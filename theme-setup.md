@@ -10,6 +10,14 @@ image:
   creditlink: http://www.dargadgetz.com/ios-7-abstract-wallpaper-pack-for-iphone-5-and-ipod-touch-retina/
 share: true
 ---
+
+**\*목차\*** 
+1. 파이선 정의
+2. 기본 문법 I
+3. 연습문제
+4. 참고사이트
+{: .notice}
+
 # 01 파이썬이란?
 
 ## 1-1 파이썬이란 무엇인가?
@@ -30,7 +38,6 @@ Python의 사전적 의미는 독이 없는 뱀으로 먹이를 몸으로 감아
 - 대화 기능의 인터프리터 언어
 - 동적인 데이터 타입 결정 지원
 
-General notes and suggestions for customizing **HPSTR**.
 
 ## Basic Setup for a new Jekyll site
 
@@ -43,7 +50,7 @@ General notes and suggestions for customizing **HPSTR**.
 
 <div markdown="0"><a href="https://github.com/mmistakes/hpstr-jekyll-theme/archive/master.zip" class="btn">Download the Theme</a></div>
 
-**Pro-tip:** Delete the `gh-pages` branch after cloning and start fresh by branching off `master`. There is a bunch of garbage in `gh-pages` used for the theme's demo site that I'm guessing you don't want on your site.
+**Pro-tip:**Delete the `gh-pages` branch after cloning and start fresh by branching off `master`. There is a bunch of garbage in `gh-pages` used for the theme's demo site that I'm guessing you don't want on your site.
 {: .notice}
 
 ---
