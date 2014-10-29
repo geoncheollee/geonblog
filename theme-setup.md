@@ -171,7 +171,7 @@ links:
 
 #### Background Images
 
-To utilize this "feature" just add the following YAML to a post's front matter. ([View demo](http://mmistakes.github.io/hpstr-jekyll-theme/background-image/))
+To utilize this "feature" just add the following YAML to a post's front matter. ([View demo](http://geoncheollee.github.io/geonblog/background-image/))
 
 {% highlight yaml %}
 image:
