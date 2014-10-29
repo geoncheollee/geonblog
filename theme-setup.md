@@ -1,7 +1,7 @@
 ---
 layout: page
 permalink: /theme-setup/
-title: Theme Setup
+title: Hello Python
 description: "Instructions on how to install and customize the modern Jekyll theme HPSTR."
 tags: [Jekyll, theme, install, setup]
 image:
