@@ -139,14 +139,53 @@ License: You must have a valid license purchased only from themeforest (the abov
                       <p>a[0:2] = [1,12]      # 동일한 크기에 대한 슬라이스 치환</p>
                       <p>print a</p>
                       <p></p>
+                      <p>a[0:2] = [1]         # 서로 다른 크기에 대한 슬라이스 치환</p>
+                      <p>print a</p>
                       <p></p>
-                      <p></p>
-                      <p></p><p></p>
+                      <p>a[0:1] = [1, 2, 3]   # 서로 다른 크기에 대한 슬라이스 치환</p>
+                      <p>print a</p>
                     </div>
                   </div>
-                  <h5>['spam', 'eggs', 123, 1234]</h5>
+                  <h5>[1, 12, 123, 1234]</h5>
+                  <h5>[1, 123, 1234]</h5>
+                  <h5>[1, 2, 3, 123, 1234]</h5>
                 </div>
-        
+      </div>
+      <!-- box area end -->
+      <!-- box area -->
+        <div class="row">
+                  <div class="col-md-6">
+                  <li class="active">확장 슬라이스를 사용하는 경우 슬라이스 치환때 요소의 개수가 일치해야 함</a></li>
+                  <li class="active">[참고] range 인자 해석</a></li>
+                  <li class="active">         range(stop): 인자가 1개인 경우 start는 0이며 주어진 인자는 stop(exclusive)으로 해석</a></li>
+                  <li class="active">         range(start, stop): 인자가 2개인 경우 start(inclusive), stop(exclusive)이고, step은 1로 해석</a></li>
+                  <li class="active">         range(start, stop, step): 인자가 3개인 경우 각각을 start(inclusive), stop(exclusive), step으로 해석</a></li>
+                  
+                    <div class="well">
+                      <p>a = range(4)</p>
+                      <p>print a</p>
+                      <p></p>
+                      <p>print a[::2]</p>
+                      <p></p>
+                      <p>a[::2] = range(0, -2, -1)     # a[0::2] = [0, 2], range(0, -2 -1) = [0, -1]</p>
+                      <p>print a</p>
+                      <p></p>
+                      <p>a[::2] = range(3)             # range(3) = [0, 1, 2], 확장 슬라이스 사용하여 치환시에는 크기가 다를 때 에러 발생</p>
+                    </div>
+                  </div>
+                  <h5>[0, 1, 2, 3]</h5>
+                  <h5>[0, 2]</h5>
+                  <h5>[0, 1, -1, 3]</h5>
+                  <h5>---------------------------------------------------------------------------</h5>
+                  <h5>ValueError                                Traceback (most recent call last)</h5>
+                  <h5><ipython-input-4-9e2265f969e9> in <module>()</h5>
+                  <h5>      7 print a</h5>
+                  <h5>      8 </h5>
+                  <h5>----> 9 a[::2] = range(3)             # range(3) = [0, 1, 2], 확장 슬라이스 사용하여 치환시에는 크기가 다를 때 에러 발생</h5>
+                  <h5></h5>
+                  <h5>ValueError: attempt to assign sequence of size 3 to extended slice of size 2</h5>
+                  <h5></h5>
+                </div>
       </div>
       <!-- box area end -->
     </div>
