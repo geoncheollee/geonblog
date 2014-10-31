@@ -127,22 +127,26 @@ function func(checkbox_num){
   }
  }
  user_info=age+","+sex+","+job+info; 
- alert("\n\n정답은 : " +user_info+ "\n"); 
+ alert("\n\n정답은 : 3번, print ""Hello, World""" +user_info+ "\n"); 
 }
 </script>
  <title>설문조사</title>
 </head>
 <form name="fm" method="get">
- <p> 성별</p>
+ <p> 1. "Hello, World를 출력하는 문장으로 옳은 것은? </p>
  <input type="radio" name="chk_sex" value="남자"checked="true">남자
  <input type="radio" name="chk_sex" value="여자">여자
  <p></p>
+ 
+ 
  <p>연령</p>
  <input type="radio" name="chk_age" value="십대"checked="true">10대
  <input type="radio" name="chk_age" value="이십대">20대
  <input type="radio" name="chk_age" value="삼십대">30대
  <input type="radio" name="chk_age" value="사십대">40대
  <p></p>
+ 
+ 
  <select name="job" onChange="chg(this.selectedIndex)">
   <option value="">직업선택</option>
   <option value="관리">관리</option>
@@ -170,6 +174,9 @@ function func(checkbox_num){
   <option value="대학생">대학(원)생</option>
   <option value="기타">기타</option>
  </select>
+ 
+ 
+ 
  <p>관심분야</p>
  <p>정치</p>
  <p>
