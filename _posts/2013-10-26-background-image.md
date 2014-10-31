@@ -31,12 +31,9 @@ Python의 사전적 의미는 독이 없는 뱀으로 먹이를 몸으로 감아
 
 {% highlight html linenos %}
 {% raw %}
-def add(a,b):
-    return a+b
-
-print add(1,2)
-print add('abc', 'def')
-print add([1, 2, 3], [4, 5, 6])
+3
+abcdef
+[1, 2, 3, 4, 5, 6]
 {% endraw %}
 {% endhighlight %}
 
