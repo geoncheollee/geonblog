@@ -38,6 +38,10 @@ print add('abc', 'def')
 print add([1, 2, 3], [4, 5, 6])
 {% endhighlight %}
 
+{% gist mmistakes/6589546 %}
+sdfsadfsadfsad
+{% gist 8531391 %}
+
 {% highlight yaml %}
 3
 abcdef
