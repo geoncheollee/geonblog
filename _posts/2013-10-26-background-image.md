@@ -30,33 +30,15 @@ Python의 사전적 의미는 독이 없는 뱀으로 먹이를 몸으로 감아
 - 동적인 데이터 타입 결정 지원
 
 {% highlight yaml %}
+{% raw %}
 def add(a,b):
     return a+b
 
 print add(1,2)
 print add('abc', 'def')
 print add([1, 2, 3], [4, 5, 6])
-{% endhighlight %}
-
-
-
-
-Line numbering enabled:
-
-{% highlight html linenos %}
-{% raw %}
-<nav class="pagination" role="navigation">
-    {% if page.previous %}
-        <a href="{{ site.url }}{{ page.previous.url }}" class="btn" title="{{ page.previous.title }}">Previous article</a>
-    {% endif %}
-    {% if page.next %}
-        <a href="{{ site.url }}{{ page.next.url }}" class="btn" title="{{ page.next.title }}">Next article</a>
-    {% endif %}
-</nav><!-- /.pagination -->
 {% endraw %}
 {% endhighlight %}
-
-
 
 
 {% highlight html linenos %}
