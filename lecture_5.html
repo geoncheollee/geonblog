@@ -5,7 +5,6 @@ title: 리스트
 description: "리스트 문법 소개 및 예제"  
 ---
 
-
 <!DOCTYPE html>
 <!-- 
 Template Name: Metronic - Responsive Admin Dashboard Template build with Twitter Bootstrap 3.2.0
@@ -27,7 +26,7 @@ License: You must have a valid license purchased only from themeforest (the abov
 <!-- Head BEGIN -->
 <head>
   <meta charset="utf-8">
-  <title>Blog Page | Metronic Frontend</title>
+  <title>Typography | Metronic Frontend</title>
 
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -60,6 +59,7 @@ License: You must have a valid license purchased only from themeforest (the abov
 
   <!-- Theme styles START -->
   <link href="../../assets/global/css/components.css" rel="stylesheet">
+  <link href="../../assets/global/css/plugins.css" rel="stylesheet">
   <link href="../../assets/frontend/layout/css/style.css" rel="stylesheet">
   <link href="../../assets/frontend/layout/css/style-responsive.css" rel="stylesheet">
   <link href="../../assets/frontend/layout/css/themes/red.css" rel="stylesheet" id="style-color">
@@ -211,14 +211,14 @@ License: You must have a valid license purchased only from themeforest (the abov
                 <li><a href="page-contacts.html">Contact</a></li>                
               </ul>
             </li>
-            <li class="dropdown">
+            <li class="dropdown active">
               <a class="dropdown-toggle" data-toggle="dropdown" data-target="#" href="#">
                 Features 
                 
               </a>
                 
               <ul class="dropdown-menu">
-                <li><a href="feature-typography.html">Typography</a></li>
+                <li class="active"><a href="feature-typography.html">Typography</a></li>
                 <li><a href="feature-buttons.html">Buttons</a></li>
                 <li><a href="feature-forms.html">Forms</a></li>
                 
@@ -255,14 +255,14 @@ License: You must have a valid license purchased only from themeforest (the abov
                 <li><a href="portfolio-item.html">Portfolio Item</a></li>
               </ul>
             </li>
-            <li class="dropdown active">
+            <li class="dropdown">
               <a class="dropdown-toggle" data-toggle="dropdown" data-target="#" href="#">
                 Blog 
                 
               </a>
                 
               <ul class="dropdown-menu">
-                <li class="active"><a href="blog.html">Blog Page</a></li>
+                <li><a href="blog.html">Blog Page</a></li>
                 <li><a href="blog-item.html">Blog Item</a></li>
               </ul>
             </li>
@@ -297,221 +297,480 @@ License: You must have a valid license purchased only from themeforest (the abov
       <div class="container">
         <ul class="breadcrumb">
             <li><a href="index.html">Home</a></li>
-            <li><a href="#">Blog</a></li>
-            <li class="active">Blog Page</li>
+            <li><a href="#">Features</a></li>
+            <li class="active">Typography</li>
         </ul>
         <!-- BEGIN SIDEBAR & CONTENT -->
         <div class="row margin-bottom-40">
           <!-- BEGIN CONTENT -->
           <div class="col-md-12 col-sm-12">
-            <h1>Blog Page</h1>
+            <h1>Typography</h1>
             <div class="content-page">
-              <div class="row">
-                <!-- BEGIN LEFT SIDEBAR -->            
-                <div class="col-md-9 col-sm-9 blog-posts">
-                  <div class="row">
-                    <div class="col-md-4 col-sm-4">
-                      <!-- BEGIN CAROUSEL -->            
-                      <div class="front-carousel">
-                        <div class="carousel slide" id="myCarousel">
-                          <!-- Carousel items -->
-                          <div class="carousel-inner">
-                            <div class="item">
-                              <img alt="" src="../../assets/frontend/pages/img/works/img1.jpg">
-                            </div>
-                            <div class="item">
-                              <img alt="" src="../../assets/frontend/pages/img/works/img2.jpg">
-                            </div>
-                            <div class="item active">
-                              <img alt="" src="../../assets/frontend/pages/img/works/img3.jpg">
-                            </div>
-                          </div>
-                          <!-- Carousel nav -->
-                          <a data-slide="prev" href="#myCarousel" class="carousel-control left">
-                            <i class="fa fa-angle-left"></i>
-                          </a>
-                          <a data-slide="next" href="#myCarousel" class="carousel-control right">
-                            <i class="fa fa-angle-right"></i>
-                          </a>
-                        </div>                
-                      </div>
-                      <!-- END CAROUSEL -->             
-                    </div>
-                    <div class="col-md-8 col-sm-8">
-                      <h2><a href="blog-item.html">Corrupti quos dolores etquas</a></h2>
-                      <ul class="blog-info">
-                        <li><i class="fa fa-calendar"></i> 25/07/2013</li>
-                        <li><i class="fa fa-comments"></i> 17</li>
-                        <li><i class="fa fa-tags"></i> Metronic, Keenthemes, UI Design</li>
-                      </ul>
-                      <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui sint blanditiis prae sentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non eleifend enim a feugiat. Pellentesque viverra vehicula sem ut volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing condimentum eleifend enim a feugiat.</p>
-                      <a href="blog-item.html" class="more">Read more <i class="icon-angle-right"></i></a>
-                    </div>
-                  </div>
-                  <hr class="blog-post-sep">
-                  <div class="row">
-                    <div class="col-md-4 col-sm-4">
-                      <img class="img-responsive" alt="" src="../../assets/frontend/pages/img/works/img4.jpg">
-                    </div>
-                    <div class="col-md-8 col-sm-8">
-                      <h2><a href="blog-item.html">Corrupti quos dolores etquas</a></h2>
-                      <ul class="blog-info">
-                        <li><i class="fa fa-calendar"></i> 25/07/2013</li>
-                        <li><i class="fa fa-comments"></i> 17</li>
-                        <li><i class="fa fa-tags"></i> Metronic, Keenthemes, UI Design</li>
-                      </ul>
-                      <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui sint blanditiis prae sentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non eleifend enim a feugiat. Pellentesque viverra vehicula sem ut volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing condimentum eleifend enim a feugiat.</p>
-                      <a href="blog-item.html" class="more">Read more <i class="icon-angle-right"></i></a>
-                    </div>
-                  </div>
-                  <hr class="blog-post-sep">
-                  <div class="row">
-                    <div class="col-md-4 col-sm-4">
-                      <!-- BEGIN VIDEO -->   
-                      <iframe height="205" allowfullscreen="" style="width:100%; border:0" src="http://player.vimeo.com/video/56974716?portrait=0"></iframe>
-                      <!-- END VIDEO -->   
-                    </div>
-                    <div class="col-md-8 col-sm-8">
-                      <h2><a href="blog-item.html">Corrupti quos dolores etquas</a></h2>
-                      <ul class="blog-info">
-                        <li><i class="fa fa-calendar"></i> 25/07/2013</li>
-                        <li><i class="fa fa-comments"></i> 17</li>
-                        <li><i class="fa fa-tags"></i> Metronic, Keenthemes, UI Design</li>
-                      </ul>
-                      <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui sint blanditiis prae sentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non eleifend enim a feugiat. Pellentesque viverra vehicula sem ut volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing condimentum eleifend enim a feugiat.</p>
-                      <a href="blog-item.html" class="more">Read more <i class="fa fa-angle-right"></i></a>
-                    </div>
-                  </div>
-                  <hr class="blog-post-sep">
-                  <div class="row">
-                    <div class="col-md-4 col-sm-4">
-                      <img class="img-responsive" alt="" src="../../assets/frontend/pages/img/works/img2.jpg">
-                    </div>
-                    <div class="col-md-8 col-sm-8">
-                      <h2><a href="#">Corrupti quos dolores etquas</a></h2>
-                      <ul class="blog-info">
-                        <li><i class="fa fa-calendar"></i> 25/07/2013</li>
-                        <li><i class="fa fa-comments"></i> 17</li>
-                        <li><i class="fa fa-tags"></i> Metronic, Keenthemes, UI Design</li>
-                      </ul>
-                      <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui sint blanditiis prae sentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non eleifend enim a feugiat. Pellentesque viverra vehicula sem ut volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing condimentum eleifend enim a feugiat.</p>
-                      <a href="blog-item.html" class="more">Read more <i class="fa fa-angle-right"></i></a>
-                    </div>
-                  </div>
-                  <hr class="blog-post-sep">
-                  <ul class="pagination">
-                    <li><a href="#">Prev</a></li>
-                    <li><a href="#">1</a></li>
-                    <li><a href="#">2</a></li>
-                    <li class="active"><a href="#">3</a></li>
-                    <li><a href="#">4</a></li>
-                    <li><a href="#">5</a></li>
-                    <li><a href="#">Next</a></li>
-                  </ul>               
+              <div class="note note-success">
+                <h4 class="block">Metronic Admin (Framework) Features</h4>
+                <p>
+                  In the frontend theme you can use nearly all the features from <a href="http://keenthemes.com/preview/metronic_admin/" target="_blanl">Metronic Admin Theme</a>. First you will just need to include 2 below global css files:
+                  </p>
+                  <p>
+                  <code>../../assets/global/css/components.css</code><br>
+                  <code>../../assets/global/css/plugins.css</code>
+                </p>  
+                <p>
+                And selected plugin's css and js files accordingly.
+                </p>
+              </div>              
+
+<div class="row">
+        <div class="col-md-8">
+          <div>
+            <!-- BEGIN GENERAL PORTLET-->
+            <div class="portlet">
+              <div class="portlet-title">
+                <div class="caption">
+                  <i class="fa fa-gift"></i>General
                 </div>
-                <!-- END LEFT SIDEBAR -->
-
-                <!-- BEGIN RIGHT SIDEBAR -->            
-                <div class="col-md-3 col-sm-3 blog-sidebar">
-                  <!-- CATEGORIES START -->
-                  <h2 class="no-top-space">Categories</h2>
-                  <ul class="nav sidebar-categories margin-bottom-40">
-                    <li><a href="#">London (18)</a></li>
-                    <li><a href="#">Moscow (5)</a></li>
-                    <li class="active"><a href="#">Paris (12)</a></li>
-                    <li><a href="#">Berlin (7)</a></li>
-                    <li><a href="#">Istanbul (3)</a></li>
-                  </ul>
-                  <!-- CATEGORIES END -->
-
-                  <!-- BEGIN RECENT NEWS -->                            
-                  <h2>Recent News</h2>
-                  <div class="recent-news margin-bottom-10">
-                    <div class="row margin-bottom-10">
-                      <div class="col-md-3">
-                        <img class="img-responsive" alt="" src="../../assets/frontend/pages/img/people/img2-large.jpg">                        
-                      </div>
-                      <div class="col-md-9 recent-news-inner">
-                        <h3><a href="#">Letiusto gnissimos</a></h3>
-                        <p>Decusamus tiusto odiodig nis simos ducimus qui sint</p>
-                      </div>                        
-                    </div>
-                    <div class="row margin-bottom-10">
-                      <div class="col-md-3">
-                        <img class="img-responsive" alt="" src="../../assets/frontend/pages/img/people/img1-large.jpg">                        
-                      </div>
-                      <div class="col-md-9 recent-news-inner">
-                        <h3><a href="#">Deiusto anissimos</a></h3>
-                        <p>Decusamus tiusto odiodig nis simos ducimus qui sint</p>
-                      </div>                        
-                    </div>
-                    <div class="row margin-bottom-10">
-                      <div class="col-md-3">
-                        <img class="img-responsive" alt="" src="../../assets/frontend/pages/img/people/img3-large.jpg">                        
-                      </div>
-                      <div class="col-md-9 recent-news-inner">
-                        <h3><a href="#">Tesiusto baissimos</a></h3>
-                        <p>Decusamus tiusto odiodig nis simos ducimus qui sint</p>
-                      </div>                        
-                    </div>
-                  </div>
-                  <!-- END RECENT NEWS -->                            
-
-                  <!-- BEGIN BLOG TALKS -->
-                  <div class="blog-talks margin-bottom-30">
-                    <h2>Popular Talks</h2>
-                    <div class="tab-style-1">
-                      <ul class="nav nav-tabs">
-                        <li class="active"><a data-toggle="tab" href="#tab-1">Multipurpose</a></li>
-                        <li><a data-toggle="tab" href="#tab-2">Documented</a></li>
-                      </ul>
-                      <div class="tab-content">
-                        <div id="tab-1" class="tab-pane row-fluid fade in active">
-                          <p class="margin-bottom-10">Raw denim you probably haven't heard of them jean shorts Austin. eu banh mi, qui irure terry richardson ex squid Aliquip placeat salvia cillum iphone.</p>
-                          <p><a class="more" href="#">Read more</a></p>
-                        </div>
-                        <div id="tab-2" class="tab-pane fade">
-                          <p>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. aliquip jean shorts ullamco ad vinyl aesthetic magna delectus mollit. Keytar helvetica VHS salvia..</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>                            
-                  <!-- END BLOG TALKS -->
-
-                  <!-- BEGIN BLOG PHOTOS STREAM -->
-                  <div class="blog-photo-stream margin-bottom-20">
-                    <h2>Photos Stream</h2>
-                    <ul class="list-unstyled">
-                      <li><a href="#"><img alt="" src="../../assets/frontend/pages/img/people/img5-small.jpg"></a></li>
-                      <li><a href="#"><img alt="" src="../../assets/frontend/pages/img/works/img1.jpg"></a></li>
-                      <li><a href="#"><img alt="" src="../../assets/frontend/pages/img/people/img4-large.jpg"></a></li>
-                      <li><a href="#"><img alt="" src="../../assets/frontend/pages/img/works/img6.jpg"></a></li>
-                      <li><a href="#"><img alt="" src="../../assets/frontend/pages/img/pics/img1-large.jpg"></a></li>
-                      <li><a href="#"><img alt="" src="../../assets/frontend/pages/img/pics/img2-large.jpg"></a></li>
-                      <li><a href="#"><img alt="" src="../../assets/frontend/pages/img/works/img3.jpg"></a></li>
-                      <li><a href="#"><img alt="" src="../../assets/frontend/pages/img/people/img2-large.jpg"></a></li>
-                    </ul>                    
-                  </div>
-                  <!-- END BLOG PHOTOS STREAM -->
-
-                  <!-- BEGIN BLOG TAGS -->
-                  <div class="blog-tags margin-bottom-20">
-                    <h2>Tags</h2>
-                    <ul>
-                      <li><a href="#"><i class="fa fa-tags"></i>OS</a></li>
-                      <li><a href="#"><i class="fa fa-tags"></i>Metronic</a></li>
-                      <li><a href="#"><i class="fa fa-tags"></i>Dell</a></li>
-                      <li><a href="#"><i class="fa fa-tags"></i>Conquer</a></li>
-                      <li><a href="#"><i class="fa fa-tags"></i>MS</a></li>
-                      <li><a href="#"><i class="fa fa-tags"></i>Google</a></li>
-                      <li><a href="#"><i class="fa fa-tags"></i>Keenthemes</a></li>
-                      <li><a href="#"><i class="fa fa-tags"></i>Twitter</a></li>
-                    </ul>
-                  </div>
-                  <!-- END BLOG TAGS -->
+                <div class="tools">
+                  <a class="collapse" href="javascript:;">
+                  </a>
+                  <a class="config" data-toggle="modal" href="#portlet-config">
+                  </a>
+                  <a class="reload" href="javascript:;">
+                  </a>
+                  <a class="remove" href="javascript:;">
+                  </a>
                 </div>
-                <!-- END RIGHT SIDEBAR -->            
               </div>
+              <div class="portlet-body">
+                <div class="row">
+                  <div class="col-md-6">
+                    <h3>Sample text with lead body</h3>
+                    <p class="lead">
+                       Lead body. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </p>
+                    <p>
+                       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales at. Nulla tellus elit, varius non commodo eget, mattis vel eros. In sed ornare nulla.
+                    </p>
+                    <p>
+                       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales at. Nulla tellus elit, varius non commodo eget, mattis vel eros. In sed ornare nulla.
+                    </p>
+                  </div>
+                  <div class="col-md-6">
+                    <h3>Sample text</h3>
+                    <p>
+                       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales at. Nulla tellus elit, varius non commodo eget, mattis vel eros. In sed ornare nulla.
+                    </p>
+                    <p>
+                       Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+                    </p>
+                    <p>
+                       Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec sed odio dui.
+                    </p>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <h3>Texts</h3>
+                    <p class="muted">
+                       Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.
+                    </p>
+                    <p class="text-warning">
+                       Etiam porta sem malesuada magna mollis euismod.
+                    </p>
+                    <p class="text-error">
+                       Donec ullamcorper nulla non metus auctor fringilla.
+                    </p>
+                    <p class="text-info">
+                       Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis.
+                    </p>
+                    <p class="text-success">
+                       Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
+                    </p>
+                  </div>
+                  <div class="col-md-6">
+                    <h3>Headings</h3>
+                    <h1>h1. Heading 1</h1>
+                    <h2>h2. Heading 2</h2>
+                    <h3>h3. Heading 3</h3>
+                    <h4>h4. Heading 4</h4>
+                    <h5>h5. Heading 5</h5>
+                    <h6>h6. Heading 6</h6>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <h3>Address</h3>
+                    <div class="well">
+                      <address>
+                      <strong>Loop, Inc.</strong><br>
+                      795 Park Ave, Suite 120<br>
+                      San Francisco, CA 94107<br>
+                      <abbr title="Phone">P:</abbr> (234) 145-1810 </address>
+                      <address>
+                      <strong>Full Name</strong><br>
+                      <a href="mailto:#">
+                         first.last@email.com
+                      </a>
+                      </address>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <h3>Some more text here</h3>
+                    <p>
+                       Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+                    </p>
+                    <p>
+                       Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec sed odio dui.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- END GENERAL PORTLET-->
+          <div>
+            <!-- BEGIN BLOCKQUOTES PORTLET-->
+            <div class="portlet">
+              <div class="portlet-title">
+                <div class="caption">
+                  <i class="fa fa-gift"></i>Blockquotes
+                </div>
+                <div class="tools">
+                  <a class="collapse" href="javascript:;">
+                  </a>
+                  <a class="config" data-toggle="modal" href="#portlet-config">
+                  </a>
+                  <a class="reload" href="javascript:;">
+                  </a>
+                  <a class="remove" href="javascript:;">
+                  </a>
+                </div>
+              </div>
+              <div class="portlet-body">
+                <h3></h3>
+                <blockquote>
+                  <p>
+                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante. Duis mollis, est non commodo luctus, nisi erat porttitor ligula integer posuere erat a ante.
+                  </p>
+                </blockquote>
+                <blockquote>
+                  <p>
+                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+                  </p>
+                  <small>Someone famous <cite title="Source Title">Source Title</cite></small>
+                </blockquote>
+                <div class="clearfix">
+                  <blockquote class="pull-right">
+                    <p>
+                       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+                    </p>
+                    <small>Someone famous <cite title="Source Title">Source Title</cite></small>
+                  </blockquote>
+                </div>
+              </div>
+            </div>
+            <!-- END BLOCKQUOTES PORTLET-->
+          </div>
+          <!-- BEGIN WELLS PORTLET-->
+          <div>
+            <div class="portlet">
+              <div class="portlet-title">
+                <div class="caption">
+                  <i class="fa fa-gift"></i>Alignments
+                </div>
+                <div class="tools">
+                  <a class="collapse" href="javascript:;">
+                  </a>
+                  <a class="config" data-toggle="modal" href="#portlet-config">
+                  </a>
+                  <a class="reload" href="javascript:;">
+                  </a>
+                  <a class="remove" href="javascript:;">
+                  </a>
+                </div>
+              </div>
+              <div class="portlet-body">
+                <p class="text-left">
+                   Left aligned text.
+                </p>
+                <p class="text-center">
+                   Center aligned text.
+                </p>
+                <p class="text-right">
+                   Right aligned text.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- END WELLS PORTLET-->
+          <!-- BEGIN WELLS PORTLET-->
+          <div>
+            <div class="portlet">
+              <div class="portlet-title">
+                <div class="caption">
+                  <i class="fa fa-gift"></i>Wells
+                </div>
+                <div class="tools">
+                  <a class="collapse" href="javascript:;">
+                  </a>
+                  <a class="config" data-toggle="modal" href="#portlet-config">
+                  </a>
+                  <a class="reload" href="javascript:;">
+                  </a>
+                  <a class="remove" href="javascript:;">
+                  </a>
+                </div>
+              </div>
+              <div class="portlet-body">
+                <div class="well">
+                  <h4>Default well</h4>
+                   Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet.Integer molestie lorem at massa Integer molestie lorem at massa Integer molestie lorem at massa Integer molestie lorem at massa.
+                </div>
+                <div class="well well-large">
+                  <h4>Large Well</h4>
+                   Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet. Integer molestie lorem at massa Integer molestie lorem at massa Integer molestie lorem at massa
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- END WELLS PORTLET-->
+        </div>
+        <div class="col-md-4">
+          <!-- BEGIN UNORDERED LISTS PORTLET-->
+          <div class="portlet box red">
+            <div class="portlet-title">
+              <div class="caption">
+                <i class="fa fa-gift"></i>Unordered Lists
+              </div>
+              <div class="tools">
+                <a class="collapse" href="javascript:;">
+                </a>
+              </div>
+            </div>
+            <div class="portlet-body">
+              <ul>
+                <li>
+                   Lorem ipsum dolor sit amet
+                </li>
+                <li>
+                   Consectetur adipiscing elit
+                </li>
+                <li>
+                   Integer molestie lorem at massa
+                </li>
+                <li>
+                   Facilisis in pretium nisl aliquet
+                </li>
+                <li>
+                   Nulla volutpat aliquam velit
+                  <ul>
+                    <li>
+                       Phasellus iaculis neque
+                    </li>
+                    <li>
+                       Purus sodales ultricies
+                    </li>
+                    <li>
+                       Vestibulum laoreet porttitor sem
+                    </li>
+                    <li>
+                       Ac tristique libero volutpat at
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                   Faucibus porta lacus fringilla vel
+                </li>
+                <li>
+                   Aenean sit amet erat nunc
+                </li>
+                <li>
+                   Eget porttitor lorem
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- END UNORDERED LISTS PORTLET-->
+          <!-- BEGIN ORDERED LISTS PORTLET-->
+          <div class="portlet box blue">
+            <div class="portlet-title">
+              <div class="caption">
+                <i class="fa fa-gift"></i>Ordered Lists
+              </div>
+              <div class="tools">
+                <a class="collapse" href="javascript:;">
+                </a>
+              </div>
+            </div>
+            <div class="portlet-body">
+              <ol>
+                <li>
+                   Lorem ipsum dolor sit amet
+                </li>
+                <li>
+                   Consectetur adipiscing elit
+                </li>
+                <li>
+                   Integer molestie lorem at massa
+                </li>
+                <li>
+                   Facilisis in pretium nisl aliquet
+                </li>
+                <li>
+                   Nulla volutpat aliquam velit
+                </li>
+                <li>
+                   Faucibus porta lacus fringilla vel
+                </li>
+                <li>
+                   Aenean sit amet erat nunc
+                </li>
+                <li>
+                   Eget porttitor lorem
+                </li>
+              </ol>
+            </div>
+          </div>
+          <!-- END ORDERED LISTS PORTLET-->
+          <!-- BEGIN UNSTYLED LISTS PORTLET-->
+          <div class="portlet box yellow">
+            <div class="portlet-title">
+              <div class="caption">
+                <i class="fa fa-gift"></i>Unstyled Lists
+              </div>
+              <div class="tools">
+                <a class="collapse" href="javascript:;">
+                </a>
+              </div>
+            </div>
+            <div class="portlet-body">
+              <ul class="list-unstyled">
+                <li>
+                   Lorem ipsum dolor sit amet
+                </li>
+                <li>
+                   Consectetur adipiscing elit
+                </li>
+                <li>
+                   Integer molestie lorem at massa
+                </li>
+                <li>
+                   Facilisis in pretium nisl aliquet
+                </li>
+                <li>
+                   Nulla volutpat aliquam velit
+                  <ul>
+                    <li>
+                       Phasellus iaculis neque
+                    </li>
+                    <li>
+                       Purus sodales ultricies
+                    </li>
+                    <li>
+                       Vestibulum laoreet porttitor sem
+                    </li>
+                    <li>
+                       Ac tristique libero volutpat at
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                   Faucibus porta lacus fringilla vel
+                </li>
+                <li>
+                   Aenean sit amet erat nunc
+                </li>
+                <li>
+                   Eget porttitor lorem
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- END UNSTYLED LISTS PORTLET-->
+          <!-- BEGIN UNSTYLED LISTS PORTLET-->
+          <div class="portlet box red">
+            <div class="portlet-title">
+              <div class="caption">
+                <i class="fa fa-gift"></i>Inline List
+              </div>
+              <div class="tools">
+                <a class="collapse" href="javascript:;">
+                </a>
+              </div>
+            </div>
+            <div class="portlet-body">
+              <ul class="list-inline">
+                <li>
+                   1. Lorem
+                </li>
+                <li>
+                   2. Phasellus
+                </li>
+                <li>
+                   3. Nulla
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- END UNSTYLED LISTS PORTLET-->
+          <!-- BEGIN DESCRIPTION LISTS PORTLET-->
+          <div class="portlet box purple">
+            <div class="portlet-title">
+              <div class="caption">
+                <i class="fa fa-gift"></i>Description Lists
+              </div>
+              <div class="tools">
+                <a class="collapse" href="javascript:;">
+                </a>
+              </div>
+            </div>
+            <div class="portlet-body">
+              <dl>
+                <dt>Description lists</dt>
+                <dd>A description list is perfect for defining terms.</dd>
+                <dt>Euismod</dt>
+                <dd>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.</dd>
+                <dd>Donec id elit non mi porta gravida at eget metus.</dd>
+                <dt>Malesuada porta</dt>
+                <dd>Etiam porta sem malesuada magna mollis euismod.</dd>
+              </dl>
+            </div>
+          </div>
+          <!-- END DESCRIPTION LISTS PORTLET-->
+          <!-- BEGIN DESCRIPTION LISTS PORTLET-->
+          <div class="portlet box blue">
+            <div class="portlet-title">
+              <div class="caption">
+                <i class="fa fa-gift"></i>Text States
+              </div>
+              <div class="tools">
+                <a class="collapse" href="javascript:;">
+                </a>
+              </div>
+            </div>
+            <div class="portlet-body">
+              <p class="text-muted">
+                 Muted text here
+              </p>
+              <p class="text-primary">
+                 Primary text here
+              </p>
+              <p class="text-success">
+                 Success text here
+              </p>
+              <p class="text-info">
+                 Info text here
+              </p>
+              <p class="text-warning">
+                 Warning text here
+              </p>
+              <p class="text-danger">
+                 Danger text here
+              </p>
+            </div>
+          </div>
+          <!-- END DESCRIPTION LISTS PORTLET-->
+        </div>
+      </div>
             </div>
           </div>
           <!-- END CONTENT -->
@@ -623,7 +882,7 @@ License: You must have a valid license purchased only from themeforest (the abov
     <!-- BEGIN CORE PLUGINS (REQUIRED FOR ALL PAGES) -->
     <!--[if lt IE 9]>
     <script src="../../assets/global/plugins/respond.min.js"></script>
-    <![endif]-->
+    <![endif]--> 
     <script src="../../assets/global/plugins/jquery.min.js" type="text/javascript"></script>
     <script src="../../assets/global/plugins/jquery-migrate.min.js" type="text/javascript"></script>
     <script src="../../assets/global/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>      
