@@ -6,292 +6,1642 @@ description: "수치 자료형과 연산자 소개 및 예제"
 ---
 
 
+
 <!DOCTYPE html>
-<html itemscope itemtype="http://schema.org/Product">
-  <head>
-    <title>repl.it</title>
-    <script>
-      // Redirect old hash url to new.
-      (function () {
-        var loc = window.location,
-            parts = loc.hash.split(':'),
-            session_path = parts[0].slice(1),
-            page = parts[1];
-        if (page || session_path) {
-          var loc = loc.protocol + '//' +  loc.host  + '/';
-          if (session_path) loc += session_path + '/';
-          if (page) loc += page;
-          window.location.href = loc;
-        }
-      })();
-    </script>
-
-    <!-- Icons -->
-    <link rel="shortcut icon" href="/images/favicon.ico" type="image/vnd.microsoft.icon" />
-    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" type="image/png" />
-
-    <!-- Scripts -->
-    <link type="text/css" rel="stylesheet" href="/css/style.css?1414438534621" />
-    <link type="text/css" rel="stylesheet" href="/css/print.css?1414438534621" media="print" />
-    <link type="text/css" rel="stylesheet" href="/css/ansi.css?1414438534621" />
-
-    <!-- Application -->
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+<html lang="en-US" prefix="og: http://ogp.me/ns#">
+<head>
+    <title>Build A Blog With Jekyll And GitHub Pages | Smashing Magazine</title>
+    <style type="text/css">article,body,div,figcaption,figure,form,h1,h2,h3,h4,html,img,label,li,nav,p,span,strong,ul{font-size:100%;vertical-align:baseline;margin:0;padding:0;outline:0;border:0;background:0 0}html{overflow-y:scroll;overflow-x:hidden}body{overflow:hidden;line-height:1.46em;max-width:2000px;color:#333;background-image:url(http://www.smashingmagazine.com/wp-content/themes/smashing-magazine/images/smbg.png)}a{font-size:100%;text-decoration:none;vertical-align:baseline;margin:0;padding:0;background:0 0;color:#41b7d8}a:active{color:#fff;background-color:#e53b2c}.pap a,li a,p a{border-bottom:.08em solid rgba(0,0,0,.1);padding-bottom:.08em}br+em a,figcaption a{border-bottom:.09em solid rgba(0,0,0,.1);padding-bottom:.09em}.pmd a,nav a{padding-bottom:0;border:0}img{max-width:100%;height:auto;border:0}.clearfix:after,.clearfix:before{content:"\0020";height:0;visibility:hidden}svg:not(:root){overflow:hidden}ul{list-style:none}ol{list-style:decimal}article ul{list-style:disc}article li ol,article li ul{margin:0 1.5em}article ol,article ul{margin:.5em 1.5em}article li{padding:.25em 0}input{vertical-align:middle}button,input[type=submit],label{cursor:pointer}button,input{margin:0}button{font-size:1em;vertical-align:top;overflow:visible;outline:0;padding:.75em 2em;border:.08em solid #c73a11;color:#fff;background:-webkit-gradient(linear,left top,left bottom,from(#e85c33),to(#e53a2b));background:-webkit-linear-gradient(top,#e85c33 0,#e53a2b 100%);background:linear-gradient(to bottom,#e85c33 0,#e53a2b 100%);border-radius:.5em;-webkit-transition:border-color .3s;transition:border-color .3s}input[type=text]:placeholder{color:#999}input[type=text]{font-size:1em;line-height:1.5em;margin-bottom:1em;outline:0;padding:.5em;color:#777;border:.08em solid rgba(0,0,0,.1);background-color:#fff;border-radius:.5em 0 0 .5em;-webkit-transition:all .3s;transition:all .3s}@-ms-viewport{width:device-width}canvas{-ms-touch-action:double-tap-zoom}body,button,input,label{font-family:"Proxima Nova Regular","Segoe UI",Roboto,"Droid Sans","Helvetica Neue",Arial,sans-serif;font-style:normal;font-weight:400}.cahe,.cat h3,.category .cat h2,h4,strong{font-family:'Proxima Nova Bold',"Segoe UI",Roboto,"Droid Sans","Helvetica Neue",Arial,sans-serif;font-style:normal;font-weight:700}.ed+p,.pmd .a,.pmd+p{font-family:"Skolar Regular","Roboto Slab","Droid Serif",Cambria,Georgia,"Times New Roman",Times,serif;font-weight:400;font-style:normal}.ed+p em,.pmd+p em{font-family:'Skolar Italic',"Roboto Slab","Droid Serif",Cambria,Georgia,"Times New Roman",Times,serif;font-weight:400;font-style:italic}.ed+p strong,.pmd+p strong{font-family:'Skolar Bold',"Roboto Slab","Droid Serif",Cambria,Georgia,"Times New Roman",Times,serif;font-weight:700;font-style:normal}h2,h3{font-family:"Skolar Bold","Segoe UI Bold","Roboto Slab","Droid Serif",AvenirNext-Bold,"Avenir Bold",Georgia,"Times New Roman",Times,serif;font-weight:700;font-style:normal}.ch,.mise,.nw,.po,.sb,.short,.sn{display:none}.ad .declare,.cahe,.clearfix:after,.clearfix:before,.long,.mini a,.pmd li,article,figure,label,nav{display:block}.cat h3+p a,.lt a{display:inline-block}.clearfix:after{clear:both}.declare,.mini,.pt img,.sr{float:left}.awithus,.gra,.ntb,.stb{float:right}.awithus,.cat h3+p a,.pt img,button,div,form,li,ul{position:relative}.mnb,.pt{position:absolute}.cat h3+p a{border-radius:.25em}.avatar{border-radius:50%}.pt img{border-radius:.3125em}.cat h3+p a,.pt img{-webkit-transition:all .3;transition:all .3}.mini{padding:1.125em 0 1em 5.5%;z-index:8}.mini a{width:58%}.sr{font:0/0 a;height:0;visibility:hidden}.mnb{top:0;right:1em;padding-top:1.5em;z-index:9}.ntb,.stb{text-indent:100%;overflow:hidden;width:2.625em;height:2.25em;margin-right:.75em;-webkit-tap-highlight-color:transparent;border:.08em solid #c73a11;border-radius:.25em;-webkit-box-shadow:0 .08em .08em rgba(0,0,0,.25);box-shadow:0 .08em .08em rgba(0,0,0,.25)}.stb{background:url(http://www.smashingmagazine.com/wp-content/themes/smashing-magazine/images/search-icon.svg) no-repeat 50% 50%,#e95c33;background-size:1.875em auto;-webkit-background-size:auto auto}.ntb{background:url(http://www.smashingmagazine.com/wp-content/themes/smashing-magazine/images/nav-icon.svg) no-repeat 50% 50%,#e95c33;background-size:1.875em auto;-webkit-background-size:auto auto}.cc,.post{margin-bottom:2em}.fluid{padding-bottom:1.5em;border:.08em solid rgba(0,0,0,.1);background-color:#fff;-webkit-box-shadow:0 0 .625em .08em rgba(0,0,0,.05);box-shadow:0 0 .625em .08em rgba(0,0,0,.05)}.grid{margin-top:1.25em}.post{padding:.5em 5.5% 4em;border-bottom:.3125em solid #41b7d8}h2{font-size:2em;line-height:1.1em}h2 a{color:#333}.cahe{font-size:.45em;line-height:1.5em;letter-spacing:.08em;padding-bottom:.5em;color:#41b7d8}.archived h2,.author-page h2{width:92%}.ed+p,.pmd .a,.pmd+p{font-size:1.25em;line-height:1.35em;margin:0}h3{font-size:1.5em;line-height:1.3em}h4{letter-spacing:.125em}.cahe,h4{text-transform:uppercase}h3,h4{padding:1.5em 0 .5em}figure img,p,p img{padding:.5em 0}figure{margin:1.5em 0}br+em,figcaption{font-size:.875em;color:#a8a8a8}.pmd{padding-bottom:2em;margin:0}.pmd li{padding:1em 2em 0 1.5em;color:rgba(0,0,0,.3)}.pmd .a{padding:.5em .5em .5em 0;border-bottom:.08em solid #e5e5e5}.date{background:url(data:image/gif;base64,R0lGODlhEAAQAMQAAOZCM/GTi/KclepiVvfDvvnV0uxxZv719OhRROlaTepfU/a+uetlWfCOhe+JgPvf3P76+vzo5vOknva6tfSuqPnRzeU9Lu57cfjKxu+HfuxuY/Wzre11avvh3////+U7LCH5BAAAAAAALAAAAAAQABAAAAVkoCd6T6N8FiNE4wg1Xyx/gNB63Kx/zbjpIh3GEwEAPTrEQbIL6iaGJlKXSegUzplhcBVxZ5fLjuA5fGOBye6zKFtjFQhi3SbEGCI7PQoojChGawBkLQVnMhoPNyMFEg4OEh03IQA7) 0 1.2em no-repeat}.tags{background:url(data:image/gif;base64,R0lGODlhEAAQAMQAAP77+upeUeZCM/76+v74+Pa8t/zs5/jIw+dHOOtpRO+HfutpXvfDvvvh3+ZENudLPfOljva4svGTivzo5u6CY/nRxelcM+U7LP///wAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAAAAAAALAAAAAAQABAAAAVKICaOZDleaIpiVkuqKuue8Npab33JOF3zud8tCAP6ikOfAJEyilIRRjP5vChEkhVk9gwQRIPFDkDpiRwN0uQhMiRIBdNhVDHZSyEAOw==) 0 1.2em no-repeat}.tags a:after{content:", "}.tags a:last-child:after{content:""}.comments{background:url(data:image/gif;base64,R0lGODlhEAAQAMQAAOZBMu+GfedKPOlXSutnW/jKxvSuqO+JgPa8t/rY1fWzrf/9/eU9LvSspvvh3+xuY/CMg/3t6+56cP729edNQPnV0vOjnPrc2vOnofnRzehQQv76+vKakvKel////+U7LCH5BAAAAAAALAAAAAAQABAAAAVOoCeOZGme52Q81PdpkrKVneDet9CMAe7fHI/lR/woBsUfAZD0DQhNnKQQdQEqHgOjCUCMLgGmDwBxmCIIzOHwABRQpMUgASdl6PXR4hQCADs=) 0 1.2em no-repeat}.cat{border-top:.625em solid;border-bottom:.08em solid;border-color:#e5e5e5;margin:2em 5.5% 3em;padding:1em 0 1.25em}.cat h2{margin-bottom:.5em}.cat h3{font-size:1.25em}.cat h3+p a{padding:.25em .5em;margin:0 .5em .5em 0;color:#fff;background:#a1a1a1}.gra{padding:1.25em .75em 1.25em 1.5em}.sf label{font-weight:400;padding:1.1em 0 .75em;color:rgba(0,0,0,.25)}.sf button{line-height:2.25em;left:-.3125em;width:23%;height:2.375em;padding:0 1%;border-left:0;border-radius:0 .5em .5em 0}.sf input[type=text]{width:73%;height:1.5em;padding:.375em 0 .375em 2%;margin-bottom:0;border-right:0}.declare{margin:.875em 0 .5em;color:rgba(0,0,0,.25)}.awithus{margin-top:.875em;z-index:9}.ad .declare{float:none;padding:1em 0 .5em;margin-top:0}#cad{width:18.75em;height:15.625em}.pt{top:0;right:-2em;z-index:9}.pt img{border:.1875em solid #fff;-webkit-box-shadow:0 .08em .1875em rgba(0,0,0,.3);box-shadow:0 .08em .1875em rgba(0,0,0,.3)}@media screen and (min-width:31.25em){.mini{width:75%}.pmd li{display:inline-block}.pmd .a{display:block}}@media screen and (min-width:38.125em){.mini{width:60%}.grid{clear:both;padding:.5em 0}}@media screen and (min-width:40.625em){body{font-size:1.1875em}.ad{float:right;margin:0 0 1em 2em;width:15em}#cad{width:15.78947em;height:13.1579em}article img,article object,figure{max-width:26.31579em;height:auto}}@media screen and (min-width:50em){body{font-size:1em;border-left:.625em solid transparent}.mini,.mnb{display:none}.ch,.mise,.nw,.nw a,.sn{display:block}.ch,.main{float:right}.cc,.ch li,.col,.nw,.nw li{float:left}.nw{width:79%;margin-bottom:-.08em}.nw li{border-right:.08em solid rgba(0,0,0,.05)}.nw li a{padding:2.5em 1em .5em;height:1.75em;color:rgba(0,0,0,.3);background-color:transparent;-webkit-transition:color .3s,background-color .3s;transition:color .3s,background-color .3s}.nw li.cody a{background-image:url(http://www.smashingmagazine.com/wp-content/themes/smashing-magazine/images/navilittlebook.png);background-repeat:no-repeat;background-position:right .125em}.nw .current{z-index:2;width:24%;border:.08em solid rgba(0,0,0,.1);border-top:0;border-bottom:0;background:#fff;-webkit-box-shadow:0 -.9375em .625em .07em rgba(0,0,0,.025);box-shadow:0 -.9375em .625em .07em rgba(0,0,0,.025)}.nw .current a{padding:1.5em 1em 0;height:3.3125em;-webkit-transition:none;transition:none}.nw .current a:hover{background-color:#fff}.nw .current img{position:relative;top:-.125em}.ch{margin:2.5em 4% 0 0;z-index:50}.ch li{margin-left:.625em}.ch li a{text-indent:100%;overflow:hidden;white-space:nowrap;display:block;width:1.4375em;height:1.4375em;background-image:url(http://www.smashingmagazine.com/wp-content/themes/smashing-magazine/images/channels.svg);-webkit-background-size:353% 600%;background-size:353% 600%;opacity:.45;-webkit-transition:all .3s;transition:all .3s}.rss a{background-position:76% 35.5%}.fb a{background-position:76% 62%}.tw a{background-position:76% 90%}.nl a{background-position:76% 9%}.cc{width:100%}.main{width:80%;padding:0;margin-top:1.5em}.author .main,.category .main,.tag .main{margin:0 0 1.5em}.mise form{margin:1em 0 2em 5.5%}.mise input[type=text]{height:1.125em;padding:1em 2.5%}.mise button{line-height:3.125em;width:17.5%;height:3.25em}.sn{width:20%}.sct{margin:2em 0}.sn ul{margin-left:-.08em}.sn li{border-left-width:.625em;border-left-style:solid;padding-bottom:2.25em;-webkit-transition:border-color .3s;transition:border-color .3s}.sn li a{font-family:'Proxima Nova Bold',"Segoe UI",Roboto,"Droid Sans","Helvetica Neue",Arial,sans-serif;font-style:normal;font-weight:700;text-transform:uppercase;letter-spacing:.175em;color:#333;padding:.25em .5em .25em 20%;display:block;border-bottom:.08em solid transparent;-webkit-transition:background-color .3s;transition:background-color .3s}.sn li li{border:0;margin-left:.08em;padding-bottom:.25em}.sn li li a{font-family:"Proxima Nova Regular","Segoe UI",Roboto,"Droid Sans","Helvetica Neue",Arial,sans-serif;font-style:normal;font-weight:400;letter-spacing:0;text-transform:none;color:#888;border:0;padding-left:20%;margin:0;-webkit-transition:color .3s,background-color .3s;transition:color .3s,background-color .3s}.menu-item-coding{border-left-color:#c9e9e5}.menu-item-design{border-left-color:#cdeeaa}.menu-item-mobile{border-left-color:#f9f0a8}.menu-item-graphics{border-left-color:#e0cfdf}.menu-item-uxdesign{border-left-color:#faced2}.menu-item-wordpress{border-left-color:#bcd8f0}.cat{padding-left:5.5%;padding-right:5.5%}.post{padding-left:11%}article img,figure{max-width:31.25em}.ad{width:18.75em}#cad{width:18.75em;height:15.625em}}@media screen and (min-width:63.75em){.mise{display:none}.nw .current{width:21%}.ch{margin-right:1em}.main{width:100%;margin-top:-.5em}.post{padding-left:5.5%}.sn{width:100%;margin-top:0;margin-bottom:0}.sct{margin-top:-.5em}.sn ul{margin:1em 0 0;padding:0 0 0 5.5%;border-bottom:.3125em solid rgba(0,0,0,.06)}.sn li{border-left-width:0;border-right:.08em solid #e5e5e5;border-bottom-width:.3125em;border-bottom-style:solid;margin-bottom:-.3125em;padding-bottom:0;float:left}.sn li:last-child{border-right:0}.sn li a{font-size:.75em;color:#333;border:0;padding:.75em .9em}.sn li ul{display:none}.menu-item-coding{border-bottom-color:#c9e9e5}.menu-item-design{border-bottom-color:#cdeeaa}.menu-item-mobile{border-bottom-color:#f9f0a8}.menu-item-graphics{border-bottom-color:#e0cfdf}.menu-item-uxdesign{border-bottom-color:#faced2}.menu-item-wordpress{border-bottom-color:#bcd8f0}h2{padding-top:.5em}.cc{margin-right:-28.125em}.fluid{margin-right:28.125em;border-radius:0 .625em .625em 0}.cat{padding-left:0;padding-right:0;margin-top:2em;margin-right:5.5%}.sb{display:block;z-index:3}.side{padding:0 0 0 1.25em;width:26.25em;top:-3.325em}.bw{margin:0 0 1.25em}.bw .awithus{margin-right:.5em}.faw{margin-top:1.5em}.bnnr-list{clear:both}.bnnr-list li{font-size:.75em;text-align:center;width:48%;display:inline-block;margin:0 2% 1em 0}.bnnr-list a{border-bottom:0}.bnnr-list .double{width:34.16667em}.wg{clear:both;margin:1.5em 0 1.5em -1.25em;padding:0 1.25em 2em;border:.08em solid rgba(0,0,0,.1);border-left:none;background:rgba(255,255,255,.55);border-radius:0 .625em .625em 0}.wg.sf{top:0}.wg.sf form{margin:.75em 0 1em}.wg.sf input[type=text]{width:66%}.wg.sf button{width:30%}.wg li{list-style:none;border-bottom:.08em solid rgba(0,0,0,.05);padding:1em 0}.wg h3{padding-left:2.5em;position:relative}.wg h3 a{position:relative}.wg h3 img{position:absolute;left:-2.5em}.so div{margin-top:.5em;border-bottom:.08em solid rgba(0,0,0,.05)}.so p{line-height:1.55em;padding-top:1.125em;overflow:hidden}.fir{padding:0 1.5em 1.75em 0}.sec{padding-bottom:1.75em}.so img{float:left;overflow:hidden;margin:1.5em 1.5em 0 0;border-radius:.5em}}@media screen and (min-width:76.25em){.nw{width:50%}.nw .current{width:29%}.nw .current img{top:-.4375em}.main{width:78%;margin-top:1.8%}.author .main,.category .main,.tag .main{margin-top:4%}.post{padding-top:0}.author .post,.category .post,.tag .post{padding-left:11%}.sn{width:22%;margin-top:4%}.sct{margin:0 0 1em -.08em;z-index:99}.sn ul{display:block;margin:0;padding:0 2.5% 0 0;border-bottom:none}.sn li{border-bottom:0;border-right:0;border-left-width:.625em;border-left-style:solid;float:none;margin-bottom:0;padding-bottom:2.25em}.sn li a{font-size:1em;width:auto!important;border:none;border-bottom:.08em solid transparent;display:block;padding:.25em .5em .25em 25%}.sn li ul{display:block;padding:0;margin-left:-.08em}.sn li ul li{padding-bottom:0;border:0}.sn li ul li a{margin-top:0;padding-left:25%;border:none}.menu-item-coding{border-left-color:#c9e9e5}.menu-item-design{border-left-color:#cdeeaa}.menu-item-mobile{border-left-color:#f9f0a8}.menu-item-graphics{border-left-color:#e0cfdf}.menu-item-uxdesign{border-left-color:#faced2}.menu-item-wordpress{border-left-color:#bcd8f0}.cat{margin-top:0;padding-left:5.5%;padding-right:5.5%}.ch{margin-right:28.125em}}@media screen and (min-width:90.625em){body{border:none}.sf{top:1.65em;padding-bottom:1em}.sf label{margin:1.5em 0 0;padding-top:0}.tn{float:left;width:10%}.nw{width:auto;float:none;margin-bottom:0}.nw li{float:none;border:none;border-bottom:.08em solid rgba(0,0,0,.1)}.nw li a{padding:1em 0 .625em 1.375em}.nw .current{border:.08em solid rgba(0,0,0,.1);border-right:.08em solid #fff;border-left:none;margin:.6em -.08em 0 0;width:auto}.nw .current a{padding:1.5em 0 1em 1.5em;height:auto}.nw .current img{top:0;left:-.5em}.ch{float:none;margin:1.25em 0 0 .875em}.ch li{margin-left:0;margin-right:.5em}.sct{margin-top:-.08em}.cc{width:90%;border-top:.625em solid transparent}.fluid{border-radius:0 .625em .625em}.grid{margin-top:2.3em}.side{top:0}}@media screen and (min-width:100em){body{font-size:1.15em}.post{padding-left:11%;padding-right:11%}.sn{margin-top:3.65%}.sn ul li ul{margin-left:-.08em}.ch{margin:1.5em 0 0 1.5em}.ad,.ch{font-size:.86957em}.wg{margin-left:-1.08696em}.cc{margin-right:-24.45652em}.fluid{margin-right:24.45652em}.side{width:22.82609em;padding-left:1.08696em}.bnnr-list .double{width:29.71015em}article p{padding:.75em 0}article li{padding:.5em 0}article img,figure{max-width:27.17391em}.cat{margin-left:5.5%}.pt{top:-.5em;right:-5em}}@media screen and (min-width:63.75em) and (max-width:70.3125em){.long{display:none}.short{display:block}}</style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8">
+<!--[if IE]><link href="http://www.smashingmagazine.com/wp-content/themes/smashing-magazine/images/favicon.ico" rel="icon" /><![endif]-->
+<link rel="icon" href="http://www.smashingmagazine.com/wp-content/themes/smashing-magazine/images/favicon.png" />
+<meta name="application-name" content="Smashing Magazine"/>
+<meta name="msapplication-TileColor" content="#e53b2c"/>
+<meta name="msapplication-square70x70logo" content="http://www.smashingmagazine.com/wp-content/themes/smashing-magazine/images/smashing-windows-icon-70-70.png"/>
+<meta name="msapplication-square150x150logo" content="http://www.smashingmagazine.com/wp-content/themes/smashing-magazine/images/smashing-windows-icon-150-150.png"/>
+<meta name="msapplication-wide310x150logo" content="http://www.smashingmagazine.com/wp-content/themes/smashing-magazine/images/smashing-windows-icon-310-150.png"/>
+<meta name="msapplication-square310x310logo" content="http://www.smashingmagazine.com/wp-content/themes/smashing-magazine/images/smashing-windows-icon-310-310.png"/>
+<meta name="msapplication-notification" content="frequency=30;polling-uri=http://notifications.buildmypinnedsite.com/?feed=http://www.smashingmagazine.com/feed/&amp;id=1;polling-uri2=http://notifications.buildmypinnedsite.com/?feed=http://www.smashingmagazine.com/feed/&amp;id=2;polling-uri3=http://notifications.buildmypinnedsite.com/?feed=http://www.smashingmagazine.com/feed/&amp;id=3;polling-uri4=http://notifications.buildmypinnedsite.com/?feed=http://www.smashingmagazine.com/feed/&amp;id=4;polling-uri5=http://notifications.buildmypinnedsite.com/?feed=http://www.smashingmagazine.com/feed/&amp;id=5; cycle=1"/>
+<link rel="apple-touch-icon-precomposed" href="http://www.smashingmagazine.com/wp-content/themes/smashing-magazine/images/apple-touch-icon-precomposed.png" />
+<link rel="apple-touch-icon-precomposed" sizes="57x57" href="http://www.smashingmagazine.com/wp-content/themes/smashing-magazine/images/apple-touch-icon-57x57-precomposed.png" />
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://www.smashingmagazine.com/wp-content/themes/smashing-magazine/images/apple-touch-icon-72x72-precomposed.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://www.smashingmagazine.com/wp-content/themes/smashing-magazine/images/apple-touch-icon-114x114-precomposed.png" />
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://www.smashingmagazine.com/wp-content/themes/smashing-magazine/images/apple-touch-icon-144x144-precomposed.png" />    <script>!function(){function e(e,t,n){e.addEventListener?e.addEventListener(t,n,!1):e.attachEvent&&e.attachEvent("on"+t,n)}function t(e){return window.localStorage&&localStorage.font_css_cache&&localStorage.font_css_cache_file===e}function n(){if(window.localStorage&&window.XMLHttpRequest)if(t(o))a(localStorage.font_css_cache);else{var n=new XMLHttpRequest;n.open("GET",o,!0),e(n,"load",function(){4===n.readyState&&(a(n.responseText),localStorage.font_css_cache=n.responseText,localStorage.font_css_cache_file=o)}),n.send()}else{var c=document.createElement("link");c.href=o,c.rel="stylesheet",c.type="text/css",document.getElementsByTagName("head")[0].appendChild(c),document.cookie="font_css_cache"}}function a(e){var t=document.createElement("style");t.innerHTML=e,document.getElementsByTagName("head")[0].appendChild(t)}var o="http://www.smashingmagazine.com/wp-content/themes/smashing-magazine/stylesheets/webfonts.min.css?ver=1.1.0";window.localStorage&&localStorage.font_css_cache||document.cookie.indexOf("font_css_cache")>-1?n():e(window,"load",n)}();</script>
     
-        <script src="/jsrepl/jsrepl.js?1414438534621" id="jsrepl-script"></script>
-        <script src="/repl.it.js?1414438534621"></script>
-    
-    <script src="/lib/ace/ace.js"></script>
-    <!-- Session -->
-    <script>try{ {{SESSION_PLACEHOLDER}} } catch(e) {}</script>
+<!-- This site is optimized with the Yoast WordPress SEO plugin v1.5.2.7 - https://yoast.com/wordpress/plugins/seo/ -->
+<meta name="description" content="Jekyll is a website generator that’s designed for building minimal, static blogs to be hosted on GitHub Pages. This article shows how to set it up."/>
+<link rel="canonical" href="http://www.smashingmagazine.com/2014/08/01/build-blog-jekyll-github-pages/" />
+<link rel="publisher" href="https://plus.google.com/+SmashingMagazine‎"/>
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Build A Blog With Jekyll And GitHub Pages - Smashing Magazine" />
+<meta property="og:description" content="Jekyll is a website generator that’s designed for building minimal, static blogs to be hosted on GitHub Pages. This article shows how to set it up." />
+<meta property="og:url" content="http://www.smashingmagazine.com/2014/08/01/build-blog-jekyll-github-pages/" />
+<meta property="og:site_name" content="Smashing Magazine" />
+<meta property="article:publisher" content="https://www.facebook.com/smashmag" />
+<meta property="article:tag" content="CMS" />
+<meta property="article:tag" content="Frameworks" />
+<meta property="article:tag" content="Workflow" />
+<meta property="article:section" content="Coding" />
+<meta property="article:published_time" content="2014-08-01T13:03:43+02:00" />
+<meta property="article:modified_time" content="2014-08-05T09:14:18+02:00" />
+<meta property="og:updated_time" content="2014-08-05T09:14:18+02:00" />
+<meta property="og:image" content="http://www.smashingmagazine.com/wp-content/uploads/2014/08/illu-jekyll.jpg" />
+<meta property="og:image" content="http://www.smashingmagazine.com/wp-content/uploads/2014/07/octojekyll-opt.jpg" />
+<meta property="og:image" content="http://www.smashingmagazine.com/wp-content/uploads/2014/07/step1.gif" />
+<meta property="og:image" content="http://www.smashingmagazine.com/wp-content/uploads/2014/07/jekyll-now-theme-500-opt.png" />
+<meta property="og:image" content="http://www.smashingmagazine.com/wp-content/uploads/2014/07/config-500-opt.png" />
+<meta property="og:image" content="http://www.smashingmagazine.com/wp-content/uploads/2014/07/newpost-500-opt.png" />
+<meta property="og:image" content="http://www.smashingmagazine.com/wp-content/uploads/2014/07/footer-icons-opt.png" />
+<meta property="og:image" content="http://www.smashingmagazine.com/wp-content/uploads/2014/07/sass.svg" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:site" content="@smashingmag"/>
+<meta name="twitter:domain" content="Smashing Magazine"/>
+<meta name="twitter:creator" content="@BazNYC"/>
+<meta name="twitter:image:src" content="http://www.smashingmagazine.com/wp-content/uploads/2014/08/illu-jekyll.jpg"/>
+<!-- / Yoast WordPress SEO plugin. -->
 
-    <!-- Facebook -->
-    <meta property="og:title" content="repl.it" />
-    <meta property="og:description" content="Run code in a variety of languages from your browser!" />
-    <meta property="og:type" content="article" />
-    <meta property="og:url" content="http://repl.it/" />
-    <meta property="og:image" content="http://repl.it/images/logo-small.png" />
-    <meta property="og:site_name" content="repl.it" />
-    <meta property="fb:app_id" content="111098168994577" />
+<link rel="alternate" type="application/rss+xml" title="Smashing Magazine &raquo; Feed" href="http://www.smashingmagazine.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Smashing Magazine &raquo; Comments Feed" href="http://www.smashingmagazine.com/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Smashing Magazine &raquo; Build A Blog With Jekyll And GitHub Pages Comments Feed" href="http://www.smashingmagazine.com/2014/08/01/build-blog-jekyll-github-pages/feed/" />
+<link rel='shortlink' href='http://www.smashingmagazine.com/?p=197342' />
+	<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+    <!--[if IE 8]><script type="text/javascript" src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><link href="http://www.smashingmagazine.com/wp-content/themes/smashing-magazine/stylesheets/ie8-nu.css" media="all" rel="stylesheet" type="text/css" /><![endif]-->
+    <noscript><link href="http://www.smashingmagazine.com/wp-content/themes/smashing-magazine/stylesheets/main.min.css?ver=2014.15.0" rel="stylesheet" media="all" type="text/css" /></noscript>
+</head>
+<body class="single single-post postid-197342 single-format-standard www-section">
+<nav id="top" class="tn clearfix">
+	<div class="mini">
+		<h1><span class="sr">Smashing Magazine</span><a href="http://www.smashingmagazine.com/"><img src="http://www.smashingmagazine.com/wp-content/themes/smashing-magazine/images/logo.png" alt="Smashing Magazine" title="Jump to the front page" /></a></h1>
+	</div>
+	<div class="mnb">
+	<a href="#mn" class="ntb">Menu</a> <a href="#ms" class="stb">Search</a>
+</div>   <ul id="menu-network-menu" class="nw clearfix"><li class="current"><a href="http://www.smashingmagazine.com"><img src="http://www.smashingmagazine.com/wp-content/themes/smashing-magazine/images/logo.png" alt="Smashing Magazine" title="Jump to the front page" /></a></li><li id="menu-item-77918" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-77918 menu-item-books"><a href="http://www.smashingmagazine.com/books/">Books</a></li>
+<li id="menu-item-78659" class="cody menu-item menu-item-type-post_type menu-item-object-page menu-item-78659 menu-item-ebooks"><a href="http://www.smashingmagazine.com/ebooks/">eBooks</a></li>
+<li id="menu-item-85386" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-85386 menu-item-workshops"><a href="http://www.smashingmagazine.com/smashing-workshops/">Workshops</a></li>
+<li id="menu-item-2" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2 menu-item-job-board"><a href="http://jobs.smashingmagazine.com/">Job Board</a></li>
+</ul>
+<ul class="ch">
+	<li class="rss"><a href="http://www.smashingmagazine.com/feed/" title="Subscribe to our RSS-feed (120K)">RSS</a></li>
+	<li class="fb"><a href="http://www.facebook.com/smashmag" title="Join our Facebook page! (221k)">Facebook</a></li>
+	<li class="tw"><a href="http://twitter.com/smashingmag" title="Follow us on Twitter! (811k)">Twitter</a></li>
+	<li class="nl"><a href="http://www.smashingmagazine.com/the-smashing-newsletter/" title="Subscribe to our Email Newsletter (180k)">Newsletter</a></li>
+</ul></nav>
+<div class="cc"><div class="fluid clearfix"><div class="grid clearfix">
+<div class="mise sf clearfix" >
+	<form id="search" method="get" action="http://www.smashingmagazine.com/search-results/" target="_top">
+		<input name="q" type="text" placeholder="e.g. JavaScript" />
+		<button class="search_submit" type="submit">Search</button>
+		<input type="hidden" name="cx" value="partner-pub-6779860845561969:5884617103">
+		<input type="hidden" name="cof" value="FORID:10">
+		<input type="hidden" name="ie" value="UTF-8">
+	</form>
+</div><div class="col sn">
+<nav class="sct"><ul id="menu-category-menu" class="clearfix"><li id="menu-item-116" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-has-children menu-item-116 menu-item-coding"><a href="http://www.smashingmagazine.com/category/coding/">Coding</a>
+<ul class="sub-menu">
+	<li id="menu-item-2014" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-2014 menu-item-css"><a href="http://www.smashingmagazine.com/tag/css/">CSS</a></li>
+	<li id="menu-item-134810" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-134810 menu-item-html"><a href="http://www.smashingmagazine.com/tag/html/">HTML</a></li>
+	<li id="menu-item-2015" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-2015 menu-item-javascript"><a href="http://www.smashingmagazine.com/tag/javascript/">JavaScript</a></li>
+	<li id="menu-item-2016" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-2016 menu-item-techniques"><a href="http://www.smashingmagazine.com/tag/techniques/">Techniques</a></li>
+</ul>
+</li>
+<li id="menu-item-117" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-117 menu-item-design"><a href="http://www.smashingmagazine.com/category/design/">Design</a>
+<ul class="sub-menu">
+	<li id="menu-item-2017" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-2017 menu-item-web-design"><a href="http://www.smashingmagazine.com/tag/web-design/">Web Design</a></li>
+	<li id="menu-item-2032" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-2032 menu-item-typography"><a href="http://www.smashingmagazine.com/tag/typography/">Typography</a></li>
+	<li id="menu-item-2063" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-2063 menu-item-inspiration"><a href="http://www.smashingmagazine.com/tag/inspiration/">Inspiration</a></li>
+	<li id="menu-item-2120" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-2120 menu-item-business"><a href="http://www.smashingmagazine.com/tag/business/">Business</a></li>
+</ul>
+</li>
+<li id="menu-item-119" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-119 menu-item-mobile"><a href="http://www.smashingmagazine.com/category/mobile/">Mobile</a>
+<ul class="sub-menu">
+	<li id="menu-item-142132" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-142132 menu-item-iphone-ipad"><a href="http://www.smashingmagazine.com/tag/ios/">iPhone &#038; iPad</a></li>
+	<li id="menu-item-143596" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-143596 menu-item-android"><a href="http://www.smashingmagazine.com/tag/android/">Android</a></li>
+	<li id="menu-item-143608" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-143608 menu-item-design-patterns"><a href="http://www.smashingmagazine.com/tag/design-patterns/">Design Patterns</a></li>
+</ul>
+</li>
+<li id="menu-item-118" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-118 menu-item-graphics"><a href="http://www.smashingmagazine.com/category/graphics/">Graphics</a>
+<ul class="sub-menu">
+	<li id="menu-item-2264" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-2264 menu-item-photoshop"><a href="http://www.smashingmagazine.com/tag/photoshop/">Photoshop</a></li>
+	<li id="menu-item-160" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-160 menu-item-fireworks"><a href="http://www.smashingmagazine.com/category/fireworks/">Fireworks</a></li>
+	<li id="menu-item-2283" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-2283 menu-item-wallpapers"><a href="http://www.smashingmagazine.com/tag/wallpapers/">Wallpapers</a></li>
+	<li id="menu-item-2305" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-2305 menu-item-freebies"><a href="http://www.smashingmagazine.com/tag/freebies/">Freebies</a></li>
+</ul>
+</li>
+<li id="menu-item-120" class="menu-item-uxdesign menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-120 menu-item-ux-design"><a href="http://www.smashingmagazine.com/category/uxdesign/">UX Design</a>
+<ul class="sub-menu">
+	<li id="menu-item-143609" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-143609 menu-item-usability"><a href="http://www.smashingmagazine.com/tag/usability/">Usability</a></li>
+	<li id="menu-item-143610" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-143610 menu-item-user-experience"><a href="http://www.smashingmagazine.com/tag/user-experience/">User Experience</a></li>
+	<li id="menu-item-143611" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-143611 menu-item-ui-design"><a href="http://www.smashingmagazine.com/tag/ui/">UI Design</a></li>
+	<li id="menu-item-143612" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-143612 menu-item-e-commerce"><a href="http://www.smashingmagazine.com/tag/e-commerce/">E-Commerce</a></li>
+</ul>
+</li>
+<li id="menu-item-121" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-121 menu-item-wordpress"><a href="http://www.smashingmagazine.com/category/wordpress/"><span class="long"><span>Word</span><span>Press</span></span><span class="short">WP</span></a>
+<ul class="sub-menu">
+	<li id="menu-item-143677" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-143677 menu-item-essentials"><a href="http://www.smashingmagazine.com/tag/essentials/">Essentials</a></li>
+	<li id="menu-item-143678" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-143678 menu-item-techniques"><a href="http://www.smashingmagazine.com/tag/techniques-wp/">Techniques</a></li>
+	<li id="menu-item-143679" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-143679 menu-item-plugins"><a href="http://www.smashingmagazine.com/tag/plugins/">Plugins</a></li>
+	<li id="menu-item-143680" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-143680 menu-item-themes"><a href="http://www.smashingmagazine.com/tag/themes/">Themes</a></li>
+</ul>
+</li>
+</ul></nav></div>
+<div class="col main single">
+    <article class="post-197342 post type-post status-publish format-standard has-post-thumbnail hentry category-coding tag-cms tag-frameworks tag-workflow post" vocab="http://schema.org/" typeof="TechArticle">
+                    <h2><a href="http://www.smashingmagazine.com/2014/08/01/build-blog-jekyll-github-pages/" rel="bookmark" title="Read 'Build A Blog With Jekyll And GitHub Pages'" property="name">Build A Blog With Jekyll And GitHub Pages</a></h2>
+                <ul class="pmd clearfix">
+            <li class="a" property="author" typeof="person" resource="#authorname">By <a rel="author" class="poa" href="http://www.smashingmagazine.com/author/barryclark/?rel=author" title="Posts by Barry Clark">Barry Clark</a></li>
+                        <li class="date" property="datepublished" content="August 1st, 2014">August 1st, 2014</li>
+            <li class="tags" itemprop="keywords"><a href="http://www.smashingmagazine.com/tag/cms/">CMS</a><a href="http://www.smashingmagazine.com/tag/frameworks/">Frameworks</a><a href="http://www.smashingmagazine.com/tag/workflow/">Workflow</a></li>
+            <li class="comments"><a href="#comments" title="Comment on Build A Blog With Jekyll And GitHub Pages">42 Comments</a> </li>
+                    </ul>
+                <div class="ad ed">
+            <span class="declare">Advertisement</span>
+            <div id="cad"></div>
+        </div>
+                                    <p>I recently migrated my blog from WordPress to Jekyll, a fantastic website generator that’s designed for building minimal, static blogs to be hosted on GitHub Pages. The simplicity of Jekyll’s theming layer and writing workflow is fantastic; however, setting up my website took a lot longer than expected.</p>
+<p>In this article we’ll walk through the following:</p>
+<ul>
+<li>the quickest way to set up a Jekyll powered blog;</li>
+<li>how to avoid common problems with using Jekyll;</li>
+<li>how to import your content from WordPress, use your own domain name, and blog in your favorite editor;</li>
+<li>how to theme in Jekyll, with Liquid templating examples;</li>
+<li>a couple of Jekyll 2.0’s new features, including Sass and CoffeeScript support and collections.</li>
+</ul>
+<h4>Jekyll’s Simple Purpose</h4>
+<p>Tom Preston-Werner created Jekyll to enable people to blog using a simple static HTML website, with all of the content hosted and version-controlled on GitHub. The goal was to eliminate the complexity of other blogging platforms by creating a workflow that allows you to <a href="http://tom.preston-werner.com/2008/11/17/blogging-like-a-hacker.html">blog like a hacker</a><sup class="po" id="note-1"><a href="#1">1</a></sup>.</p>
+<figure><img class="at" src="http://www.smashingmagazine.com/wp-content/uploads/2014/07/octojekyll-opt.jpg" alt="Jekyll’s Octocat mascot" width="500" height="336" /><figcaption>Jekyll’s Octocat mascot. (Image credit: <a href="http://jekyllrb.com/">GitHub</a><sup class="po" id="note-2"><a href="#2">2</a></sup>)</figcaption></figure>
+<p>Jekyll takes your content written in Markdown, passes it through your templates and spits it out as a complete static website, ready to be served. GitHub Pages conveniently serves the website directly from your GitHub repository so that you don’t have to deal with any hosting.</p>
+<p>Here are some websites that were created with Jekyll:</p>
+<ul>
+<li><a href="http://www.barryclark.co/?utm_source=smashing&amp;utm_medium=post&amp;utm_campaign=jekyll">Barry Clark’s blog</a><sup class="po" id="note-3"><a href="#3">3</a></sup> (that’s me)</li>
+<li><a href="http://zachholman.com">Zach Holman’s blog</a><sup class="po" id="note-4"><a href="#4">4</a></sup></li>
+<li><a href="http://csswizardry.com/about/#colophon">CSS Wizardry</a><sup class="po" id="note-5"><a href="#5">5</a></sup></li>
+<li><a href="http://jekyllrb.com/">Jekyll</a><sup class="po" id="note-6"><a href="#6">6</a></sup></li>
+<li><a href="https://www.healthcare.gov/">HealthCare.gov</a><sup class="po" id="note-7"><a href="#7">7</a></sup>’s landing page and content subpages</li>
+<li><a href="http://developmentseed.org/blog/2013/10/24/its-called-jekyll/">Development Seed</a><sup class="po" id="note-8"><a href="#8">8</a></sup></li>
+</ul>
+<h4>The Advantages of Going Static</h4>
+<ul>
+<li><strong>Simplicity</strong><br />
+	Jekyll strips everything down to the bare minimum, eliminating a lot of complexity:</p>
+<ul>
+<li><strong>No database</strong><br />
+		Unlike WordPress and other content management systems (CMS), Jekyll doesn’t have a database. All posts and pages are converted to static HTML prior to publication. This is great for loading speed because no database calls are made when a page is loaded.</li>
+<li><strong>No CMS</strong><br />
+		Simply write all of your content in Markdown, and Jekyll will run it through templates to generate your static website. GitHub can serve as a CMS if needed because you can edit content on it.</li>
+<li><strong>Fast</strong><br />
+		Jekyll is fast because, being stripped down and without a database, you’re just serving up static pages. My base theme, <a href="http://github.com/barryclark/jekyll-now">Jekyll Now</a><sup class="po" id="note-50"><a href="#50">50</a></sup><sup class="po" id="note-25"><a href="#25">25</a></sup><sup class="po" id="note-15"><a href="#15">15</a></sup><sup class="po" id="note-9"><a href="#9">9</a></sup>, makes only three HTTP requests &mdash; including the profile picture and social icons!</li>
+<li><strong>Minimal</strong><br />
+		Your Jekyll website will include absolutely no functionality or features that you aren’t using.</li>
+</ul>
+</li>
+<li><strong>Design control</strong><br />
+	Spend less time wrestling with complex templates written by other people, and more time creating your own theme or customizing an uncomplicated base theme.</li>
+<li><strong>Security</strong><br />
+	The vast majority of vulnerabilities that affect platforms like WordPress don’t exist because Jekyll has no CMS, database or PHP. So, you don’t have to spend as much time installing security updates.</li>
+<li><strong>Convenient hosting</strong><br />
+	Convenient if you already use GitHub, that is. GitHub Pages will build and host your Jekyll website at no charge, while simultaneously handling version control.</li>
+</ul>
+<h4>Let’s Try It Out</h4>
+<p>There are multiple ways to get started with Jekyll, each with its own variations. Here are a few options:</p>
+<ul>
+<li>Install Jekyll locally via the command line, create a new boilerplate website using <code>jekyll new</code>, build it locally with <code>jekyll build</code>, and then serve it. (The <a href="http://jekyllrb.com/">Jekyll website</a><sup class="po" id="note-10"><a href="#10">10</a></sup> shows this workflow.)</li>
+<li>Clone a starting point to your local machine, install Jekyll locally via the command line, make updates to your website, build it locally, and then serve it.</li>
+<li>Fork a starting point, make changes, and then serve it.</li>
+</ul>
+<p>We’ll get started with the quickest and easiest option: forking a starting point. This will get us up and running in a few minutes, and we won’t have to install any dependancies. Here’s what we’re going to do directly on GitHub.com in the browser:</p>
+<ol>
+<li>Create our Jekyll powered website.</li>
+<li>Host it for free on GitHub Pages.</li>
+<li>Customize it to include our name, avatar and social links.</li>
+<li>Publish our first blog post!</li>
+</ol>
+<h3>1. Fork A Starting Point</h3>
+<p>We’ll start by forking a repository that has followed best practices and the workflows that we’ll be covering in this article. This will get us on the right track and save a lot of time.</p>
+<p>I have prepared a repository for us already. Head to <a href="http://www.github.com/barryclark/jekyll-now">Jekyll Now</a><sup class="po" id="note-11"><a href="#11">11</a></sup>, and hit the “Fork” button in the top-right corner of the repository to fork a copy of the blog theme to your GitHub account.</p>
+<figure><a href="http://www.smashingmagazine.com/wp-content/uploads/2014/07/step1.gif"><img src="http://www.smashingmagazine.com/wp-content/uploads/2014/07/step1.gif" alt="step1" width="500" height="275" /></a><sup class="po" id="note-12"><a href="#12">12</a></sup><figcaption>Walkthrough of steps 1 and 2. (<a href="http://www.smashingmagazine.com/wp-content/uploads/2014/07/step1.gif">View large version</a><sup class="po" id="note-13"><a href="#13">13</a></sup>)</figcaption></figure>
+<p>Starting with a fork is great because it will give you a feel for what Jekyll is like before you have to set up a local development environment, install dependencies and figure out Jekyll’s build process.</p>
+<p><strong>Common problem #1</strong>: Creating a Jekyll website through the local command line can be frustrating and time-consuming because you have to <strong>install and configure dependencies</strong> like Ruby and RubyGems. Let GitHub Pages build the website for you, until you have a real need to build it locally.</p>
+<h3>2. Host On Your GitHub Account</h3>
+<p>As a GitHub user, you’re entitled to one free “user” website (as opposed to a “project” website), which will live at <code>http://yourusername.github.io</code>. This space is ideal for hosting a Jekyll blog!</p>
+<p>The best part is that you can simply place your unbuilt Jekyll blog on the master branch of your user repository, and GitHub Pages will build the static website and serve it for you. You don’t have to worry about the build process at all — it’s all taken care of.</p>
+<p>Click the “Settings” button in your new forked repository (in the menu on the right), and change the repository’s name to <code>yourusername.github.io</code>, replacing <code>yourusername</code> with your GitHub user name.</p>
+<p>Your website will probably go live immediately. You can check by going to <code>http://yourusername.github.io</code>. Don’t worry if it isn’t live yet: Step 3 will force it to be built.</p>
+<figure><a href="http://www.smashingmagazine.com/wp-content/uploads/2014/07/jekyll-now-theme-large-opt.jpg"><img src="http://www.smashingmagazine.com/wp-content/uploads/2014/07/jekyll-now-theme-500-opt.png" alt="The base theme of your blog will look like this after being forked." width="500" height="377" /></a><sup class="po" id="note-14"><a href="#14">14</a></sup><figcaption>The base theme of your blog will look like this after being forked. (Image: <a href="http://github.com/barryclark/jekyll-now">Jekyll Now</a><sup class="po" id="note-50"><a href="#50">50</a></sup><sup class="po" id="note-25"><a href="#25">25</a></sup><sup class="po" id="note-15"><a href="#15">15</a></sup><sup class="po" id="note-9"><a href="#9">9</a></sup>) (<a href="http://www.smashingmagazine.com/wp-content/uploads/2014/07/jekyll-now-theme-large-opt.jpg">View large version</a><sup class="po" id="note-16"><a href="#16">16</a></sup>)</figcaption></figure>
+<p>Whew! We’re moving fast here. We already have a Jekyll website up and running! Let’s step back for a second and look at some of the most common issues to be aware of when hosting a Jekyll website on GitHub Pages.</p>
+<p><strong>Common problem #2</strong>: Be aware of the difference between <a href="https://help.github.com/articles/user-organization-and-project-pages">user websites and project websites</a><sup class="po" id="note-17"><a href="#17">17</a></sup> on GitHub. With a user website (which we’re setting up), you don’t need to do any branching. The <code>master</code> branch is already configured to run anything placed on it through Jekyll. You don’t need to set up a <code>gh-pages</code> branch.</p>
+<p><strong>Common problem #3</strong>: Using a project website for your Jekyll website <a href="http://jekyllrb.com/docs/github-pages/#project_page_url_structure">introduces some complexity</a><sup class="po" id="note-18"><a href="#18">18</a></sup> because your website will be published to a subdirectory. The URL will look like <code>http://yourname.github.io/repository-name</code>, which will cause problems in Jekyll templates, such as breaking references to images and not letting you preview the website locally.</p>
+<p><strong>Common problem #4</strong>: Jekyll has a <a href="http://jekyllrb.com/docs/plugins/">lot of plugins</a><sup class="po" id="note-19"><a href="#19">19</a></sup>, but GitHub Pages supports only a <a href="https://help.github.com/articles/using-jekyll-plugins-with-github-pages">few of them</a><sup class="po" id="note-20"><a href="#20">20</a></sup>. If you try to include a plugin that isn’t supported, then Jekyll will fail while building your website. So, stick to the supported list. Luckily, my favorite plugin is on the list: <a href="https://github.com/jekyll/jemoji">Jemoji</a><sup class="po" id="note-21"><a href="#21">21</a></sup> lets you include emoji in blog posts, just like you would on GitHub and Basecamp.</p>
+<h3>3. Customize Your Website</h3>
+<p>You can now change your website’s name, description, avatar and other options by editing the <code>_config.yml</code> file. These custom variables have been set up for convenience and are pulled into your theme when your website gets built.</p>
+<p>Making a change to <code>_config.yml</code> (or any file in your repository) will force GitHub Pages to rebuild your website with Jekyll. The rebuilt website will be viewable a few seconds later at <code>http://yourusername.github.io</code>. If your website wasn’t live immediately after step 2, it will be after this step.</p>
+<p>Go ahead and customize your website by updating the variables in your <code>_config.yml</code> file and then committing the changes.</p>
+<p>You can change your blog’s files from here on in one of three ways. Pick whichever suits you best:</p>
+<ul>
+<li>Edit files in your new <code>username.github.io</code> repository directly in the browser at GitHub.com (as shown below).</li>
+<li>Use a third-party GitHub content editor, such as <a href="http://prose.io">Prose</a><sup class="po" id="note-22"><a href="#22">22</a></sup> by Development Seed. It’s optimized for Jekyll, which makes it easy to edit Markdown, write drafts and upload images.</li>
+<li>Clone your repository and make updates locally, and then push them to your GitHub repository (<a href="https://www.atlassian.com/git/tutorial/git-basics">Atlassian has a guide</a><sup class="po" id="note-23"><a href="#23">23</a></sup> on this).</li>
+</ul>
+<figure><a href="http://www.smashingmagazine.com/wp-content/uploads/2014/07/config-large-opt.png"><img src="http://www.smashingmagazine.com/wp-content/uploads/2014/07/config-500-opt.png" alt="Editing your website’s _config.yml on GitHub.com " width="500" height="267" /></a><sup class="po" id="note-24"><a href="#24">24</a></sup><figcaption>Editing your website’s <code>_config.yml</code> on GitHub.com. (Image credit: <a href="http://github.com/barryclark/jekyll-now">Jekyll Now</a><sup class="po" id="note-50"><a href="#50">50</a></sup><sup class="po" id="note-25"><a href="#25">25</a></sup><sup class="po" id="note-15"><a href="#15">15</a></sup><sup class="po" id="note-9"><a href="#9">9</a></sup>) (<a href="http://www.smashingmagazine.com/wp-content/uploads/2014/07/config-large-opt.png">View large version</a><sup class="po" id="note-26"><a href="#26">26</a></sup>)</figcaption></figure>
+<p><strong>Common problem #5</strong>: Don’t assume that you need to <code>jekyll build</code> the website locally in order to customize and theme a Jekyll website. GitHub Pages does that for you. You just need to place the files that you want to be built in the master branch of your user repository or in the <code>gh-pages</code> branch of any other repository, and then GitHub Pages will process it with Jekyll.</p>
+<h3>4. Publish Your First Blog Post</h3>
+<p>Your website is now customized, live and looking good. You just have to publish your first blog post:</p>
+<ol>
+<li>Edit <code>/_posts/2014-3-3-Hello-World.md</code>, deleting the placeholder content and entering your own. If you need a quick primer on writing in Markdown, check out <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">Adam Pritchard’s cheat sheet</a><sup class="po" id="note-27"><a href="#27">27</a></sup>.</li>
+<li>Change the file name to include today’s date and the title of your post. Jekyll requires posts to be named <code>year-month-day-title.md</code>.</li>
+<li>Update the title at the top of the Markdown file. Those variables at the top of the blog post are called front matter, which we’ll dig into a little later. In this case, they specify which layout to use and the title of the blog post. <a href="http://jekyllrb.com/docs/frontmatter/">Additional front-matter variables</a><sup class="po" id="note-28"><a href="#28">28</a></sup> exist, such as <code>permalink</code>, <code>tags</code> and <code>category</code>.</li>
+</ol>
+<p>If you’d like to create new blog posts in the browser on GitHub.com, simply hit the “+” icon in <code>/_posts/</code>. Just remember to format the file name correctly and to include the front-matter block so that the file gets processed by Jekyll.</p>
+<figure><a href="http://www.smashingmagazine.com/wp-content/uploads/2014/07/newpost-large-opt.png"><img src="http://www.smashingmagazine.com/wp-content/uploads/2014/07/newpost-500-opt.png" alt="Creating a new post on GitHub.com" width="500" height="189" /></a><sup class="po" id="note-29"><a href="#29">29</a></sup><figcaption>Creating a new post on GitHub.com. (<a href="http://www.smashingmagazine.com/wp-content/uploads/2014/07/newpost-large-opt.png">View large version</a><sup class="po" id="note-30"><a href="#30">30</a></sup>)</figcaption></figure>
+<p><strong>Common problem #6</strong>: One concern I had about using Jekyll for my blog was that it has no CMS, so I wouldn’t have the convenience of being able to make quick edits by logging into a CMS interface when I’m away from my laptop. It turns out that your Jekyll blog will have a CMS if you use GitHub Pages, because GitHub itself serves as the CMS. You can edit posts in the browser, even on your phone if you wish. It might not be as convenient as other CMS’, but you won’t be stuck when you’re away from your computer and need to make a change.</p>
+<h3>Optional Steps</h3>
+<h4>Use Your Own Domain</h4>
+<p>Configuring your domain name to point to GitHub Pages is a simple two-step process:</p>
+<ol>
+<li>Go to the root of your blog’s repository, and edit the CNAME file to include your domain name (for example, <code>www.yourdomainname.com</code>).</li>
+<li>Go to your domain name registrar, and add a CNAME DNS record pointing your domain to GitHub Pages:
+<ul>
+<li>type: <code>CNAME</code></li>
+<li>host: <code>www.yourdomainname.com</code></li>
+<li>answer: <code>yourusername.github.io</code></li>
+<li>TTL: <code>300</code></li>
+</ul>
+</li>
+</ol>
+<p>Then, refresh <a href="https://www.whatsmydns.net/">What’s My DNS</a><sup class="po" id="note-31"><a href="#31">31</a></sup> like crazy until you’ve propagated. If you run into any problems, refer to “<a href="https://help.github.com/articles/setting-up-a-custom-domain-with-pages">Setting Up a Custom Domain With GitHub Pages</a><sup class="po" id="note-32"><a href="#32">32</a></sup>.”</p>
+<h4>Import Your Blog Posts From WordPress</h4>
+<p>Before importing, you’ll need to export your data from WordPress, possibly massaging the data a little (for example, by updating the image references), and then import it into your new Jekyll website. Fortunately, a few great tools can help.</p>
+<p>To <strong>export from WordPress</strong>, I’d highly recommend Ben Balter’s one-click <a href="https://github.com/benbalter/wordpress-to-jekyll-exporter">WordPress to Jekyll Exporter</a><sup class="po" id="note-33"><a href="#33">33</a></sup> plugin. It exports all of your WordPress content as a ZIP file, including posts, images and meta data, converting it to Jekyll’s format where needed. Good on you, Ben.</p>
+<p>The other option is to export all content in the “Tools” menu of the WordPress dashboard, and then importing it with <a href="http://import.jekyllrb.com/docs/wordpress/">Jekyll’s importer</a><sup class="po" id="note-34"><a href="#34">34</a></sup>.</p>
+<p>Next, we need to <strong>update our image references</strong>. Ben Balter’s plugin will export all of your images into a folder. Then, you’ll need to copy them to wherever you’re hosting your images on your Jekyll blog. This could be in an <code>/images</code> folder or on a content delivery network.</p>
+<p>Then, you have the fun task of updating all of the links to these images across your WordPress content. Because I was only updating five or six posts, a quick find-and-replace worked well, but if you have a lot of content, then it might be worth writing a script or checking out scripts that others have written, such as <a href="https://gist.github.com/stammy/790971">Paul Stamatiou’s</a><sup class="po" id="note-35"><a href="#35">35</a></sup>.</p>
+<p>Finally, we have to <strong>import comments</strong>. Being a platform for static websites, Jekyll doesn’t support comments. However, a hosted solution like Disqus works really well! I’d recommend <a href="http://help.disqus.com/customer/portal/articles/466255-importing-comments-from-wordpress">importing your WordPress comments to Disqus</a><sup class="po" id="note-36"><a href="#36">36</a></sup>. Then, if you’re using Jekyll Now, you can enter your Disqus user name in <code>_config.yml</code> and you’re set.</p>
+<h4 id="bloglocallyinyourfavoriteeditor">Blog Locally in Your Favorite Editor</h4>
+<p>If you prefer to write in Sublime, Vim, Atom or another editor, all you need to do is clone to your repository, create new Markdown blog posts in the <code>_posts</code> folder, and then push the changes to GitHub. GitHub Pages will automatically rebuild your website as soon as your Markdown file hits the repository, and your new blog post will be live as soon as the build is complete.</p>
+<ol>
+<li>First, <code>git clone git@github.com:yourusername/yourusername.github.io.git</code>, or clone your repository using <a href="https://mac.github.com/">GitHub Mac</a><sup class="po" id="note-37"><a href="#37">37</a></sup>.</li>
+<li>Create a new post in the <code>_posts</code> folder. Remember to name it in the format <code>year-month-day-title.md</code>, and include the front matter at the top of the post.</li>
+<li>Commit the post’s Markdown file, and push to your GitHub repository. (<a href="https://www.atlassian.com/git/tutorial/git-basics">Atlassian’s guide to Git’s basics</a><sup class="po" id="note-38"><a href="#38">38</a></sup> might come in handy.)</li>
+<li>That’s it! Just wait for GitHub Pages to rebuild your website. This typically takes under 10 seconds, assuming you don’t have a huge amount of content.</li>
+</ol>
+<p><strong>Common problem #7</strong>: Again, you don’t need to build your Jekyll website locally in order to write a blog post locally and publish it to your website. You can write the Markdown post locally and push it with any images you’ve used, and then GitHub Pages will rebuild the website for you on the server.</p>
+<h3>Theming In Jekyll</h3>
+<p>Want to customize your theme? Here are some things you should know.</p>
+<h4>Building Your Website Locally</h4>
+<p>If your theme development is more substantial, then building and testing your Jekyll website locally could be convenient. This step isn’t required for theme development. You could just push the theme changes to your repository, and GitHub Pages will do the build for you. However, having Jekyll watch for theme changes locally and preview the website for you would be helpful if you’re creating a custom theme.</p>
+<p>First, you’ll need to install Jekyll. The easiest way to do this is to install the <a href="https://github.com/github/pages-gem">GitHub Pages gem</a><sup class="po" id="note-39"><a href="#39">39</a></sup> by running <code>gem install github-pages</code>. It&#8217;ll keep your local environment in sync with the same versions of all of the gems that are used to build GitHub Pages, and includes Jekyll and all of the dependancies you&#8217;ll need, like: kramdown, jemoji, and jekyll-sitemap. You will need to have <a href="http://www.ruby-lang.org/">Ruby ~&gt; 1.9.3</a><sup class="po" id="note-40"><a href="#40">40</a></sup> and <a href="http://rubygems.org/">RubyGems</a><sup class="po" id="note-41"><a href="#41">41</a></sup> installed.</p>
+<p>Here is the workflow for building and viewing your Jekyll website locally:</p>
+<ol>
+<li>First, <code>cd</code> into the folder where your Jekyll website is stored.</li>
+<li>Then, <code>jekyll serve --watch</code>. (Jekyll explains <a href="http://jekyllrb.com/docs/usage/">more build options</a><sup class="po" id="note-42"><a href="#42">42</a></sup>.)</li>
+<li>View your website at <code>http://0.0.0.0:4000</code>.</li>
+<li>When you’re done, commit the changes and push everything to the master branch of your GitHub user website. GitHub Pages will then rebuild and serve the website.</li>
+</ol>
+<p><strong>Common problem #8</strong>: Keep in mind that <code>jekyll build</code> will wipe everything in <code>/_sites/</code>. The first step of <code>jekyll build</code> is to delete everything in <code>/_sites/</code> and then build it all again from scratch. So, you can’t store any files in there and expect them to stick around. Everything that goes into <code>/_sites/</code> should be generated by Jekyll.</p>
+<h4>Directory Structure</h4>
+<p>Here’s a snapshot of my Jekyll website’s directory structure:</p>
+<pre><code class="language-markup">/Users/barryclark/Code/jekyll-now
+├─ CNAME # Contains your custom domain name (optional)
+├─ _config.yml # Jekyll's configuration flags
+├─ _includes # Snippets of code that can be used throughout your templates
+│  ├─ analytics.html
+│  └─ disqus.html
+├─ _layouts 
+│  ├─ default.html # The main template. Includes &lt;head&gt;, &lt;navigation&gt;, &lt;footer&gt;, etc
+│  ├─ page.html # Static page layout
+│  └─ post.html # Blog post layout
+├─ _posts # All posts go in this directory!
+│  └─ 2014-3-3-Hello-World.md
+├─ _site # After Jekyll builds the website, it puts the static HTML output here. This is what's served!
+│  ├─ CNAME
+│  ├─ LICENSE
+│  ├─ about.html
+│  ├─ feed.xml
+│  ├─ index.html
+│  ├─ sitemap.xml
+│  └─ style.css
+├─ about.md # A static "About" page that I created.
+├─ feed.xml # Powers the RSS feed
+├─ images # All of my images are stored here.
+│  ├── first-post.jpg
+├─ index.html # Home page layout
+├─ scss # The Sass style sheets for my website
+│  ├─ _highlights.scss
+│  ├─ _reset.scss
+│  ├─ _variables.scss
+│  └─ style.scss
+└── sitemap.xml # Site map for the website
+</code></pre>
+<h4>Liquid Templating</h4>
+<p>Jekyll uses the Liquid templating language to process templates. There are two important things to know about using Liquid.</p>
+<p>First, a <strong>YAML front-matter</strong> block is at the beginning of every content file. It specifies the layout of the page and other variables, like <code>title</code>, <code>date</code> and <code>tags</code>. It may include custom page variables that you’ve created, too.</p>
+<p><strong>Liquid template tags</strong> are used to execute loops and conditional statements and to output content.</p>
+<p>For example, each blog post uses the following layout from <code>/_layouts/post.html</code>:</p>
+<pre><code class="language-markup">---
+layout: default
+---
 
-    <!-- G+ -->
-    <meta itemprop="name" content="repl.it" />
-    <meta itemprop="description" content="Run code in a variety of languages from your browser!" />
-    <meta itemprop="image" content="http://repl.it/images/logo-small.png" />
+&lt;article class="post"&gt;
 
-    <!-- Mobiles -->
-    <meta name="viewport" content="width=device-width, maximum-scale=1, minimum-scale=1">
+  &lt;h1&gt;{{ page.title }}&lt;/h1&gt;
 
-    <!-- General -->
-    <meta name="description" content="Online Interpreters in JavaScript. Try Python, Ruby, Scheme, Lua, CoffeeScript and more programming languages. Online coding and REPL. Run and share code.">
-    <meta name="keywords" content="Online,Interpreters,JavaScript,Python,Ruby,Scheme,APL,Lua,CoffeeScript,Forth,QBasic,terminal,console,share,run,code,coding,programming,esoteric,languages,web,REPL">
-    <meta name="author" content="Amjad Masad and Max Shawabkeh">
-    <meta charset="UTF-8">
-  </head>
-  <body>
-    <div id="header">
-      <a id="logo" href="/languages"><img src="/images/logo-small.png" width="173" height="60" alt="repl.it" /></a>
-      <div id="buttons">
-        <!-- Warning: inline elements, any white space would break the layout --> 
-       <a href="/languages"><div id="button-languages" class="button left" title="Languages"></div></a><a href="/examples"><div id="button-examples" class="button middle" title="Examples"></div></a><div id="button-save" class="button middle" title="Save"></div><a href="/help"><div id="button-help" class="button right" title="Help"></div></a>
-      </div>
-      <h1 id="title">Online Interpreter</h1>
+  &lt;div class="entry"&gt;
+    {{ content }}
+  &lt;/div&gt;
+
+  &lt;div class="date"&gt;
+    Written on {{ page.date | date: "%B %e, %Y" }}
+  &lt;/div&gt;
+
+  &lt;div class="comments"&gt;
+    {% include disqus.html disqus_identifier=page.disqus_identifier %}
+  &lt;/div&gt;
+&lt;/article&gt;
+</code></pre>
+<p>At the top of the file, YAML front matter is surrounded by triple hyphens. Here, we’re specifying that this file should be processed as the content for the <code>default.html</code> layout, which contains the website’s header and footer.</p>
+<p>Liquid markup uses double curly braces to output content. The first Liquid template tags that do this in the example above are <code>{{ page.title }}</code> and <code>{{ content }}</code>, which output the title and content of the blog post. A number of <a href="http://jekyllrb.com/docs/variables/">Jekyll variables</a><sup class="po" id="note-43"><a href="#43">43</a></sup> are made available for outputting in templates.</p>
+<p>Single curly braces and modules are used for conditionals and loops and for displaying includes. Here, I’m including a Disqus commenting partial at the bottom of the blog post, which will display the markup from <code>/_includes/disqus.html</code>.</p>
+<h4>_config.yml</h4>
+<p>This is Jekyll’s configuration file, containing all of the <a href="http://jekyllrb.com/docs/configuration/">settings for your Jekyll website</a><sup class="po" id="note-44"><a href="#44">44</a></sup>. The great thing about <code>_config.yml</code> is that you can also specify all of your own variables here to be pulled in via template files across the website.</p>
+<p>For example, I use custom variables in Jekyll Now’s <code>_config.yml</code> to allow SVG icons to be easily included in the footer:</p>
+<p>Here is <code>_config.yml</code>:</p>
+<pre><code class="language-markup"># Includes an icon in the footer for each user name you enter
+footer-links:
+  github: barryclark
+  twitter: baznyc
+</code></pre>
+<p>And here is <code>/_layouts/default.html</code>:</p>
+<pre><code class="language-markup">&lt;footer class="footer"&gt;
+  {% if site.footer-links.github %}&lt;a href="http://github.com/{{ site.footer-links.github }}"&gt;{% include svg-icons/github.html %}&lt;/a&gt;{% endif %}
+  {% if site.footer-links.twitter %}&lt;a href="http://twitter.com/{{ site.footer-links.twitter }}"&gt;{% include svg-icons/twitter.html %}&lt;/a&gt;{% endif %}
+&lt;/footer&gt;
+</code></pre>
+<figure><img src="http://www.smashingmagazine.com/wp-content/uploads/2014/07/footer-icons-opt.png" alt="Example of SVG footer icons" width="500" height="110" /><figcaption>Example of SVG footer icons</figcaption></figure>
+<p>The variable is outputted to the Twitter URL like this: <code>http://twitter.com/{{ site.footer-links.twitter }}</code>, so that the footer icon links to your Twitter profile. One other thing I really like about variables is that you can use them to optionally add pieces of UI. So, a footer icon wouldn’t be displayed if you don’t enter anything in the variable.</p>
+<p><strong>Common problem #9</strong>: Note that <code>_config.yml</code> changes are loaded at compile time, not runtime. This means that if you’re running <code>jekyll serve</code> locally and you edit <code>_config.yml</code>, then changes to it won’t be detected. You’ll need to kill and rerun <code>jekyll serve</code>.</p>
+<h4>Layouts and Static Pages</h4>
+<p>Most simple blog websites need only two layout files: one for blog posts (<code>post.html</code>) and one for static pages (<code>page.html</code>). The only real difference between these in Jekyll Now is that <code>post.html</code> includes the Disqus comments block and a date, and <code>page.html</code> doesn’t.</p>
+<p>If you create a file with an <code>.html</code> or <code>.md</code> extension in the root of your Jekyll website, it will be treated as a static page. For example, <code>about.md</code> would be outputted as <code>www.mysite.com/about</code>. Nice and easy!</p>
+<h4>Images</h4>
+<p>I store my images in an <code>/images/</code> folder in the repository and haven’t had any performance problems yet. If your website is hosted on GitHub Pages, then the images will be served up by GitHub’s super-fast content delivery network. I haven’t found the need to store them elsewhere yet, but if I wanted to migrate my images to somewhere like CloudFront, then just pointing all of my image links to a folder on that server would be easy enough.</p>
+<p>I like the simplicity of saving an image to the <code>/images/</code> folder and then linking to it in the content. The Markdown to include an image in content is simple:</p>
+<pre><code class="language-markup">![Image description](/images/my-image.jpg)
+</code></pre>
+<h4>Preprocessor Support</h4>
+<p>Jekyll now supports Sass and CoffeeScript without any need for plugins or Grunt files. You can include your <code>.sass</code>, <code>.scss</code> and <code>.coffee</code> files anywhere in your website’s directory, and Jekyll will process it, outputting a <code>.css</code> file in that same directory.</p>
+<figure><img title="It's Sass time!" src="http://www.smashingmagazine.com/wp-content/uploads/2014/07/sass.svg" alt="It's Sass time!" width="500" /><figcaption>It’s Sass time! (Image credit: <a href="http://sass-lang.com/">Sass</a><sup class="po" id="note-45"><a href="#45">45</a></sup>)</figcaption></figure>
+<p>To ensure that your <code>.sass</code>, <code>.scss</code> and <code>.coffee</code> files get processed, start the file with two lines of triple hyphens, like this:</p>
+<pre><code class="language-css">---
+---
+$color-coffee: #644C37;
+</code></pre>
+<p>If you’re using <code>@imports</code> to break out your Sass into partials, then you’ll need to let Jekyll know that by including the following flag in your <code>_config.yml</code> file.</p>
+<pre><code class="language-css">sass:
+  sass_dir: _scss
+</code></pre>
+<p>You can specify the outputted style here, too:</p>
+<pre><code class="language-css">sass:
+  sass_dir: _scss
+  style: :compressed
+</code></pre>
+<h3>Advanced Jekyll Features</h3>
+<p>Jekyll has a couple of powerful, more advanced features that might help you if you’re looking to scale up your website from a simple blog.</p>
+<h4>Data Files</h4>
+<p>There are two ways to integrate external data with a Jekyll website. The first is by using third-party services and APIs. For example, Disqus allows you to embed dynamic content on your static website via its external service.</p>
+<p>The second way is by using data files. Jekyll is able to read YAML and JSON <a href="http://jekyllrb.com/docs/datafiles/">data files</a><sup class="po" id="note-46"><a href="#46">46</a></sup> from the <code>/_data/</code> folder, allowing you to use them in your templates just like other variables. This is really useful for storing repetitive or website-specific data that you wouldn’t want bulking up <code>_config.yml</code>.</p>
+<p>Data files also make it possible to include large data sets in your Jekyll website. You could write a script to break down a big data set into JSON files and place them in your Jekyll website’s <code>/_data/</code> folder. A creative example of this is <a href="http://developmentseed.org/blog/google-analytics-jekyll-plugin/">serving Google Analytics data to Jekyll</a><sup class="po" id="note-47"><a href="#47">47</a></sup> in order to rank blog posts by popularity.</p>
+<h4>Collections</h4>
+<p>The two standard document types in Jekyll are posts (for blog content) and pages (for static pages). The launch of Jekyll 2.0 brought <a href="http://jekyllrb.com/docs/collections/">collections</a><sup class="po" id="note-48"><a href="#48">48</a></sup>, which allow you to define your own document types. For example, you could use a collection to define a photo album, book or portfolio.</p>
+<h3>Conclusion</h3>
+<p>Jekyll isn’t for every project. The biggest disadvantage of a static website generator is that incorporating dynamic server-side functionality becomes difficult. The number of services to integrate, like Disqus, is growing, but not all offer much flexibility or control. Jekyll isn’t suited to building user-based websites because there is no database or server-side logic to handle user registration or logging in.</p>
+<p>Jekyll’s strength is its simplicity and minimalism, giving you just what you need to create a content-focused website that doesn’t need much dynamic user interaction — and no more. This makes it perfect for your blog and portfolio and also worth considering for a simple client website.</p>
+<p>Don’t let Jekyll’s reputation as a blogging platform for hackers dissuade you. Building a beautiful, fast, minimal website in Jekyll doesn’t require elite hacker skills or knowledge of the command line. As shown in the walkthrough, you can get set up in a matter of minutes, giving you more time to spend on your content and design.</p>
+<h4>Further Resources</h4>
+<ul>
+<li><a href="http://jekyllrb.com">Jekyll</a><sup class="po" id="note-49"><a href="#49">49</a></sup><br />
+  The official website is the best resource for theming Jekyll and creating a website. A lot of the information in this article was drawn from it.</li>
+<li><a href="http://github.com/barryclark/jekyll-now">Jekyll Now</a><sup class="po" id="note-50"><a href="#50">50</a></sup><sup class="po" id="note-25"><a href="#25">25</a></sup><sup class="po" id="note-15"><a href="#15">15</a></sup><sup class="po" id="note-9"><a href="#9">9</a></sup><br />
+  This starting point makes it easier to create a Jekyll blog by eliminating a lot of the up-front setting up.</li>
+<li><a href="http://github.com/jekyll/jekyll">Jekyll source code</a><sup class="po" id="note-51"><a href="#51">51</a></sup><br />
+  The Jekyll repository shares the source code and discussions about Jekyll.</li>
+</ul>
+<p><em>(al, ml)</em></p>
+<h4 class="po">Footnotes</h4><ol class="po"><li id="#1"><a href="#note-1">1 http://tom.preston-werner.com/2008/11/17/blogging-like-a-hacker.html</a></li><li id="#2"><a href="#note-2">2 http://jekyllrb.com/</a></li><li id="#3"><a href="#note-3">3 http://www.barryclark.co/?utm_source=smashing&amp;utm_medium=post&amp;utm_campaign=jekyll</a></li><li id="#4"><a href="#note-4">4 http://zachholman.com</a></li><li id="#5"><a href="#note-5">5 http://csswizardry.com/about/#colophon</a></li><li id="#6"><a href="#note-6">6 http://jekyllrb.com/</a></li><li id="#7"><a href="#note-7">7 https://www.healthcare.gov/</a></li><li id="#8"><a href="#note-8">8 http://developmentseed.org/blog/2013/10/24/its-called-jekyll/</a></li><li id="#9"><a href="#note-9">9 http://github.com/barryclark/jekyll-now</a></li><li id="#10"><a href="#note-10">10 http://jekyllrb.com/</a></li><li id="#11"><a href="#note-11">11 http://www.github.com/barryclark/jekyll-now</a></li><li id="#12"><a href="#note-12">12 http://www.smashingmagazine.com/wp-content/uploads/2014/07/step1.gif</a></li><li id="#13"><a href="#note-13">13 http://www.smashingmagazine.com/wp-content/uploads/2014/07/step1.gif</a></li><li id="#14"><a href="#note-14">14 http://www.smashingmagazine.com/wp-content/uploads/2014/07/jekyll-now-theme-large-opt.jpg</a></li><li id="#15"><a href="#note-15">15 http://github.com/barryclark/jekyll-now</a></li><li id="#16"><a href="#note-16">16 http://www.smashingmagazine.com/wp-content/uploads/2014/07/jekyll-now-theme-large-opt.jpg</a></li><li id="#17"><a href="#note-17">17 https://help.github.com/articles/user-organization-and-project-pages</a></li><li id="#18"><a href="#note-18">18 http://jekyllrb.com/docs/github-pages/#project_page_url_structure</a></li><li id="#19"><a href="#note-19">19 http://jekyllrb.com/docs/plugins/</a></li><li id="#20"><a href="#note-20">20 https://help.github.com/articles/using-jekyll-plugins-with-github-pages</a></li><li id="#21"><a href="#note-21">21 https://github.com/jekyll/jemoji</a></li><li id="#22"><a href="#note-22">22 http://prose.io</a></li><li id="#23"><a href="#note-23">23 https://www.atlassian.com/git/tutorial/git-basics</a></li><li id="#24"><a href="#note-24">24 http://www.smashingmagazine.com/wp-content/uploads/2014/07/config-large-opt.png</a></li><li id="#25"><a href="#note-25">25 http://github.com/barryclark/jekyll-now</a></li><li id="#26"><a href="#note-26">26 http://www.smashingmagazine.com/wp-content/uploads/2014/07/config-large-opt.png</a></li><li id="#27"><a href="#note-27">27 https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet</a></li><li id="#28"><a href="#note-28">28 http://jekyllrb.com/docs/frontmatter/</a></li><li id="#29"><a href="#note-29">29 http://www.smashingmagazine.com/wp-content/uploads/2014/07/newpost-large-opt.png</a></li><li id="#30"><a href="#note-30">30 http://www.smashingmagazine.com/wp-content/uploads/2014/07/newpost-large-opt.png</a></li><li id="#31"><a href="#note-31">31 https://www.whatsmydns.net/</a></li><li id="#32"><a href="#note-32">32 https://help.github.com/articles/setting-up-a-custom-domain-with-pages</a></li><li id="#33"><a href="#note-33">33 https://github.com/benbalter/wordpress-to-jekyll-exporter</a></li><li id="#34"><a href="#note-34">34 http://import.jekyllrb.com/docs/wordpress/</a></li><li id="#35"><a href="#note-35">35 https://gist.github.com/stammy/790971</a></li><li id="#36"><a href="#note-36">36 http://help.disqus.com/customer/portal/articles/466255-importing-comments-from-wordpress</a></li><li id="#37"><a href="#note-37">37 https://mac.github.com/</a></li><li id="#38"><a href="#note-38">38 https://www.atlassian.com/git/tutorial/git-basics</a></li><li id="#39"><a href="#note-39">39 https://github.com/github/pages-gem</a></li><li id="#40"><a href="#note-40">40 http://www.ruby-lang.org/</a></li><li id="#41"><a href="#note-41">41 http://rubygems.org/</a></li><li id="#42"><a href="#note-42">42 http://jekyllrb.com/docs/usage/</a></li><li id="#43"><a href="#note-43">43 http://jekyllrb.com/docs/variables/</a></li><li id="#44"><a href="#note-44">44 http://jekyllrb.com/docs/configuration/</a></li><li id="#45"><a href="#note-45">45 http://sass-lang.com/</a></li><li id="#46"><a href="#note-46">46 http://jekyllrb.com/docs/datafiles/</a></li><li id="#47"><a href="#note-47">47 http://developmentseed.org/blog/google-analytics-jekyll-plugin/</a></li><li id="#48"><a href="#note-48">48 http://jekyllrb.com/docs/collections/</a></li><li id="#49"><a href="#note-49">49 http://jekyllrb.com</a></li><li id="#50"><a href="#note-50">50 http://github.com/barryclark/jekyll-now</a></li><li id="#51"><a href="#note-51">51 http://github.com/jekyll/jekyll</a></li></ol>           	                            <div id="textadtarget"></div>
+	                    <div class="lt">
+            <a href="http://www.smashingmagazine.com/tag/cms/">CMS</a><a href="http://www.smashingmagazine.com/tag/frameworks/">Frameworks</a><a href="http://www.smashingmagazine.com/tag/workflow/">Workflow</a>        </div>
+        <p><a href="#top" class="top single" title="Jump to the top of the page">&uarr; Back to top</a><a class="sot single" href="https://twitter.com/intent/tweet?original_referer=http%3A%2F%2Fwww.smashingmagazine.com%2F2014%2F08%2F01%2Fbuild-blog-jekyll-github-pages%2F&amp;source=tweetbutton&amp;text=Build%20A%20Blog%20With%20Jekyll%20And%20GitHub%20Pages&amp;url=http%3A%2F%2Fwww.smashingmagazine.com%2F2014%2F08%2F01%2Fbuild-blog-jekyll-github-pages%2F&amp;via=smashingmag" title="Share on Twitter!">Share on Twitter</a></p>
+    </article>
+    <div class="bio clearfix">
+        <div class="grv">
+            <img alt="" src="http://www.smashingmagazine.com/wp-content/plugins/inpsyde-gravatar-load-delay/inc/frontend/../../assets/img/avatar-placeholder.png" data-gravatar-url="http://0.gravatar.com/avatar/8529ad4bfdb99b07c3b6c3338bb91104?s=78&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D78&amp;r=G" class="avatar avatar-78 photo" height="78" width="78" />        </div>
+        <div class="about">
+            <a rel="author" class="poa" href="http://www.smashingmagazine.com/author/barryclark/?rel=author" title="Posts by Barry Clark">Barry Clark</a>            <p><a href="http://www.barryclark.co">Barry Clark</a> is a web developer living in Brooklyn, NY. He works as a hands-on Technical Director for DoSomething.org in Manhattan. He loves working on projects that help fellow web developers save time, recently creating <a href="http://github.com/barryclark/jekyll-now">Jekyll Now</a> and <a href="http://github.com/barryclark/bashstrap">Bashstrap</a>. In past lives Barry coded video games for Rockstar and traveled the world as a professional poker player. He’s writes a free newsletter on <a href="http://www.barryclark.co/getting-hired">getting hired as a web developer</a>.</p>
+        </div>
     </div>
-    <div id="main">
-      <div id="resize-left"></div>
+    	<div class="ras clearfix">
+		<h2>Related Articles</h2>
+						<div class="ra clearfix">
+					<a class="pp" href="http://www.smashingmagazine.com/2014/10/24/how-to-run-a-content-planning-workshop/"><img width="84" height="84" src="http://www.smashingmagazine.com/wp-content/uploads/2014/10/illu-planning.jpg" class="attachment-related-thumb wp-post-image" alt="illu-planning" /></a>
+					<h3><a href="http://www.smashingmagazine.com/2014/10/24/how-to-run-a-content-planning-workshop/">How To Run A Content-Planning Workshop</a></h3>
+				</div>
+						<div class="ra clearfix">
+					<a class="pp" href="http://www.smashingmagazine.com/2014/10/09/front-end-development-ode-to-specifications/"><img width="84" height="84" src="http://www.smashingmagazine.com/wp-content/uploads/2014/10/blueprints-illu.jpg" class="attachment-related-thumb wp-post-image" alt="blueprints-illu" /></a>
+					<h3><a href="http://www.smashingmagazine.com/2014/10/09/front-end-development-ode-to-specifications/">A Front-End Developer's Ode To Specifications</a></h3>
+				</div>
+						<div class="ra clearfix">
+					<a class="pp" href="http://www.smashingmagazine.com/2014/10/06/the-skeptics-guide-to-low-fidelity-prototyping/"><img width="84" height="84" src="http://www.smashingmagazine.com/wp-content/uploads/2014/10/illu-prototype.jpg" class="attachment-related-thumb wp-post-image" alt="illu-prototype" /></a>
+					<h3><a href="http://www.smashingmagazine.com/2014/10/06/the-skeptics-guide-to-low-fidelity-prototyping/">The Skeptic’s Guide To Low-Fidelity Prototyping</a></h3>
+				</div>
+			</div>
+    <div class="adv">
+    <span class="declare">Advertising</span>
+    <div id="commentspnsrtarget"></div>
+</div>
+<ul id="comments" class="sub-tabs clearfix">
+    <li><a href="#show-comments" class="active">42 Comments</a></li>
+    </ul>
+<div id="discussion" class="subtab-pages">
+    <div id="show-comments">
+        	        <ol id="comments-overview" class="cl">
+					<li class="comment even thread-even depth-1 clearfix">
+		<span class="cn">1</span>
+		<div class="c" id="comment-1179334">
+		<div class="cau clearfix">
+			<img alt="" src="http://www.smashingmagazine.com/wp-content/plugins/inpsyde-gravatar-load-delay/inc/frontend/../../assets/img/avatar-placeholder.png" data-gravatar-url="http://1.gravatar.com/avatar/58390323bbfe72c72dc3a4eeb6419472?s=38&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D38&amp;r=G" class="avatar avatar-38 photo" height="38" width="38" />			<div class="aum">
+				<h3>Kibotu</h3>
+				<span class="dati">
+					<a title="Commentlink #1" href="http://www.smashingmagazine.com/2014/08/01/build-blog-jekyll-github-pages/#comment-1179334">
+						August 1, 2014 1:35 pm					</a>
+				</span>
+			</div>
+		</div>
+		<div class="ctx">
+			<p>Nice! :D I really like where this github page thing going! i&#8217;ve created a small lib to use github pages for error-tracking for your android app (<a href="https://github.com/kibotu/net.kibotu.android.error.tracking" rel="nofollow">https://github.com/kibotu/net.kibotu.android.error.tracking</a>) So there are actually a lot of possibilities :)</p>
+		</div>
+		<div class="com">
+						<div class="reply"><a class='comment-reply-link' href='/2014/08/01/build-blog-jekyll-github-pages/?replytocom=1179334#respond' onclick='return addComment.moveForm("comment-1179334", "1179334", "respond", "197342")'>Reply</a></div>
+			<div class="inpsyde_extended_comments_rate_wrapper clearfix" aria-live="polite">
+	<div id="inpsyde_extended_comments_rate_1179334" class="inpsyde_extended_comments_rate negative">-5</div>
+			<div class="inpsyde_extended_comments_rate_stars" data-comment_id="1179334" data-action="inpsyde_extended_comments_rate"></div>
+	</div>		</div>
+	</div>
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1 clearfix">
+		<span class="cn">2</span>
+		<div class="c" id="comment-1179636">
+		<div class="cau clearfix">
+			<img alt="" src="http://www.smashingmagazine.com/wp-content/plugins/inpsyde-gravatar-load-delay/inc/frontend/../../assets/img/avatar-placeholder.png" data-gravatar-url="http://0.gravatar.com/avatar/8f23dc0e24118af0eb7730fd08918b28?s=38&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D38&amp;r=G" class="avatar avatar-38 photo" height="38" width="38" />			<div class="aum">
+				<h3>Joe Kent</h3>
+				<span class="dati">
+					<a title="Commentlink #2" href="http://www.smashingmagazine.com/2014/08/01/build-blog-jekyll-github-pages/#comment-1179636">
+						August 1, 2014 2:38 pm					</a>
+				</span>
+			</div>
+		</div>
+		<div class="ctx">
+			<p>Barry is god web developer<br />
+Also SECOND!</p>
+		</div>
+		<div class="com">
+						<div class="reply"><a class='comment-reply-link' href='/2014/08/01/build-blog-jekyll-github-pages/?replytocom=1179636#respond' onclick='return addComment.moveForm("comment-1179636", "1179636", "respond", "197342")'>Reply</a></div>
+			<div class="inpsyde_extended_comments_rate_wrapper clearfix" aria-live="polite">
+	<div id="inpsyde_extended_comments_rate_1179636" class="inpsyde_extended_comments_rate negative">-11</div>
+			<div class="inpsyde_extended_comments_rate_stars" data-comment_id="1179636" data-action="inpsyde_extended_comments_rate"></div>
+	</div>		</div>
+	</div>
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1 clearfix">
+		<span class="cn">3</span>
+		<div class="c" id="comment-1179839">
+		<div class="cau clearfix">
+			<img alt="" src="http://www.smashingmagazine.com/wp-content/plugins/inpsyde-gravatar-load-delay/inc/frontend/../../assets/img/avatar-placeholder.png" data-gravatar-url="http://1.gravatar.com/avatar/7c78c2359dc31fa27485199a1895d9e2?s=38&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D38&amp;r=G" class="avatar avatar-38 photo" height="38" width="38" />			<div class="aum">
+				<h3>Michael Rose</h3>
+				<span class="dati">
+					<a title="Commentlink #3" href="http://www.smashingmagazine.com/2014/08/01/build-blog-jekyll-github-pages/#comment-1179839">
+						August 1, 2014 3:18 pm					</a>
+				</span>
+			</div>
+		</div>
+		<div class="ctx">
+			<p>Really enjoying the built-in Sass support Jekyll recently added. As someone who has opensourced a few themes it&#8217;s a great addition. </p>
+<p>For non-devs who wanted to make some minor cosmetic changes to fonts and colors it was a big hurdle to overcome trying to modify the theme&#8217;s CSS. Now they just edit a few variables and Jekyll takes care of all the preprocessing at site build.</p>
+		</div>
+		<div class="com">
+						<div class="reply"><a class='comment-reply-link' href='/2014/08/01/build-blog-jekyll-github-pages/?replytocom=1179839#respond' onclick='return addComment.moveForm("comment-1179839", "1179839", "respond", "197342")'>Reply</a></div>
+			<div class="inpsyde_extended_comments_rate_wrapper clearfix" aria-live="polite">
+	<div id="inpsyde_extended_comments_rate_1179839" class="inpsyde_extended_comments_rate positive">3</div>
+			<div class="inpsyde_extended_comments_rate_stars" data-comment_id="1179839" data-action="inpsyde_extended_comments_rate"></div>
+	</div>		</div>
+	</div>
+	<ul class="children">
+	<li class="comment byuser comment-author-barryclark bypostauthor odd alt depth-2 clearfix">
+		<span class="cn">4</span>
+		<div class="c" id="comment-1182068">
+		<div class="cau clearfix">
+			<img alt="" src="http://www.smashingmagazine.com/wp-content/plugins/inpsyde-gravatar-load-delay/inc/frontend/../../assets/img/avatar-placeholder.png" data-gravatar-url="http://0.gravatar.com/avatar/8529ad4bfdb99b07c3b6c3338bb91104?s=38&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D38&amp;r=G" class="avatar avatar-38 photo" height="38" width="38" />			<div class="aum">
+				<h3>Barry Clark</h3>
+				<span class="dati">
+					<a title="Commentlink #4" href="http://www.smashingmagazine.com/2014/08/01/build-blog-jekyll-github-pages/#comment-1182068">
+						August 1, 2014 11:30 pm					</a>
+				</span>
+			</div>
+		</div>
+		<div class="ctx">
+			<p>Yes! Deleting my Gruntfile.js was such a good time.</p>
+<p>Your themes rock, Michael. Let me know if you&#8217;d like any of them added to the &#8220;other forkable themes&#8221; list at <a href="https://github.com/barryclark/jekyll-now#other-forkable-themes" rel="nofollow">https://github.com/barryclark/jekyll-now#other-forkable-themes</a> after you&#8217;ve Jekyll 2&#8242;d them.</p>
+		</div>
+		<div class="com">
+						<div class="reply"><a class='comment-reply-link' href='/2014/08/01/build-blog-jekyll-github-pages/?replytocom=1182068#respond' onclick='return addComment.moveForm("comment-1182068", "1182068", "respond", "197342")'>Reply</a></div>
+			<div class="inpsyde_extended_comments_rate_wrapper clearfix" aria-live="polite">
+	<div id="inpsyde_extended_comments_rate_1182068" class="inpsyde_extended_comments_rate">0</div>
+			<div class="inpsyde_extended_comments_rate_stars" data-comment_id="1182068" data-action="inpsyde_extended_comments_rate"></div>
+	</div>		</div>
+	</div>
+	<ul class="children">
+	<li class="comment even depth-3 clearfix">
+		<span class="cn">5</span>
+		<div class="c" id="comment-1194086">
+		<div class="cau clearfix">
+			<img alt="" src="http://www.smashingmagazine.com/wp-content/plugins/inpsyde-gravatar-load-delay/inc/frontend/../../assets/img/avatar-placeholder.png" data-gravatar-url="http://1.gravatar.com/avatar/7c78c2359dc31fa27485199a1895d9e2?s=38&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D38&amp;r=G" class="avatar avatar-38 photo" height="38" width="38" />			<div class="aum">
+				<h3>Michael Rose</h3>
+				<span class="dati">
+					<a title="Commentlink #5" href="http://www.smashingmagazine.com/2014/08/01/build-blog-jekyll-github-pages/#comment-1194086">
+						August 4, 2014 12:00 pm					</a>
+				</span>
+			</div>
+		</div>
+		<div class="ctx">
+			<p>Agreed!</p>
+<p>That would great if you added my themes to the list. Here are the two that currently support Jekyll 2.x&#8217;s inclusion of Sass along with some _data file stuff for customizing site navs and author info.</p>
+<p><a href="https://github.com/mmistakes/minimal-mistakes" rel="nofollow">https://github.com/mmistakes/minimal-mistakes</a></p>
+<p><a href="https://github.com/mmistakes/skinny-bones-jekyll" rel="nofollow">https://github.com/mmistakes/skinny-bones-jekyll</a></p>
+		</div>
+		<div class="com">
+						<div class="reply"><a class='comment-reply-link' href='/2014/08/01/build-blog-jekyll-github-pages/?replytocom=1194086#respond' onclick='return addComment.moveForm("comment-1194086", "1194086", "respond", "197342")'>Reply</a></div>
+			<div class="inpsyde_extended_comments_rate_wrapper clearfix" aria-live="polite">
+	<div id="inpsyde_extended_comments_rate_1194086" class="inpsyde_extended_comments_rate">0</div>
+			<div class="inpsyde_extended_comments_rate_stars" data-comment_id="1194086" data-action="inpsyde_extended_comments_rate"></div>
+	</div>		</div>
+	</div>
+	<ul class="children">
+	<li class="comment byuser comment-author-barryclark bypostauthor odd alt depth-4 clearfix">
+		<span class="cn">6</span>
+		<div class="c" id="comment-1220887">
+		<div class="cau clearfix">
+			<img alt="" src="http://www.smashingmagazine.com/wp-content/plugins/inpsyde-gravatar-load-delay/inc/frontend/../../assets/img/avatar-placeholder.png" data-gravatar-url="http://0.gravatar.com/avatar/8529ad4bfdb99b07c3b6c3338bb91104?s=38&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D38&amp;r=G" class="avatar avatar-38 photo" height="38" width="38" />			<div class="aum">
+				<h3>Barry Clark</h3>
+				<span class="dati">
+					<a title="Commentlink #6" href="http://www.smashingmagazine.com/2014/08/01/build-blog-jekyll-github-pages/#comment-1220887">
+						August 16, 2014 3:13 pm					</a>
+				</span>
+			</div>
+		</div>
+		<div class="ctx">
+			<p>Added, thanks Michael.</p>
+		</div>
+		<div class="com">
+						<div class="reply"><a class='comment-reply-link' href='/2014/08/01/build-blog-jekyll-github-pages/?replytocom=1220887#respond' onclick='return addComment.moveForm("comment-1220887", "1220887", "respond", "197342")'>Reply</a></div>
+			<div class="inpsyde_extended_comments_rate_wrapper clearfix" aria-live="polite">
+	<div id="inpsyde_extended_comments_rate_1220887" class="inpsyde_extended_comments_rate">0</div>
+			<div class="inpsyde_extended_comments_rate_stars" data-comment_id="1220887" data-action="inpsyde_extended_comments_rate"></div>
+	</div>		</div>
+	</div>
+	</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+	<li class="comment even thread-odd thread-alt depth-1 clearfix">
+		<span class="cn">7</span>
+		<div class="c" id="comment-1179845">
+		<div class="cau clearfix">
+			<img alt="" src="http://www.smashingmagazine.com/wp-content/plugins/inpsyde-gravatar-load-delay/inc/frontend/../../assets/img/avatar-placeholder.png" data-gravatar-url="http://0.gravatar.com/avatar/03ea00460e7c50df4fbc4d13142c6bd6?s=38&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D38&amp;r=G" class="avatar avatar-38 photo" height="38" width="38" />			<div class="aum">
+				<h3>John Gertz</h3>
+				<span class="dati">
+					<a title="Commentlink #7" href="http://www.smashingmagazine.com/2014/08/01/build-blog-jekyll-github-pages/#comment-1179845">
+						August 1, 2014 3:19 pm					</a>
+				</span>
+			</div>
+		</div>
+		<div class="ctx">
+			<p>I really enjoyed this post. I wish I had it when I started with Jekyll as it is a great getting started guide. I wanted your readers to know that well Jekyll is a good system, and certainly the most popular, there are many other static site generators out there. I started with Jekyll, but was frustrated with it&#8217;s dependence on all things Ruby and how long it took to render my blog with a few dozen posts. I found Hugo (<a href="http://hugo.spf13.com" rel="nofollow">http://hugo.spf13.com</a>) and never looked back. Very similar to Jekyll in usage, but I found it better for me. For one, installation couldn&#8217;t be easier. Just download a single program file. No package managers to setup and use. I also love how fast Hugo is. Jekyll took minutes to render my blog, while Hugo does it in under 1 second. One thing that Jekyll does well is github pages integration. I was happy to discover that Hugo&#8217;s integration with github pages is rock solid.</p>
+		</div>
+		<div class="com">
+						<div class="reply"><a class='comment-reply-link' href='/2014/08/01/build-blog-jekyll-github-pages/?replytocom=1179845#respond' onclick='return addComment.moveForm("comment-1179845", "1179845", "respond", "197342")'>Reply</a></div>
+			<div class="inpsyde_extended_comments_rate_wrapper clearfix" aria-live="polite">
+	<div id="inpsyde_extended_comments_rate_1179845" class="inpsyde_extended_comments_rate positive">4</div>
+			<div class="inpsyde_extended_comments_rate_stars" data-comment_id="1179845" data-action="inpsyde_extended_comments_rate"></div>
+	</div>		</div>
+	</div>
+	<ul class="children">
+	<li class="comment byuser comment-author-barryclark bypostauthor odd alt depth-2 clearfix">
+		<span class="cn">8</span>
+		<div class="c" id="comment-1182084">
+		<div class="cau clearfix">
+			<img alt="" src="http://www.smashingmagazine.com/wp-content/plugins/inpsyde-gravatar-load-delay/inc/frontend/../../assets/img/avatar-placeholder.png" data-gravatar-url="http://0.gravatar.com/avatar/8529ad4bfdb99b07c3b6c3338bb91104?s=38&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D38&amp;r=G" class="avatar avatar-38 photo" height="38" width="38" />			<div class="aum">
+				<h3>Barry Clark</h3>
+				<span class="dati">
+					<a title="Commentlink #8" href="http://www.smashingmagazine.com/2014/08/01/build-blog-jekyll-github-pages/#comment-1182084">
+						August 1, 2014 11:36 pm					</a>
+				</span>
+			</div>
+		</div>
+		<div class="ctx">
+			<p>Glad you enjoyed the post, John. </p>
+<p>Great point on there being a number of options with static site generators. This list is a great resource for seeing which are the most popular: <a href="http://www.staticgen.com/" rel="nofollow">http://www.staticgen.com/</a></p>
+		</div>
+		<div class="com">
+						<div class="reply"><a class='comment-reply-link' href='/2014/08/01/build-blog-jekyll-github-pages/?replytocom=1182084#respond' onclick='return addComment.moveForm("comment-1182084", "1182084", "respond", "197342")'>Reply</a></div>
+			<div class="inpsyde_extended_comments_rate_wrapper clearfix" aria-live="polite">
+	<div id="inpsyde_extended_comments_rate_1182084" class="inpsyde_extended_comments_rate">0</div>
+			<div class="inpsyde_extended_comments_rate_stars" data-comment_id="1182084" data-action="inpsyde_extended_comments_rate"></div>
+	</div>		</div>
+	</div>
+	</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1 clearfix">
+		<span class="cn">9</span>
+		<div class="c" id="comment-1179914">
+		<div class="cau clearfix">
+			<img alt="" src="http://www.smashingmagazine.com/wp-content/plugins/inpsyde-gravatar-load-delay/inc/frontend/../../assets/img/avatar-placeholder.png" data-gravatar-url="http://0.gravatar.com/avatar/c6014951e41addd6a9e7d9b2b43cce65?s=38&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D38&amp;r=G" class="avatar avatar-38 photo" height="38" width="38" />			<div class="aum">
+				<h3>Vlad Dumitrescu</h3>
+				<span class="dati">
+					<a title="Commentlink #9" href="http://www.smashingmagazine.com/2014/08/01/build-blog-jekyll-github-pages/#comment-1179914">
+						August 1, 2014 3:30 pm					</a>
+				</span>
+			</div>
+		</div>
+		<div class="ctx">
+			<p>A way to ease up the problems with managing dependencies and build locally the same way as GitHub does is to install the github-pages gem (<a href="https://github.com/github/pages-gem" rel="nofollow">https://github.com/github/pages-gem</a>), that sets up the right environment with all supported plugins.</p>
+		</div>
+		<div class="com">
+						<div class="reply"><a class='comment-reply-link' href='/2014/08/01/build-blog-jekyll-github-pages/?replytocom=1179914#respond' onclick='return addComment.moveForm("comment-1179914", "1179914", "respond", "197342")'>Reply</a></div>
+			<div class="inpsyde_extended_comments_rate_wrapper clearfix" aria-live="polite">
+	<div id="inpsyde_extended_comments_rate_1179914" class="inpsyde_extended_comments_rate positive">2</div>
+			<div class="inpsyde_extended_comments_rate_stars" data-comment_id="1179914" data-action="inpsyde_extended_comments_rate"></div>
+	</div>		</div>
+	</div>
+	<ul class="children">
+	<li class="comment byuser comment-author-barryclark bypostauthor odd alt depth-2 clearfix">
+		<span class="cn">10</span>
+		<div class="c" id="comment-1182089">
+		<div class="cau clearfix">
+			<img alt="" src="http://www.smashingmagazine.com/wp-content/plugins/inpsyde-gravatar-load-delay/inc/frontend/../../assets/img/avatar-placeholder.png" data-gravatar-url="http://0.gravatar.com/avatar/8529ad4bfdb99b07c3b6c3338bb91104?s=38&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D38&amp;r=G" class="avatar avatar-38 photo" height="38" width="38" />			<div class="aum">
+				<h3>Barry Clark</h3>
+				<span class="dati">
+					<a title="Commentlink #10" href="http://www.smashingmagazine.com/2014/08/01/build-blog-jekyll-github-pages/#comment-1182089">
+						August 1, 2014 11:38 pm					</a>
+				</span>
+			</div>
+		</div>
+		<div class="ctx">
+			<p>Really good point, Vlad. I&#8217;ll submit an edit this weekend to include that in the article.</p>
+		</div>
+		<div class="com">
+						<div class="reply"><a class='comment-reply-link' href='/2014/08/01/build-blog-jekyll-github-pages/?replytocom=1182089#respond' onclick='return addComment.moveForm("comment-1182089", "1182089", "respond", "197342")'>Reply</a></div>
+			<div class="inpsyde_extended_comments_rate_wrapper clearfix" aria-live="polite">
+	<div id="inpsyde_extended_comments_rate_1182089" class="inpsyde_extended_comments_rate">0</div>
+			<div class="inpsyde_extended_comments_rate_stars" data-comment_id="1182089" data-action="inpsyde_extended_comments_rate"></div>
+	</div>		</div>
+	</div>
+	</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+	<li class="comment even thread-odd thread-alt depth-1 clearfix">
+		<span class="cn">11</span>
+		<div class="c" id="comment-1180861">
+		<div class="cau clearfix">
+			<img alt="" src="http://www.smashingmagazine.com/wp-content/plugins/inpsyde-gravatar-load-delay/inc/frontend/../../assets/img/avatar-placeholder.png" data-gravatar-url="http://1.gravatar.com/avatar/594752a88aa9e5806123c3aff3990b49?s=38&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D38&amp;r=G" class="avatar avatar-38 photo" height="38" width="38" />			<div class="aum">
+				<h3>preeti</h3>
+				<span class="dati">
+					<a title="Commentlink #11" href="http://www.smashingmagazine.com/2014/08/01/build-blog-jekyll-github-pages/#comment-1180861">
+						August 1, 2014 6:30 pm					</a>
+				</span>
+			</div>
+		</div>
+		<div class="ctx">
+			<p>This is very informative article.</p>
+		</div>
+		<div class="com">
+						<div class="reply"><a class='comment-reply-link' href='/2014/08/01/build-blog-jekyll-github-pages/?replytocom=1180861#respond' onclick='return addComment.moveForm("comment-1180861", "1180861", "respond", "197342")'>Reply</a></div>
+			<div class="inpsyde_extended_comments_rate_wrapper clearfix" aria-live="polite">
+	<div id="inpsyde_extended_comments_rate_1180861" class="inpsyde_extended_comments_rate negative">-6</div>
+			<div class="inpsyde_extended_comments_rate_stars" data-comment_id="1180861" data-action="inpsyde_extended_comments_rate"></div>
+	</div>		</div>
+	</div>
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-even depth-1 clearfix">
+		<span class="cn">12</span>
+		<div class="c" id="comment-1181263">
+		<div class="cau clearfix">
+			<img alt="" src="http://www.smashingmagazine.com/wp-content/plugins/inpsyde-gravatar-load-delay/inc/frontend/../../assets/img/avatar-placeholder.png" data-gravatar-url="http://0.gravatar.com/avatar/af8f9d6642542f1aee172f7af90b9781?s=38&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D38&amp;r=G" class="avatar avatar-38 photo" height="38" width="38" />			<div class="aum">
+				<h3>Jeseph Meyers</h3>
+				<span class="dati">
+					<a title="Commentlink #12" href="http://www.smashingmagazine.com/2014/08/01/build-blog-jekyll-github-pages/#comment-1181263">
+						August 1, 2014 7:40 pm					</a>
+				</span>
+			</div>
+		</div>
+		<div class="ctx">
+			<p>Great guide, I&#8217;ve become increasingly curious about dynamic sites built with static pages. This might be the motivation that I need to get started (at least for a personal project). One thing holding me back that I can&#8217;t seem to get over is the absence of the SEO plugins I&#8217;ve come to love. Either way, thank you!</p>
+		</div>
+		<div class="com">
+						<div class="reply"><a class='comment-reply-link' href='/2014/08/01/build-blog-jekyll-github-pages/?replytocom=1181263#respond' onclick='return addComment.moveForm("comment-1181263", "1181263", "respond", "197342")'>Reply</a></div>
+			<div class="inpsyde_extended_comments_rate_wrapper clearfix" aria-live="polite">
+	<div id="inpsyde_extended_comments_rate_1181263" class="inpsyde_extended_comments_rate">0</div>
+			<div class="inpsyde_extended_comments_rate_stars" data-comment_id="1181263" data-action="inpsyde_extended_comments_rate"></div>
+	</div>		</div>
+	</div>
+	<ul class="children">
+	<li class="comment byuser comment-author-barryclark bypostauthor even depth-2 clearfix">
+		<span class="cn">13</span>
+		<div class="c" id="comment-1182136">
+		<div class="cau clearfix">
+			<img alt="" src="http://www.smashingmagazine.com/wp-content/plugins/inpsyde-gravatar-load-delay/inc/frontend/../../assets/img/avatar-placeholder.png" data-gravatar-url="http://0.gravatar.com/avatar/8529ad4bfdb99b07c3b6c3338bb91104?s=38&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D38&amp;r=G" class="avatar avatar-38 photo" height="38" width="38" />			<div class="aum">
+				<h3>Barry Clark</h3>
+				<span class="dati">
+					<a title="Commentlink #13" href="http://www.smashingmagazine.com/2014/08/01/build-blog-jekyll-github-pages/#comment-1182136">
+						August 1, 2014 11:57 pm					</a>
+				</span>
+			</div>
+		</div>
+		<div class="ctx">
+			<p>What are your favorite SEO plug-ins, Jeseph? </p>
+<p>I don&#8217;t do any type of SEO analysis on posts, now I&#8217;m wondering if I should be ;)</p>
+		</div>
+		<div class="com">
+						<div class="reply"><a class='comment-reply-link' href='/2014/08/01/build-blog-jekyll-github-pages/?replytocom=1182136#respond' onclick='return addComment.moveForm("comment-1182136", "1182136", "respond", "197342")'>Reply</a></div>
+			<div class="inpsyde_extended_comments_rate_wrapper clearfix" aria-live="polite">
+	<div id="inpsyde_extended_comments_rate_1182136" class="inpsyde_extended_comments_rate positive">1</div>
+			<div class="inpsyde_extended_comments_rate_stars" data-comment_id="1182136" data-action="inpsyde_extended_comments_rate"></div>
+	</div>		</div>
+	</div>
+	</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1 clearfix">
+		<span class="cn">14</span>
+		<div class="c" id="comment-1181777">
+		<div class="cau clearfix">
+			<img alt="" src="http://www.smashingmagazine.com/wp-content/plugins/inpsyde-gravatar-load-delay/inc/frontend/../../assets/img/avatar-placeholder.png" data-gravatar-url="http://1.gravatar.com/avatar/78a2a31c08656c5755dbf8e0e28d403a?s=38&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D38&amp;r=G" class="avatar avatar-38 photo" height="38" width="38" />			<div class="aum">
+				<h3>Navid Emami</h3>
+				<span class="dati">
+					<a title="Commentlink #14" href="http://www.smashingmagazine.com/2014/08/01/build-blog-jekyll-github-pages/#comment-1181777">
+						August 1, 2014 9:58 pm					</a>
+				</span>
+			</div>
+		</div>
+		<div class="ctx">
+			<p>Great tutorial on how to build static blogs. Recently i worked with projects like [DocPad](<a href="http://docpad.org" rel="nofollow">http://docpad.org</a>), which is a cool static website generator, but Jekyll is much simpler than that! And i started to build my own blog in *GitHub* pages thanks to you :)</p>
+		</div>
+		<div class="com">
+						<div class="reply"><a class='comment-reply-link' href='/2014/08/01/build-blog-jekyll-github-pages/?replytocom=1181777#respond' onclick='return addComment.moveForm("comment-1181777", "1181777", "respond", "197342")'>Reply</a></div>
+			<div class="inpsyde_extended_comments_rate_wrapper clearfix" aria-live="polite">
+	<div id="inpsyde_extended_comments_rate_1181777" class="inpsyde_extended_comments_rate">0</div>
+			<div class="inpsyde_extended_comments_rate_stars" data-comment_id="1181777" data-action="inpsyde_extended_comments_rate"></div>
+	</div>		</div>
+	</div>
+	<ul class="children">
+	<li class="comment byuser comment-author-barryclark bypostauthor even depth-2 clearfix">
+		<span class="cn">15</span>
+		<div class="c" id="comment-1182145">
+		<div class="cau clearfix">
+			<img alt="" src="http://www.smashingmagazine.com/wp-content/plugins/inpsyde-gravatar-load-delay/inc/frontend/../../assets/img/avatar-placeholder.png" data-gravatar-url="http://0.gravatar.com/avatar/8529ad4bfdb99b07c3b6c3338bb91104?s=38&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D38&amp;r=G" class="avatar avatar-38 photo" height="38" width="38" />			<div class="aum">
+				<h3>Barry Clark</h3>
+				<span class="dati">
+					<a title="Commentlink #15" href="http://www.smashingmagazine.com/2014/08/01/build-blog-jekyll-github-pages/#comment-1182145">
+						August 2, 2014 12:00 am					</a>
+				</span>
+			</div>
+		</div>
+		<div class="ctx">
+			<p>Nice! Your About page is looking good, Navid :)</p>
+		</div>
+		<div class="com">
+						<div class="reply"><a class='comment-reply-link' href='/2014/08/01/build-blog-jekyll-github-pages/?replytocom=1182145#respond' onclick='return addComment.moveForm("comment-1182145", "1182145", "respond", "197342")'>Reply</a></div>
+			<div class="inpsyde_extended_comments_rate_wrapper clearfix" aria-live="polite">
+	<div id="inpsyde_extended_comments_rate_1182145" class="inpsyde_extended_comments_rate">0</div>
+			<div class="inpsyde_extended_comments_rate_stars" data-comment_id="1182145" data-action="inpsyde_extended_comments_rate"></div>
+	</div>		</div>
+	</div>
+	<ul class="children">
+	<li class="comment odd alt depth-3 clearfix">
+		<span class="cn">16</span>
+		<div class="c" id="comment-1185280">
+		<div class="cau clearfix">
+			<img alt="" src="http://www.smashingmagazine.com/wp-content/plugins/inpsyde-gravatar-load-delay/inc/frontend/../../assets/img/avatar-placeholder.png" data-gravatar-url="http://1.gravatar.com/avatar/78a2a31c08656c5755dbf8e0e28d403a?s=38&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D38&amp;r=G" class="avatar avatar-38 photo" height="38" width="38" />			<div class="aum">
+				<h3>Navid Emami</h3>
+				<span class="dati">
+					<a title="Commentlink #16" href="http://www.smashingmagazine.com/2014/08/01/build-blog-jekyll-github-pages/#comment-1185280">
+						August 2, 2014 5:38 pm					</a>
+				</span>
+			</div>
+		</div>
+		<div class="ctx">
+			<p>Yeah, thank to you finally i got a simple blog :)</p>
+		</div>
+		<div class="com">
+						<div class="reply"><a class='comment-reply-link' href='/2014/08/01/build-blog-jekyll-github-pages/?replytocom=1185280#respond' onclick='return addComment.moveForm("comment-1185280", "1185280", "respond", "197342")'>Reply</a></div>
+			<div class="inpsyde_extended_comments_rate_wrapper clearfix" aria-live="polite">
+	<div id="inpsyde_extended_comments_rate_1185280" class="inpsyde_extended_comments_rate">0</div>
+			<div class="inpsyde_extended_comments_rate_stars" data-comment_id="1185280" data-action="inpsyde_extended_comments_rate"></div>
+	</div>		</div>
+	</div>
+	</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1 clearfix">
+		<span class="cn">17</span>
+		<div class="c" id="comment-1181876">
+		<div class="cau clearfix">
+			<img alt="" src="http://www.smashingmagazine.com/wp-content/plugins/inpsyde-gravatar-load-delay/inc/frontend/../../assets/img/avatar-placeholder.png" data-gravatar-url="http://1.gravatar.com/avatar/325beef9c9a7220381d760d9e37a5119?s=38&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D38&amp;r=G" class="avatar avatar-38 photo" height="38" width="38" />			<div class="aum">
+				<h3>Moritz »mo.« Sauer</h3>
+				<span class="dati">
+					<a title="Commentlink #17" href="http://www.smashingmagazine.com/2014/08/01/build-blog-jekyll-github-pages/#comment-1181876">
+						August 1, 2014 10:24 pm					</a>
+				</span>
+			</div>
+		</div>
+		<div class="ctx">
+			<p>I use Jekyll mainly to build my own little websites for clients who don&#8217;t need a CMS. One of the best things for web developers is how you can optimize websites while using Jekyll. For example just check out  Compress HTML-Template by Anatol Broder › <a href="https://github.com/penibelst/jekyll-compress-html" rel="nofollow">https://github.com/penibelst/jekyll-compress-html</a></p>
+<p>Within two minutes, you minify all HTML-docs Jekyll builds. Or check out the excellent image plugins by Rob Wierzbowski. With Minimagick and Imagemagick installed on your machine, you resize your images and it&#8217;s ALL FREE OPEN SOURCE software.</p>
+<p>Jekyll Image Tag<br />
+<a href="https://github.com/robwierzbowski/jekyll-image-tag" rel="nofollow">https://github.com/robwierzbowski/jekyll-image-tag</a></p>
+<p>Jekyll Picture Tag<br />
+<a href="https://github.com/robwierzbowski/jekyll-picture-tag" rel="nofollow">https://github.com/robwierzbowski/jekyll-picture-tag</a></p>
+<p>And to finish everything, you let gulp do the rest.</p>
+<p>I just love static website generators.</p>
+		</div>
+		<div class="com">
+						<div class="reply"><a class='comment-reply-link' href='/2014/08/01/build-blog-jekyll-github-pages/?replytocom=1181876#respond' onclick='return addComment.moveForm("comment-1181876", "1181876", "respond", "197342")'>Reply</a></div>
+			<div class="inpsyde_extended_comments_rate_wrapper clearfix" aria-live="polite">
+	<div id="inpsyde_extended_comments_rate_1181876" class="inpsyde_extended_comments_rate">0</div>
+			<div class="inpsyde_extended_comments_rate_stars" data-comment_id="1181876" data-action="inpsyde_extended_comments_rate"></div>
+	</div>		</div>
+	</div>
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1 clearfix">
+		<span class="cn">18</span>
+		<div class="c" id="comment-1184203">
+		<div class="cau clearfix">
+			<img alt="" src="http://www.smashingmagazine.com/wp-content/plugins/inpsyde-gravatar-load-delay/inc/frontend/../../assets/img/avatar-placeholder.png" data-gravatar-url="http://0.gravatar.com/avatar/08279a5038646896cb36ce434d97b775?s=38&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D38&amp;r=G" class="avatar avatar-38 photo" height="38" width="38" />			<div class="aum">
+				<h3>Neo</h3>
+				<span class="dati">
+					<a title="Commentlink #18" href="http://www.smashingmagazine.com/2014/08/01/build-blog-jekyll-github-pages/#comment-1184203">
+						August 2, 2014 11:25 am					</a>
+				</span>
+			</div>
+		</div>
+		<div class="ctx">
+			<p>Wow, this is what I am looking into now. Great post!</p>
+		</div>
+		<div class="com">
+						<div class="reply"><a class='comment-reply-link' href='/2014/08/01/build-blog-jekyll-github-pages/?replytocom=1184203#respond' onclick='return addComment.moveForm("comment-1184203", "1184203", "respond", "197342")'>Reply</a></div>
+			<div class="inpsyde_extended_comments_rate_wrapper clearfix" aria-live="polite">
+	<div id="inpsyde_extended_comments_rate_1184203" class="inpsyde_extended_comments_rate negative">-3</div>
+			<div class="inpsyde_extended_comments_rate_stars" data-comment_id="1184203" data-action="inpsyde_extended_comments_rate"></div>
+	</div>		</div>
+	</div>
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1 clearfix">
+		<span class="cn">19</span>
+		<div class="c" id="comment-1184673">
+		<div class="cau clearfix">
+			<img alt="" src="http://www.smashingmagazine.com/wp-content/plugins/inpsyde-gravatar-load-delay/inc/frontend/../../assets/img/avatar-placeholder.png" data-gravatar-url="http://0.gravatar.com/avatar/af4ffd88857ef429ac98c1acf9a0e2f3?s=38&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D38&amp;r=G" class="avatar avatar-38 photo" height="38" width="38" />			<div class="aum">
+				<h3>Brett Jankord</h3>
+				<span class="dati">
+					<a title="Commentlink #19" href="http://www.smashingmagazine.com/2014/08/01/build-blog-jekyll-github-pages/#comment-1184673">
+						August 2, 2014 1:51 pm					</a>
+				</span>
+			</div>
+		</div>
+		<div class="ctx">
+			<p>Great write-up Barry, this was the nudge I needed to get more familiar with Jekyll.</p>
+		</div>
+		<div class="com">
+						<div class="reply"><a class='comment-reply-link' href='/2014/08/01/build-blog-jekyll-github-pages/?replytocom=1184673#respond' onclick='return addComment.moveForm("comment-1184673", "1184673", "respond", "197342")'>Reply</a></div>
+			<div class="inpsyde_extended_comments_rate_wrapper clearfix" aria-live="polite">
+	<div id="inpsyde_extended_comments_rate_1184673" class="inpsyde_extended_comments_rate">0</div>
+			<div class="inpsyde_extended_comments_rate_stars" data-comment_id="1184673" data-action="inpsyde_extended_comments_rate"></div>
+	</div>		</div>
+	</div>
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1 clearfix">
+		<span class="cn">20</span>
+		<div class="c" id="comment-1185929">
+		<div class="cau clearfix">
+			<img alt="" src="http://www.smashingmagazine.com/wp-content/plugins/inpsyde-gravatar-load-delay/inc/frontend/../../assets/img/avatar-placeholder.png" data-gravatar-url="http://0.gravatar.com/avatar/ed3a4674322f005c3ee03cf70cc56057?s=38&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D38&amp;r=G" class="avatar avatar-38 photo" height="38" width="38" />			<div class="aum">
+				<h3>Jonas Ohlsson</h3>
+				<span class="dati">
+					<a title="Commentlink #20" href="http://www.smashingmagazine.com/2014/08/01/build-blog-jekyll-github-pages/#comment-1185929">
+						August 2, 2014 9:06 pm					</a>
+				</span>
+			</div>
+		</div>
+		<div class="ctx">
+			<p>This is great! I&#8217;ve been wanting to move my wordpress blog over for a while &#8211; this will help a lot, thanks!</p>
+		</div>
+		<div class="com">
+						<div class="reply"><a class='comment-reply-link' href='/2014/08/01/build-blog-jekyll-github-pages/?replytocom=1185929#respond' onclick='return addComment.moveForm("comment-1185929", "1185929", "respond", "197342")'>Reply</a></div>
+			<div class="inpsyde_extended_comments_rate_wrapper clearfix" aria-live="polite">
+	<div id="inpsyde_extended_comments_rate_1185929" class="inpsyde_extended_comments_rate negative">-1</div>
+			<div class="inpsyde_extended_comments_rate_stars" data-comment_id="1185929" data-action="inpsyde_extended_comments_rate"></div>
+	</div>		</div>
+	</div>
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1 clearfix">
+		<span class="cn">21</span>
+		<div class="c" id="comment-1187670">
+		<div class="cau clearfix">
+			<img alt="" src="http://www.smashingmagazine.com/wp-content/plugins/inpsyde-gravatar-load-delay/inc/frontend/../../assets/img/avatar-placeholder.png" data-gravatar-url="http://0.gravatar.com/avatar/e2f6d4d5405443372ca888055ae8cb46?s=38&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D38&amp;r=G" class="avatar avatar-38 photo" height="38" width="38" />			<div class="aum">
+				<h3>Alberto Apure</h3>
+				<span class="dati">
+					<a title="Commentlink #21" href="http://www.smashingmagazine.com/2014/08/01/build-blog-jekyll-github-pages/#comment-1187670">
+						August 3, 2014 5:44 am					</a>
+				</span>
+			</div>
+		</div>
+		<div class="ctx">
+			<p>Thanks Barry. With your column and repository it was really easy for me to<br />
+setup a blog. I will learn more while customizing the site.<br />
+Your instructions were great.</p>
+		</div>
+		<div class="com">
+						<div class="reply"><a class='comment-reply-link' href='/2014/08/01/build-blog-jekyll-github-pages/?replytocom=1187670#respond' onclick='return addComment.moveForm("comment-1187670", "1187670", "respond", "197342")'>Reply</a></div>
+			<div class="inpsyde_extended_comments_rate_wrapper clearfix" aria-live="polite">
+	<div id="inpsyde_extended_comments_rate_1187670" class="inpsyde_extended_comments_rate positive">1</div>
+			<div class="inpsyde_extended_comments_rate_stars" data-comment_id="1187670" data-action="inpsyde_extended_comments_rate"></div>
+	</div>		</div>
+	</div>
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1 clearfix">
+		<span class="cn">22</span>
+		<div class="c" id="comment-1187694">
+		<div class="cau clearfix">
+			<img alt="" src="http://www.smashingmagazine.com/wp-content/plugins/inpsyde-gravatar-load-delay/inc/frontend/../../assets/img/avatar-placeholder.png" data-gravatar-url="http://0.gravatar.com/avatar/0ddcf055fc7c94184036cc673187e24b?s=38&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D38&amp;r=G" class="avatar avatar-38 photo" height="38" width="38" />			<div class="aum">
+				<h3>Ishan Verma</h3>
+				<span class="dati">
+					<a title="Commentlink #22" href="http://www.smashingmagazine.com/2014/08/01/build-blog-jekyll-github-pages/#comment-1187694">
+						August 3, 2014 5:54 am					</a>
+				</span>
+			</div>
+		</div>
+		<div class="ctx">
+			<p>This is a great option for the blog, I have used many times for micro sites. <a href="http://andhyde.com/" rel="nofollow">http://andhyde.com/</a> Hyde is good to start theme for jekyll. Only issue is composing article is little messy.</p>
+		</div>
+		<div class="com">
+						<div class="reply"><a class='comment-reply-link' href='/2014/08/01/build-blog-jekyll-github-pages/?replytocom=1187694#respond' onclick='return addComment.moveForm("comment-1187694", "1187694", "respond", "197342")'>Reply</a></div>
+			<div class="inpsyde_extended_comments_rate_wrapper clearfix" aria-live="polite">
+	<div id="inpsyde_extended_comments_rate_1187694" class="inpsyde_extended_comments_rate">0</div>
+			<div class="inpsyde_extended_comments_rate_stars" data-comment_id="1187694" data-action="inpsyde_extended_comments_rate"></div>
+	</div>		</div>
+	</div>
+	<ul class="children">
+	<li class="comment byuser comment-author-barryclark bypostauthor even depth-2 clearfix">
+		<span class="cn">23</span>
+		<div class="c" id="comment-1190048">
+		<div class="cau clearfix">
+			<img alt="" src="http://www.smashingmagazine.com/wp-content/plugins/inpsyde-gravatar-load-delay/inc/frontend/../../assets/img/avatar-placeholder.png" data-gravatar-url="http://0.gravatar.com/avatar/8529ad4bfdb99b07c3b6c3338bb91104?s=38&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D38&amp;r=G" class="avatar avatar-38 photo" height="38" width="38" />			<div class="aum">
+				<h3>Barry Clark</h3>
+				<span class="dati">
+					<a title="Commentlink #23" href="http://www.smashingmagazine.com/2014/08/01/build-blog-jekyll-github-pages/#comment-1190048">
+						August 3, 2014 3:54 pm					</a>
+				</span>
+			</div>
+		</div>
+		<div class="ctx">
+			<p>Glad you mentioned Hyde, it&#8217;s a beautiful theme. MDO has a few more great ones too &#8211; <a href="https://github.com/poole" rel="nofollow">https://github.com/poole</a></p>
+<p>They&#8217;re also at the top of my &#8220;other forkable themes&#8221; section in the Jekyll Now readme, and can easily be forked using the same workflow outlined in this walkthrough.<br />
+<a href="https://github.com/barryclark/jekyll-now#other-forkable-themes" rel="nofollow">https://github.com/barryclark/jekyll-now#other-forkable-themes</a></p>
+		</div>
+		<div class="com">
+						<div class="reply"><a class='comment-reply-link' href='/2014/08/01/build-blog-jekyll-github-pages/?replytocom=1190048#respond' onclick='return addComment.moveForm("comment-1190048", "1190048", "respond", "197342")'>Reply</a></div>
+			<div class="inpsyde_extended_comments_rate_wrapper clearfix" aria-live="polite">
+	<div id="inpsyde_extended_comments_rate_1190048" class="inpsyde_extended_comments_rate">0</div>
+			<div class="inpsyde_extended_comments_rate_stars" data-comment_id="1190048" data-action="inpsyde_extended_comments_rate"></div>
+	</div>		</div>
+	</div>
+	</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+	<li class="comment odd alt thread-even depth-1 clearfix">
+		<span class="cn">24</span>
+		<div class="c" id="comment-1194076">
+		<div class="cau clearfix">
+			<img alt="" src="http://www.smashingmagazine.com/wp-content/plugins/inpsyde-gravatar-load-delay/inc/frontend/../../assets/img/avatar-placeholder.png" data-gravatar-url="http://0.gravatar.com/avatar/85548e78e5d0bcde83182daa36f6441d?s=38&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D38&amp;r=G" class="avatar avatar-38 photo" height="38" width="38" />			<div class="aum">
+				<h3>Ahmad Colapietro</h3>
+				<span class="dati">
+					<a title="Commentlink #24" href="http://www.smashingmagazine.com/2014/08/01/build-blog-jekyll-github-pages/#comment-1194076">
+						August 4, 2014 11:57 am					</a>
+				</span>
+			</div>
+		</div>
+		<div class="ctx">
+			<p>I enjoyed reading this a lot</p>
+		</div>
+		<div class="com">
+						<div class="reply"><a class='comment-reply-link' href='/2014/08/01/build-blog-jekyll-github-pages/?replytocom=1194076#respond' onclick='return addComment.moveForm("comment-1194076", "1194076", "respond", "197342")'>Reply</a></div>
+			<div class="inpsyde_extended_comments_rate_wrapper clearfix" aria-live="polite">
+	<div id="inpsyde_extended_comments_rate_1194076" class="inpsyde_extended_comments_rate">0</div>
+			<div class="inpsyde_extended_comments_rate_stars" data-comment_id="1194076" data-action="inpsyde_extended_comments_rate"></div>
+	</div>		</div>
+	</div>
+	</li><!-- #comment-## -->
+	<li class="comment even thread-odd thread-alt depth-1 clearfix">
+		<span class="cn">25</span>
+		<div class="c" id="comment-1194272">
+		<div class="cau clearfix">
+			<img alt="" src="http://www.smashingmagazine.com/wp-content/plugins/inpsyde-gravatar-load-delay/inc/frontend/../../assets/img/avatar-placeholder.png" data-gravatar-url="http://1.gravatar.com/avatar/5449b454179035cf32988643d521bcd6?s=38&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D38&amp;r=G" class="avatar avatar-38 photo" height="38" width="38" />			<div class="aum">
+				<h3>Francesca</h3>
+				<span class="dati">
+					<a title="Commentlink #25" href="http://www.smashingmagazine.com/2014/08/01/build-blog-jekyll-github-pages/#comment-1194272">
+						August 4, 2014 12:41 pm					</a>
+				</span>
+			</div>
+		</div>
+		<div class="ctx">
+			<p>Thanks Barry!  Everything&#8217;s clear!<br />
+I&#8217;d just need some additional helps with scss &#8230; Now my scss folder includes my style.scss with all the imports and 2 other folders: BOOTSTRAP folder with all the partials, and CUSTOM folder which contains other folders with my custom partials (modules, layout, vendors, states).<br />
+How should I set the _config.yml in this case?<br />
+Thank you!</p>
+		</div>
+		<div class="com">
+						<div class="reply"><a class='comment-reply-link' href='/2014/08/01/build-blog-jekyll-github-pages/?replytocom=1194272#respond' onclick='return addComment.moveForm("comment-1194272", "1194272", "respond", "197342")'>Reply</a></div>
+			<div class="inpsyde_extended_comments_rate_wrapper clearfix" aria-live="polite">
+	<div id="inpsyde_extended_comments_rate_1194272" class="inpsyde_extended_comments_rate">0</div>
+			<div class="inpsyde_extended_comments_rate_stars" data-comment_id="1194272" data-action="inpsyde_extended_comments_rate"></div>
+	</div>		</div>
+	</div>
+	<ul class="children">
+	<li class="comment byuser comment-author-barryclark bypostauthor odd alt depth-2 clearfix">
+		<span class="cn">26</span>
+		<div class="c" id="comment-1220888">
+		<div class="cau clearfix">
+			<img alt="" src="http://www.smashingmagazine.com/wp-content/plugins/inpsyde-gravatar-load-delay/inc/frontend/../../assets/img/avatar-placeholder.png" data-gravatar-url="http://0.gravatar.com/avatar/8529ad4bfdb99b07c3b6c3338bb91104?s=38&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D38&amp;r=G" class="avatar avatar-38 photo" height="38" width="38" />			<div class="aum">
+				<h3>Barry Clark</h3>
+				<span class="dati">
+					<a title="Commentlink #26" href="http://www.smashingmagazine.com/2014/08/01/build-blog-jekyll-github-pages/#comment-1220888">
+						August 16, 2014 3:17 pm					</a>
+				</span>
+			</div>
+		</div>
+		<div class="ctx">
+			<p>It&#8217;d be great to take a quick look at your project if you&#8217;re still need additional help with this, Francesca. </p>
+<p>Shoot me an email with a link to your GitHub repository? My email address is on the footer of <a href="http://www.barryclark.co/" rel="nofollow">http://www.barryclark.co/</a></p>
+		</div>
+		<div class="com">
+						<div class="reply"><a class='comment-reply-link' href='/2014/08/01/build-blog-jekyll-github-pages/?replytocom=1220888#respond' onclick='return addComment.moveForm("comment-1220888", "1220888", "respond", "197342")'>Reply</a></div>
+			<div class="inpsyde_extended_comments_rate_wrapper clearfix" aria-live="polite">
+	<div id="inpsyde_extended_comments_rate_1220888" class="inpsyde_extended_comments_rate">0</div>
+			<div class="inpsyde_extended_comments_rate_stars" data-comment_id="1220888" data-action="inpsyde_extended_comments_rate"></div>
+	</div>		</div>
+	</div>
+	</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1 clearfix">
+		<span class="cn">27</span>
+		<div class="c" id="comment-1200080">
+		<div class="cau clearfix">
+			<img alt="" src="http://www.smashingmagazine.com/wp-content/plugins/inpsyde-gravatar-load-delay/inc/frontend/../../assets/img/avatar-placeholder.png" data-gravatar-url="http://1.gravatar.com/avatar/916191c680938d8608da1c2fe206fe76?s=38&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D38&amp;r=G" class="avatar avatar-38 photo" height="38" width="38" />			<div class="aum">
+				<h3>Saleh Hamadeh</h3>
+				<span class="dati">
+					<a title="Commentlink #27" href="http://www.smashingmagazine.com/2014/08/01/build-blog-jekyll-github-pages/#comment-1200080">
+						August 5, 2014 1:14 pm					</a>
+				</span>
+			</div>
+		</div>
+		<div class="ctx">
+			<p>Great article. Jekyll itself could not explain itself that well. One thing that I would like to hear you talk about is making a static blog social. In my blog, I use Disqus for comments, Mailchimp for mailing lists, and AddThis for sharing content. I wrote this article about the social stack that I use<br />
+<a href="http://shamadeh.com/blog/web/2013/12/28/MakeABlogSocial.html" rel="nofollow">http://shamadeh.com/blog/web/2013/12/28/MakeABlogSocial.html</a></p>
+<p>I am constantly trying to find ways to make blogs socially engaging. If you have any ideas, please share them.</p>
+		</div>
+		<div class="com">
+						<div class="reply"><a class='comment-reply-link' href='/2014/08/01/build-blog-jekyll-github-pages/?replytocom=1200080#respond' onclick='return addComment.moveForm("comment-1200080", "1200080", "respond", "197342")'>Reply</a></div>
+			<div class="inpsyde_extended_comments_rate_wrapper clearfix" aria-live="polite">
+	<div id="inpsyde_extended_comments_rate_1200080" class="inpsyde_extended_comments_rate">0</div>
+			<div class="inpsyde_extended_comments_rate_stars" data-comment_id="1200080" data-action="inpsyde_extended_comments_rate"></div>
+	</div>		</div>
+	</div>
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1 clearfix">
+		<span class="cn">28</span>
+		<div class="c" id="comment-1205157">
+		<div class="cau clearfix">
+			<img alt="" src="http://www.smashingmagazine.com/wp-content/plugins/inpsyde-gravatar-load-delay/inc/frontend/../../assets/img/avatar-placeholder.png" data-gravatar-url="http://1.gravatar.com/avatar/fc1c023c38ea815656eb827326a76c0e?s=38&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D38&amp;r=G" class="avatar avatar-38 photo" height="38" width="38" />			<div class="aum">
+				<h3>Wafiq Bau</h3>
+				<span class="dati">
+					<a title="Commentlink #28" href="http://www.smashingmagazine.com/2014/08/01/build-blog-jekyll-github-pages/#comment-1205157">
+						August 6, 2014 10:02 am					</a>
+				</span>
+			</div>
+		</div>
+		<div class="ctx">
+			<p>Middleman  is far superior and also has great support for github pages. <a href="http://middlemanapp.com" rel="nofollow">http://middlemanapp.com</a></p>
+		</div>
+		<div class="com">
+						<div class="reply"><a class='comment-reply-link' href='/2014/08/01/build-blog-jekyll-github-pages/?replytocom=1205157#respond' onclick='return addComment.moveForm("comment-1205157", "1205157", "respond", "197342")'>Reply</a></div>
+			<div class="inpsyde_extended_comments_rate_wrapper clearfix" aria-live="polite">
+	<div id="inpsyde_extended_comments_rate_1205157" class="inpsyde_extended_comments_rate">0</div>
+			<div class="inpsyde_extended_comments_rate_stars" data-comment_id="1205157" data-action="inpsyde_extended_comments_rate"></div>
+	</div>		</div>
+	</div>
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1 clearfix">
+		<span class="cn">29</span>
+		<div class="c" id="comment-1208864">
+		<div class="cau clearfix">
+			<img alt="" src="http://www.smashingmagazine.com/wp-content/plugins/inpsyde-gravatar-load-delay/inc/frontend/../../assets/img/avatar-placeholder.png" data-gravatar-url="http://0.gravatar.com/avatar/82ef0a373dc69da09e9eccea517a30ca?s=38&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D38&amp;r=G" class="avatar avatar-38 photo" height="38" width="38" />			<div class="aum">
+				<h3>Daniel</h3>
+				<span class="dati">
+					<a title="Commentlink #29" href="http://www.smashingmagazine.com/2014/08/01/build-blog-jekyll-github-pages/#comment-1208864">
+						August 6, 2014 10:58 pm					</a>
+				</span>
+			</div>
+		</div>
+		<div class="ctx">
+			<p>Unfortunately this doesn&#8217;t work as well for projects hosted at bitbucket. Hopefully they&#8217;ll add support for Jekyll.</p>
+		</div>
+		<div class="com">
+						<div class="reply"><a class='comment-reply-link' href='/2014/08/01/build-blog-jekyll-github-pages/?replytocom=1208864#respond' onclick='return addComment.moveForm("comment-1208864", "1208864", "respond", "197342")'>Reply</a></div>
+			<div class="inpsyde_extended_comments_rate_wrapper clearfix" aria-live="polite">
+	<div id="inpsyde_extended_comments_rate_1208864" class="inpsyde_extended_comments_rate negative">-1</div>
+			<div class="inpsyde_extended_comments_rate_stars" data-comment_id="1208864" data-action="inpsyde_extended_comments_rate"></div>
+	</div>		</div>
+	</div>
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1 clearfix">
+		<span class="cn">30</span>
+		<div class="c" id="comment-1219707">
+		<div class="cau clearfix">
+			<img alt="" src="http://www.smashingmagazine.com/wp-content/plugins/inpsyde-gravatar-load-delay/inc/frontend/../../assets/img/avatar-placeholder.png" data-gravatar-url="http://0.gravatar.com/avatar/20fe19cab27807e3349c9cd2e2ce9a00?s=38&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D38&amp;r=G" class="avatar avatar-38 photo" height="38" width="38" />			<div class="aum">
+				<h3>Alex</h3>
+				<span class="dati">
+					<a title="Commentlink #30" href="http://www.smashingmagazine.com/2014/08/01/build-blog-jekyll-github-pages/#comment-1219707">
+						August 13, 2014 4:15 pm					</a>
+				</span>
+			</div>
+		</div>
+		<div class="ctx">
+			<p>Hi Barry,</p>
+<p>Thanks so much. This is great. I&#8217;m trying to set up a personal site that has a blog, but where the blog is not the landing page for the main url. Is there a quick make it such that the main url username.github.io, go to a static page and not to blog posts?</p>
+		</div>
+		<div class="com">
+						<div class="reply"><a class='comment-reply-link' href='/2014/08/01/build-blog-jekyll-github-pages/?replytocom=1219707#respond' onclick='return addComment.moveForm("comment-1219707", "1219707", "respond", "197342")'>Reply</a></div>
+			<div class="inpsyde_extended_comments_rate_wrapper clearfix" aria-live="polite">
+	<div id="inpsyde_extended_comments_rate_1219707" class="inpsyde_extended_comments_rate">0</div>
+			<div class="inpsyde_extended_comments_rate_stars" data-comment_id="1219707" data-action="inpsyde_extended_comments_rate"></div>
+	</div>		</div>
+	</div>
+	<ul class="children">
+	<li class="comment even depth-2 clearfix">
+		<span class="cn">31</span>
+		<div class="c" id="comment-1219785">
+		<div class="cau clearfix">
+			<img alt="" src="http://www.smashingmagazine.com/wp-content/plugins/inpsyde-gravatar-load-delay/inc/frontend/../../assets/img/avatar-placeholder.png" data-gravatar-url="http://0.gravatar.com/avatar/20fe19cab27807e3349c9cd2e2ce9a00?s=38&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D38&amp;r=G" class="avatar avatar-38 photo" height="38" width="38" />			<div class="aum">
+				<h3>Alex</h3>
+				<span class="dati">
+					<a title="Commentlink #31" href="http://www.smashingmagazine.com/2014/08/01/build-blog-jekyll-github-pages/#comment-1219785">
+						August 13, 2014 6:33 pm					</a>
+				</span>
+			</div>
+		</div>
+		<div class="ctx">
+			<p>Hey. I figured out the static page, but I&#8217;m now having trouble with Disqus. I put in my short name, and I see Disqus trying to load, but it says there is an error. Any idea what might be going on?</p>
+		</div>
+		<div class="com">
+						<div class="reply"><a class='comment-reply-link' href='/2014/08/01/build-blog-jekyll-github-pages/?replytocom=1219785#respond' onclick='return addComment.moveForm("comment-1219785", "1219785", "respond", "197342")'>Reply</a></div>
+			<div class="inpsyde_extended_comments_rate_wrapper clearfix" aria-live="polite">
+	<div id="inpsyde_extended_comments_rate_1219785" class="inpsyde_extended_comments_rate">0</div>
+			<div class="inpsyde_extended_comments_rate_stars" data-comment_id="1219785" data-action="inpsyde_extended_comments_rate"></div>
+	</div>		</div>
+	</div>
+	<ul class="children">
+	<li class="comment byuser comment-author-barryclark bypostauthor odd alt depth-3 clearfix">
+		<span class="cn">32</span>
+		<div class="c" id="comment-1220889">
+		<div class="cau clearfix">
+			<img alt="" src="http://www.smashingmagazine.com/wp-content/plugins/inpsyde-gravatar-load-delay/inc/frontend/../../assets/img/avatar-placeholder.png" data-gravatar-url="http://0.gravatar.com/avatar/8529ad4bfdb99b07c3b6c3338bb91104?s=38&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D38&amp;r=G" class="avatar avatar-38 photo" height="38" width="38" />			<div class="aum">
+				<h3>Barry Clark</h3>
+				<span class="dati">
+					<a title="Commentlink #32" href="http://www.smashingmagazine.com/2014/08/01/build-blog-jekyll-github-pages/#comment-1220889">
+						August 16, 2014 3:19 pm					</a>
+				</span>
+			</div>
+		</div>
+		<div class="ctx">
+			<p>I could take a quick look at your code if you’re still need a hand with this, Alex.</p>
+<p>Shoot me an email with a link to your GitHub repository? My email address is on the footer of <a href="http://www.barryclark.co/" rel="nofollow">http://www.barryclark.co/</a></p>
+		</div>
+		<div class="com">
+						<div class="reply"><a class='comment-reply-link' href='/2014/08/01/build-blog-jekyll-github-pages/?replytocom=1220889#respond' onclick='return addComment.moveForm("comment-1220889", "1220889", "respond", "197342")'>Reply</a></div>
+			<div class="inpsyde_extended_comments_rate_wrapper clearfix" aria-live="polite">
+	<div id="inpsyde_extended_comments_rate_1220889" class="inpsyde_extended_comments_rate">0</div>
+			<div class="inpsyde_extended_comments_rate_stars" data-comment_id="1220889" data-action="inpsyde_extended_comments_rate"></div>
+	</div>		</div>
+	</div>
+	</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1 clearfix">
+		<span class="cn">33</span>
+		<div class="c" id="comment-1221256">
+		<div class="cau clearfix">
+			<img alt="" src="http://www.smashingmagazine.com/wp-content/plugins/inpsyde-gravatar-load-delay/inc/frontend/../../assets/img/avatar-placeholder.png" data-gravatar-url="http://0.gravatar.com/avatar/c4f4d22a9f9b45107029a940f8e04f21?s=38&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D38&amp;r=G" class="avatar avatar-38 photo" height="38" width="38" />			<div class="aum">
+				<h3>Xirux Nefer</h3>
+				<span class="dati">
+					<a title="Commentlink #33" href="http://www.smashingmagazine.com/2014/08/01/build-blog-jekyll-github-pages/#comment-1221256">
+						August 17, 2014 10:34 pm					</a>
+				</span>
+			</div>
+		</div>
+		<div class="ctx">
+			<p>I wonder if there is anything like Adaptive Images (<a href="http://adaptive-images.com/" rel="nofollow">http://adaptive-images.com/</a>) to make your blog images responsive in these static blogs? I think there are also some JavaScript solutions but I don&#8217;t like to load a ton of scripts, and that would invalidate the point of faster loading. If a lot of scripts have to be requested, then the page stops being fast loaded even if it is static.</p>
+		</div>
+		<div class="com">
+						<div class="reply"><a class='comment-reply-link' href='/2014/08/01/build-blog-jekyll-github-pages/?replytocom=1221256#respond' onclick='return addComment.moveForm("comment-1221256", "1221256", "respond", "197342")'>Reply</a></div>
+			<div class="inpsyde_extended_comments_rate_wrapper clearfix" aria-live="polite">
+	<div id="inpsyde_extended_comments_rate_1221256" class="inpsyde_extended_comments_rate">0</div>
+			<div class="inpsyde_extended_comments_rate_stars" data-comment_id="1221256" data-action="inpsyde_extended_comments_rate"></div>
+	</div>		</div>
+	</div>
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1 clearfix">
+		<span class="cn">34</span>
+		<div class="c" id="comment-1222150">
+		<div class="cau clearfix">
+			<img alt="" src="http://www.smashingmagazine.com/wp-content/plugins/inpsyde-gravatar-load-delay/inc/frontend/../../assets/img/avatar-placeholder.png" data-gravatar-url="http://1.gravatar.com/avatar/daa27376ce3982b657f1c3f9b12a6d44?s=38&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D38&amp;r=G" class="avatar avatar-38 photo" height="38" width="38" />			<div class="aum">
+				<h3>Daniel Peukert</h3>
+				<span class="dati">
+					<a title="Commentlink #34" href="http://www.smashingmagazine.com/2014/08/01/build-blog-jekyll-github-pages/#comment-1222150">
+						August 21, 2014 3:14 pm					</a>
+				</span>
+			</div>
+		</div>
+		<div class="ctx">
+			<p>Hi,<br />
+thanks very much for the repo, because I really didn&#8217;t want to mess with installing Jekyll on Windows. Now onto my question, the JekyllNow repo should continue to work with future version of Jekyll, right? (excluding things like if they change the syntax of _config.yml of course).</p>
+<p>Thanks</p>
+		</div>
+		<div class="com">
+						<div class="reply"><a class='comment-reply-link' href='/2014/08/01/build-blog-jekyll-github-pages/?replytocom=1222150#respond' onclick='return addComment.moveForm("comment-1222150", "1222150", "respond", "197342")'>Reply</a></div>
+			<div class="inpsyde_extended_comments_rate_wrapper clearfix" aria-live="polite">
+	<div id="inpsyde_extended_comments_rate_1222150" class="inpsyde_extended_comments_rate">0</div>
+			<div class="inpsyde_extended_comments_rate_stars" data-comment_id="1222150" data-action="inpsyde_extended_comments_rate"></div>
+	</div>		</div>
+	</div>
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1 clearfix">
+		<span class="cn">35</span>
+		<div class="c" id="comment-1222181">
+		<div class="cau clearfix">
+			<img alt="" src="http://www.smashingmagazine.com/wp-content/plugins/inpsyde-gravatar-load-delay/inc/frontend/../../assets/img/avatar-placeholder.png" data-gravatar-url="http://0.gravatar.com/avatar/6f71df24cd1ecf150ff878d1efabbaf1?s=38&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D38&amp;r=G" class="avatar avatar-38 photo" height="38" width="38" />			<div class="aum">
+				<h3>Jordan</h3>
+				<span class="dati">
+					<a title="Commentlink #35" href="http://www.smashingmagazine.com/2014/08/01/build-blog-jekyll-github-pages/#comment-1222181">
+						August 21, 2014 7:42 pm					</a>
+				</span>
+			</div>
+		</div>
+		<div class="ctx">
+			<p>Excellent writing!  Thank you very much for sharing it!<br />
+Within very short time, followed your blog, I could set up my blog site and wrote my first blog in Github: <a href="http://kunxuj.github.io/my-first-blog/" rel="nofollow">http://kunxuj.github.io/my-first-blog/</a></p>
+<p>One question: </p>
+<p>Why you don&#8217;t  use Disqus as your commenting tool? </p>
+<p>Thanks again</p>
+<p>-Jordan</p>
+		</div>
+		<div class="com">
+						<div class="reply"><a class='comment-reply-link' href='/2014/08/01/build-blog-jekyll-github-pages/?replytocom=1222181#respond' onclick='return addComment.moveForm("comment-1222181", "1222181", "respond", "197342")'>Reply</a></div>
+			<div class="inpsyde_extended_comments_rate_wrapper clearfix" aria-live="polite">
+	<div id="inpsyde_extended_comments_rate_1222181" class="inpsyde_extended_comments_rate">0</div>
+			<div class="inpsyde_extended_comments_rate_stars" data-comment_id="1222181" data-action="inpsyde_extended_comments_rate"></div>
+	</div>		</div>
+	</div>
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1 clearfix">
+		<span class="cn">36</span>
+		<div class="c" id="comment-1222245">
+		<div class="cau clearfix">
+			<img alt="" src="http://www.smashingmagazine.com/wp-content/plugins/inpsyde-gravatar-load-delay/inc/frontend/../../assets/img/avatar-placeholder.png" data-gravatar-url="http://1.gravatar.com/avatar/11acaf0b05e1b750f0f4e7936b165c77?s=38&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D38&amp;r=G" class="avatar avatar-38 photo" height="38" width="38" />			<div class="aum">
+				<h3>Cecily</h3>
+				<span class="dati">
+					<a title="Commentlink #36" href="http://www.smashingmagazine.com/2014/08/01/build-blog-jekyll-github-pages/#comment-1222245">
+						August 22, 2014 5:18 am					</a>
+				</span>
+			</div>
+		</div>
+		<div class="ctx">
+			<p>I&#8217;m curious &#8211; if I already have a github page setup at skeskali.github.io, how would I replace those pages with Jekyll? I&#8217;m sorry if this is a basic question, but I&#8217;m confused.</p>
+		</div>
+		<div class="com">
+						<div class="reply"><a class='comment-reply-link' href='/2014/08/01/build-blog-jekyll-github-pages/?replytocom=1222245#respond' onclick='return addComment.moveForm("comment-1222245", "1222245", "respond", "197342")'>Reply</a></div>
+			<div class="inpsyde_extended_comments_rate_wrapper clearfix" aria-live="polite">
+	<div id="inpsyde_extended_comments_rate_1222245" class="inpsyde_extended_comments_rate">0</div>
+			<div class="inpsyde_extended_comments_rate_stars" data-comment_id="1222245" data-action="inpsyde_extended_comments_rate"></div>
+	</div>		</div>
+	</div>
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1 clearfix">
+		<span class="cn">37</span>
+		<div class="c" id="comment-1225492">
+		<div class="cau clearfix">
+			<img alt="" src="http://www.smashingmagazine.com/wp-content/plugins/inpsyde-gravatar-load-delay/inc/frontend/../../assets/img/avatar-placeholder.png" data-gravatar-url="http://0.gravatar.com/avatar/c8b34d95d0ab2e114ae3f3dad9d38926?s=38&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D38&amp;r=G" class="avatar avatar-38 photo" height="38" width="38" />			<div class="aum">
+				<h3>vish</h3>
+				<span class="dati">
+					<a title="Commentlink #37" href="http://www.smashingmagazine.com/2014/08/01/build-blog-jekyll-github-pages/#comment-1225492">
+						August 27, 2014 9:38 pm					</a>
+				</span>
+			</div>
+		</div>
+		<div class="ctx">
+			<p>Excellent article, Thanks for writing</p>
+		</div>
+		<div class="com">
+						<div class="reply"><a class='comment-reply-link' href='/2014/08/01/build-blog-jekyll-github-pages/?replytocom=1225492#respond' onclick='return addComment.moveForm("comment-1225492", "1225492", "respond", "197342")'>Reply</a></div>
+			<div class="inpsyde_extended_comments_rate_wrapper clearfix" aria-live="polite">
+	<div id="inpsyde_extended_comments_rate_1225492" class="inpsyde_extended_comments_rate">0</div>
+			<div class="inpsyde_extended_comments_rate_stars" data-comment_id="1225492" data-action="inpsyde_extended_comments_rate"></div>
+	</div>		</div>
+	</div>
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1 clearfix">
+		<span class="cn">38</span>
+		<div class="c" id="comment-1228477">
+		<div class="cau clearfix">
+			<img alt="" src="http://www.smashingmagazine.com/wp-content/plugins/inpsyde-gravatar-load-delay/inc/frontend/../../assets/img/avatar-placeholder.png" data-gravatar-url="http://1.gravatar.com/avatar/93c290b9d59c80630dd10d4064aa75e8?s=38&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D38&amp;r=G" class="avatar avatar-38 photo" height="38" width="38" />			<div class="aum">
+				<h3>Ashish</h3>
+				<span class="dati">
+					<a title="Commentlink #38" href="http://www.smashingmagazine.com/2014/08/01/build-blog-jekyll-github-pages/#comment-1228477">
+						September 8, 2014 5:20 pm					</a>
+				</span>
+			</div>
+		</div>
+		<div class="ctx">
+			<p>Thanks for the article. I am wondering how I can add my own images in /image/ directory? Its not allowing me to. Can you please help me here?</p>
+		</div>
+		<div class="com">
+						<div class="reply"><a class='comment-reply-link' href='/2014/08/01/build-blog-jekyll-github-pages/?replytocom=1228477#respond' onclick='return addComment.moveForm("comment-1228477", "1228477", "respond", "197342")'>Reply</a></div>
+			<div class="inpsyde_extended_comments_rate_wrapper clearfix" aria-live="polite">
+	<div id="inpsyde_extended_comments_rate_1228477" class="inpsyde_extended_comments_rate">0</div>
+			<div class="inpsyde_extended_comments_rate_stars" data-comment_id="1228477" data-action="inpsyde_extended_comments_rate"></div>
+	</div>		</div>
+	</div>
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1 clearfix">
+		<span class="cn">39</span>
+		<div class="c" id="comment-1233992">
+		<div class="cau clearfix">
+			<img alt="" src="http://www.smashingmagazine.com/wp-content/plugins/inpsyde-gravatar-load-delay/inc/frontend/../../assets/img/avatar-placeholder.png" data-gravatar-url="http://1.gravatar.com/avatar/39165a4eaf0e7670d5f2bb88367d68b9?s=38&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D38&amp;r=G" class="avatar avatar-38 photo" height="38" width="38" />			<div class="aum">
+				<h3>Tim Base</h3>
+				<span class="dati">
+					<a title="Commentlink #39" href="http://www.smashingmagazine.com/2014/08/01/build-blog-jekyll-github-pages/#comment-1233992">
+						October 6, 2014 8:48 am					</a>
+				</span>
+			</div>
+		</div>
+		<div class="ctx">
+			<p>Migrating from WordPress to Jekyll is something I rather admire!</p>
+<p>For those who are on Macs and just want to do a bit of testing, and do a local build of Jekyll. I whipped up an <a href="http://www.webhostwhat.com/guide-how-to-host-jekyll-blog-on-github-using-a-mac/" rel="nofollow">easy guide</a> on the steps to get it quickly up and running.</p>
+<p>Much thanks Barry.</p>
+		</div>
+		<div class="com">
+						<div class="reply"><a class='comment-reply-link' href='/2014/08/01/build-blog-jekyll-github-pages/?replytocom=1233992#respond' onclick='return addComment.moveForm("comment-1233992", "1233992", "respond", "197342")'>Reply</a></div>
+			<div class="inpsyde_extended_comments_rate_wrapper clearfix" aria-live="polite">
+	<div id="inpsyde_extended_comments_rate_1233992" class="inpsyde_extended_comments_rate positive">3</div>
+			<div class="inpsyde_extended_comments_rate_stars" data-comment_id="1233992" data-action="inpsyde_extended_comments_rate"></div>
+	</div>		</div>
+	</div>
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1 clearfix">
+		<span class="cn">40</span>
+		<div class="c" id="comment-1235688">
+		<div class="cau clearfix">
+			<img alt="" src="http://www.smashingmagazine.com/wp-content/plugins/inpsyde-gravatar-load-delay/inc/frontend/../../assets/img/avatar-placeholder.png" data-gravatar-url="http://0.gravatar.com/avatar/6865cae1ebbcf4108dc62440af5f1278?s=38&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D38&amp;r=G" class="avatar avatar-38 photo" height="38" width="38" />			<div class="aum">
+				<h3>James</h3>
+				<span class="dati">
+					<a title="Commentlink #40" href="http://www.smashingmagazine.com/2014/08/01/build-blog-jekyll-github-pages/#comment-1235688">
+						October 15, 2014 5:13 pm					</a>
+				</span>
+			</div>
+		</div>
+		<div class="ctx">
+			<p>Thanks for the article, I managed to get a page up at Github very easily. I have a question though, you list several themes which are compatible, however you point to what appears to be the standard setup. This in turn makes me think we are effectively starting from scratch when we want to change themes. Is there a way to change without starting over?</p>
+		</div>
+		<div class="com">
+						<div class="reply"><a class='comment-reply-link' href='/2014/08/01/build-blog-jekyll-github-pages/?replytocom=1235688#respond' onclick='return addComment.moveForm("comment-1235688", "1235688", "respond", "197342")'>Reply</a></div>
+			<div class="inpsyde_extended_comments_rate_wrapper clearfix" aria-live="polite">
+	<div id="inpsyde_extended_comments_rate_1235688" class="inpsyde_extended_comments_rate">0</div>
+			<div class="inpsyde_extended_comments_rate_stars" data-comment_id="1235688" data-action="inpsyde_extended_comments_rate"></div>
+	</div>		</div>
+	</div>
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1 clearfix">
+		<span class="cn">41</span>
+		<div class="c" id="comment-1238706">
+		<div class="cau clearfix">
+			<img alt="" src="http://www.smashingmagazine.com/wp-content/plugins/inpsyde-gravatar-load-delay/inc/frontend/../../assets/img/avatar-placeholder.png" data-gravatar-url="http://0.gravatar.com/avatar/e70417e47d5bc7935c73810c2b95e3bc?s=38&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D38&amp;r=G" class="avatar avatar-38 photo" height="38" width="38" />			<div class="aum">
+				<h3>Lu</h3>
+				<span class="dati">
+					<a title="Commentlink #41" href="http://www.smashingmagazine.com/2014/08/01/build-blog-jekyll-github-pages/#comment-1238706">
+						October 26, 2014 6:22 pm					</a>
+				</span>
+			</div>
+		</div>
+		<div class="ctx">
+			<p>That&#8217;s awesome!</p>
+<p>BTW, which screenshot app you use to get the animated gif?</p>
+		</div>
+		<div class="com">
+						<div class="reply"><a class='comment-reply-link' href='/2014/08/01/build-blog-jekyll-github-pages/?replytocom=1238706#respond' onclick='return addComment.moveForm("comment-1238706", "1238706", "respond", "197342")'>Reply</a></div>
+			<div class="inpsyde_extended_comments_rate_wrapper clearfix" aria-live="polite">
+	<div id="inpsyde_extended_comments_rate_1238706" class="inpsyde_extended_comments_rate">0</div>
+			<div class="inpsyde_extended_comments_rate_stars" data-comment_id="1238706" data-action="inpsyde_extended_comments_rate"></div>
+	</div>		</div>
+	</div>
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1 clearfix">
+		<span class="cn">42</span>
+		<div class="c" id="comment-1239770">
+		<div class="cau clearfix">
+			<img alt="" src="http://www.smashingmagazine.com/wp-content/plugins/inpsyde-gravatar-load-delay/inc/frontend/../../assets/img/avatar-placeholder.png" data-gravatar-url="http://0.gravatar.com/avatar/45c00ecad7a7950818f48e0533c76917?s=38&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D38&amp;r=G" class="avatar avatar-38 photo" height="38" width="38" />			<div class="aum">
+				<h3>William Denman</h3>
+				<span class="dati">
+					<a title="Commentlink #42" href="http://www.smashingmagazine.com/2014/08/01/build-blog-jekyll-github-pages/#comment-1239770">
+						October 30, 2014 10:50 pm					</a>
+				</span>
+			</div>
+		</div>
+		<div class="ctx">
+			<p>Really awesome article, well written and very easy to follow.</p>
+		</div>
+		<div class="com">
+						<div class="reply"><a class='comment-reply-link' href='/2014/08/01/build-blog-jekyll-github-pages/?replytocom=1239770#respond' onclick='return addComment.moveForm("comment-1239770", "1239770", "respond", "197342")'>Reply</a></div>
+			<div class="inpsyde_extended_comments_rate_wrapper clearfix" aria-live="polite">
+	<div id="inpsyde_extended_comments_rate_1239770" class="inpsyde_extended_comments_rate">0</div>
+			<div class="inpsyde_extended_comments_rate_stars" data-comment_id="1239770" data-action="inpsyde_extended_comments_rate"></div>
+	</div>		</div>
+	</div>
+	</li><!-- #comment-## -->
+	        </ol>
+            		    </div>
+	</div>
+<div id="respond">
+    <h3>Leave a Comment</h3>
+    <p>Yay! You've decided to leave a comment. That's fantastic! Please keep in mind that comments are moderated and <code>rel="nofollow"</code> is in use. So, please do not use a spammy keyword or a domain as your name, or else it will be deleted. Let's have a personal and meaningful conversation instead. Thanks for dropping by!</p>
+                    <a rel="nofollow" id="cancel-comment-reply-link" href="/2014/08/01/build-blog-jekyll-github-pages/#respond" style="display:none;">Click here to cancel reply.</a>								<div id="respond" class="comment-respond">
+				<h3 id="reply-title" class="comment-reply-title"> <small><a rel="nofollow" id="cancel-comment-reply-link" href="/2014/08/01/build-blog-jekyll-github-pages/#respond" style="display:none;">Click here to cancel reply.</a></small></h3>
+									<form action="http://www.smashingmagazine.com/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate>
+																										<div class="clearfix"><p class="input-half"><label for="comment_author">Your name<span class="required">*</span></label><input type="text" name="author" id="comment_author" value="" tabindex="1" class="input" /></p>
+<p class="input-half"><label for="email">Your email<span class="required">*</span></label><input type="text" name="email" id="email" value="" tabindex="2" class="input" /></p></div>
+												<div class="ccr right"><small></small></div><label for="comment">Your message<span class="required">*</span></label><textarea name="79800-comment" id="comment" rows="10" tabindex="3" class="input textarea"></textarea><textarea name="comment" style="display:none" rows="1" cols="1"></textarea>												<p class="form-submit">
+							<input name="submit" type="submit" id="submit" value="Submit Comment" />
+							<input type='hidden' name='comment_post_ID' value='197342' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+						</p>
+						<div id="inpsyde_extended_comments_preview_wrapper">
+	<a href="#" class="btn btn-primary" id="inpsyde_extended_comments_preview_button" role="button" aria-controls="inpsyde_extended_comments_preview_container" data-action="inpsyde_extended_comments_preview" >Preview</a>
+	<div id="inpsyde_extended_comments_preview_container" aria-live="polite"></div>
+</div>					</form>
+							</div><!-- #respond -->
+			        </div>
+</div></div><p><a href="#top" class="top" title="Jump to the top of the page">&uarr; Back to top</a></p>
+</div><div class="fo-na">
 
-      <!-- Main wokspace area with editor and console. -->
-      <div id="content-workspace" class="page">
-        <div id="editor">
-          <div id="editor-run" class="button"></div>
-          <div id="editor-widget"></div>
-          <div id="unhide-left"></div>
-        </div>
-        <div id="resize-center"></div>
-        <div id="console">
-          <div id="replay-button" class="button">Run Session</div>
-          <div id="progress"><div id="progress-fill"></div></div>
-          <div id="unhide-right"></div>
-        </div>
-      </div>
-      <!-- Language selector. -->
-      <!-- NOTE: tabindex needed for it to receive focus. -->
-      <div id="content-languages" class="page" tabindex="0">
-        <h2 class="content-title">Select a Language</h2>
-        <div id="languages-back" class="page-close"></div>
-        <div class="language-group">
-          <h3 class="language-group-header">Classic</h3>
-          <ul>
-          <li>
-          <a href="/languages/QBasic"><b><em>Q</em>Basic:</b>&nbsp;
-            Structured programming for beginners.</a>
-        </li><li>
-          <a href="/languages/Forth"><b>Fort<em>h</em>:</b>&nbsp;
-            An interactive stack-oriented language.</a>
-        </li><li>
-          <a href="/languages/APL"><b><em>A</em>PL:</b>&nbsp;
-            An array-oriented language using funny characters</a>
-        </li>
-          </ul>
-        </div>
-        <div class="language-group">
-          <h3 class="language-group-header">Practical</h3>
-          <ul>
-          <li>
-          <a href="/languages/Ruby"><b><em>R</em>uby (beta):</b>&nbsp;
-            A natural dynamic object-oriented language.</a>
-        </li><li>
-          <a href="/languages/Python"><b><em>P</em>ython:</b>&nbsp;
-            A dynamic language emphasizing readability.</a>
-        </li><li>
-          <a href="/languages/Lua"><b><em>L</em>ua:</b>&nbsp;
-            A lightweight multi-paradigm scripting language.</a>
-        </li><li>
-          <a href="/languages/Scheme"><b><em>S</em>cheme:</b>&nbsp;
-            An elegant dynamic dialect of Lisp.</a>
-        </li>
-          </ul>
-        </div>
-        <div class="language-group">
-          <h3 class="language-group-header">Esoteric</h3>
-          <ul>
-          <li>
-          <a href="/languages/Emoticon"><b><em>E</em>moticon:</b>&nbsp;
-            Programming with an extra dose of smile.</a>
-        </li><li>
-          <a href="/languages/Brainfuck"><b>Brain<em>F</em>***:</b>&nbsp;
-            A pure Turing machine controller.</a>
-        </li><li>
-          <a href="/languages/LOLCODE"><b>L<em>O</em>LCODE:</b>&nbsp;
-            The basic language of lolcats.</a>
-        </li><li>
-          <a href="/languages/Unlambda"><b><em>U</em>nlambda:</b>&nbsp;
-            Functional purity given form.</a>
-        </li><li>
-          <a href="/languages/Bloop"><b><em>B</em>loop:</b>&nbsp;
-            Nothing but bounded loops.</a>
-        </li>
-          </ul>
-        </div>
-        <div class="language-group">
-          <h3 class="language-group-header">Web</h3>
-          <ul>
-          <li>
-          <a href="/languages/JavaScript"><b><em>J</em>avaScript:</b>&nbsp;
-            The de facto language of the Web.</a>
-        </li><li>
-          <a href="/languages/Traceur"><b>Javascript.<em>n</em>ext:</b>&nbsp;
-            The JavaScript of tomorrow.</a>
-        </li><li>
-          <a href="/languages/Move"><b><em>M</em>ove:</b>&nbsp;
-            The easy way to program the web.</a>
-        </li><li>
-          <a href="/languages/Kaffeine"><b><em>K</em>affeine:</b>&nbsp;
-            Extended JavaScript for pros.</a>
-        </li><li>
-          <a href="/languages/CoffeeScript"><b><em>C</em>offeeScript:</b>&nbsp;
-            Unfancy JavaScript.</a>
-        </li><li>
-          <a href="/languages/Roy"><b>Ro<em>y</em>:</b>&nbsp;
-            Small functional language that compiles to JavaScript.</a>
-        </li>
-          </ul>
-        </div>
+<div class="mn" id="mn">
+
+	 <ul id="menu-smashing-mobile-network" class="mnu"><li class="mnh">Smashing Pages:</li><li id="menu-item-188956" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-188956 menu-item-books"><a href="http://www.smashingmagazine.com/books/">Books</a></li>
+<li id="menu-item-188957" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-188957 menu-item-ebooks"><a href="http://www.smashingmagazine.com/ebooks/">eBooks</a></li>
+<li id="menu-item-188955" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-188955 menu-item-workshops"><a href="http://www.smashingmagazine.com/smashing-workshops/">Workshops</a></li>
+<li id="menu-item-188959" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-188959 menu-item-email-newsletter"><a href="http://www.smashingmagazine.com/the-smashing-newsletter/">Email Newsletter</a></li>
+<li id="menu-item-188961" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-188961 menu-item-job-board"><a href="http://jobs.smashingmagazine.com">Job Board</a></li>
+<li id="menu-item-188958" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-188958 menu-item-about-us-impressum"><a href="http://www.smashingmagazine.com/about/">About us / Impressum</a></li>
+</ul>
+	 <ul id="menu-mobile-categories" class="mnu"><li class="mnh">Categories:</li><li id="menu-item-181575" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-181575 menu-item-coding"><a href="http://www.smashingmagazine.com/category/coding/">Coding</a></li>
+<li id="menu-item-181576" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-181576 menu-item-design"><a href="http://www.smashingmagazine.com/category/design/">Design</a></li>
+<li id="menu-item-181580" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-181580 menu-item-mobile"><a href="http://www.smashingmagazine.com/category/mobile/">Mobile</a></li>
+<li id="menu-item-181579" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-181579 menu-item-graphics"><a href="http://www.smashingmagazine.com/category/graphics/">Graphics</a></li>
+<li id="menu-item-181577" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-181577 menu-item-ux-design"><a href="http://www.smashingmagazine.com/category/uxdesign/">UX Design</a></li>
+<li id="menu-item-181578" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-181578 menu-item-wordpress"><a href="http://www.smashingmagazine.com/category/wordpress/"><span class="long"><span>Word</span><span>Press</span></span><span class="short">WP</span></a></li>
+</ul>
+	<a href="#top" class="top" title="Jump to the top of the page">&uarr; Back to top</a>
+</div><div class="ms" id="ms">
+  <form id="searching" class="sfm" method="get" action="http://www.smashingmagazine.com/search-results/" target="_top">
+    <div class="clearfix">
+      <input name="q" id="mobile-search-input" type="text" placeholder="e.g. CSS" />
+      <button class="search_submit" type="submit">Search</button>
+      <input type="hidden" name="cx" value="partner-pub-6779860845561969:5884617103">
+      <input type="hidden" name="cof" value="FORID:10">
+      <input type="hidden" name="ie" value="UTF-8">
     </div>
-      <!-- Examples page. -->
-      <div id="content-examples" class="page">
-        <h2 class="content-title">Example Code</h2>
-        <div id="examples-back" class="page-close"></div>
-        <div id="examples-editor"></div>
-        <div id="examples-separator"></div>
-        <div id="examples-console"></div>
-      </div>
-      <!-- Help page. -->
-      <div id="content-help" class="page">
-        <h2 class="content-title">Help</h2>
-        <div id="help-back" class="page-close"></div>
-        <div id="help-faq">
-          <div class="help-header">FAQ</div>
-          <div class="faq-question">What is repl.it?</div>
-          <div class="faq-answer">It is an online environment for interactively exploring programming languages. The name comes from the <a href="http://en.wikipedia.org/wiki/REPL">read-eval-print loop</a>, the interactive toplevel used by languages like Lisp and Python.</div>
-
-          <div class="faq-question">How do I start?</div>
-          <div class="faq-answer">Once you have selected a language, start by typing an expression into the console on the right side of the screen and pressing Enter. Your expression will be evaluated in the selected language and its result will be printed. Repeat until satisfied. You can also try some ready-to-run examples by clicking on the button labeled "eg".</div>
-
-          <div class="faq-question">Can I use variables or other state?</div>
-          <div class="faq-answer">Yes! The repl.it interpreters fully support variables, state and side effects in all the supported languages.</div>
-
-          <div class="faq-question">Can I save my session?</div>
-          <div class="faq-answer">Yes! You can save your session and share it with others by clicking on the chain link icon in the top right corner. Both the editor's content and the REPL session will be preserved and can be executed once again using the created link to continue from where you left off.</div>
-
-          <div class="faq-question">Is repl.it open source?</div>
-          <div class="faq-answer">Yes! You can explore the code and contribute to various parts of repl.it through <a href="https://github.com/replit">our GitHub repositories</a>.</div>
-
-          <div class="faq-question">Can I use repl.it on my phone or tablet?</div>
-          <div class="faq-answer">Yes! As a web application, repl.it can be used on any device that has a modern web browser. Currently, we have full support for Android devices, and partial support for iOS.</div>
-
-          <div class="faq-question">How does repl.it work?</div>
-          <div class="faq-answer">All code processed by repl.it runs entirely on your computer, with no server-side evaluation. It uses language interpreters written in JavaScript to execute your code and keep track of state. Some of the interpreters (like BiwaScheme) are originally implemented in JavaScript, while others (like Python) were compiled from their original lower-level implementations using <a href="http://emscripten.org/">Emscripten</a>.</div>
-        </div>
-        <div id="help-shortcuts">
-          <div class="help-header">Console Shortcuts</div>
-          <div id="help-shortcuts-content">
-            <div class="shortcut"><kbd>Enter</kbd></div> Evaluate the entered command.<br />
-            <div class="shortcut"><kbd>Shift<em>+</em>Enter</kbd></div> Continue to the next line.<br />
-            <div class="shortcut"><kbd>Tab</kbd></div> Indent.<br />
-            <div class="shortcut"><kbd>Shift<em>+</em>Tab</kbd></div> Unindent.<br />
-            <div class="shortcut"><kbd>Up</kbd></div> Previous history item.<br />
-            <div class="shortcut"><kbd>Down</kbd></div> Next history item.<br />
-            <div class="shortcut"><kbd>Ctrl<em>+</em>Up</kbd></div> Move to the line above the cursor.<br />
-            <div class="shortcut"><kbd>Ctrl<em>+</em>Down</kbd></div> Move to the line below the cursor.<br />
-            <div class="shortcut"><kbd>Ctrl<em>+</em>E</kbd></div> Move to the end of the current line.<br />
-            <div class="shortcut"><kbd>Ctrl<em>+</em>A</kbd></div> Move to the start of the current line.<br />
-            <div class="shortcut"><kbd>Ctrl<em>+</em>K</kbd></div> Clears the console.<br />
-            <div class="shortcut"><kbd>Ctrl<em>+</em>Z</kbd></div> Cancel current prompt.<br />
-            <div class="shortcut"><kbd>Ctrl<em>+</em>L</kbd></div> Open languages selector.<br />
-            <div class="shortcut"><kbd>Ctrl<em>+</em>G</kbd></div> Open examples preview.<br />
-            <div class="shortcut"><kbd>Ctrl<em>+</em>H</kbd></div> Open this help page.<br />
-            <div class="shortcut"><kbd>Ctrl<em>+</em>S</kbd></div> Save session (new revision).<br />
-            <div class="shortcut"><kbd>Escape</kbd></div> Close current view.<br />
-          </div>
-        </div>
-      </div>
-
-      <!-- About page. -->
-      <div id="content-about" class="page">
-        <h2 class="content-title">About Us</h2>
-        <div id="about-back" class="page-close"></div>
-        <p>The repl.it project is an attempt to create an online environment for interactively exploring programming languages. It provides a fully-featured terminal emulator and code editor, powered by interpreter engines for more than 15 languages.</p>
-        <p>All our interpreters are written in (or compiled to) JavaScript, and run completely on the user's device, regardless or whether it's a desktop, laptop or phone.</p>
-        <p>The repl.it code is open source and is available on <a href="https://github.com/replit">GitHub</a>.</p>
-        <p>&nbsp;</p>
-        <p><a href="https://twitter.com/amasad"><img src="/images/amjad.jpg" alt="Amjad Masad" /></a><a href="https://twitter.com/amasad">Amjad Masad</a> is a programmer at <a href="http://codecademy.com">Codecademy</a> and a JavaScript fanatic. He usually does frontend development, but is also known to dabble in server stuff. He drives fast cars and likes good food.</p>
-        <p><a href="http://max99x.com/"><img src="/images/max.jpg" alt="Max Shawabkeh" /></a><a href="http://max99x.com/">Max Shawabkeh</a> is a software engineer at Google and a Python enthusiast. He fancies himself a jack of many programming trades but a master of none. He reads fantasy books and likes good food.</p>
-        <p>&nbsp;</p>
-        <p>This application is a result of their sushi-powered collaboration.</p>
-      </div>
-
-      <div id="resize-right"></div>
+  </form>
+  <a href="#top" class="top" title="Jump to the top of the page">&uarr; Back to top</a>
+</div> <!-- Search form --></div>
+</div><div id="wpsidebar" class="sb">
+	<div class="col side">
+		<div class="sf">
+			<form method="get" action="http://www.smashingmagazine.com/search-results/" target="_top">
+				<label for="magazine-search">Search on Smashing Magazine</label>
+				<input id="magazine-search" name="q" type="text" placeholder="e.g. Responsive design" />
+				<button type="submit">Search</button>
+				<input type="hidden" name="cx" value="partner-pub-6779860845561969:5884617103">
+				<input type="hidden" name="cof" value="FORID:10">
+				<input type="hidden" name="ie" value="UTF-8">
+			</form>
+		</div>
+		<div class="bw faw">
+			        <span class="declare">Advertisement</span>
+        <span class="awithus"><a class="sprite ed-us" href="mailto:&#97;&#100;&#118;&#101;&#114;&#116;&#105;&#115;&#105;&#110;&#103;&#64;&#115;&#109;&#97;&#115;&#104;&#105;&#110;&#103;&#109;&#97;&#103;&#97;&#122;&#105;&#110;&#101;&#46;&#99;&#111;&#109;" title="Advertise with us!">Advertise with us!</a></span>
+        <div id="spnsrlist-a"></div>
+ 					</div>
+		<div class="sf wg">
+      <h3>
+      	<a href="http://www.smashingmagazine.com/the-smashing-newsletter/">
+      		<img src="http://www.smashingmagazine.com/files/smashing-widget/v006/img/smnl.png" alt="Smashing Newsletter" /> Smashing Newsletter
+      	</a>
+      </h3>
+      <p>Subscribe to our email newsletter for useful tips and valuable resources, sent out every second Tuesday.</p>
+      <form action="http://smashingmagazine.us1.list-manage1.com/subscribe/post?u=16b832d9ad4b28edf261f34df&amp;id=a1666656e0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate">
+        <input name="EMAIL" type="text" placeholder="email address" />
+        <button class="search_submit" type="submit">Subscribe</button>
+      </form>
     </div>
-    <!-- Browser fallback page. -->
-    <div id="content-fallback">
-      <div id="fallback-header">Browser Version Not Supported</div>
-      <div id="fallback-content">
-        Due to repl.it's reliance on advanced JavaScript techniques, older browsers might have problems running it correctly. Please download the latest version of your favourite browser.
-        <br />
-        <a href="http://www.google.com/chrome" id="browser-chrome">Chrome 13+</a>
-        <a href="http://www.mozilla.org/firefox/" id="browser-firefox">Firefox 4+</a>
-        <a href="http://www.opera.com/download/" id="browser-opera">Opera 11.51+</a>
-        <br />
-        <a href="http://windows.microsoft.com/en-US/internet-explorer/downloads/ie" id="browser-ie">IE 10+</a>
-        <a href="http://www.apple.com/safari/download/" id="browser-safari">Safari 5+</a>
-        <div id="fallback-ignore">Let me try anyway!</div>
+          <div class="bw">
+        <div id="spnsrlist-b"></div>
+      </div>
+        <div class="so wg">
+  <div class="fir">
+    <a href="http://www.smashingmagazine.com/2014/09/30/mobile-web-handbook-release/"><img src="http://www.smashingmagazine.com/wp-content/uploads/2014/10/sidebar-ppk-1.png" alt="The Mobile Web Handbook by Peter Paul Koch"></a>
+    <p>Fixing RWD issues can be quite easy — once you understand exactly why they come up. The <a href="http://www.smashingmagazine.com/2014/09/30/mobile-web-handbook-release/">Mobile Web Handbook</a> will help you understand technical issues on mobile and how to deal with them effectively.</p>
+  </div>
+  <div class="sec">
+    <a href="http://www.smashingmagazine.com/smashing-book-4-new-perspectives/"><img src="http://www.smashingmagazine.com/wp-content/uploads/2013/04/Smashing-Book-4-sidebar-transparent-opt.png" alt="Smashing Book #4"></a>
+    <p>It's done. The <a href="http://www.smashingmagazine.com/smashing-book-4-new-perspectives/">Smashing Book #4</a>, our brand new book with smart <strong>front-end techniques</strong> and design approaches. Written by respected designers and developers, neatly packed in a gorgeous hardcover.</p>
+  </div>
+  <div class="thi">
+    <a href="http://www.smashingmagazine.com/ebooks/?pk_campaign=sb4-sidebar"><img src="http://www.smashingmagazine.com/wp-content/uploads/2014/08/sidebar-smashing-library.png" alt="Smashing Library"></a>
+    <p>Hungry for more content? Over 60 <strong>eBooks</strong> are waiting to be discovered in our lovely <a href="http://www.smashingmagazine.com/ebooks/">Smashing Library</a>. And guess what? You can watch Smashing Conference talks there, too.</p>
+  </div>
+</div>      		<div class="bw">
+        <div id="spnsrlist-c"></div>
+      </div>
+    		<div class="wg">
+      <div id="jobs">
+        <h3>
+        	<a href="http://jobs.smashingmagazine.com/?pk_campaign=sm&amp;piwik_kwd=widget">
+        		<span>Smashing Job Board</span>
+        		<img src="http://www.smashingmagazine.com/files/smashing-widget/v006/img/sm-jobs.png" alt="Smashing Jobs">
+        	</a>
+        </h3>
+        <ul class="tl">
+          <li style="display:none;"></li>
+          <ul class="tl"><li class="clearfix"><a href="http://feedproxy.google.com/~r/smjobs/~3/PsJWp0NPT4o/2416189">Senior Developer - Kindle Communications - (Chicago, Illinois ONLY) - Freelance</a><p>Specific Technical Requirements 
+•	Excellent understanding of basic web languages including HTML, CSS, Javascript, with willingness to learn current trend...</p></li><li class="clearfix"><a href="http://feedproxy.google.com/~r/smjobs/~3/mv5DI4TZQ5A/2416188">User Experience Designer - Starling - (Brooklyn, NY) - FullTime</a><p>Starling is seeking a User Experience Designer to create an exceptional user experience that feels intuitive, engaging and seamless. As a critical member of the p...</p></li></ul>        </ul>
+        <a class="cr" href="http://jobs.smashingmagazine.com?pk_campaign=sm&amp;piwik_kwd=widget">View more job openings&hellip;</a>
       </div>
     </div>
-    <!-- Session save box. -->
-    <div id="save-box">
-      <div id="save-box-handle"></div>
-      <label for="save-box-link">Share on:</label>
-      <ul class="share-list">
-        <li class="share-social facebook"><a href="#"></a></li>
-        <li class="share-social twitter"><a href="#"></a></li>
-        <li class="share-social gplus"><a href="#"></a></li>
-      </ul>
-      <input id="save-box-link" type="text" value="" />
-      <label>Download:</label>
-      <ul class="downloads">
-        <li><a class="editor" href="#">Editor content</a></li>
-        <li><a class="repl" href="#">REPL session</a></li>
-      </ul>
-        
-    </div>
-    <div id="footer">
-      <div id="links">
-        <a href="/about" id="link-about">about us</a>
-        <a href="https://github.com/replit" id="link-source-code" target="_blank">source code</a>
-        <a href="/" id="language-about-link" target="_blank"> </a>
-        <a href="/" id="language-engine-link" target="_blank"> </a>
-      </div>
-    </div>
-  </body>
-</html>
+        <div id="sidebar_special-1"></div>
+    <div id="sidebar_special-2"></div>
+    <div class="sidebar_sky" id="sidebar_sky-1"></div>
+    <div class="sidebar_sky" id="sidebar_sky-2"></div>
+    	</div>
+</div>
+<footer class="f" id="footer" role="content-information">
+	
+<div class="fp clearfix">
+	<a class="pi" href="http://www.smashingmagazine.com/smashing-book-4-new-perspectives/?pk_campaign=sb4-footer"><img src="http://www.smashingmagazine.com/wp-content/uploads/2013/10/smashing-book-4-footer-opt.png" alt="Smashing Book #4"></a>
+	<p class="pd">
+		<a href="http://www.smashingmagazine.com/smashing-book-4-new-perspectives/?pk_campaign=sb4-footer"><strong>Smashing Book #4</strong></a><br />Get our brand new Smashing Book #4, available as print and eBook. <a href="http://www.smashingmagazine.com/smashing-book-4-new-perspectives/?pk_campaign=sb4-footer">Learn more...</a>
+	</p>
+</div>
+<div class="fp clearfix">
+	<a class="pi" href="https://shop.smashingmagazine.com/smashing-library-complete.html?pk_campaign=smashingmagazine-footer"><img src="http://www.smashingmagazine.com/wp-content/uploads/2013/10/smashing-library-footer-new-opt.png" alt="The Smashing Library"></a>
+	<p class="pd">
+		<a href="https://shop.smashingmagazine.com/smashing-library-complete.html?pk_campaign=smashingmagazine-footer"><strong>The Smashing Library</strong></a><br />Grab all published and upcoming Smashing eBooks, in one swoop. <a href="https://shop.smashingmagazine.com/smashing-library-complete.html?pk_campaign=smashingmagazine-footer">Learn more...</a>
+	</p>
+</div>
+<div class="fp clearfix">
+	<a class="pi" href="http://www.smashingmagazine.com/smashing-workshops/"><img src="http://www.smashingmagazine.com/wp-content/uploads/2013/08/footer-brad-frost-opt.jpg" alt="Smashing Workshops"></a>
+	<p class="pd">
+		<a href="http://www.smashingmagazine.com/smashing-workshops/"><strong>Smashing Workshops</strong></a><br />Join our hands-on full-day workshops, run by experts of the industry. Good stuff. <a href="http://www.smashingmagazine.com/smashing-workshops/">Learn more...</a>
+	</p>
+</div><p class="stmt"><em>With a commitment to quality content for the design community.</em><br />Founded by Vitaly Friedman and Sven Lennartz. 2006-2014.<br />Made in Germany. &#9998; <a href="http://www.smashingmagazine.com/write-for-us/">Write for us</a> – <a href="http://www.smashingmagazine.com/contact/">Contact us</a> – <a href="http://www.smashingmagazine.com/about/">Impressum</a>.</p>
+</footer>
+<script>var ms = document.createElement('link');ms.rel = 'stylesheet';ms.href = 'http://www.smashingmagazine.com/wp-content/themes/smashing-magazine/stylesheets/main.min.css?ver=2014.15.0';;document.getElementsByTagName("head")[0].appendChild(ms);</script>
+
+	<script type="text/javascript">var clicky_site_ids=clicky_site_ids||[];clicky_site_ids.push(2727),function(){var e=document.createElement("script");e.type="text/javascript",e.async=!0,e.src="//static.getclicky.com/js",(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(e)}();</script><noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/2727ns.gif" /></p></noscript>
+
+	
+	<script type='text/javascript' src='http://www.smashingmagazine.com/wp-content/themes/smashing-magazine/javascripts/ads.min.js?ver=2014.1.3'></script>
+<script type="text/javascript">var elements=["http://www.smashingmagazine.com/wp-content/themes/smashing-magazine/javascripts/onload.min.js?ver=2014.15.0","http://www.smashingmagazine.com/wp-content/themes/smashing-magazine/javascripts/prism.js"],downloadJSAtOnload=function(n){if("[object Array]"!==Object.prototype.toString.call(n))return 0;var t,e;for(t=0;t<n.length;t++)e=document.createElement("script"),e.src=n[t],document.body.appendChild(e);return !0};window.addEventListener ? window.addEventListener("load",function(){downloadJSAtOnload(elements)},!1):window.attachEvent ? window.attachEvent("onload",function(){downloadJSAtOnload(elements)}):window.onload=function(){downloadJSAtOnload(elements)};window.onload=function(){var avatars=document.querySelectorAll('.avatar');for(var i=0,length=avatars.length;i<length;i++){var gravatar_url=avatars[i].getAttribute('data-gravatar-url');avatars[i].src=gravatar_url;}};</script>
+<script type='text/javascript'>/* <![CDATA[ */  SmashingAds.load();   /* ]]> */</script><script type='text/javascript'>/* <![CDATA[ */  SmashingAds.postLoad();   /* ]]> */</script><script type='text/javascript'>/* <![CDATA[ */  SmashingAds.postPostLoad();   /* ]]> */</script>
+<script type="text/javascript">(function(){"use strict";if("querySelector" in document){var forEach=function(array,callback,scope){for(var i=0;i<array.length;i++){callback.call(scope,i,array[i]);}};var articles=document.getElementsByTagName("article");forEach(articles,function(i,el){var tagElements=el.querySelectorAll("li.tags a");var tags=[];forEach(tagElements,function(i,el){var content=el.innerText||el.textContent;tags.push(content.toLowerCase());});var image=el.querySelector(".at");if(image)image.setAttribute("data-adt-keywords",tags);});adtile("[data-adt-keywords]",{apiKey:"4624ca9f-0982-442f-b691-bb5f04643a74",channel:"technology",keywords:["Smashing Conference","Smashingconf","Whistler","Front-end","CSS","Javascript"],taglineFontFamily:"'Proxima Nova Bold','Helvetica Neue',Helvetica,Arial,sans-serif",taglineBorderRadius:"1.25em",colors:{iconBackground:"#e53b2c",closeButtonBackground:"#e53b2c"}});}})();</script>
+</body></html>
