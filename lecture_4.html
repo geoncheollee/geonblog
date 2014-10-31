@@ -61,11 +61,11 @@ function func(){
  var chkage=document.fm.chk_age;
  for(i=0;i<chk.length;i++){
   if(chk[i].checked==true){
-   if (i = 3 )
+   if (i == "3" ) {
     //창 뜨게 하는거
-    alert('\n\n정답입니다.'+ "\n"); 
-   else
-    alert('\n\n틀렸습니다. 정답은 3번, print "Hello, World"'+ "\n");
+    alert('\n\n정답입니다.'+ "\n"); }
+   else {
+    alert('\n\n틀렸습니다. 정답은 3번, print "Hello, World"'+ "\n"); }
    break;
   }
  }
@@ -99,8 +99,9 @@ function func(){
 </head>
 <form name="fm" method="get">
  <p> 1. "Hello, World를 출력하는 문장으로 옳은 것은? </p>
- <input type="radio" name="chk_sex" value="남자"checked="true">남자
- <input type="radio" name="chk_sex" value="여자">여자
+ <input type="radio" name="chk" value="1"checked="true">1. print Hello, World
+ <input type="radio" name="chk" value="2">2. printf Hello, World
+ <input type="radio" name="chk" value="3">3. print "Hello, World"
  <p></p>
  
   <p><form name="input" method="post" action="">
