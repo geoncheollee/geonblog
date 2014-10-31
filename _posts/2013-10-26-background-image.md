@@ -29,7 +29,7 @@ Python의 사전적 의미는 독이 없는 뱀으로 먹이를 몸으로 감아
 - 대화 기능의 인터프리터 언어
 - 동적인 데이터 타입 결정 지원
 
-{% highlight yaml %}
+{% highlight html linenos %}
 {% raw %}
 def add(a,b):
     return a+b
