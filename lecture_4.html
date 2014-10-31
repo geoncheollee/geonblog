@@ -56,15 +56,20 @@ description: "문자열 문법 소개 및 예제"
 function func(){
  //checkbox_num=관심분야 체크박스 개수
  //sex=성별정보, age=나이정보, job=직업정보, info=관심분야 정보, user_info=나이, 성별, 직업, 관심분야 통합 정도
- /*
- var chksex=document.fm.chk_sex;
+ 
+ var chk=document.fm.chk_sex;
  var chkage=document.fm.chk_age;
- for(i=0;i<chksex.length;i++){
-  if(chksex[i].checked==true){
-   sex=chksex[i].value;
+ for(i=0;i<chk.length;i++){
+  if(chk[i].checked==true){
+   if (i = 3 )
+    //창 뜨게 하는거
+    alert('\n\n정답입니다.'+ "\n"); 
+   else
+    alert('\n\n틀렸습니다. 정답은 3번, print "Hello, World"'+ "\n");
    break;
   }
  }
+ /*
  for(i=0;i<chkage.length;i++){
   if(chkage[i].checked==true){
    age=chkage[i].value;
@@ -86,8 +91,7 @@ function func(){
  }
  user_info=age+","+sex+","+job+info; 
  */
- //창 뜨게 하는거
- alert('\n\n정답은 : 3번, print "Hello, World"'+ "\n"); 
+ 
  
 }
 </script>
