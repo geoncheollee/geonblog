@@ -66,7 +66,6 @@ print add(1,2)
 </body>
 </html>
 
-<!-- 사지선다형 문제 시작 -->
 <html>
 <head>
 <SCRIPT> 
@@ -98,7 +97,6 @@ function func(){
  //관심분야 체크박스들의 배열 생성 및 초기화
  var a=new Array();
  a[0]=document.fm.chk_info1;
-
  
  var info="";
  for(i=0;i<checkbox_num;i++){
@@ -116,7 +114,6 @@ function func(){
 </head>
 <form name="fm" method="get">
  <p> 1. "Hello, World를 출력하는 문장으로 옳은 것은? </p>
- 
  <input type="radio" name="chk" value=1 checked="true">1. print Hello, World
  <input type="radio" name="chk" value=2>2. printf Hello, World
  <input type="radio" name="chk" value=3>3. print "Hello, World"
@@ -126,7 +123,6 @@ function func(){
   <input type="button" value="확인" onClick="func()"></form></p>
  
  <p>연령</p>
- 
  <input type="radio" name="chk_age" value="십대"checked="true">10대
  <input type="radio" name="chk_age" value="이십대">20대
  <input type="radio" name="chk_age" value="삼십대">30대
@@ -216,3 +212,6 @@ function func(){
 
  </body>
 </html>
+
+
+<!-- 사지선다형 문제 끝 -->
