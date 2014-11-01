@@ -58,22 +58,56 @@ print a, b, c
 {% endhighlight %}
 
 ####1-3 Decimal 자료형
+- 컴퓨터의 부동소수점 (Floating point)에 의한 실수 표현은 매우 미미한 오차를 동반함
+- 그러한 오차를 최대한 줄이고 최대한 정확한 결과 값을 얻어내기 위해 사용할 수 있는 모듈 -> decimal 모듈
+- 다음 두 개의 클래스를 제공
+  - Decimal: 숫자 자체를 표현
+  - Context: 정확도나 반올림 방법 등과 같은 환경 설정
+
 <!-- 코드입력부 기능 -->
 {% highlight html linenos %}
 {% raw %}
-a = 1.2
-b = 3.5e3
-c = -0.2e-4
-print type(a), type(b), type(c)
-print a, b, c
+
+e = 0.0                   # 기본 자료형인 float형 변수 e 생성 및 0.0 값으로 초기화
+for k in range(10000):    # 0부터 9999 까지 만번 반복
+    e += 0.0001           # 0.0001을 누적  
+    
+print e                   # print로는 1.0이 출력됨
+e
+
 {% endraw %}
 {% endhighlight %}
 
 <!-- 코드 출력부 기능 -->
 {% highlight html %}
-<type 'float'> <type 'float'> <type 'float'>
-1.2 3500.0 -2e-05
+1.0
+0.9999999999999062
 {% endhighlight %}
+
+<!-- 코드입력부 기능 -->
+{% highlight html linenos %}
+{% raw %}
+
+from decimal import *
+e2 = Decimal('0.0')        # 기본 자료형인 float형 변수 e 생성 및 0.0 값으로 초기화
+delta = Decimal('0.0001') # 누적하려고 하는 0.0001 값을 Decimal 객체인 delta 변수로 생성
+
+for k in range(10000):    # 0부터 9999 까지 만번 반복
+    e2 += delta            # delta를 누적  
+    
+print e2                   # print로는 1.0이 출력됨
+e2
+
+{% endraw %}
+{% endhighlight %}
+
+<!-- 코드 출력부 기능 -->
+{% highlight html %}
+1.0000
+Decimal('1.0000')
+{% endhighlight %}
+
+
 
 <!-- 댓글 기능 -->
 <html>
