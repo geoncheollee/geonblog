@@ -11,12 +11,17 @@ image:
 share: true
 ---
 수정1
----
-## 3. 수치 자료형과 연산자
----
-### 01 수치 자료형
+***
+***
+# 3. 수치 자료형과 연산자
+***
+***
 
-#### 1-1 정수형 상수
+***
+## 01 수치 자료형
+***
+
+### 1-1 정수형 상수
 <!-- 코드입력부 기능 -->
 {% highlight html linenos %}
 {% raw %}
@@ -30,11 +35,45 @@ print a, b, c
 
 <!-- 코드 출력부 기능 -->
 {% highlight html %}
-<<type 'int'> <type 'int'> <type 'int'>
+<type 'int'> <type 'int'> <type 'int'>
 23 19 35
-> </iframe>
 {% endhighlight %}
 
+####1-2 실수형 상수
+<!-- 코드입력부 기능 -->
+{% highlight html linenos %}
+{% raw %}
+a = 1.2
+b = 3.5e3
+c = -0.2e-4
+print type(a), type(b), type(c)
+print a, b, c
+{% endraw %}
+{% endhighlight %}
+
+<!-- 코드 출력부 기능 -->
+{% highlight html %}
+<type 'float'> <type 'float'> <type 'float'>
+1.2 3500.0 -2e-05
+{% endhighlight %}
+
+####1-3 Decimal 자료형
+<!-- 코드입력부 기능 -->
+{% highlight html linenos %}
+{% raw %}
+a = 1.2
+b = 3.5e3
+c = -0.2e-4
+print type(a), type(b), type(c)
+print a, b, c
+{% endraw %}
+{% endhighlight %}
+
+<!-- 코드 출력부 기능 -->
+{% highlight html %}
+<type 'float'> <type 'float'> <type 'float'>
+1.2 3500.0 -2e-05
+{% endhighlight %}
 
 <!-- 댓글 기능 -->
 <html>
