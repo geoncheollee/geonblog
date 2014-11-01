@@ -155,6 +155,28 @@ License: You must have a valid license purchased only from themeforest (the abov
       <!-- box area -->
         <div class="row">
                   <div class="col-md-6">
+                  <li class="active">리스트 원소에 대한 슬라이스 치환</a></li>
+                    <div class="well">
+                      <p>a = ['spam', 'eggs', 123, 1234]</p>
+                      <p>a[0:2] = [1,12]      # 동일한 크기에 대한 슬라이스 치환</p>
+                      <p>print a</p>
+                      <p></p>
+                      <p>a[0:2] = [1]         # 서로 다른 크기에 대한 슬라이스 치환</p>
+                      <p>print a</p>
+                      <p></p>
+                      <p>a[0:1] = [1, 2, 3]   # 서로 다른 크기에 대한 슬라이스 치환</p>
+                      <p>print a</p>
+                    </div>
+                  </div>
+                  <h5>[1, 12, 123, 1234]</h5>
+                  <h5>[1, 123, 1234]</h5>
+                  <h5>[1, 2, 3, 123, 1234]</h5>
+                </div>
+      </div>
+      <!-- box area end -->
+      <!-- box area -->
+        <div class="row">
+                  <div class="col-md-6">
                   <li class="active">확장 슬라이스를 사용하는 경우 슬라이스 치환때 요소의 개수가 일치해야 함</a></li>
                   <li class="active">[참고] range 인자 해석</a></li>
                   <li class="active">         range(stop): 인자가 1개인 경우 start는 0이며 주어진 인자는 stop(exclusive)으로 해석</a></li>
