@@ -54,3 +54,11 @@ print add(1,2)
 {% highlight html %}
 <iframe width="560" height="315" src="//www.youtube.com/embed/SU3kYxJmWuQ" frameborder="0"> </iframe>
 {% endhighlight %}
+
+<!-- 파이썬 코드 실행기  -->
+    <h2>파이썬 연습하기</h2>
+
+    <p>파이썬 코드를 입력 후 RUN 버튼을 누르세요.</p>
+
+    <iframe src="https://trinket.io/embed/python/538012d3a6554c7945027aab" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen> </iframe>
+
