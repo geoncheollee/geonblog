@@ -10,13 +10,13 @@ image:
   creditlink: http://www.dargadgetz.com/ios-7-abstract-wallpaper-pack-for-iphone-5-and-ipod-touch-retina/-->
 share: true
 ---
-
+수정1
 ---
-##3. 수치 자료형과 연산자
+## 3. 수치 자료형과 연산자
 ---
-###01 수치 자료형
+### 01 수치 자료형
 
-####1-1 정수형 상수
+#### 1-1 정수형 상수
 <!-- 코드입력부 기능 -->
 {% highlight html linenos %}
 {% raw %}
