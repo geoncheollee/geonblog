@@ -1,5 +1,5 @@
 ---
-layout: post-index
+layout: page
 permalink: /lecture_3/
 title: 수치 자료형과 연산자
 description: "수치 자료형과 연산자 소개 및 예제"
