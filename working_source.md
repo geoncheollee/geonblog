@@ -66,6 +66,11 @@ print add(1,2)
 </body>
 </html>
 
+<!-- 문제풀이 -->
+<div class="page">
+<div class="body">
+<div class="main">
+
 <html>
 <head>
 <SCRIPT> 
@@ -213,5 +218,7 @@ function func(){
  </body>
 </html>
 
-
+</div>
+</div>
+</div>
 <!-- 사지선다형 문제 끝 -->
