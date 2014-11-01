@@ -30,8 +30,10 @@ image:
       <h1 class="entry-title"><a href="{{ site.url }}{{ post.url }}" rel="bookmark" title="{{ post.title }}" itemprop="url">{{ post.title }}</a></h1>
     {% endif %}
   </header>
+  
+  <!-- md파일 읽어오기 기능 -->
   <div class="entry-content">
-    {{ post.content }}                                   <!-- md파일 읽어오기 명령! -->
+    {{ post.content }}
   </div><!-- /.entry-content -->
 </article><!-- /.hentry -->
 {% endfor %}
