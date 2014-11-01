@@ -116,6 +116,7 @@ function func(){
 </head>
 <form name="fm" method="get">
  <p> 1. "Hello, World를 출력하는 문장으로 옳은 것은? </p>
+ 
  <input type="radio" name="chk" value=1 checked="true">1. print Hello, World
  <input type="radio" name="chk" value=2>2. printf Hello, World
  <input type="radio" name="chk" value=3>3. print "Hello, World"
@@ -125,6 +126,7 @@ function func(){
   <input type="button" value="확인" onClick="func()"></form></p>
  
  <p>연령</p>
+ 
  <input type="radio" name="chk_age" value="십대"checked="true">10대
  <input type="radio" name="chk_age" value="이십대">20대
  <input type="radio" name="chk_age" value="삼십대">30대
