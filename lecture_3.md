@@ -5,7 +5,7 @@ title: 수치 자료형과 연산자
 description: "수치 자료형과 연산자 소개 및 예제"
 ---
 
-
+[Jekyll](http://naver.com)
 <!-- 댓글 기능 -->
 <a href="http://foo.com/bar.html#disqus_thread">Link</a>.
 
