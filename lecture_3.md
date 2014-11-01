@@ -11,9 +11,34 @@ image:
 share: true
 ---
 
+---
+##3. 수치 자료형과 연산자
+---
+###01 수치 자료형
+
+####1-1 정수형 상수
+<!-- 코드입력부 기능 -->
+{% highlight html linenos %}
+{% raw %}
+a = 23      # 10진 정수
+b = 023     # 8진 정수
+c = 0x23    # 16진 정수
+print type(a), type(b), type(c)
+print a, b, c
+{% endraw %}
+{% endhighlight %}
+
+<!-- 코드 출력부 기능 -->
+{% highlight html %}
+<<type 'int'> <type 'int'> <type 'int'>
+23 19 35
+> </iframe>
+{% endhighlight %}
 
 
 <!-- 댓글 기능 -->
+<html>
+<body>
 <a href="http://foo.com/bar.html#disqus_thread">Link</a>.
 
     <div id="disqus_thread"></div>
@@ -26,6 +51,9 @@ share: true
         })();
     </script>
     <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+</body>
+</html>
 
 <!-- 이미지 기능 -->
 <figure>
