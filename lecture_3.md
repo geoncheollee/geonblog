@@ -6,11 +6,14 @@ description: "수치 자료형과 연산자 소개 및 예제"
 tags: [Jekyll, theme, install, setup]
 image:
   feature: lecture_3_logo.jpg
-  <!--feature: abstract-11.jpg
-  credit: dargadgetz
-  creditlink: http://www.dargadgetz.com/ios-7-abstract-wallpaper-pack-for-iphone-5-and-ipod-touch-retina/-->
+
 share: true
 ---
+  <!--
+  credit: dargadgetz
+  creditlink: http://www.dargadgetz.com/ios-7-abstract-wallpaper-pack-for-iphone-5-and-ipod-touch-retina/-->
+
+
 수정2
 
 ***
