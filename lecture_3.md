@@ -10,7 +10,19 @@ image:
   creditlink: http://www.dargadgetz.com/ios-7-abstract-wallpaper-pack-for-iphone-5-and-ipod-touch-retina/-->
 share: true
 ---
-수정1
+수정2
+
+<html>
+<body>
+<h2>통계</h2> <p>
+        질문: <span><abbr class="timeago" title="2013-10-13 17:16:59 +0900">
+        2013-10-13 17:16:59 +0900
+    </abbr></span> </p> <p> 
+        읽음: <span>1,446 시간</span> </p> <p>
+        마지막 업데이트: <span title="2013-10-25 08:06:36.847074+00:00">Oct 25 '13</span> </p> </div> 
+</body>
+</html>
+
 ***
 ***
 # 3. 수치 자료형과 연산자
@@ -317,3 +329,50 @@ print add(1,2)
 {% highlight html %}
 <iframe width="560" height="315" src="//www.youtube.com/embed/SU3kYxJmWuQ" frameborder="0"> </iframe>
 {% endhighlight %}
+
+<html>
+
+<!-- 문제풀이 -->
+<div class="page">
+<div class="body">
+<div class="main">
+
+<SCRIPT> 
+function func(){
+
+ var chk=document.fm.chk_1;
+ 
+ for(i=0;i<chk.length;i++){
+  if(chk[i].checked==true){
+   if (i == 2 ) {
+    //창 뜨게 하는거
+    alert('\n\n정답입니다.'+ "\n"); }
+   else {
+    alert('\n\n틀렸습니다. 정답은 3번, print "Hello, World"'+ "\n"); }
+   break;
+  }
+ }
+}
+</script>
+
+<form name="fm" method="get">
+
+ <p> 1. "Hello, World를 출력하는 문장으로 옳은 것은? </p>
+ 
+ <p></p>
+ <input type="radio" name="chk_1" value="chk_1"> (1) print Hello, World <p></p>
+ <input type="radio" name="chk_1" value="chk_2"> (2) printf Hello, World <p></p>
+ <input type="radio" name="chk_1" value="chk_3"> (3) print "Hello, World" <p></p>
+ 
+  <p><form name="input" method="post" action="">
+  <input type="button" value="확인" onClick="func()"></form></p>
+
+ 
+ 
+</div>
+</div>
+</div>
+
+</html>
+
+<!-- 사지선다형 문제 끝 -->
