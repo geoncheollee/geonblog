@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: post-index
 title: Latest Posts
 description: "Describe this nonsense."
 tags: [Jekyll, theme, themes, responsive, blog, modern]
