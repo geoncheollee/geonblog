@@ -38,6 +38,8 @@ share: true
 
 <!-- 동영상 기능 -->
 <iframe width="560" height="315" src="//www.youtube.com/embed/SU3kYxJmWuQ" frameborder="0"> </iframe>
+---
+<iframe width="854" height="510" src="//www.youtube.com/embed/obO1oUu8AK8" frameborder="0" allowfullscreen></iframe>
 
 <!-- 코드입력부 기능 -->
 {% highlight html linenos %}
