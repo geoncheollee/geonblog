@@ -30,7 +30,7 @@ share: true
 
 ### 1-2 인덱싱
 
-~~~
+~~~~
 s = 'abcdef'
 l = [100,200,300]
 print s[0]
@@ -40,7 +40,7 @@ print
 print l[1]
 l[1] = 900
 print l[1]
-~~~
+~~~~
 
 {% highlight html %}
 a
@@ -56,7 +56,7 @@ f
 
 ### 1-3 슬라이싱
 
-~~~
+~~~~
 s = 'abcdef'
 L = [100, 200, 300]
 
@@ -67,7 +67,7 @@ print s[-100:100]
 print
 print L[:-1]     # L[:2] 와 동일
 print L[:2]
-~~~
+~~~~
 
 {% highlight html %}
 bc
@@ -85,11 +85,11 @@ abcdef
 ### 1-4 확장 슬라이싱
 
 
-~~~
+~~~~
 s = 'abcd'
 print s[::2]   #step:2 - 오른쪽 방향으로 2칸씩
 print s[::-1]  #step:-1 - 왼쪽 방향으로 1칸씩
-~~~
+~~~~
 
 {% highlight html %}
 ac
@@ -101,13 +101,13 @@ dcba
 
 ### 1-5 연결하기
 
-~~~
+~~~~
 s = 'abc' + 'def'
 print s
 
 L = [1,2,3] + [4,5,6]
 print L
-~~~
+~~~~
 
 {% highlight html %}
 abcdef
@@ -119,13 +119,13 @@ abcdef
 
 ### 1-6 반복하기
 
-~~~
+~~~~
 s = 'Abc'
 print s * 4
 
 L = [1,2,3]
 print L * 2
-~~~
+~~~~
 
 {% highlight html %}
 AbcAbcAbcAbc
@@ -137,7 +137,7 @@ AbcAbcAbcAbc
 
 ### 1-7 멤버십 테스트
 
-~~~
+~~~~
 s = 'abcde'
 print 'c' in s
 
@@ -145,7 +145,7 @@ t = (1,2,3,4,5)
 print 2 in t
 print 10 in t
 print 10 not in t
-~~~
+~~~~
 
 {% highlight html %}
 True
@@ -156,12 +156,12 @@ True
 
 
 
-~~~
+~~~~
 print 'ab' in 'abcd'
 print 'ad' in 'abcd'
 print ' ' in 'abcd'
 print ' ' in 'abcd '
-~~~
+~~~~
 
 {% highlight html %}
 True
@@ -175,14 +175,14 @@ True
 
 ### 1-8 길이 정보
 
-~~~
+~~~~
 s = 'abcde'
 l = [1,2,3]
 t = (1, 2, 3, 4)
 print len(s)
 print len(l)
 print len(t)
-~~~
+~~~~
 
 {% highlight html %}
 5
@@ -198,10 +198,10 @@ print len(t)
 
 ## 문제 풀어보기
 
-~~~
+~~~~
 s = 'hello, python'
 print s[5]
-~~~
+~~~~
 
 
 <!-- 문제풀이 -->
