@@ -9,8 +9,10 @@ image:
   credit: dargadgetz
   creditlink: http://www.dargadgetz.com/ios-7-abstract-wallpaper-pack-for-iphone-5-and-ipod-touch-retina/
 ---
-<!-- 수정1 -->
+수정1
 
+<html>
+<body>
 
 {% for post in paginator.posts %}
 <article class="hentry">
@@ -93,3 +95,6 @@ image:
         })();
     </script>
     <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+</body>
+</html>
