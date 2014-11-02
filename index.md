@@ -10,7 +10,11 @@ share: true
 ---
 
 수정1
-Your Google Analytics ID goes here along with meta tags for [Google Webmaster Tools](http://support.google.com/webmasters/bin/answer.py?hl=en&answer=35179) and [Bing Webmaster Tools](https://ssl.bing.com/webmaster/configure/verify/ownershi) site verification.
+<!-- Your Google Analytics ID goes here along with meta tags for [Google Webmaster Tools](http://support.google.com/webmasters/bin/answer.py?hl=en&answer=35179) and [Bing Webmaster Tools](https://ssl.bing.com/webmaster/configure/verify/ownershi) site verification. -->
+
+Your Google Analytics ID goes here along with meta tags for [Google Webmaster Tools](http://geoncheollee.github.io/geonblog/_post/2014-11-01-Python_start/) and [Bing Webmaster Tools](https://ssl.bing.com/webmaster/configure/verify/ownershi) site verification.
+
+
 <html>
 <body>
 <!-- <a href="/blog/2014/08/16/rules-of-good-bad-studying/">배우는 법 배우기 - 좋은/나쁜 학습의 10가지 원칙</a> -->
