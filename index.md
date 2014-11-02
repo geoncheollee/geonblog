@@ -9,15 +9,17 @@ image:
 share: true
 ---
 
-수정2
+수정1
 
 <html>
 <body>
 <!-- <a href="/blog/2014/08/16/rules-of-good-bad-studying/">배우는 법 배우기 - 좋은/나쁜 학습의 10가지 원칙</a> -->
 <!-- 2014-11-01-Python_start.md -->
+<ul class="posts">
+    <!-- This loops through the paginated posts -->
       <li>
         <h2>
-          <a href="/geonblog/_posts/2014-11-01-Python_start.md/">배우는 법 배우기 - 좋은/나쁜 학습의 10가지 원칙</a>
+          <a href="/geonblog/_posts/2014/11/01/Python_start.md/">배우는 법 배우기 - 좋은/나쁜 학습의 10가지 원칙</a>
         </h2>
         <p>
           <span class="date">16 Aug 2014</span>
