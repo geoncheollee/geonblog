@@ -1,6 +1,6 @@
 ---
 layout: page
-permalink: /lecture_4/
+permalink: /lecture_2/
 <!-- title: 문자열 -->
 description: "문자열 문법 소개 및 예제"
 image:
