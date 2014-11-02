@@ -79,7 +79,7 @@ function func(){
  //checkbox_num=관심분야 체크박스 개수
  //sex=성별정보, age=나이정보, job=직업정보, info=관심분야 정보, user_info=나이, 성별, 직업, 관심분야 통합 정도
  
- var chk=document.fm.chk;
+ var chk=document.fm.chk_1;
  
  for(i=0;i<chk.length;i++){
   if(chk[i].checked==true){
@@ -108,9 +108,11 @@ function func(){
  
  <p>연령</p>
  <input type="radio" name="chk_age" value="십대"checked="true">10대
- <input type="radio" name="chk_age" value="이십대">20대
- <input type="radio" name="chk_age" value="삼십대">30대
- <input type="radio" name="chk_age" value="사십대">40대
+ 
+ <p></p>
+ <input type="radio" name="chk_1" value="이십대">1. print Hello, World
+ <input type="radio" name="chk_1" value="삼십대">2. printf Hello, World
+ <input type="radio" name="chk_1" value="사십대">3. print "Hello, World"
  <p></p>
  
  
