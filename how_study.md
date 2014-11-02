@@ -21,8 +21,6 @@ share: true
   <title>
     배우는 법 배우기 - 좋은/나쁜 학습의 10가지 원칙
     
-    - @n0lb00's Blog
-    
   </title>
 <!--   <link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:700,400|Titillium+Web:700,400"> -->
   <link rel="stylesheet" href="/css/site.css">
@@ -41,22 +39,6 @@ share: true
   <div class="container">
     <div class="site">
       <header>
-        <nav>
-          <a class="" href="/">홈</a>
-          <a class="" href="/archive/">전체글</a>
-          <a class="" href="//github.com/nolboo/nolboo.github.io/wiki">번역글 위키</a>
-        </nav>
-        <div class="pull-right right logo">
-          <div class="name">
-            <a href="/">Nolboo's Blog</a><br />
-            <small>
-              <em>
-                  <a href="/">Learn to do. Learn by doing.</a>
-              </em>
-            </small>
-          </div>
-          <a href="/feed.xml"><img class="avatar" src="/images/rss.jpg" alt="RSS" /></a>
-        </div>
         <div class="clear"></div>
       </header>
       <div class="separator"></div>
