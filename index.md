@@ -9,7 +9,31 @@ image:
 share: true
 ---
 
+수정1
 
+<html>
+<body>
+
+      <li>
+        <h2>
+          <a href="/blog/2014/08/16/rules-of-good-bad-studying/">배우는 법 배우기 - 좋은/나쁜 학습의 10가지 원칙</a>
+        </h2>
+        <p>
+          <span class="date">16 Aug 2014</span>
+          <span class="description">코세라의 배우는 법 배우기(Learn How to Learn) 강의 중 좋은/나쁜 학습의 열가지 원칙 번역</span>
+        </p>
+        <ul class="tags cf">
+          
+          <li><a href="/search/?tags=learn">learn</a></li>
+          
+          <li><a href="/search/?tags=rule">rule</a></li>
+          
+          <li><a href="/search/?tags=coursera">coursera</a></li>
+          
+        </ul>
+      </li>
+</body>
+</html>
 
 # 파이썬을 배워야 하는 이유...
 ---
@@ -76,26 +100,3 @@ OS에 관련된 기능들은 (예: POSIX interface) 대부분 C/C++에서 제공
 
 <iframe width="854" height="510" src="//www.youtube.com/embed/obO1oUu8AK8" frameborder="0"></iframe>
 ---
-
-<html>
-<body>
-  <!-- Pagination links -->
-  <ul class="pagination clearfix">
-    
-    <li><span class="disabled">Prev</span></li>
-    
-    <li><span class="active">1</span></li>
-    
-      <li><a href="/page2">2</a></li>
-      
-      <li><a href="/page3">3</a></li>
-      
-      <li><a href="/page4">4</a></li>
-      
-    <li><a href="/page2">Next</a></li>
-    
-  </ul>
-</section>
-
-</body>
-</html>
