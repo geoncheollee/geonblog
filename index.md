@@ -72,11 +72,7 @@ OS에 관련된 기능들은 (예: POSIX interface) 대부분 C/C++에서 제공
 ---
 
 ##Python 개요 및 설치방법
+---
 
-<iframe width="560" height="315" src="//www.youtube.com/embed/SU3kYxJmWuQ" frameborder="0"> </iframe>
-
-
-<!-- 동영상 기능 -->
-<iframe width="560" height="315" src="//www.youtube.com/embed/SU3kYxJmWuQ" frameborder="0"> </iframe>
 <iframe width="854" height="510" src="//www.youtube.com/embed/obO1oUu8AK8" frameborder="0"></iframe>
 ---
