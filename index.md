@@ -86,3 +86,6 @@ OS에 관련된 기능들은 (예: POSIX interface) 대부분 C/C++에서 제공
 </body>
 </html>
 
+<!-- 동영상 기능 -->
+<iframe width="560" height="315" src="//www.youtube.com/embed/SU3kYxJmWuQ" frameborder="0"> </iframe>
+---
