@@ -9,6 +9,8 @@ image:
 share: true
 ---
 
+<html>
+<body>
 
 <!--TOP버튼 시작--> <script language=javascript>
 <!--
@@ -81,6 +83,8 @@ if (isNS4) {
 //-->
 </script> <!--TOP버튼 끝-->
 
+</body>
+</html>
 
 
 # 4. 문자열
