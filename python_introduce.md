@@ -3,7 +3,14 @@ layout: page
 permalink: /python_introduce/
 title: Python introduce
 description: "Python intro"
+tags: [Jekyll, theme, install, setup]
+image:
+  feature: abstract-11.jpg
+  credit: dargadgetz
+  creditlink: http://www.dargadgetz.com/ios-7-abstract-wallpaper-pack-for-iphone-5-and-ipod-touch-retina/
+share: true
 ---
+
 
 수정011
 
