@@ -31,8 +31,8 @@ share: true
 ### 1-2 인덱싱
 
 
-~~~~
-```
+
+```python
 s = 'abcdef'
 l = [100,200,300]
 print s[0]
@@ -43,7 +43,7 @@ print l[1]
 l[1] = 900
 print l[1]
 ```
-~~~~
+
 
 
 {% highlight html %}
