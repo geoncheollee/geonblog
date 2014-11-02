@@ -1,16 +1,15 @@
 ---
 layout: page
-title: Python introduce
+<!-- title: Python introduce -->
 description: "Python intro"
 tags: [Jekyll, theme, themes, responsive, blog, modern]
 image:
-  feature: abstract-1.jpg
-  credit: dargadgetz
-  creditlink: http://www.dargadgetz.com/ios-7-abstract-wallpaper-pack-for-iphone-5-and-ipod-touch-retina/
+  feature: pythonlogo.JPG
+  creditlink: https://github.com/geoncheollee/geonblog/blob/gh-pages/images/pythonlogo.JPG
 ---
 
 
-수정1
+수정0
 
 # 파이썬을 배워야 하는 이유...
 ---
