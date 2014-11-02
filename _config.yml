@@ -10,7 +10,9 @@ url:              http://geoncheollee.github.io/geonblog
 owner:
   name:           SLH
   avatar:         avatar.jpg
-  bio:            "S : 'S' is seo_jangwon. his one gesture makes all of girls happy. L : 'L' is Lee_geonchul. he has sharp and analytical brain and all of people envious him  H : 'H' is Hong_wonpyo. he has fearsome muscle and stone body also, his mechanical planning is intensive"
+  bio:            "S : 'S' is seo_jangwon. his one gesture makes all of girls happy." 
+                  "L : 'L' is Lee_geonchul. he has sharp and analytical brain and all of people envious him."
+                  "H : 'H' is Hong_wonpyo. he has fearsome muscle and stone body also, his mechanical planning is intensive"
   email:          you@email.com
   # Social networking links used in footer. Update and remove as you like.
   twitter:        
