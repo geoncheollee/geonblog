@@ -27,14 +27,6 @@ share: true
   - 길이 정보 (Length)
   - for ~ in 문
 
-<html>
-<body>
-<p></p>
-<p></p>
-<p></p>
-<p></p><p></p><p></p>
-</body>
-</html>
 
 ### 1-2 인덱싱
 
@@ -224,21 +216,17 @@ print len(t)
 {% endhighlight %}
 
 
-- 참고 동영상
+## 참고 동영상
 
 <iframe width="854" height="510" src="//www.youtube.com/embed/qWy-kTU8qYU?list=PLc91J-KoFBX-d1SsaakXM8mOnCeOEzH32" frameborder="0" allowfullscreen></iframe>
 
 
-- 문제 풀어보기
+## 문제 풀어보기
 
 {% highlight html linenos %}
 {% raw %}
-s = 'abcde'
-l = [1,2,3]
-t = (1, 2, 3, 4)
-print len(s)
-print len(l)
-print len(t)
+s = 'hello, python'
+print s[5]
 {% endraw %}
 {% endhighlight %}
 
@@ -258,7 +246,7 @@ function func(){
  
  for(i=0;i<chk.length;i++){
   if(chk[i].checked==true){
-   if (i == 2 ) {
+   if (i == 0 ) {
     //창 뜨게 하는거
     alert('\n\n정답입니다.'+ "\n"); }
    else {
@@ -273,12 +261,11 @@ function func(){
 
  <p> 1. 위의 코드 결과로 알맞은 것은? </p>
  
- 
- 
  <p></p>
- <input type="radio" name="chk_1" value="chk_1"> (1) print Hello, World <p></p>
- <input type="radio" name="chk_1" value="chk_2"> (2) printf Hello, World <p></p>
- <input type="radio" name="chk_1" value="chk_3"> (3) print "Hello, World" <p></p>
+ <input type="radio" name="chk_1" value="chk_1"> (1) , <p></p>
+ <input type="radio" name="chk_2" value="chk_2"> (2) h <p></p>
+ <input type="radio" name="chk_3" value="chk_3"> (3) 공백 <p></p>
+ <input type="radio" name="chk_4" value="chk_4"> (3) W <p></p>
  
   <p><form name="input" method="post" action="">
   <input type="button" value="확인" onClick="func()"></form></p>
