@@ -1,49 +1,47 @@
-/*! Plugin options and other jQuery stuff */
+<!--TOP버튼 시작--> <script language=javascript>
+<!--
 
-// dl-menu options
-$(function() {
-  $( '#dl-menu' ).dlmenu({
-    animationClasses : { classin : 'dl-animate-in', classout : 'dl-animate-out' }
-  });
-});
+var isDOM = (document.getElementById ? true : false); 
+var isIE4 = ((document.all && !isDOM) ? true : false);
+var isNS4 = (document.layers ? true : false);
 
-// FitVids options
-$(function() {
-  $("article").fitVids();
-});
+function getRef(id) {
+        if (isDOM) return document.getElementById(id);
+        if (isIE4) return document.all[id];
+        if (isNS4) return document.layers[id];
+}
 
-$(".close-menu").click(function () {
-  $(".menu").toggleClass("disabled");
-  $(".links").toggleClass("enabled");
-});
+var isNS = navigator.appName == "Netscape";
 
-$(".about").click(function () {
-  $("#about").css('display','block');
-});
+function moveRightEdge() {
 
-$(".close-about").click(function () {
-  $("#about").css('display','');
-});
-
-// Add lightbox class to all image links
-$("a[href$='.jpg'],a[href$='.jpeg'],a[href$='.JPG'],a[href$='.png'],a[href$='.gif']").addClass("image-popup");
-
-// Magnific-Popup options
-$(document).ready(function() {
-  $('.image-popup').magnificPopup({
-    type: 'image',
-    tLoading: 'Loading image #%curr%...',
-    gallery: {
-      enabled: true,
-      navigateByImgClick: true,
-      preload: [0,1] // Will preload 0 - before current, and 1 after the current image
-    },
-    image: {
-      tError: '<a href="%url%">Image #%curr%</a> could not be loaded.',
-    },
-    removalDelay: 300, // Delay in milliseconds before popup is removed
-    // Class that is added to body when popup is open. 
-    // make it unique to apply your CSS animations just to this exact popup
-    mainClass: 'mfp-fade'
-  });
-});
+        var yMenuFrom, yMenuTo, yOffset, timeoutNextCheck;
+        
+        if (isNS4) {
+                yMenuFrom   = divMenu.top;
+                yMenuTo     = windows.pageYOffset + 405;   // 위쪽 위치
+        } else if (isDOM) {
+                yMenuFrom   = parseInt (divMenu.style.top, 10);
+                yMenuTo     = (isNS ? window.pageYOffset +405 : document.body.clientHeight + document.body.scrollTop - 45 ); // 위쪽 위치
+                if(!isNS) {
+                        if( yMenuTo > document.body.scrollHeight - 250 ) yMenuTo = document.body.scrollHeight - 235;
+                        if( yMenuTo < 65 ) yMenuTo = 65;
+                }
+        }
+        
+        timeoutNextCheck = 500;
+        
+        if (yMenuFrom != yMenuTo) {
+                yOffset = Math.ceil(Math.abs(yMenuTo - yMenuFrom) / 10);
+                if (yMenuTo < yMenuFrom)
+                        yOffset = -yOffset;
+                if (isNS4)
+                        divMenu.top += yOffset;
+                else if (isDOM)
+                        divMenu.style.top = parseInt (divMenu.style.top, 10) + yOffset;
+                        timeoutNextCheck = 10;
+        }
+        setTimeout ("moveRightEdge()", timeoutNextCheck);
+}
+//--> 
+</script> 
