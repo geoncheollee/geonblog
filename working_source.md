@@ -98,22 +98,15 @@ function func(){
 
  <p> 1. "Hello, World를 출력하는 문장으로 옳은 것은? </p>
  
- <input type="radio" name="chk" value=1 checked="true">1. print Hello, World
- <input type="radio" name="chk" value=2>2. printf Hello, World
- <input type="radio" name="chk" value=3>3. print "Hello, World"
- <p></p>
- 
-  <p><form name="input" method="post" action="">
-  <input type="button" value="확인" onClick="func()"></form></p>
- 
- <p>연령</p>
- <input type="radio" name="chk_age" value="십대"checked="true">10대
- 
  <p></p>
  <input type="radio" name="chk_1" value="이십대">1. print Hello, World
  <input type="radio" name="chk_1" value="삼십대">2. printf Hello, World
  <input type="radio" name="chk_1" value="사십대">3. print "Hello, World"
  <p></p>
+ 
+  <p><form name="input" method="post" action="">
+  <input type="button" value="확인" onClick="func()"></form></p>
+
  
  
 </div>
