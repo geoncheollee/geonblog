@@ -6,6 +6,7 @@ tags: [Jekyll, theme, themes, responsive, blog, modern]
 image:
   feature: pythonlogo3.jpg
   creditlink: https://github.com/geoncheollee/geonblog/blob/gh-pages/images/pythonlogo2.JPG
+share: true
 ---
 
 
