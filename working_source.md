@@ -66,13 +66,13 @@ print add(1,2)
 </body>
 </html>
 
+
+<html>
+
 <!-- 문제풀이 -->
 <div class="page">
 <div class="body">
 <div class="main">
-
-<html>
-<body>
 
 <SCRIPT> 
 function func(){
@@ -113,10 +113,12 @@ function func(){
  <input type="radio" name="chk_age" value="사십대">40대
  <p></p>
  
- </body>
+ 
+</div>
+</div>
+</div>
+
 </html>
 
-</div>
-</div>
-</div>
+
 <!-- 사지선다형 문제 끝 -->
