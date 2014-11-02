@@ -3,13 +3,15 @@ layout: page
 <!-- title: Python introduce -->
 description: "Python intro"
 tags: [Jekyll, theme, themes, responsive, blog, modern]
+<!-- tags: [Jekyll, theme, install, setup] -->
 image:
   feature: pythonlogo3.jpg
   creditlink: https://github.com/geoncheollee/geonblog/blob/gh-pages/images/pythonlogo2.JPG
+share: true
 ---
 
 
-수정1
+수정2
 
 # 파이썬을 배워야 하는 이유...
 ---
