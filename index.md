@@ -13,13 +13,12 @@ share: true
 
 <html>
 <body>
-<!-- <a href="/blog/2014/08/16/rules-of-good-bad-studying/">배우는 법 배우기 - 좋은/나쁜 학습의 10가지 원칙</a> -->
-<!-- 2014-11-01-Python_start.md -->
+
 <ul class="posts">
     <!-- This loops through the paginated posts -->
       <li>
         <h2>
-          <a href="/geonblog/working_source/">배우는 법 배우기 - 좋은/나쁜 학습의 10가지 원칙</a>
+          <a href="/geonblog/study/">배우는 법 배우기 - 좋은/나쁜 학습의 10가지 원칙</a>
         </h2>
         <p>
           <span class="date">16 Aug 2014</span>
@@ -37,6 +36,8 @@ share: true
       </li>
 </body>
 </html>
+
+
 
 # 파이썬을 배워야 하는 이유...
 ---
