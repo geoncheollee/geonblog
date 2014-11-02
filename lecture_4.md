@@ -30,10 +30,14 @@ share: true
 
 ### 1-2 인덱싱
 
-{% highlight html linenos %}
-{% raw %}
+<html>
 <FONT 
 style="BACKGROUND-COLOR: yellow">next </FONT>week.</P>
+</html>
+
+{% highlight html linenos %}
+{% raw %}
+
 s = 'abcdef'
 l = [100,200,300]
 print s[0]
