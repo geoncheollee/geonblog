@@ -263,9 +263,9 @@ function func(){
  
  <p></p>
  <input type="radio" name="chk_1" value="chk_1"> (1) , <p></p>
- <input type="radio" name="chk_2" value="chk_2"> (2) h <p></p>
- <input type="radio" name="chk_3" value="chk_3"> (3) 공백 <p></p>
- <input type="radio" name="chk_4" value="chk_4"> (3) W <p></p>
+ <input type="radio" name="chk_1" value="chk_2"> (2) h <p></p>
+ <input type="radio" name="chk_1" value="chk_3"> (3) 공백 <p></p>
+ <input type="radio" name="chk_1" value="chk_4"> (3) W <p></p>
  
   <p><form name="input" method="post" action="">
   <input type="button" value="확인" onClick="func()"></form></p>
