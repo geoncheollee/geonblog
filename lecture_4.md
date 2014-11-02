@@ -30,18 +30,7 @@ share: true
 
 ### 1-2 인덱싱
 
-
-<div style="background-color:black; color:white; margin:20px; padding:20px;">
-
-<h2>London</h2>
-
-<p>
-London is the capital city of England. It is the most populous city in the United Kingdom, with a metropolitan area of over 13 million inhabitants.
-adf
-asdfasdf
-</p>
-
-</div>
+~~~~
 s = 'abcdef'
 l = [100,200,300]
 print s[0]
@@ -51,7 +40,8 @@ print
 print l[1]
 l[1] = 900
 print l[1]
----
+~~~~
+{: .language-python}
 
 
 {% highlight html %}
