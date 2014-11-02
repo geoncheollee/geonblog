@@ -1,5 +1,5 @@
 ---
-layout: post-index
+layout: page
 permalink: /lecture_5/
 title: 리스트
 description: "리스트 문법 소개 및 예제"  
