@@ -5,7 +5,7 @@ permalink: /lecture_4/
 description: "문자열 문법 소개 및 예제"
 image:
   feature: lecture_4_logo.jpg
-  creditlink: https://github.com/geoncheollee/geonblog/blob/gh-pages/images/lecture_4_logo.jpg
+  <!-- creditlink: https://github.com/geoncheollee/geonblog/blob/gh-pages/images/lecture_4_logo.jpg -->
 share: true
 ---
 
