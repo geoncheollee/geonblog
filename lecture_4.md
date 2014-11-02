@@ -84,7 +84,9 @@ abcdef
 {% endhighlight %}
 
 
-### 1-4 확장 슬라이싱
+<!-- ### 1-4 확장 슬라이싱 -->
+<td style="BORDER-RIGHT: #000 1px solid; BORDER-TOP: #000 1px solid; BORDER-LEFT: #000 1px solid; BORDER-BOTTOM: #000 1px solid; background-color:#000;" width="300"><span style="FONT-SIZE: 11pt; color: #fff; "><strong>&nbsp;1-4 확장 슬라이싱</strong></span></td>
+
 
 {% highlight html linenos %}
 {% raw %}
