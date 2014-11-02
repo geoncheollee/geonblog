@@ -84,18 +84,16 @@ abcdef
 {% endhighlight %}
 
 
-<!-- ### 1-4 확장 슬라이싱 -->
-<html>
-<td style="BORDER-RIGHT: #000 1px solid; BORDER-TOP: #000 1px solid; BORDER-LEFT: #000 1px solid; BORDER-BOTTOM: #000 1px solid; background-color:#000;" width="300"><span style="FONT-SIZE: 11pt; color: #fff; "><strong>&nbsp;1-4 확장 슬라이싱</strong></span></td>
-</html>
+### 1-4 확장 슬라이싱
 
-{% highlight html linenos %}
+
+
 {% raw %}
 s = 'abcd'
 print s[::2]   #step:2 - 오른쪽 방향으로 2칸씩
 print s[::-1]  #step:-1 - 왼쪽 방향으로 1칸씩
 {% endraw %}
-{% endhighlight %}
+
 
 {% highlight html %}
 <result>
