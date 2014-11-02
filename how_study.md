@@ -10,9 +10,11 @@ image:
   creditlink: http://www.dargadgetz.com/ios-7-abstract-wallpaper-pack-for-iphone-5-and-ipod-touch-retina/-->
 share: true
 ---
-수정1
+수정2
 
 
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -20,6 +22,8 @@ share: true
 <!--   <meta name="google-site-verification" content="aexITLS38FdIRzwj25OVWxm87rpa9l-UV0URTyC9cTs" /> -->
   <title>
     배우는 법 배우기 - 좋은/나쁜 학습의 10가지 원칙
+    
+    - @n0lb00's Blog
     
   </title>
 <!--   <link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:700,400|Titillium+Web:700,400"> -->
@@ -39,6 +43,22 @@ share: true
   <div class="container">
     <div class="site">
       <header>
+        <nav>
+          <a class="" href="/">홈</a>
+          <a class="" href="/archive/">전체글</a>
+          <a class="" href="//github.com/nolboo/nolboo.github.io/wiki">번역글 위키</a>
+        </nav>
+        <div class="pull-right right logo">
+          <div class="name">
+            <a href="/">Nolboo's Blog</a><br />
+            <small>
+              <em>
+                  <a href="/">Learn to do. Learn by doing.</a>
+              </em>
+            </small>
+          </div>
+          <a href="/feed.xml"><img class="avatar" src="/images/rss.jpg" alt="RSS" /></a>
+        </div>
         <div class="clear"></div>
       </header>
       <div class="separator"></div>
@@ -145,5 +165,86 @@ share: true
 
 <p>두뇌 조각은 잠잘 때 문제 해결 기술을 조합하고, 잠자기 전 두뇌에 집어넣으려고 한 것을 연습하고 반복한다. 장기의 피로는 뇌에 독소가 생기게 하여 빠르고 잘 생각하는 데 필요한 신경 연결을 파괴한다. 테스트 전에 꿀잠을 자지 않으면, <strong>여러분이 한 다른 모든 것은 헛수고가 된다.</strong></p>
 
+<p>이제 자야겠다..</p>
+
+  </div>
+  <ul class="tags post-tags cf">
+    
+    <li><a href="/search/?tags=learn">learn</a></li>
+    
+    <li><a href="/search/?tags=rule">rule</a></li>
+    
+    <li><a href="/search/?tags=coursera">coursera</a></li>
+    
+  </ul>
+</article>
+
+<section class="post-footer">
+  <a href="/feed.xml" class="pull-right">
+    <img src="/images/rss.jpg" alt="RSS" />
+  </a>
+</section>
+
+<script defer src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<!-- tag, category search -->
+<script defer src="/js/alexpearce.js"></script>
+
+<div class="separator"></div>
+
+<section class="comments">
+  <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'nolboo'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
+      <div class="separator"></div>
+    </div>
+  </div>
+
+  <div class="clear"></div>
+
+  <footer>
+    <p>
+  Powered by <a href="http://jekyllrb.com/">Jekyll</a>,
+  hosted on <a href="http://pages.github.com/">Github Pages</a>
+  | Template inspired by <a href="http://sebastien.saunier.me/">sebastien.saunier.me</a>
+</p>
+<ul class="links">
+  <li><a href="https://twitter.com/n0lb00" title="follow me"><i class="icon-twitter"></i></a></li>
+  <li><a href="mailto:nolboo.kim@gmail.com" title="AMA"><i class="icon-sparrow"></i></a></li>
+</ul>
+  </footer>
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+  <!-- tag, category search -->
+  <script src="/js/alexpearce.js"></script>
+  <!-- TOC Generator -->
+  <script src="/js/jquery.toc-1.1.4.min.js"></script>
+  <!-- Google Analytics -->
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-42615434-1', 'nolboo.github.io');
+    ga('send', 'pageview');
+  </script>
+  <!-- TOC Generator -->
+  <script>
+     $('#toc').toc({exclude: 'h1, h6', autoId: true});
+  </script>
 </body>
 </html>
+
