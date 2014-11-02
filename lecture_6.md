@@ -1,9 +1,12 @@
 ---
 layout: post-index
-permalink: /lecture_1/
-title: Python 시작하기
-description: "파이썬 정의와 간단한 문법 소개"
+permalink: /lecture_6/
+title: 튜플
+description: "튜플 문법 소개 및 예제"
 ---
+
+<html>
+<body>
 
 {% capture site_tags %}{% for tag in site.tags %}{{ tag | first }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
 {% assign tags_list = site_tags | split:',' | sort %}
@@ -14,8 +17,6 @@ description: "파이썬 정의와 간단한 문법 소개"
   	<li><a href="#{{ this_word }}" class="tag">{{ this_word }} <span>{{ site.tags[this_word].size }}</span></a></li>
   {% endunless %}{% endfor %}
 </ul>
-
-문법 및 소개2
 
 {% for item in (0..site.tags.size) %}{% unless forloop.last %}
   {% capture this_word %}{{ tags_list[item] | strip_newlines }}{% endcapture %}
@@ -29,6 +30,5 @@ description: "파이썬 정의와 간단한 문법 소개"
 	</article><!-- /.hentry -->
 {% endunless %}{% endfor %}
 
-문법 및 소개
-
-
+</body>
+</html>

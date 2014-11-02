@@ -1,12 +1,15 @@
 ---
-layout: post-index
+layout: page
 permalink: /lecture_5/
-title: 리스트
+<!-- title: 리스트 -->
 description: "리스트 문법 소개 및 예제"  
+image:
+  feature: lecture_5_logo.jpg
 ---
+<!-- -->
 
 <!DOCTYPE html>
-<!-- 
+<!--
 Template Name: Metronic - Responsive Admin Dashboard Template build with Twitter Bootstrap 3.2.0
 Version: 3.3.1
 Author: KeenThemes
@@ -69,6 +72,7 @@ License: You must have a valid license purchased only from themeforest (the abov
 <!-- Head END -->
 
 <!-- Body BEGIN -->
+<html>
 <body class="corporate">
     <!-- BEGIN STYLE CUSTOMIZER -->
     <div class="color-panel hidden-sm">
@@ -194,7 +198,7 @@ License: You must have a valid license purchased only from themeforest (the abov
       <!-- box area -->
         <div class="row">
                   <div class="col-md-6">
-                  <li> 3-1 리스트의 메소드</li>
+                  <li><h4> 3-1 리스트의 메소드</h3></li>
                     <div class="well">
                       <p>s = [1, 2, 3]</p>
                       <p></p>
@@ -209,6 +213,28 @@ License: You must have a valid license purchased only from themeforest (the abov
                   <h5>[1,2,3,4,5]</h5>
                 </div>
       <!-- box area end -->
+      
+      <!-- box area -->
+        <div class="row">
+                  <div class="col-md-6">
+                  <li><h4>3-2 리스트를 스택(Stack)으로 쓰기</h4></li>
+                    <div class="well">
+                      <p>s = [10, 20, 30, 40, 50]</p>
+                      <p>s.append(60)</p>
+                      <p>print s</p>
+                      <p></p>
+                      <p>print s.pop()</p>
+                      <p></p>
+                      <p>print s</p>
+                    </div>
+                  </div>
+                  <h5>[10, 20, 30, 40, 50, 60]</h5>
+                  <h5>60</h5>
+                  <h5>[10, 20, 30, 40, 50]</h5>
+                  <img src="http://geoncheollee.github.io/geonblog/images/stack.png" alt="stack.png"class="author-photo">
+                </div>
+      <!-- box area end -->
+      
     </div>
   </div>
     <!-- END BEGIN STYLE CUSTOMIZER --> 
@@ -218,28 +244,10 @@ License: You must have a valid license purchased only from themeforest (the abov
     <div class="pre-footer">
       <div class="container">
         <div class="row">
-          <!-- BEGIN BOTTOM ABOUT BLOCK -->
-          <div class="col-md-4 col-sm-6 pre-footer-col">
-            <h2>About us</h2>
-            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam sit nonummy nibh euismod tincidunt ut laoreet dolore magna aliquarm erat sit volutpat.</p>
-
-            <div class="photo-stream">
-              <h2>Photos Stream</h2>
-              <ul class="list-unstyled">
-                <li><a href="#"><img alt="" src="../../assets/frontend/pages/img/people/img5-small.jpg"></a></li>
-                <li><a href="#"><img alt="" src="../../assets/frontend/pages/img/works/img1.jpg"></a></li>
-                <li><a href="#"><img alt="" src="../../assets/frontend/pages/img/people/img4-large.jpg"></a></li>
-                <li><a href="#"><img alt="" src="../../assets/frontend/pages/img/works/img6.jpg"></a></li>
-                <li><a href="#"><img alt="" src="../../assets/frontend/pages/img/works/img3.jpg"></a></li>
-              </ul>                    
-            </div>
-          </div>
-          <!-- END BOTTOM ABOUT BLOCK -->
-
           <!-- BEGIN TWITTER BLOCK --> 
           <div class="col-md-4 col-sm-6 pre-footer-col">
-            <h2 class="margin-bottom-0">Latest Tweets</h2>
-            <a class="twitter-timeline" href="https://twitter.com/twitterapi" data-tweet-limit="2" data-theme="dark" data-link-color="#57C8EB" data-widget-id="455411516829736961" data-chrome="noheader nofooter noscrollbar noborders transparent">Loading tweets by @keenthemes...</a>
+            <h2 class="margin-bottom-0">리스트 관련사이트</h2>
+            <a class="twitter-timeline" href="http://link.koreatech.ac.kr/courses/2014_2/SP/SP20142.html" data-tweet-limit="2" data-theme="dark" data-link-color="#57C8EB" data-widget-id="455411516829736961" data-chrome="noheader nofooter noscrollbar noborders transparent">linklab.relative_python</a>
           </div>
           <!-- END TWITTER BLOCK -->
         </div>
@@ -253,7 +261,7 @@ License: You must have a valid license purchased only from themeforest (the abov
         <div class="row">
           <!-- BEGIN COPYRIGHT -->
           <div class="col-md-6 col-sm-6 padding-top-10">
-            2014 © Metronic Shop UI. ALL Rights Reserved. <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+            2014 © ComputerSystemBasicDesign SLH TEAM. ALL Rights Reserved.
           </div>
           <!-- END COPYRIGHT -->
 
@@ -275,7 +283,6 @@ License: You must have a valid license purchased only from themeforest (the abov
 
     <!-- BEGIN PAGE LEVEL JAVASCRIPTS (REQUIRED ONLY FOR CURRENT PAGE) -->
     <script src="../../assets/global/plugins/fancybox/source/jquery.fancybox.pack.js" type="text/javascript"></script><!-- pop up -->
-
     <script src="../../assets/frontend/layout/scripts/layout.js" type="text/javascript"></script>
     <script type="text/javascript">
         jQuery(document).ready(function() {
@@ -285,5 +292,5 @@ License: You must have a valid license purchased only from themeforest (the abov
     </script>
     <!-- END PAGE LEVEL JAVASCRIPTS -->
 </body>
-<!-- END BODY -->
 </html>
+<!-- END BODY -->
