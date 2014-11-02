@@ -30,9 +30,7 @@ share: true
 
 ### 1-2 인덱싱
 
-{% highlight html linenos %}
-{% raw %}
-
+~~~
 s = 'abcdef'
 l = [100,200,300]
 print s[0]
@@ -42,11 +40,9 @@ print
 print l[1]
 l[1] = 900
 print l[1]
-{% endraw %}
-{% endhighlight %}
+~~~
 
 {% highlight html %}
-<result>
 a
 b
 f
@@ -60,8 +56,7 @@ f
 
 ### 1-3 슬라이싱
 
-{% highlight html linenos %}
-{% raw %}
+~~~
 s = 'abcdef'
 L = [100, 200, 300]
 
@@ -72,11 +67,9 @@ print s[-100:100]
 print
 print L[:-1]     # L[:2] 와 동일
 print L[:2]
-{% endraw %}
-{% endhighlight %}
+~~~
 
 {% highlight html %}
-<result>
 bc
 bcdef
 abcdef
@@ -92,16 +85,13 @@ abcdef
 ### 1-4 확장 슬라이싱
 
 
-{% highlight html %}
-{% raw %}
+~~~
 s = 'abcd'
 print s[::2]   #step:2 - 오른쪽 방향으로 2칸씩
 print s[::-1]  #step:-1 - 왼쪽 방향으로 1칸씩
-{% endraw %}
-{% endhighlight %}
+~~~
 
 {% highlight html %}
-<result>
 ac
 dcba
 {% endhighlight %}
@@ -111,18 +101,15 @@ dcba
 
 ### 1-5 연결하기
 
-{% highlight html linenos %}
-{% raw %}
+~~~
 s = 'abc' + 'def'
 print s
 
 L = [1,2,3] + [4,5,6]
 print L
-{% endraw %}
-{% endhighlight %}
+~~~
 
 {% highlight html %}
-<result>
 abcdef
 [1, 2, 3, 4, 5, 6]
 {% endhighlight %}
@@ -132,18 +119,15 @@ abcdef
 
 ### 1-6 반복하기
 
-{% highlight html linenos %}
-{% raw %}
+~~~
 s = 'Abc'
 print s * 4
 
 L = [1,2,3]
 print L * 2
-{% endraw %}
-{% endhighlight %}
+~~~
 
 {% highlight html %}
-<result>
 AbcAbcAbcAbc
 [1, 2, 3, 1, 2, 3]
 {% endhighlight %}
@@ -153,8 +137,7 @@ AbcAbcAbcAbc
 
 ### 1-7 멤버십 테스트
 
-{% highlight html linenos %}
-{% raw %}
+~~~
 s = 'abcde'
 print 'c' in s
 
@@ -162,11 +145,9 @@ t = (1,2,3,4,5)
 print 2 in t
 print 10 in t
 print 10 not in t
-{% endraw %}
-{% endhighlight %}
+~~~
 
 {% highlight html %}
-<result>
 True
 True
 False
@@ -175,17 +156,14 @@ True
 
 
 
-{% highlight html linenos %}
-{% raw %}
+~~~
 print 'ab' in 'abcd'
 print 'ad' in 'abcd'
 print ' ' in 'abcd'
 print ' ' in 'abcd '
-{% endraw %}
-{% endhighlight %}
+~~~
 
 {% highlight html %}
-<result>
 True
 False
 False
@@ -197,19 +175,16 @@ True
 
 ### 1-8 길이 정보
 
-{% highlight html linenos %}
-{% raw %}
+~~~
 s = 'abcde'
 l = [1,2,3]
 t = (1, 2, 3, 4)
 print len(s)
 print len(l)
 print len(t)
-{% endraw %}
-{% endhighlight %}
+~~~
 
 {% highlight html %}
-<result>
 5
 3
 4
@@ -223,12 +198,10 @@ print len(t)
 
 ## 문제 풀어보기
 
-{% highlight html linenos %}
-{% raw %}
+~~~
 s = 'hello, python'
 print s[5]
-{% endraw %}
-{% endhighlight %}
+~~~
 
 
 <!-- 문제풀이 -->
