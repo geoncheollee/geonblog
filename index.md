@@ -76,3 +76,21 @@ OS에 관련된 기능들은 (예: POSIX interface) 대부분 C/C++에서 제공
 
 <iframe width="854" height="510" src="//www.youtube.com/embed/obO1oUu8AK8" frameborder="0"></iframe>
 ---
+
+  <!-- Pagination links -->
+  <ul class="pagination clearfix">
+    
+    <li><span class="disabled">Prev</span></li>
+    
+    <li><span class="active">1</span></li>
+    
+      <li><a href="/page2">2</a></li>
+      
+      <li><a href="/page3">3</a></li>
+      
+      <li><a href="/page4">4</a></li>
+      
+    <li><a href="/page2">Next</a></li>
+    
+  </ul>
+</section>
