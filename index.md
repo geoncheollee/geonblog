@@ -9,7 +9,7 @@ image:
 ---
 
 
-수정1
+수정2
 
 # 파이썬을 배워야 하는 이유...
 ---
@@ -77,8 +77,10 @@ OS에 관련된 기능들은 (예: POSIX interface) 대부분 C/C++에서 제공
 <iframe width="560" height="315" src="//www.youtube.com/watch?v=obO1oUu8AK8" frameborder="0"> </iframe>
 
 ---
-
+<html>
+<body>
 <!-- 동영상 기능 -->
 <iframe width="560" height="315" src="//www.youtube.com/watch?v=obO1oUu8AK8" frameborder="0"> </iframe>
-
+</body>
+</html>
 ---
