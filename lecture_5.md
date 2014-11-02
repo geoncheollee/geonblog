@@ -72,6 +72,7 @@ License: You must have a valid license purchased only from themeforest (the abov
 <!-- Head END -->
 
 <!-- Body BEGIN -->
+<html>
 <body class="corporate">
     <!-- BEGIN STYLE CUSTOMIZER -->
     <div class="color-panel hidden-sm">
@@ -214,7 +215,6 @@ License: You must have a valid license purchased only from themeforest (the abov
       <!-- box area end -->
       
       <!-- box area -->
-      <html>
         <div class="row">
                   <div class="col-md-6">
                   <li><h4>3-2 리스트를 스택(Stack)으로 쓰기</h4></li>
@@ -233,7 +233,6 @@ License: You must have a valid license purchased only from themeforest (the abov
                   <h5>[10, 20, 30, 40, 50]</h5>
                   <img src="http://geoncheollee.github.io/geonblog/images/stack.png" alt="stack.png"class="author-photo">
                 </div>
-        </html>
       <!-- box area end -->
       
     </div>
@@ -293,4 +292,5 @@ License: You must have a valid license purchased only from themeforest (the abov
     </script>
     <!-- END PAGE LEVEL JAVASCRIPTS -->
 </body>
+</html>
 <!-- END BODY -->
