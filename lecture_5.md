@@ -6,7 +6,7 @@ description: "리스트 문법 소개 및 예제"
 image:
   feature: lecture_5_logo.jpg
 ---
-
+<!-- -->
 <!DOCTYPE html>
 <!-- 
 Template Name: Metronic - Responsive Admin Dashboard Template build with Twitter Bootstrap 3.2.0
