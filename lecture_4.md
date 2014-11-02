@@ -30,11 +30,6 @@ share: true
 
 ### 1-2 인덱싱
 
-
-<FONT 
-style="BACKGROUND-COLOR: yellow">next </FONT>week.</P>
-
-
 {% highlight html linenos %}
 {% raw %}
 
