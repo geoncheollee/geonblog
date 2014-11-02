@@ -1,11 +1,11 @@
 ---
-layout: post-index
+layout: page
 permalink: /python_introduce/
 title: Python introduce
 description: "Python intro"
 ---
 
-수정01
+수정011
 
 # 파이썬을 배워야 하는 이유...
 ---
