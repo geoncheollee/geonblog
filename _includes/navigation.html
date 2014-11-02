@@ -33,7 +33,7 @@
 				<li>
 			<a href="#">self-improvement</a>
 			<ul class="dl-submenu">
-				<li><a href="{{ site.url }}/study/">코세라의 Learn How to Learn</a></li>
+				<li><a href="{{ site.url }}/study/">Learn How to Learn</a></li>
 			</ul>
 		</li>
 		<li>
@@ -42,11 +42,10 @@
 				<li><a href="{{ site.url }}/posts/">All Posts</a></li>
 				<li><a href="{{ site.url }}/tags/">All Tags</a></li>
 				<li><a href="{{ site.url }}/python_intro/">Python 학습 개요</a></li>
-				<li><a href="{{ site.url }}/lecture_3/">수치 자료형과 연산자</a></li>
-				<li><a href="{{ site.url }}/lecture_4/">문자열</a></li>
-				<li><a href="{{ site.url }}/lecture_5/">리스트</a></li>
+				<li><a href="{{ site.url }}/lecture_1/">수치 자료형과 연산자</a></li>
+				<li><a href="{{ site.url }}/lecture_2/">문자열</a></li>
+				<li><a href="{{ site.url }}/lecture_3/">리스트</a></li>
 				<li><a href="{{ site.url }}/lecture_6/">튜플</a></li>
-				<li><a href="{{ site.url }}/lecture_7/">사전 및 집합</a></li>
 			</ul>
 		</li>
 		{% for link in site.links %}<li>{% if link.external %}<a href="{{ link.url }}" target="_blank">{{ link.title }}</a>{% else %}<a href="{{ site.url }}{{ link.url }}">{{ link.title }}</a>{% endif %}</li>{% endfor %}
