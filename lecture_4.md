@@ -250,7 +250,7 @@ function func(){
     //창 뜨게 하는거
     alert('\n\n정답입니다.'+ "\n"); }
    else {
-    alert('\n\n틀렸습니다. 정답은 3번, print "Hello, World"'+ "\n"); }
+    alert('\n\n틀렸습니다. 정답은 1번'+ "\n"); }
    break;
   }
  }
