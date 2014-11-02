@@ -4,6 +4,8 @@ permalink: /lecture_1/
 title: Python 시작하기
 description: "파이썬 정의와 간단한 문법 소개"
 ---
+<html>
+<body>
 
 {% capture site_tags %}{% for tag in site.tags %}{{ tag | first }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
 {% assign tags_list = site_tags | split:',' | sort %}
@@ -31,4 +33,5 @@ description: "파이썬 정의와 간단한 문법 소개"
 
 문법 및 소개
 
-
+</body>
+</html>
