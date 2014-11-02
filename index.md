@@ -2,14 +2,15 @@
 layout: page
 title: Latest Posts
 description: "Describe this nonsense."
-tags: [Jekyll, theme, themes, responsive, blog, modern]
+tags: [Jekyll, theme, install, setup]
 image:
-  feature: abstract-1.jpg
+  feature: abstract-11.jpg
   credit: dargadgetz
   creditlink: http://www.dargadgetz.com/ios-7-abstract-wallpaper-pack-for-iphone-5-and-ipod-touch-retina/
+share: true
 ---
 
-수정1
+수정00
 
 # 파이썬을 배워야 하는 이유...
 ---
