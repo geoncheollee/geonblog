@@ -9,8 +9,6 @@ image:
 <!-- -->
 
 <!DOCTYPE html>
-
-<html> 
 <!--
 Template Name: Metronic - Responsive Admin Dashboard Template build with Twitter Bootstrap 3.2.0
 Version: 3.3.1
@@ -214,8 +212,9 @@ License: You must have a valid license purchased only from themeforest (the abov
                   <h5>[1,2,3,4,5]</h5>
                 </div>
       <!-- box area end -->
-      <html>
+      
       <!-- box area -->
+      <html>
         <div class="row">
                   <div class="col-md-6">
                   <li><h4>3-2 리스트를 스택(Stack)으로 쓰기</h4></li>
@@ -234,8 +233,9 @@ License: You must have a valid license purchased only from themeforest (the abov
                   <h5>[10, 20, 30, 40, 50]</h5>
                   <img src="http://geoncheollee.github.io/geonblog/images/stack.png" alt="stack.png"class="author-photo">
                 </div>
+        </html>
       <!-- box area end -->
-      </html>
+      
     </div>
   </div>
     <!-- END BEGIN STYLE CUSTOMIZER --> 
@@ -294,4 +294,3 @@ License: You must have a valid license purchased only from themeforest (the abov
     <!-- END PAGE LEVEL JAVASCRIPTS -->
 </body>
 <!-- END BODY -->
-</html>
