@@ -9,16 +9,6 @@ image:
 share: true
 ---
 
-<meta http-equiv="refresh" content="1;url=http://exampleURL.com">
-
-
-<script type="text/javascript">
-     window.location.replace('http://example.com')
-</script>
-
-<script type="text/javascript">
-     window.location.href = "http://example.com"
-</script>
 
 # 4. 문자열
 
