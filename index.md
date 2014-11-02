@@ -10,10 +10,6 @@ share: true
 ---
 
 수정2
-<!-- Your Google Analytics ID goes here along with meta tags for [Google Webmaster Tools](http://support.google.com/webmasters/bin/answer.py?hl=en&answer=35179) and [Bing Webmaster Tools](https://ssl.bing.com/webmaster/configure/verify/ownershi) site verification. -->
-
-Your Google Analytics ID goes here along with meta tags for [Google Webmaster Tools](http://geoncheollee.github.io/geonblog/_post/2014-11-01-Python_start.md/) and [Bing Webmaster Tools](https://ssl.bing.com/webmaster/configure/verify/ownershi) site verification.
-
 
 <html>
 <body>
