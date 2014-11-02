@@ -32,6 +32,8 @@ share: true
 
 {% highlight html linenos %}
 {% raw %}
+<FONT 
+style="BACKGROUND-COLOR: yellow">next </FONT>week.</P>
 s = 'abcdef'
 l = [100,200,300]
 print s[0]
