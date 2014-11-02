@@ -5,6 +5,9 @@ title: 튜플
 description: "튜플 문법 소개 및 예제"
 ---
 
+<html>
+<body>
+
 {% capture site_tags %}{% for tag in site.tags %}{{ tag | first }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
 {% assign tags_list = site_tags | split:',' | sort %}
 
@@ -26,3 +29,6 @@ description: "튜플 문법 소개 및 예제"
 		</ul>
 	</article><!-- /.hentry -->
 {% endunless %}{% endfor %}
+
+</body>
+</html>
