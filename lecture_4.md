@@ -28,6 +28,8 @@ share: true
   - for ~ in 문
 
 
+
+
 ### 1-2 인덱싱
 
 {% highlight html linenos %}
@@ -54,6 +56,8 @@ f
 200
 900
 {% endhighlight %}
+
+
 
 
 ### 1-3 슬라이싱
@@ -85,6 +89,8 @@ abcdef
 {% endhighlight %}
 
 
+
+
 ### 1-4 확장 슬라이싱
 
 
@@ -101,6 +107,8 @@ print s[::-1]  #step:-1 - 왼쪽 방향으로 1칸씩
 ac
 dcba
 {% endhighlight %}
+
+
 
 
 ### 1-5 연결하기
@@ -122,6 +130,8 @@ abcdef
 {% endhighlight %}
 
 
+
+
 ### 1-6 반복하기
 
 {% highlight html linenos %}
@@ -139,6 +149,8 @@ print L * 2
 AbcAbcAbcAbc
 [1, 2, 3, 1, 2, 3]
 {% endhighlight %}
+
+
 
 
 ### 1-7 멤버십 테스트
@@ -181,6 +193,8 @@ False
 False
 True
 {% endhighlight %}
+
+
 
 
 ### 1-8 길이 정보
@@ -239,20 +253,6 @@ function func(){
 
 <form name="fm" method="get">
 
-{% highlight html linenos %}
-{% raw %}
-s = 'abcdef'
-l = [100,200,300]
-print s[0]
-print s[1]
-print s[-1]
-print
-print l[1]
-l[1] = 900
-print l[1]
-{% endraw %}
-{% endhighlight %}
-
  <p> 1. 위의 코드 결과로 알맞은 것은? </p>
  
  
@@ -268,10 +268,6 @@ print l[1]
 </div></div></div>
 </html>
 <!-- 문제풀이 끝-->
-
-
-
-
 
 
 
@@ -316,49 +312,6 @@ print add(1,2)
 </body>
 </html>
 <!-- 파이썬 코드 실행기 끝 -->
-
-
-<!-- 문제풀이 -->
-<html>
-<div class="page">
-<div class="body">
-<div class="main">
-
-<SCRIPT> 
-function func(){
- //checkbox_num=관심분야 체크박스 개수
- //sex=성별정보, age=나이정보, job=직업정보, info=관심분야 정보, user_info=나이, 성별, 직업, 관심분야 통합 정도
- 
- var chk=document.fm.chk_1;
- 
- for(i=0;i<chk.length;i++){
-  if(chk[i].checked==true){
-   if (i == 2 ) {
-    //창 뜨게 하는거
-    alert('\n\n정답입니다.'+ "\n"); }
-   else {
-    alert('\n\n틀렸습니다. 정답은 3번, print "Hello, World"'+ "\n"); }
-   break;
-  }
- }
-}
-</script>
-
-<form name="fm" method="get">
-
- <p> 1. "Hello, World를 출력하는 문장으로 옳은 것은? </p>
- 
- <p></p>
- <input type="radio" name="chk_1" value="chk_1"> (1) print Hello, World <p></p>
- <input type="radio" name="chk_1" value="chk_2"> (2) printf Hello, World <p></p>
- <input type="radio" name="chk_1" value="chk_3"> (3) print "Hello, World" <p></p>
- 
-  <p><form name="input" method="post" action="">
-  <input type="button" value="확인" onClick="func()"></form></p>
- 
-</div></div></div>
-</html>
-<!-- 문제풀이 끝-->
 
 
 <!-- 댓글 기능 -->
