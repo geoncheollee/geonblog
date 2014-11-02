@@ -32,17 +32,15 @@ share: true
 
 
 
-
 > s = 'abcdef'
-l = [100,200,300]
-print s[0]
-print s[1]
-print s[-1]
-print
-print l[1]
-l[1] = 900
-print l[1]
-
+> l = [100,200,300]
+> print s[0]
+> print s[1]
+> print s[-1]
+> print
+> print l[1]
+> l[1] = 900
+> print l[1]
 
 
 
