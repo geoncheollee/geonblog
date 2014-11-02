@@ -72,7 +72,8 @@ print add(1,2)
 <div class="main">
 
 <html>
-<head>
+
+<body>
 <SCRIPT> 
 function func(){
  //checkbox_num=관심분야 체크박스 개수
@@ -115,7 +116,7 @@ function func(){
  
 }
 </script>
- <title>설문조사</title>
+
 </head>
 <form name="fm" method="get">
  <p> 1. "Hello, World를 출력하는 문장으로 옳은 것은? </p>
