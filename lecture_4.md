@@ -1,7 +1,7 @@
 ---
 layout: page
 permalink: /lecture_4/
-title: 문자열
+<!-- title: 문자열 -->
 description: "문자열 문법 소개 및 예제"
 image:
   feature: lecture_4_logo.jpg
