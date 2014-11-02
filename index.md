@@ -23,7 +23,7 @@ Your Google Analytics ID goes here along with meta tags for [Google Webmaster To
     <!-- This loops through the paginated posts -->
       <li>
         <h2>
-          <a href="/geonblog/2014-11-01-Python_start/">배우는 법 배우기 - 좋은/나쁜 학습의 10가지 원칙</a>
+          <a href="/blog/2014/08/16/rules-of-good-bad-studying/">배우는 법 배우기 - 좋은/나쁜 학습의 10가지 원칙</a>
         </h2>
         <p>
           <span class="date">16 Aug 2014</span>
