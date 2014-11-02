@@ -12,38 +12,86 @@ description: "튜플 문법 소개 및 예제"
  
   <head>
   <script type="text/javascript">
-   function go_top(orix,oriy,desx,desy) {
-    var Timer;
-    if (document.body.scrollTop == 0) {
-        var winHeight = document.documentElement.scrollTop;
-    } else {
-        var winHeight = document.body.scrollTop;
-    }
-    if(Timer) clearTimeout(Timer);
-    startx = 0;
-    starty = winHeight;
-    if(!orix || orix < 0) orix = 0;
-    if(!oriy || oriy < 0) oriy = 0;
-    var speed = 7;
-    if(!desx) desx = 0 + startx;
-    if(!desy) desy = 0 + starty;
-    desx += (orix - startx) / speed;
-    if (desx < 0) desx = 0;
-    desy += (oriy - starty) / speed;
-    if (desy < 0) desy = 0;
-    var posX = Math.ceil(desx);
-    var posY = Math.ceil(desy);
-    window.scrollTo(posX, posY);
-    if((Math.floor(Math.abs(startx - orix)) < 1) && (Math.floor(Math.abs(starty - oriy)) < 1)){
-        clearTimeout(Timer);
-        window.scroll(orix,oriy);
-    }else if(posX != orix || posY != oriy){
-        Timer = setTimeout("go_top("+orix+","+oriy+","+desx+","+desy+")",15);
-    }else{
-        clearTimeout(Timer);
-    }
-}
+jQuery(document).ready(function()
+{
+	if (jQuery("#content .entry div[id$=Comment]").css("display") != "none")
+	{
+		jQuery("#content .entry .comment ol li div .control .modify, #content .entry .commentWrite div").css("display", "none");
+		jQuery("#content .entry .commentWrite textarea").bind("focus, click", function()
+		{
+			jQuery(this).parent("div").find("div").slideDown(200);
+		});
+	}
+
+	jQuery("#content .guestbook .guestWrite textarea").bind("focus, click", function()
+	{
+		jQuery(this).parent("div").find("div").slideDown(200);
+	});
+
+	jQuery("#content .guestbook .guestList .comment_area, #content .entry .comment .comment_area").mouseover(function()
+	{
+		jQuery(this).find(".modify").fadeIn(100);
+	}).mouseleave(function()
+	{
+		jQuery(this).find(".modify").fadeOut(100);
+	});
+
+	jQuery("#sidebar li.category a img").each(function()
+	{
+		jQuery(this).appendTo(jQuery(this).parent("a"));
+	});
+	jQuery("#sidebar li.category .c_cnt").each(function()
+	{
+		jQuery(this).insertAfter(jQuery(this).parent("a"));
+	});
+
+	jQuery("#sidebar li.category a").each(function()
+	{
+		//$(this).text(jQuery.trim($(this).text()));
+		var cateroot = catename.replace(/(^[^\/]+)\/[^\/]+$/g, "$1");
+		var catesub = catename.replace(/^[^\/]+\/([^\/]+$)/g, "$1");
+		if (jQuery.trim(jQuery(this).text()) == cateroot || jQuery.trim(jQuery(this).text()) == catesub)
+			jQuery(this).addClass("selected");
+	});
+
+	jQuery("#sidebar li.category .c_cnt, #sidebar li.recentPost span").each(function()
+	{
+		jQuery(this).text(jQuery(this).text().replace(/^\(([0-9]+)\)$/g, "$1"));
+		if (jQuery(this).text() == "0" || jQuery(this).text() == "")
+			jQuery(this).hide();
+	});
+	jQuery("#sidebar .notice").each(function()
+	{
+		if (!jQuery(this).find("li").size())
+			jQuery(this).hide();
+	});
+	var go_top_state = 0;
+	jQuery(document).bind("scroll", function(){
+		if (jQuery(document).scrollTop() > 600)
+		{
+			if (go_top_state == 0)
+			{
+				go_top_state = 1;
+				jQuery(".go_top img").fadeIn();
+			}
+		}
+		else if (jQuery(document).scrollTop() <= 600)
+		{
+			if (go_top_state == 1)
+			{
+				go_top_state = 0;
+				jQuery(".go_top img").fadeOut();
+			}
+		}
+	});
+	var speed = 500; // 스크롤속도
+    	jQuery(".go_top").css("cursor", "pointer").click(function()
+   	 {
+  	      $('body, html').animate({scrollTop:0}, speed);
+  	  });
+});
 </script>
+
 </head>
  <body>
 asdfjhasdfjkasdfasdfasdf
