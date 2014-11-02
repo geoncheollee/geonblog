@@ -7,8 +7,11 @@ image:
   feature: lecture_5_logo.jpg
 ---
 <!-- -->
+
 <!DOCTYPE html>
-<!-- 
+
+<html> 
+<!--
 Template Name: Metronic - Responsive Admin Dashboard Template build with Twitter Bootstrap 3.2.0
 Version: 3.3.1
 Author: KeenThemes
