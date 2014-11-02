@@ -225,6 +225,18 @@ print len(t)
 
 - 문제 풀어보기
 
+{% highlight html linenos %}
+{% raw %}
+s = 'abcde'
+l = [1,2,3]
+t = (1, 2, 3, 4)
+print len(s)
+print len(l)
+print len(t)
+{% endraw %}
+{% endhighlight %}
+
+
 <!-- 문제풀이 -->
 <html>
 <div class="page">
