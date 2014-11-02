@@ -14,8 +14,6 @@ share: true
 <!-- 댓글 기능 -->
 <html>
 <body>
-<a href="http://foo.com/bar.html#disqus_thread">Link</a>.
-
     <div id="disqus_thread"></div>
     <script type="text/javascript">
         var disqus_shortname = 'slhblog';
