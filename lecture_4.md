@@ -87,13 +87,13 @@ abcdef
 ### 1-4 확장 슬라이싱
 
 
-
+{% highlight html %}
 {% raw %}
 s = 'abcd'
 print s[::2]   #step:2 - 오른쪽 방향으로 2칸씩
 print s[::-1]  #step:-1 - 왼쪽 방향으로 1칸씩
 {% endraw %}
-
+{% endhighlight %}
 
 {% highlight html %}
 <result>
