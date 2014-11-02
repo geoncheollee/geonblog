@@ -99,10 +99,9 @@ function func(){
  <p> 1. "Hello, World를 출력하는 문장으로 옳은 것은? </p>
  
  <p></p>
- <input type="radio" name="chk_1" value="이십대">1. print Hello, World
- <input type="radio" name="chk_1" value="삼십대">2. printf Hello, World
- <input type="radio" name="chk_1" value="사십대">3. print "Hello, World"
- <p></p>
+ <input type="radio" name="chk_1" value="chk_1">1. print Hello, World <p></p>
+ <input type="radio" name="chk_1" value="chk_2">2. printf Hello, World <p></p>
+ <input type="radio" name="chk_1" value="chk_3">3. print "Hello, World" <p></p>
  
   <p><form name="input" method="post" action="">
   <input type="button" value="확인" onClick="func()"></form></p>
