@@ -214,6 +214,7 @@ License: You must have a valid license purchased only from themeforest (the abov
                   <h5>[1,2,3,4,5]</h5>
                 </div>
       <!-- box area end -->
+      <html>
       <!-- box area -->
         <div class="row">
                   <div class="col-md-6">
@@ -234,6 +235,7 @@ License: You must have a valid license purchased only from themeforest (the abov
                   <img src="http://geoncheollee.github.io/geonblog/images/stack.png" alt="stack.png"class="author-photo">
                 </div>
       <!-- box area end -->
+      </html>
     </div>
   </div>
     <!-- END BEGIN STYLE CUSTOMIZER --> 
