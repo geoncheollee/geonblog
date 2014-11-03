@@ -14,15 +14,8 @@ share: true
 	<body>
 	
 	
-	<div style="
-height: 200px ;
-width: 450px ;
-border: 1px   solid  blue ;
-text-align: center ;
- " >
-	
 
-		<div style="height: 500px; width: 200px; border: 2px solid black; text-align: center; position: fixed; top: 25px; right: 15px;">
+		<div style="background: white; height: 400px; width: 200px; border: 2px solid black; position: fixed; top: 25px; right: 15px;">
   			<a href="#string">string</a> <br>
   			<a href="#string_1">1.1</a> <br>
   			<a href="#string_2">1.2</a> <br>
@@ -34,8 +27,8 @@ text-align: center ;
   			<a href="#string_8">1.8</a> <br>
   			<a href="#string_movie">관련 영상</a> <br>
   			<a href="#string_problem">문제 풀기</a> <br>
-  			<a href="#string_code">코드 직접 작성해보기</a> <br>
-  			<a href="#fm">fm</a> 
+  			<a href="#string_code">코드 직접 작성해보기</a>
+  			
 		</div>
 		
 	</body>
