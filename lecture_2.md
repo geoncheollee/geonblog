@@ -15,9 +15,9 @@ share: true
 	
 	
 
-		<div style="background-image: URL({{ site.url }}/images/list2.jpg); color: white; height: 350px; width: 200px; border: 2px solid black; position: fixed; top: 35px; right: 35px;">
-  			<a href="#string"> &nbsp;&nbsp; <b>string</b></a> <br>
-  			<a href="#string_1"> &nbsp;&nbsp; <b>1.1 시퀀스 자료형</b></a> <br>
+		<div style="background: black; color: white; height: 350px; width: 200px; border: 2px solid black; position: fixed; top: 35px; right: 35px;">
+  			<a href="#string" style="color: white"> &nbsp;&nbsp; <b>string</b></a> <br>
+  			<a href="#string_1" style="color: white"> &nbsp;&nbsp; <b>1.1 시퀀스 자료형</b></a> <br>
   			<a href="#string_2"> &nbsp;&nbsp; <b>1.2 인덱싱</b></a> <br>
   			<a href="#string_3"> &nbsp;&nbsp; <b>1.3 슬라이싱</b></a> <br>
   			<a href="#string_4">&nbsp;&nbsp;  <b>1.4 확장 슬라이싱</b></a> <br>
