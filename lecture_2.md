@@ -16,6 +16,7 @@ share: true
 	
 
 		<div style="background: black; color: white; height: 700px; width: 200px; border: 2px solid black; position: fixed; top: 35px; right: 35px;">
+			<br>
   			<a href="#string" style="color: white"> &nbsp;&nbsp; <b>string</b></a> <br>
   			<a href="#string_1" style="color: white"> &nbsp;&nbsp; <b>1.1 시퀀스 자료형</b></a> <br>
   			<a href="#string_2" style="color: white"> &nbsp;&nbsp; <b>1.2 인덱싱</b></a> <br>
