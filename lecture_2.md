@@ -23,7 +23,7 @@ share: true
 
 
 
-<div id="first"></div>
+<div id="string"></div>
 
 # 4. 문자열
 
