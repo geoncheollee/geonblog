@@ -15,6 +15,17 @@ share: true
 
 		<div style="position: fixed; right: 15px;">
   			<a href="#string">string</a> <br>
+  			<a href="#string_1">1.1</a> <br>
+  			<a href="#string_2">1.2</a> <br>
+  			<a href="#string_3">1.3</a> <br>
+  			<a href="#string_4">1.4</a> <br>
+  			<a href="#string_5">1.5</a> <br>
+  			<a href="#string_6">1.6</a> <br>
+  			<a href="#string_7">1.7</a> <br>
+  			<a href="#string_8">1.8</a> <br>
+  			<a href="#string_movie">관련 영상</a> <br>
+  			<a href="#string_problem">문제 풀기</a> <br>
+  			<a href="#string_code">코드 직접 작성해보기</a> <br>
   			<a href="#fm">fm</a> 
 		</div>
 		
@@ -30,6 +41,8 @@ share: true
 
 ## 01 시퀀스 자료형의 특성
 
+<div id="string_1"></div>
+
 ### 1-1 시퀀스 자료형이란?
 - 저장된 각 요소를 정수 Index를 이용하여 참조가 가능한 자료형 
 - 시퀀스(Sequence) 자료형: 문자열, 리스트, 튜플
@@ -44,6 +57,8 @@ share: true
   - for ~ in 문
 
 <br><br>
+
+<div id="string_2"></div>
 
 ### 1-2 인덱싱
 
@@ -74,6 +89,7 @@ f
 
 <br><br>
 
+<div id="string_3"></div>
 
 ### 1-3 슬라이싱
 
@@ -107,6 +123,8 @@ abcdef
 <br><br>
 
 
+<div id="string_4"></div>
+
 ### 1-4 확장 슬라이싱
 
 
@@ -127,6 +145,7 @@ dcba
 
 <br><br>
 
+<div id="string_5"></div>
 
 ### 1-5 연결하기
 
@@ -149,6 +168,7 @@ abcdef
 
 <br><br>
 
+<div id="string_6"></div>
 
 ### 1-6 반복하기
 
@@ -171,6 +191,7 @@ AbcAbcAbcAbc
 
 <br><br>
 
+<div id="string_7"></div>
 
 ### 1-7 멤버십 테스트
 
@@ -216,6 +237,7 @@ True
 
 <br><br>
 
+<div id="string_8"></div>
 
 ### 1-8 길이 정보
 
@@ -239,12 +261,15 @@ print len(t)
 <br><br>
 
 
+<div id="string_movie"></div>
+
 ## 참고 동영상
 
 <iframe width="854" height="510" src="//www.youtube.com/embed/qWy-kTU8qYU?list=PLc91J-KoFBX-d1SsaakXM8mOnCeOEzH32" frameborder="0" allowfullscreen></iframe>
 
 <br><br>
 
+<div id="string_problem"></div>
 
 ## 문제 풀어보기
 
@@ -301,20 +326,7 @@ function func(){
 <!-- 문제풀이 끝-->
 
 
-
-
-
-<!-- 이미지 기능 -->
-<figure>
-	<a href="http://farm9.staticflickr.com/8426/7758832526_cc8f681e48_b.jpg"><img src="http://farm9.staticflickr.com/8426/7758832526_cc8f681e48_c.jpg" alt=""></a>
-	<figcaption><a href="http://www.flickr.com/photos/80901381@N04/7758832526/" title="Morning Fog Emerging From Trees by A Guy Taking Pictures, on Flickr">Morning Fog Emerging From Trees by A Guy Taking Pictures, on Flickr</a>.</figcaption>
-</figure>
-
-<!-- 동영상 기능 -->
-<iframe width="560" height="315" src="//www.youtube.com/embed/SU3kYxJmWuQ" frameborder="0"> </iframe>
----
-<iframe width="854" height="510" src="//www.youtube.com/embed/obO1oUu8AK8" frameborder="0" allowfullscreen></iframe>
-
+<div id="string_code"></div>
 
 <!-- 파이썬 코드 실행기  -->
 <html>
@@ -327,6 +339,14 @@ function func(){
 </body>
 </html>
 <!-- 파이썬 코드 실행기 끝 -->
+
+
+<!-- 이미지 기능 -->
+<figure>
+	<a href="http://farm9.staticflickr.com/8426/7758832526_cc8f681e48_b.jpg"><img src="http://farm9.staticflickr.com/8426/7758832526_cc8f681e48_c.jpg" alt=""></a>
+	<figcaption><a href="http://www.flickr.com/photos/80901381@N04/7758832526/" title="Morning Fog Emerging From Trees by A Guy Taking Pictures, on Flickr">Morning Fog Emerging From Trees by A Guy Taking Pictures, on Flickr</a>.</figcaption>
+</figure>
+
 
 
 <!-- 댓글 기능 -->
@@ -348,6 +368,8 @@ function func(){
 </body>
 </html>
 <!-- 댓글 기능 끝 -->
+
+
 
 
 <div style="cursor:pointer;" onclick="window.scrollTo(0,0);">TOP</div>
