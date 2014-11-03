@@ -318,7 +318,7 @@ function func(){
  <input type="radio" name="chk_1" value="chk_1"> (1) , <p></p>
  <input type="radio" name="chk_1" value="chk_2"> (2) h <p></p>
  <input type="radio" name="chk_1" value="chk_3"> (3) 공백 <p></p>
- <input type="radio" name="chk_1" value="chk_4"> (3) W <p></p>
+ <input type="radio" name="chk_1" value="chk_4"> (4) W <p></p>
  
 
   <p><form name="input" method="post" action="">
@@ -329,7 +329,7 @@ function func(){
 </html>
 <!-- 문제풀이 끝-->
 
-br><br>
+<br>
 
 
 <!-- 2번 문제풀이 -->
@@ -373,7 +373,7 @@ function func1(){
  <input type="radio" name="chk_2" value="chk_1"> (1) Hello,World <p></p>
  <input type="radio" name="chk_2" value="chk_2"> (2) Hello World <p></p>
  <input type="radio" name="chk_2" value="chk_3"> (3) HelloWorld <p></p>
- <input type="radio" name="chk_2" value="chk_4"> (3) Hello <p></p>
+ <input type="radio" name="chk_2" value="chk_4"> (4) Hello <p></p>
  
 
   <p><form name="input" method="post" action="">
