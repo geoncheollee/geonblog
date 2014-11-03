@@ -39,7 +39,7 @@ share: true
 
 <div id="string"></div>
 
-# 4. 문자열
+# 문자열
 
 
 ## 01 시퀀스 자료형의 특성
