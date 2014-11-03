@@ -28,7 +28,7 @@ share: true
 
 ### 1-1 정수형 상수
 
-{% highlight html linenos %}
+{% highlight python linenos %}
 {% raw %}
 a = 23      # 10진 정수
 b = 023     # 8진 정수
@@ -46,7 +46,7 @@ print a, b, c
 
 ####1-2 실수형 상수
 
-{% highlight html linenos %}
+{% highlight python linenos %}
 {% raw %}
 a = 1.2
 b = 3.5e3
@@ -68,7 +68,7 @@ print a, b, c
   - Decimal: 숫자 자체를 표현
   - Context: 정확도나 반올림 방법 등과 같은 환경 설정
 
-{% highlight html linenos %}
+{% highlight python linenos %}
 {% raw %}
 e = 0.0                   # 기본 자료형인 float형 변수 e 생성 및 0.0 값으로 초기화
 for k in range(10000):    # 0부터 9999 까지 만번 반복
@@ -84,7 +84,7 @@ e
 0.9999999999999062
 {% endhighlight %}
 
-{% highlight html linenos %}
+{% highlight python linenos %}
 {% raw %}
 from decimal import *
 e2 = Decimal('0.0')        # 기본 자료형인 float형 변수 e 생성 및 0.0 값으로 초기화
@@ -106,7 +106,7 @@ Decimal('1.0000')
 - 최근 python 버전에서는 실수에 대한 지수승 지원 (decimal이 아니어도 실수에 대한 지수승 가능) 
 - Decimal 타입과 기본 실수형에 대한 사칙연산은 에러 발생
 
-{% highlight html linenos %}
+{% highlight python linenos %}
 {% raw %}
 a = Decimal('35.72') b = Decimal('1.73')
 print a ** 2
@@ -148,14 +148,8 @@ Decimal('485.8887109649886451686600498')
 ***
 
 ### 2-1 산술 연산자
-| 연산자 |    우선순위  | 설명   | 결합순서 |
-|:------:|:------:|:-----------------:|:-----------:|
-| +, -     |    1   |   단항 연산자        |  -  | 
-|  **      |    2   |지수 연산자        | 왼쪽 <- 오른쪽 | 
-| *,/,%,// |    3    |곱하기,나누기,나머지,몫 | 왼쪽 -> 오른쪽 | 
-| +, -     |    4    |더하기,빼기           |   왼쪽 -> 오른쪽  |
 
-{% highlight html linenos %}
+{% highlight python linenos %}
 {% raw %}
 print 2 ** 3
 print 5 % -3
@@ -186,7 +180,7 @@ print --3
 ### 2-2 관계 연산자
 - 객체가 지닌 값의 크기(대소)를 비교함
 
-{% highlight html linenos %}
+{% highlight python linenos %}
 {% raw %}
 print 6 == 9
 print 6 != 9
@@ -215,7 +209,7 @@ True
 - 논리 연산자 자체가 값을 반환하지는 않는다. 
 - 논리 연산을 따라 최종적으로 평가(Evaluation)되어진 값이 반환된다.
 
-{% highlight html linenos %}
+{% highlight python linenos %}
 {% raw %}
 a = 20
 b = 30
@@ -232,7 +226,7 @@ True
   - True: 1
   - False: 0
 
-{% highlight html linenos %}
+{% highlight python linenos %}
 {% raw %}
 print True + 1
 print False + 1
@@ -298,34 +292,10 @@ True
 </body>
 </html>
 
-<!-- 이미지 기능 -->
-<figure>
-	<a href="http://farm9.staticflickr.com/8426/7758832526_cc8f681e48_b.jpg"><img src="http://farm9.staticflickr.com/8426/7758832526_cc8f681e48_c.jpg" alt=""></a>
-	<figcaption><a href="http://www.flickr.com/photos/80901381@N04/7758832526/" title="Morning Fog Emerging From Trees by A Guy Taking Pictures, on Flickr">Morning Fog Emerging From Trees by A Guy Taking Pictures, on Flickr</a>.</figcaption>
-</figure>
-
-<!-- 동영상 기능 -->
-<iframe width="560" height="315" src="//www.youtube.com/embed/SU3kYxJmWuQ" frameborder="0"> </iframe>
-
-<!-- 코드입력부 기능 -->
-{% highlight html linenos %}
-{% raw %}
-def add(a,b):
-  return a+b
-  
-print add(1,2)
-{% endraw %}
-{% endhighlight %}
-
-
-<!-- 코드 출력부 기능 -->
-{% highlight html %}
-<iframe width="560" height="315" src="//www.youtube.com/embed/SU3kYxJmWuQ" frameborder="0"> </iframe>
-{% endhighlight %}
-
-<html>
 
 <!-- 문제풀이 -->
+<html>
+
 <div class="page">
 <div class="body">
 <div class="main">
