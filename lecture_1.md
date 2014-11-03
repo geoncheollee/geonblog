@@ -386,7 +386,7 @@ function func(){
  
  for(i=0;i<chk.length;i++){
   if(chk[i].checked==true){
-   if (i == 1 ) {
+   if (i == 0 ) {
     //창 뜨게 하는거
     alert('\n\n정답입니다.'+ "\n"); }
    else {
