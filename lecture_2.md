@@ -13,7 +13,7 @@ share: true
 <html>
 	<body>
 
-		<div style="position: fixed; right: 15px;">
+		<div style="position: fixed; top: 25px; right: 15px;">
   			<a href="#string">string</a> <br>
   			<a href="#string_1">1.1</a> <br>
   			<a href="#string_2">1.2</a> <br>
