@@ -12,47 +12,6 @@ share: true
 <html>
 <body>
 
-<!--TOP버튼 시작--> <script language=javascript>
-<!--
-
-var isDOM = (document.getElementById ? true : false); 
-var isIE4 = ((document.all && !isDOM) ? true : false);
-var isNS4 = (document.layers ? true : false);
-
-function getRef(id) {
-        if (isDOM) return document.getElementById(id);
-        if (isIE4) return document.all[id];
-        if (isNS4) return document.layers[id];
-}
-
-var isNS = navigator.appName == "Netscape";
-
-
-<span onclick="go_top();">Top으로</span>
-<span onclick="go_top();">Top으로</span>
-
-<a onfocus=blur() href="#top"><img id=divMenu style="LEFT: 864px; VISIBILITY: visible; WIDTH: 13px; POSITION: absolute; TOP: 661px" src="tour_icon/fly_top.gif" border=0></a> 
-
-<script language=javascript>
-<!--
-if (isNS4) {
-        var divMenu = document["divMenu"];
-        divMenu.top = windows.pageYOffset + 405;
-        divMenu.visibility = "visible";
-        moveRightEdge();
-} else if (isDOM) {
-        var divMenu = getRef('divMenu');
-             divMenu.style.top = (isNS ? window.pageYOffset +405 : document.body.clientHeight + document.body.scrollTop - 45 );
-        if(!isNS) {
-                if( divMenu.style.top > document.body.scrollHeight - 250 ) divMenu.style.top = document.body.scrollHeight - 235;
-                if( divMenu.style.top < 65 ) divMenu.style.top = 65;
-        }
-                        
-        divMenu.style.visibility = "visible";
-        moveRightEdge();
-}
-//-->
-</script> <!--TOP버튼 끝-->
 
 </body>
 </html>
@@ -79,6 +38,7 @@ if (isNS4) {
 
 ### 1-2 인덱싱
 
+{% highlight python %}
 [raw]
 s = 'abcdef'
 l = [100,200,300]
@@ -90,7 +50,7 @@ print l[1]
 l[1] = 900
 print l[1]
 [/raw]
-
+{% endhighlight %}
 
 {% highlight html %}
 a
