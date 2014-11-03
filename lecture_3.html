@@ -326,262 +326,30 @@ dcba</code></pre></div>
 </html>
 <!-- END BODY -->
 
-<!-- 카테고리 모듈 -->
-								<div id="category">
-									<h3>카테고리</h3>
-									<script type="text/javascript">
-//<![CDATA[
-	var expanded = false;
-	function expandTree() {
-		expandFolder(461280, true);
-		expandFolder(491485, true);
-	}
-
-	function expandFolder(category, expand) {
-		var oLevel1 = document.getElementById("category_" + category);
-		var oImg = oLevel1.getElementsByTagName("img")[0];
-		switch (expand) {
-			case true:
-				oImg.src = "http://i1.daumcdn.net/cfs.tistory/v/0/blog/image/tree/base/tab_opened.gif";
-				showLayer("category_" + category + "_children");
-				return true;
-			case false:
-				oImg.src = "http://i1.daumcdn.net/cfs.tistory/v/0/blog/image/tree/base/tab_closed.gif";
-				hideLayer("category_" + category + "_children");
-				return true;
-		}
-		return false;
-	}
-
-	function toggleFolder(category) {
-		var oLevel1 = document.getElementById("category_" + category);
-		var oImg = oLevel1.getElementsByTagName("img")[0];
-		switch (oImg.src.substr(oImg.src.length - 10, 6)) {
-			case "isleaf":
-				return true;
-			case "closed":
-				oImg.src = "http://i1.daumcdn.net/cfs.tistory/v/0/blog/image/tree/base/tab_opened.gif";
-				tt_showLayer("category_" + category + "_children");
-				expanded = true;
-				return true;
-			case "opened":
-				oImg.src = "http://i1.daumcdn.net/cfs.tistory/v/0/blog/image/tree/base/tab_closed.gif";
-				tt_hideLayer("category_" + category + "_children");
-				expanded = false;
-				return true;
-		}
-		return false;
-	}
-	var selectedNode = 0;
-	function selectNode(category) {
-
-		try {
-			var root = document.getElementById('treeComponent');
-			var prevSelectedNode= root.getAttribute('currentselectednode');
-			var oLevel = document.getElementById("category_" + selectedNode);
-			var oChild = oLevel.getElementsByTagName("table")[0];
-
-			oChild.style.color = "#666666";
-			oChild.style.backgroundColor = "#f8f8f8"
-			root.setAttribute('currentselectednode',category);
-			document.getElementById('text_'+selectedNode).style.color="#666666";
-
-			var oLevel = document.getElementById("category_" + category);
-			var oChild = oLevel.getElementsByTagName("table")[0];
-			oChild.style.color = "#666666";
-			oChild.style.backgroundColor = "#f8f8f8"
-			document.getElementById('text_'+category).style.color="#666666";
-
-			selectedNode = category;
-		} catch(e) {
-		}
-	}
-
-	function setTreeStyle(skin) {
-		try {
-			treeNodes = document.getElementsByName("treeNode");
-			for(var i=0; i<treeNodes.length; i++) {
-				if( ('category_'+selectedNode) == (treeNodes[i].getAttribute('id').value) ) {
-					var oLevel = document.getElementById('category_'+i);
-					var oChild = oLevel.getElementsByTagName("table")[0];
-					oChild.style.color ='#'+skin['activeItemColor'];
-					if (skin['activeItemBgColor'] != '' && skin['activeItemBgColor'] != undefined) {
-						oChild.style.backgroundColor ='#'+skin['activeItemBgColor'];
-					} else {
-						oChild.style.backgroundColor ="";
-					}
-				} else{
-					var oLevel = document.getElementById("category_" + i);
-					var oChild = oLevel.getElementsByTagName("table")[0];
-					oChild.style.color ='#'+skin['colorOnTree'];
-					oChild.style.backgroundColor ='#'+skin['bgColorOnTree'];
-					var oLevel = document.getElementById('text_'+i).style.color='#'+skin['colorOnTree'];
-				}
-			}
-		} catch(e) {
-		}
-	}
-//]]>
-</script>
-		<table id="treeComponent"  cellpadding="0" cellspacing="0" style="width: 100%;"><tr>
-	<td>
-		<table id="category_0"  cellpadding="0" cellspacing="0"><tr>
-			<td class="ib" style="font-size: 1px"><img src="http://i1.daumcdn.net/cfs.tistory/v/0/blog/image/tree/base/tab_top.gif" width="16" onclick="expandTree()" alt=""/></td>
-			<td valign="top" style="font-size:9pt; padding-left:3px">
-				<table onclick="" id="imp0" cellpadding="0" cellspacing="0" style="background-color: #f8f8f8;"><tr>
-										<td class="branch3" onclick="window.location.href='/category'"><div id="text_0" style=" color: #666666;">전체 <span class="c_cnt">(59)</span></div></td>
-				</tr></table>
-			</td>
-		</tr></table>
-
-		<table   id="category_461281" cellpadding="0" cellspacing="0"><tr>
-			<td class="ib" style="width:39px; font-size: 1px; background-image: url('http://i1.daumcdn.net/cfs.tistory/v/0/blog/image/tree/base/navi_back_noactive.gif"><a class="click" onclick="toggleFolder('461281')"><img src="http://i1.daumcdn.net/cfs.tistory/v/0/blog/image/tree/base/tab_isleaf.gif" width="39" alt=""/></a></td>
-			<td>
-				<table cellpadding="0" cellspacing="0" style="background-color: #f8f8f8;"><tr>
-					<td class="branch3" onclick="window.location.href='/category/Android'"><div id="text_461281" style="color: #666666;">Android <span class="c_cnt">(32)</span></div></td>
-				</tr></table>
-			</td>
-		</tr></table>
-		<div id="category_461281_children" style="display:none">
-		</div>
-		<table   id="category_532615" cellpadding="0" cellspacing="0"><tr>
-			<td class="ib" style="width:39px; font-size: 1px; background-image: url('http://i1.daumcdn.net/cfs.tistory/v/0/blog/image/tree/base/navi_back_noactive.gif"><a class="click" onclick="toggleFolder('532615')"><img src="http://i1.daumcdn.net/cfs.tistory/v/0/blog/image/tree/base/tab_isleaf.gif" width="39" alt=""/></a></td>
-			<td>
-				<table cellpadding="0" cellspacing="0" style="background-color: #f8f8f8;"><tr>
-					<td class="branch3" onclick="window.location.href='/category/Web'"><div id="text_532615" style="color: #666666;">Web <span class="c_cnt">(3)</span></div></td>
-				</tr></table>
-			</td>
-		</tr></table>
-		<div id="category_532615_children" style="display:none">
-		</div>
-		<table   id="category_532616" cellpadding="0" cellspacing="0"><tr>
-			<td class="ib" style="width:39px; font-size: 1px; background-image: url('http://i1.daumcdn.net/cfs.tistory/v/0/blog/image/tree/base/navi_back_noactive.gif"><a class="click" onclick="toggleFolder('532616')"><img src="http://i1.daumcdn.net/cfs.tistory/v/0/blog/image/tree/base/tab_isleaf.gif" width="39" alt=""/></a></td>
-			<td>
-				<table cellpadding="0" cellspacing="0" style="background-color: #f8f8f8;"><tr>
-					<td class="branch3" onclick="window.location.href='/category/Start-Up'"><div id="text_532616" style="color: #666666;">Start-Up <span class="c_cnt">(0)</span></div></td>
-				</tr></table>
-			</td>
-		</tr></table>
-		<div id="category_532616_children" style="display:none">
-		</div>
-		<table   id="category_461284" cellpadding="0" cellspacing="0"><tr>
-			<td class="ib" style="width:39px; font-size: 1px; background-image: url('http://i1.daumcdn.net/cfs.tistory/v/0/blog/image/tree/base/navi_back_noactive.gif"><a class="click" onclick="toggleFolder('461284')"><img src="http://i1.daumcdn.net/cfs.tistory/v/0/blog/image/tree/base/tab_isleaf.gif" width="39" alt=""/></a></td>
-			<td>
-				<table cellpadding="0" cellspacing="0" style="background-color: #f8f8f8;"><tr>
-					<td class="branch3" onclick="window.location.href='/category/일상'"><div id="text_461284" style="color: #666666;">일상 <span class="c_cnt">(7)</span></div></td>
-				</tr></table>
-			</td>
-		</tr></table>
-		<div id="category_461284_children" style="display:none">
-		</div>
-		<table   id="category_461280" cellpadding="0" cellspacing="0"><tr>
-			<td class="ib" style="width:39px; font-size: 1px; background-image: url('http://i1.daumcdn.net/cfs.tistory/v/0/blog/image/tree/base/navi_back_noactive.gif"><a class="click" onclick="toggleFolder('461280')"><img src="http://i1.daumcdn.net/cfs.tistory/v/0/blog/image/tree/base/tab_closed.gif" width="39" alt=""/></a></td>
-			<td>
-				<table cellpadding="0" cellspacing="0" style="background-color: #f8f8f8;"><tr>
-					<td class="branch3" onclick="window.location.href='/category/프로그래밍'"><div id="text_461280" style="color: #666666;">프로그래밍 <span class="c_cnt">(8)</span></div></td>
-				</tr></table>
-			</td>
-		</tr></table>
-		<div id="category_461280_children" style="display:none">
-				<table id="category_461282"  cellpadding="0" cellspacing="0"><tr>
-				<td style="width:39px; font-size: 1px"><img src="http://i1.daumcdn.net/cfs.tistory/v/0/blog/image/tree/base/navi_back_active.gif" width="17" height="18" alt=""/><img src="http://i1.daumcdn.net/cfs.tistory/v/0/blog/image/tree/base/tab_treed.gif" width="22" alt=""/></td>
-				<td>
-					<table onclick="window.location.href='/category/프로그래밍/Design%20Pattern'" cellpadding="0" cellspacing="0" style="background-color: #f8f8f8;"><tr>
-					<td class="branch3"><div id="text_461282" style="color: #666666;">Design Pattern <span class="c_cnt">(2)</span></div></td>
-					</tr></table>
-				</td>
-				</tr></table>
-				<table id="category_490668"  cellpadding="0" cellspacing="0"><tr>
-				<td style="width:39px; font-size: 1px"><img src="http://i1.daumcdn.net/cfs.tistory/v/0/blog/image/tree/base/navi_back_active.gif" width="17" height="18" alt=""/><img src="http://i1.daumcdn.net/cfs.tistory/v/0/blog/image/tree/base/tab_treed.gif" width="22" alt=""/></td>
-				<td>
-					<table onclick="window.location.href='/category/프로그래밍/iOS'" cellpadding="0" cellspacing="0" style="background-color: #f8f8f8;"><tr>
-					<td class="branch3"><div id="text_490668" style="color: #666666;">iOS <span class="c_cnt">(4)</span></div></td>
-					</tr></table>
-				</td>
-				</tr></table>
-				<table id="category_492611"  cellpadding="0" cellspacing="0"><tr>
-				<td style="width:39px; font-size: 1px"><img src="http://i1.daumcdn.net/cfs.tistory/v/0/blog/image/tree/base/navi_back_active.gif" width="17" height="18" alt=""/><img src="http://i1.daumcdn.net/cfs.tistory/v/0/blog/image/tree/base/tab_treed.gif" width="22" alt=""/></td>
-				<td>
-					<table onclick="window.location.href='/category/프로그래밍/WordPress'" cellpadding="0" cellspacing="0" style="background-color: #f8f8f8;"><tr>
-					<td class="branch3"><div id="text_492611" style="color: #666666;">WordPress <span class="c_cnt">(1)</span></div></td>
-					</tr></table>
-				</td>
-				</tr></table>
-				<table id="category_540660"  cellpadding="0" cellspacing="0"><tr>
-				<td style="width:39px; font-size: 1px"><img src="http://i1.daumcdn.net/cfs.tistory/v/0/blog/image/tree/base/navi_back_active.gif" width="17" height="18" alt=""/><img src="http://i1.daumcdn.net/cfs.tistory/v/0/blog/image/tree/base/tab_treed.gif" width="22" alt=""/></td>
-				<td>
-					<table onclick="window.location.href='/category/프로그래밍/node.js'" cellpadding="0" cellspacing="0" style="background-color: #f8f8f8;"><tr>
-					<td class="branch3"><div id="text_540660" style="color: #666666;">node.js <span class="c_cnt">(0)</span></div></td>
-					</tr></table>
-				</td>
-				</tr></table>
-				<table id="category_560053"  cellpadding="0" cellspacing="0"><tr>
-				<td style="width:39px; font-size: 1px"><img src="http://i1.daumcdn.net/cfs.tistory/v/0/blog/image/tree/base/navi_back_active.gif" width="17" height="18" alt=""/><img src="http://i1.daumcdn.net/cfs.tistory/v/0/blog/image/tree/base/tab_treed_end.gif" width="22" alt=""/></td>
-				<td>
-					<table onclick="window.location.href='/category/프로그래밍/Ruby'" cellpadding="0" cellspacing="0" style="background-color: #f8f8f8;"><tr>
-					<td class="branch3"><div id="text_560053" style="color: #666666;">Ruby <span class="c_cnt">(0)</span></div></td>
-					</tr></table>
-				</td>
-				</tr></table>
-		</div>
-		<table   id="category_491485" cellpadding="0" cellspacing="0"><tr>
-			<td class="ib" style="width:39px; font-size: 1px; background-image: url('http://i1.daumcdn.net/cfs.tistory/v/0/blog/image/tree/base/navi_back_noactive.gif"><a class="click" onclick="toggleFolder('491485')"><img src="http://i1.daumcdn.net/cfs.tistory/v/0/blog/image/tree/base/tab_closed.gif" width="39" alt=""/></a></td>
-			<td>
-				<table cellpadding="0" cellspacing="0" style="background-color: #f8f8f8;"><tr>
-					<td class="branch3" onclick="window.location.href='/category/IT'"><div id="text_491485" style="color: #666666;">IT <span class="c_cnt">(8)</span></div></td>
-				</tr></table>
-			</td>
-		</tr></table>
-		<div id="category_491485_children" style="display:none">
-				<table id="category_491486"  cellpadding="0" cellspacing="0"><tr>
-				<td style="width:39px; font-size: 1px"><img src="http://i1.daumcdn.net/cfs.tistory/v/0/blog/image/tree/base/navi_back_active.gif" width="17" height="18" alt=""/><img src="http://i1.daumcdn.net/cfs.tistory/v/0/blog/image/tree/base/tab_treed.gif" width="22" alt=""/></td>
-				<td>
-					<table onclick="window.location.href='/category/IT/Mac'" cellpadding="0" cellspacing="0" style="background-color: #f8f8f8;"><tr>
-					<td class="branch3"><div id="text_491486" style="color: #666666;">Mac <span class="c_cnt">(5)</span></div></td>
-					</tr></table>
-				</td>
-				</tr></table>
-				<table id="category_526707"  cellpadding="0" cellspacing="0"><tr>
-				<td style="width:39px; font-size: 1px"><img src="http://i1.daumcdn.net/cfs.tistory/v/0/blog/image/tree/base/navi_back_active.gif" width="17" height="18" alt=""/><img src="http://i1.daumcdn.net/cfs.tistory/v/0/blog/image/tree/base/tab_treed_end.gif" width="22" alt=""/></td>
-				<td>
-					<table onclick="window.location.href='/category/IT/관심'" cellpadding="0" cellspacing="0" style="background-color: #f8f8f8;"><tr>
-					<td class="branch3"><div id="text_526707" style="color: #666666;">관심 <span class="c_cnt">(3)</span></div></td>
-					</tr></table>
-				</td>
-				</tr></table>
-		</div>
-		<table   id="category_461283" cellpadding="0" cellspacing="0"><tr>
-			<td class="ib" style="width:39px; font-size: 1px; background-image: url('http://i1.daumcdn.net/cfs.tistory/v/0/blog/image/tree/base/navi_back_noactive.gif"><a class="click" onclick="toggleFolder('461283')"><img src="http://i1.daumcdn.net/cfs.tistory/v/0/blog/image/tree/base/tab_isleaf.gif" width="39" alt=""/></a></td>
-			<td>
-				<table cellpadding="0" cellspacing="0" style="background-color: #f8f8f8;"><tr>
-					<td class="branch3" onclick="window.location.href='/category/여행'"><div id="text_461283" style="color: #666666;">여행 <span class="c_cnt">(0)</span></div></td>
-				</tr></table>
-			</td>
-		</tr></table>
-		<div id="category_461283_children" style="display:none">
-		</div>
-		<table   id="category_461279" cellpadding="0" cellspacing="0"><tr>
-			<td class="ib" style="width:39px; font-size: 1px; background-image: url('http://i1.daumcdn.net/cfs.tistory/v/0/blog/image/tree/base/navi_back_noactive.gif"><a class="click" onclick="toggleFolder('461279')"><img src="http://i1.daumcdn.net/cfs.tistory/v/0/blog/image/tree/base/tab_isleaf.gif" width="39" alt=""/></a></td>
-			<td>
-				<table cellpadding="0" cellspacing="0" style="background-color: #f8f8f8;"><tr>
-					<td class="branch3" onclick="window.location.href='/category/사진'"><div id="text_461279" style="color: #666666;">사진 <span class="c_cnt">(1)</span></div></td>
-				</tr></table>
-			</td>
-		</tr></table>
-		<div id="category_461279_children" style="display:none">
-		</div>
-		<table   id="category_557587" cellpadding="0" cellspacing="0"><tr>
-			<td class="ib" style="width:39px; font-size: 1px; background-image: url('http://i1.daumcdn.net/cfs.tistory/v/0/blog/image/tree/base/navi_back_noactive_end.gif"><a class="click" onclick="toggleFolder('557587')"><img src="http://i1.daumcdn.net/cfs.tistory/v/0/blog/image/tree/base/tab_isleaf.gif" width="39" alt=""/></a></td>
-			<td>
-				<table cellpadding="0" cellspacing="0" style="background-color: #f8f8f8;"><tr>
-					<td class="branch3" onclick="window.location.href='/category/Kanban'"><div id="text_557587" style="color: #666666;">Kanban <span class="c_cnt">(0)</span></div></td>
-				</tr></table>
-			</td>
-		</tr></table>
-		<div id="category_557587_children" style="display:none">
-		</div>
-	</td></tr></table>
-
+<!-- BEGIN CHART PORTLET-->
+							<div class="portlet light bordered">
+								<div class="portlet-title">
+									<div class="caption">
+										<i class="icon-bar-chart font-green-haze"></i>
+										<span class="caption-subject bold uppercase font-green-haze"> Bar Charts</span>
+										<span class="caption-helper">column and line mix</span>
+									</div>
+									<div class="tools">
+										<a href="javascript:;" class="collapse">
+										</a>
+										<a href="#portlet-config" data-toggle="modal" class="config">
+										</a>
+										<a href="javascript:;" class="reload">
+										</a>
+										<a href="javascript:;" class="fullscreen">
+										</a>
+										<a href="javascript:;" class="remove">
+										</a>
+									</div>
 								</div>
-							
-
+								<div class="portlet-body">
+									<div id="chart_1" class="chart" style="height: 500px;">
+									</div>
+								</div>
+							</div>
+							<!-- END CHART PORTLET-->
