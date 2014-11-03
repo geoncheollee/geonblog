@@ -58,6 +58,8 @@ f
 
 
 
+<br><br>
+
 
 ### 1-3 슬라이싱
 
@@ -88,6 +90,8 @@ abcdef
 
 
 
+<br><br>
+
 
 ### 1-4 확장 슬라이싱
 
@@ -106,6 +110,8 @@ dcba
 {% endhighlight %}
 
 
+
+<br><br>
 
 
 ### 1-5 연결하기
@@ -127,6 +133,8 @@ abcdef
 
 
 
+<br><br>
+
 
 ### 1-6 반복하기
 
@@ -146,6 +154,8 @@ AbcAbcAbcAbc
 {% endhighlight %}
 
 
+
+<br><br>
 
 
 ### 1-7 멤버십 테스트
@@ -190,6 +200,8 @@ True
 
 
 
+<br><br>
+
 
 ### 1-8 길이 정보
 
@@ -210,10 +222,14 @@ print len(t)
 4
 {% endhighlight %}
 
+<br><br>
+
 
 ## 참고 동영상
 
 <iframe width="854" height="510" src="//www.youtube.com/embed/qWy-kTU8qYU?list=PLc91J-KoFBX-d1SsaakXM8mOnCeOEzH32" frameborder="0" allowfullscreen></iframe>
+
+<br><br>
 
 
 ## 문제 풀어보기
@@ -284,22 +300,6 @@ function func(){
 <iframe width="560" height="315" src="//www.youtube.com/embed/SU3kYxJmWuQ" frameborder="0"> </iframe>
 ---
 <iframe width="854" height="510" src="//www.youtube.com/embed/obO1oUu8AK8" frameborder="0" allowfullscreen></iframe>
-
-<!-- 코드입력부 기능 -->
-{% highlight html linenos %}
-{% raw %}
-def add(a,b):
-  return a+b
-  
-print add(1,2)
-{% endraw %}
-{% endhighlight %}
-
-
-<!-- 코드 출력부 기능 -->
-{% highlight html %}
-<iframe width="560" height="315" src="//www.youtube.com/embed/SU3kYxJmWuQ" frameborder="0"> </iframe>
-{% endhighlight %}
 
 
 <!-- 파이썬 코드 실행기  -->
