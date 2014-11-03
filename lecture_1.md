@@ -10,7 +10,6 @@ image:
 share: true
 ---
 
-수정1
   <!--
   credit: dargadgetz
   creditlink: http://www.dargadgetz.com/ios-7-abstract-wallpaper-pack-for-iphone-5-and-ipod-touch-retina/-->
@@ -19,7 +18,7 @@ share: true
 	
 	
 
-		<div style="background: white; height: 390px; width: 200px; border: 2px solid black; position: fixed; top: 35px; right: 35px;">
+		<div style="background: white; height: 410px; width: 200px; border: 2px solid black; position: fixed; top: 35px; right: 35px;">
   			<br><a href="#01"> &nbsp;01.수치 자료형 </a> <br>
   			<a href="#1-1"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1-1 정수형 상수 </a> <br>
   			<a href="#1-2"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1-2 실수형 상수 </a> <br>
@@ -419,6 +418,8 @@ function func(){
 
 <!-- 사지선다형 문제 끝 -->
 
+---
+
 <div id="coding"></div>
 
 <!-- 파이썬 코드 실행기  -->
@@ -433,6 +434,9 @@ function func(){
 </html>
 
 <div id="forum"></div>
+
+---
+
 <!-- 댓글 기능 -->
 <html>
 <body>
