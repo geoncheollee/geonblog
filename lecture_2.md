@@ -23,7 +23,7 @@ share: true
 
 
 
-<form id="string" name="fm" method="get">
+<div id="first"></div>
 
 # 4. 문자열
 
