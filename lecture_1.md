@@ -13,8 +13,6 @@ share: true
   credit: dargadgetz
   creditlink: http://www.dargadgetz.com/ios-7-abstract-wallpaper-pack-for-iphone-5-and-ipod-touch-retina/-->
 
-수정33
-
 <html>
 <h1>3. 수치 자료형과 연산자</h1>
 
@@ -58,8 +56,6 @@ print a, b, c
 <type 'float'> <type 'float'> <type 'float'>
 1.2 3500.0 -2e-05
 {% endhighlight %}
-
-<div markdown="0"><a href="https://dl-web.dropbox.com/get/jquery.toc-1.1.4.min.js?_subject_uid=338436955&w=AADOWGjI7mYbBxUqh8n5qYSs5brF712C3Qyr1-wKUlwvNg" class="btn">Download the Theme</a></div>
 
 <!-- 파이썬 코드 실행기  -->
 <html>
