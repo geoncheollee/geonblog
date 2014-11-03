@@ -11,7 +11,22 @@
 </head>
 
 
-<body>
+
+<body id="page" {% if page.image.feature %}class="feature"{% endif %}>
+
+{% include browser-upgrade.html %}
+{% include navigation.html %}
+
+{% if page.image.feature %}
+
+<!-- 버튼(건철)
+    body의 id인 page 참조하여 이동-->
+<div style="position: fixed; bottom: 15px; right: 15px;">
+  <a href="#page"><img src="{{ site.url }}/images/top.png" title="top"></a> 
+</div>
+
+
+<!-- 애니메이션 -->
 <span class="opacity" style="font-size:32px; font-weight:bolder; color:orange; right: 10px">
   ★/span>
 <span class="opacity" style="font-size:32px; font-weight:bolder; color:orange; -webkit-animation-delay:3s; animation-delay:3s;">
@@ -35,27 +50,9 @@
 <img src="{{ site.url }}/images/top.png" class="opacity" style="font-size:32px; font-weight:bolder; color:orange; -webkit-animation-delay:5s; animation-delay:5s; padding:0;">
 
 <img src="https://api.monosnap.com/image/download?id=x5ZxE4ATofBBXzThhYkbARMKrd4eAf" class="opacity" style="font-size:32px; font-weight:bolder; color:orange; -webkit-animation-delay:6s; animation-delay:6s; padding:0;">
-
-</body>
-
+<!-- 애니메이션 -->
 
 
-
-
-
-
-<body id="page" {% if page.image.feature %}class="feature"{% endif %}>
-
-{% include browser-upgrade.html %}
-{% include navigation.html %}
-
-{% if page.image.feature %}
-
-<!-- 버튼(건철)
-    body의 id인 page 참조하여 이동-->
-<div style="position: fixed; bottom: 15px; right: 15px;">
-  <a href="#page"><img src="{{ site.url }}/images/top.png" title="top"></a> 
-</div>
 
 <div class="entry-header">
   {% if page.image.credit %}<div class="image-credit">Image source: <a href="{{ page.image.creditlink }}">{{ page.image.credit }}</a></div><!-- /.image-credit -->{% endif %}
