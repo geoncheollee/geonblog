@@ -30,7 +30,7 @@ share: true
   - for ~ in 문
 
 
-### 1-2 인덱싱 1
+### 1-2 인덱싱
 
 {% highlight python linenos %}
 {% raw %}
@@ -60,7 +60,7 @@ f
 
 ### 1-3 슬라이싱
 
-{% highlight html linenos %}
+{% highlight python linenos %}
 {% raw %}
 s = 'abcdef'
 L = [100, 200, 300]
@@ -91,7 +91,7 @@ abcdef
 ### 1-4 확장 슬라이싱
 
 
-{% highlight html linenos %}
+{% highlight python linenos %}
 {% raw %}
 s = 'abcd'
 print s[::2]   #step:2 - 오른쪽 방향으로 2칸씩
@@ -109,7 +109,7 @@ dcba
 
 ### 1-5 연결하기
 
-{% highlight html linenos %}
+{% highlight python linenos %}
 {% raw %}
 s = 'abc' + 'def'
 print s
@@ -129,7 +129,7 @@ abcdef
 
 ### 1-6 반복하기
 
-{% highlight html linenos %}
+{% highlight python linenos %}
 {% raw %}
 s = 'Abc'
 print s * 4
@@ -149,7 +149,7 @@ AbcAbcAbcAbc
 
 ### 1-7 멤버십 테스트
 
-{% highlight html linenos %}
+{% highlight python linenos %}
 {% raw %}
 s = 'abcde'
 print 'c' in s
@@ -170,7 +170,7 @@ True
 
 
 
-{% highlight html linenos %}
+{% highlight python linenos %}
 {% raw %}
 print 'ab' in 'abcd'
 print 'ad' in 'abcd'
@@ -192,7 +192,7 @@ True
 
 ### 1-8 길이 정보
 
-{% highlight html linenos %}
+{% highlight python linenos %}
 {% raw %}
 s = 'abcde'
 l = [1,2,3]
@@ -217,7 +217,7 @@ print len(t)
 
 ## 문제 풀어보기
 
-{% highlight html linenos %}
+{% highlight python linenos %}
 {% raw %}
 
 s = 'hello, python'
