@@ -15,7 +15,7 @@ share: true
 	
 	
 
-		<div style="background-image: URL({{ site.url }}/images/list2.jpg); color: white; height: 350px; width: 200px; border: 2px solid black; position: fixed; top: 35px; right: 35px;">
+		<div style="background-image: URL({{ site.url }}/images/list2.jpg); height: 350px; width: 200px; border: 2px solid black; position: fixed; top: 35px; right: 35px;">
 			<br>
   			<a href="#string" style="color: white"> &nbsp;&nbsp; <b>string</b></a> <br>
   			<a href="#string_1" style="color: white"> &nbsp;&nbsp; <b>1.1 시퀀스 자료형</b></a> <br>
