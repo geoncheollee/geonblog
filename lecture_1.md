@@ -22,11 +22,11 @@ share: true
   			<a href="#1-1"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1-1 정수형 상수 </a> <br>
   			<a href="#1-2"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1-2 실수형 상수 </a> <br>
   			<a href="#1-3"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1-3 Decimal 자료형 </a> <br>
-  			<a href="#02"> &nbsp;02 파이썬 연산자 </a> <br>
+  			<a href="#02"> &nbsp;02 파이썬 연산자 </a> <br><br>
   			<a href="#2-1"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2-1 산술 연산자 </a> <br>
   			<a href="#2-2"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2-2 관계 연산자 </a> <br>
   			<a href="#2-3"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2-3 논리 연산자 </a> <br>
-  			<a href="#2-4"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2-4 비트 단위 연산자 </a> <br>
+  			<a href="#2-4"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2-4 비트 단위 연산자 </a> <br><br>
   			<a href="#problem"> &nbsp; 연습문제 </a> <br>
   			<a href="#coding"> &nbsp; 코딩 실습 </a> <br>
   			<a href="#forum"> &nbsp; Forum </a> <br>
