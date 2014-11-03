@@ -34,4 +34,18 @@ share: true
 	<a href="https://github.com/geoncheollee/geonblog/blob/gh-pages/images/VD_1.JPG"><img src="https://github.com/geoncheollee/geonblog/blob/gh-pages/images/VD_1.JPG" alt=""></a>
 </figure>
 
+<!-- 이미지 기능 -->
+<figure>
+	<a href="https://github.com/geoncheollee/geonblog/blob/gh-pages/images/VD_2.JPG"><img src="https://github.com/geoncheollee/geonblog/blob/gh-pages/images/VD_2.JPG" alt=""></a>
+</figure>
+
+<!-- 이미지 기능 -->
+<figure>
+	<a href="https://github.com/geoncheollee/geonblog/blob/gh-pages/images/VD_3.JPG"><img src="https://github.com/geoncheollee/geonblog/blob/gh-pages/images/VD_3.JPG" alt=""></a>
+</figure>
+
+<!-- 이미지 기능 -->
+<figure>
+	<a href="https://github.com/geoncheollee/geonblog/blob/gh-pages/images/VD_4.JPG"><img src="https://github.com/geoncheollee/geonblog/blob/gh-pages/images/VD_4.JPG" alt=""></a>
+</figure>
 
