@@ -9,40 +9,6 @@ image:
 share: true
 ---
 
-<html>
-<script language="javascript">
-<!--
-
-
-var tScroll, userHeight, curPos = 0;
-
-
-function runTimer() {
- curPos = document.body.scrollTop + 3;
- window.scroll(0, curPos);
- userHeight = document.body.scrollHeight - document.body.clientHeight;  // 시각적으로 볼 수 없는 높이의 합
-
- if (curPos > userHeight) window.scroll(0, 0);  // 볼 수 없는 높이와 스크롤바top좌표가 같으면 스크롤바의 이동완료를 의미
- tscroll = window.setTimeout("runTimer()", 100);
-}
-
-
-window.onload = runTimer;
-window.onunload = new Function("clearTimeout(tscroll)");
-
-// -->
-</script>
-
-
-<body style="margin-bottom:350pt;" scroll="auto">
-자동스크롤<br><br><br><br>
-자동스크롤<br><br><br><br>
-자동스크롤<br><br><br><br>
-</body>
-</html>
-
-
-
 # 4. 문자열
 
 
