@@ -16,7 +16,7 @@ share: true
 	
 
 		<div style="background: white; height: 350px; width: 200px; border: 2px solid black; position: fixed; top: 35px; right: 35px;">
-  			<a href="#string"> &nbsp;&nbsp; string</a> <br>
+  			<a href="#string"> &nbsp;&nbsp; <b>string</b></a> <br>
   			<a href="#string_1"> &nbsp;&nbsp; 1.1</a> <br>
   			<a href="#string_2"> &nbsp;&nbsp; 1.2</a> <br>
   			<a href="#string_3"> &nbsp;&nbsp; 1.3</a> <br>
