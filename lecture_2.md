@@ -329,6 +329,8 @@ function func(){
 </html>
 <!-- 문제풀이 끝-->
 
+br><br>
+
 
 <!-- 2번 문제풀이 -->
 {% highlight python linenos %}
