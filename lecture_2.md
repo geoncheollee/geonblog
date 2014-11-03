@@ -32,7 +32,7 @@ share: true
 
 ### 1-2 인덱싱
 
-{% highlight python %}
+{% highlight python linenos %}
 {% raw %}
 s = 'abcdef'
 l = [100,200,300]
