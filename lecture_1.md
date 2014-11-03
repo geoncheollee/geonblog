@@ -12,11 +12,34 @@ share: true
   <!--
   credit: dargadgetz
   creditlink: http://www.dargadgetz.com/ios-7-abstract-wallpaper-pack-for-iphone-5-and-ipod-touch-retina/-->
+<html>
+	<body>
+	
+	
+
+		<div style="background: white; height: 350px; width: 200px; border: 2px solid black; position: fixed; top: 35px; right: 35px;">
+  			<a href="#01"> 01. 수치 자료형</a> <br>
+  			<a href="#string_2">  1.2</a> <br>
+  			<a href="#string_3">  1.3</a> <br>
+  			<a href="#string_4">              1.4</a> <br>
+  			<a href="#string_5">              1.5</a> <br>
+  			<a href="#string_6">  1.6</a> <br>
+  			<a href="#string_7">  1.7</a> <br>
+  			<a href="#string_8">  1.8</a> <br>
+  			<a href="#string_movie">  관련 영상</a> <br>
+  			<a href="#string_problem">  문제 풀기</a> <br>
+  			<a href="#string_code">  코드 직접 작성해보기</a>
+  			
+		</div>
+		
+	</body>
+</html>
 
 <html>
-<h1>3. 수치 자료형과 연산자</h1>
+<h1>수치 자료형과 연산자</h1>
 
-<h2>01 수치 자료형</h2>
+<div id="01"></div>
+<h2>01. 수치 자료형</h2>
 </html>
 
 
