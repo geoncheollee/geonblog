@@ -16,62 +16,66 @@ share: true
 	
 	
 	
-	<style type="text/css"> 
-#star ul.star { list-style: none; margin: 0; padding: 0; width: 169px; height: 20px; left: 10px; top: -5px; position: relative; float: left; background: url('/skin/board/eb_score_skin/img/star2.gif') repeat-x; cursor: pointer; } 
-#star li { padding: 0; margin: 0; float: left; display: block; width: 0px; height: 20px; text-decoration: none; text-indent: -9000px; z-index: 20; position: absolute; padding: 0; } 
-#star li.curr { background: url('/skin/board/eb_score_skin/img/star2.gif') left 25px; font-size: 1px; } 
-#star div.user { left: 15px; position: relative; float: left; font-size: 13px; font-family: arial; color: #888; } 
-</style> 
+	<script>
+var locked = 0;
 
-<script type="text/javascript"> 
-function $(v,o) { 
-return((typeof(o)=='object'?o:document).getElementById(v)); 
-} 
+function show(imagenr) 
+{
+    if (locked) return;
+    var i;
+    var image;
+    var el;
 
-function $S(o) { return((typeof(o)=='object'?o:$(o)).style); } 
-function agent(v) { return(Math.max(navigator.userAgent.toLowerCase().indexOf(v),0)); } 
-function abPos(o) { 
-var o=(typeof(o)=='object'?o:$(o)), z={X:0,Y:0}; 
-while(o!=null) { 
-z.X+=o.offsetLeft; 
-z.Y+=o.offsetTop; 
-o=o.offsetParent; 
-}; 
-return(z); 
-} 
-2012-02-27 
-function XY(e,v) { 
-var o=agent('msie')?{ 
-'X':event.clientX+document.body.scrollLeft,'Y':event.clientY+document.body.scrollTop}:{'X':e.pageX,'Y':e.pageY}; return(v?o[v]:o); } 
-star={}; 
+    for (i=1; i<=imagenr; i++) {
+        image = 'image' + i;
+        el = document.getElementById(image);
+        el.src="star1.gif";
+    }
+}
 
-star.mouse=function(e,o) { if(star.stop || isNaN(star.stop)) { star.stop=0; 
-document.onmousemove=function(e) { var n=star.num; 
-var p=abPos($('star'+n)), x=XY(e), oX=x.X-p.X, oY=x.Y-p.Y; star.num=o.id.substr(4); 
-if(oX<0 || oX>168|| oY<0 || oY>19) { star.stop=1; star.revert(); 
-} 
-else { 
-$S('starCur'+n).width=oX+'px'; 
-$S('starUser'+n).color='#111'; 
-$('starUser'+n).innerHTML=Math.round(oX/168*100)+'점'; 
-} 
-}; 
-} }; 
 
-star.update=function(e,o) { var n=star.num, v=parseInt($('starUser'+n).innerHTML); 
-n=o.id.substr(4); $('starCur'+n).title=v; 
-req=new XMLHttpRequest(); req.open('GET','/AJAX_Star_Vote.php?vote='+(v/100),false); req.send(null);    
-}; 
-star.revert=function() { var n=star.num, v=parseInt($('starCur'+n).title); 
-$S('starCur'+n).width=Math.round(v*168/100)+'px'; 
-$('starUser'+n).innerHTML=(v>0?Math.round(v)+'점':''); 
-document.fviewcomment.wr_1.value = (v>0?Math.round(v)+'':''); 
-$('starUser'+n).style.color='#888';	
-document.onmousemove=''; 
-}; 
+function noshow(imagenr)
+{
+    if (locked) return;
+    var i;
+    var image;
+    var el;
 
-star.num=0; 
-</script> 
+    for (i=1; i<=imagenr; i++) {
+        image = 'image' + i;
+        el = document.getElementById(image);
+        el.src="star0.gif";
+    }
+}
+
+function lock(imagenr)
+{
+    show(imagenr);
+    locked = 1;
+}
+
+function mark(imagenr)
+{
+    //show(imagenr);
+    //locked = 1;
+    lock(imagenr);
+
+    var e = document.getElementById('ratetext');
+    e.innerHTML = "You rated: ";
+
+    /* store rating on server */
+    var xmlhttp;
+    try {
+        xmlhttp = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject("Microsoft.XMLHTTP");
+    } catch (e) {
+        // todo
+    }
+    var qs = '/test2.html?rate=' + imagenr;
+    xmlhttp.open("GET", qs);
+    xmlhttp.send(null);
+}
+</script>
+
 	
 	
 	
@@ -124,16 +128,29 @@ star.num=0;
 
 
 
-<div id="star"> 
-<ul id="star0" class="star" onmousedown="star.update(event,this)" onmousemove="star.mouse(event,this)" title="Rate This!"> 
-<li id="starCur0" class="curr" style="width: 0px;"></li> 
-</ul> 
 
-<div style="color: rgb(136, 136, 136);" id="starUser0" class="user">0 점</div> 
-<br style="clear: both;"> 
-<input type="hidden" id="wr_1" style='width:40px;' size="3" name="wr_1" required value="" class=ed onblur="onlyNum()"></td> 
-</div> 
 
+
+<table cellpadding=0 cellspacing=0 border=0 width=126 height=21 align=center background=star_bg.gif>
+	<tr>
+		<td>
+			<table cellpadding=0 cellspacing=0 border=0 width=67% height=21 background=star.gif><tr><td></td></tr></table>
+		</td>
+	</tr>
+</table>
+	<BR>
+<DIV id=rating align=center>
+	<SPAN id=ratetext>Rate this site</SPAN>
+	<BR>
+	<SPAN>
+		<IMG id=image1 onmouseover=show(1) onclick=mark(1) onmouseout=noshow(1) src="star0.gif">
+		<IMG id=image2 onmouseover=show(2) onclick=mark(2) onmouseout=noshow(2) src="star0.gif">
+		<IMG id=image3 onmouseover=show(3) onclick=mark(3) onmouseout=noshow(3) src="star0.gif">
+		<IMG id=image4 onmouseover=show(4) onclick=mark(4) onmouseout=noshow(4) src="star0.gif">
+		<IMG id=image5 onmouseover=show(5) onclick=mark(5) onmouseout=noshow(5) src="star0.gif">
+	</SPAN>
+	<BR>
+</DIV>
 
 </body>
 </html>
