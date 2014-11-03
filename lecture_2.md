@@ -333,8 +333,10 @@ function func(){
  <input type="radio" name="chk_1" value="chk_3"> (3) 공백 <p></p>
  <input type="radio" name="chk_1" value="chk_4"> (3) W <p></p>
  
+ <!--
   <p><form name="input" method="post" action="">
   <input type="button" value="확인" onClick="func()"></form></p>
+ -->
  
 </div></div></div>
 </html>
@@ -367,7 +369,7 @@ print s1 + s2
  <input type="radio" name="chk_2" value="chk_4"> (3) Hello <p></p>
  
   <p><form name="input" method="post" action="">
-  <input type="button" value="확인" onClick="func1()"></form></p>
+  <input type="button" value="확인" onClick="func()"></form></p>
  
 </div></div></div>
 </html>
