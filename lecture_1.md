@@ -18,8 +18,7 @@ share: true
 	
 	
 
-		<
-div style="background-image: URL({{ site.url }}/images/list2.png); height: 410px; width: 200px; border: 2px solid black; position: fixed; top: 35px; right: 35px;">
+		<div style="background-image: URL({{ site.url }}/images/list2.png); height: 410px; width: 200px; border: 2px solid black; position: fixed; top: 35px; right: 35px;">
   			<br><a href="#01"> &nbsp;01.수치 자료형 </a> <br>
   			<a href="#1-1" style="color: white"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1-1 정수형 상수 </a> <br>
   			<a href="#1-2" style="color: white"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1-2 실수형 상수 </a> <br>
