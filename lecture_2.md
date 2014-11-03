@@ -14,14 +14,17 @@ share: true
 	<body>
 
 		<div style="position: fixed; right: 15px;">
-  			<a href="#fm">fmfm</a> 
+  			<a href="#string">string</a> 
+  			<a href="#fm">fm</a> 
 		</div>
 		
 	</body>
 </html>
 
 
-
+<html>
+	<body id="string"></body>
+<html>
 # 4. 문자열
 
 
