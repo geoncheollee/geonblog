@@ -18,16 +18,16 @@ share: true
 		<div style="background: black; color: white; height: 350px; width: 200px; border: 2px solid black; position: fixed; top: 35px; right: 35px;">
   			<a href="#string" style="color: white"> &nbsp;&nbsp; <b>string</b></a> <br>
   			<a href="#string_1" style="color: white"> &nbsp;&nbsp; <b>1.1 시퀀스 자료형</b></a> <br>
-  			<a href="#string_2"> &nbsp;&nbsp; <b>1.2 인덱싱</b></a> <br>
-  			<a href="#string_3"> &nbsp;&nbsp; <b>1.3 슬라이싱</b></a> <br>
-  			<a href="#string_4">&nbsp;&nbsp;  <b>1.4 확장 슬라이싱</b></a> <br>
-  			<a href="#string_5"> &nbsp;&nbsp; <b>1.5 연결하기</b></a> <br>
-  			<a href="#string_6"> &nbsp;&nbsp; <b>1.6 반복하기</b></a> <br>
-  			<a href="#string_7"> &nbsp;&nbsp; <b>1.7 멤버십 테스트</b></a> <br>
-  			<a href="#string_8"> &nbsp;&nbsp; <b>1.8 길이 정보</b></a> <br>
-  			<a href="#string_movie"> &nbsp;&nbsp; <b>관련 영상</b></a> <br>
-  			<a href="#string_problem"> &nbsp;&nbsp; <b>문제 풀기</b></a> <br>
-  			<a href="#string_code"> &nbsp;&nbsp; <b>코드 작성하기</b></a>
+  			<a href="#string_2" style="color: white"> &nbsp;&nbsp; <b>1.2 인덱싱</b></a> <br>
+  			<a href="#string_3" style="color: white"> &nbsp;&nbsp; <b>1.3 슬라이싱</b></a> <br>
+  			<a href="#string_4" style="color: white">&nbsp;&nbsp;  <b>1.4 확장 슬라이싱</b></a> <br>
+  			<a href="#string_5" style="color: white"> &nbsp;&nbsp; <b>1.5 연결하기</b></a> <br>
+  			<a href="#string_6" style="color: white"> &nbsp;&nbsp; <b>1.6 반복하기</b></a> <br>
+  			<a href="#string_7" style="color: white"> &nbsp;&nbsp; <b>1.7 멤버십 테스트</b></a> <br>
+  			<a href="#string_8" style="color: white"> &nbsp;&nbsp; <b>1.8 길이 정보</b></a> <br>
+  			<a href="#string_movie" style="color: white"> &nbsp;&nbsp; <b>관련 영상</b></a> <br>
+  			<a href="#string_problem" style="color: white"> &nbsp;&nbsp; <b>문제 풀기</b></a> <br>
+  			<a href="#string_code" style="color: white"> &nbsp;&nbsp; <b>코드 작성하기</b></a>
   			
 		</div>
 		
