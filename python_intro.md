@@ -8,7 +8,7 @@ image:
   feature: python_intro.jpg
 share: true
 ---
-수정1
+
 
 # 파이썬을 배워야 하는 이유...
 ---
