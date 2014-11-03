@@ -24,15 +24,6 @@ share: true
           <span class="date">16 Aug 2014</span>
           <span class="description">코세라의 배우는 법 배우기(Learn How to Learn) 강의 중 좋은/나쁜 학습의 열가지 원칙 번역</span>
         </p>
-        <ul class="tags cf">
-          
-          <li><a href="/search/?tags=learn">learn</a></li>
-          
-          <li><a href="/search/?tags=rule">rule</a></li>
-          
-          <li><a href="/search/?tags=coursera">coursera</a></li>
-          
-        </ul>
       </li>
 </body>
 </html>
