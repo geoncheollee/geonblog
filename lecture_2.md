@@ -30,7 +30,7 @@ share: true
   - for ~ in 문
 
 
-### 1-2 인덱싱
+### 1-2 인덱싱 1
 
 {% highlight python linenos %}
 {% raw %}
