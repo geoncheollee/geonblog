@@ -12,8 +12,17 @@ share: true
 
 <html>
 	<body>
+	
+	
+	<div style="
+height: 200px ;
+width: 450px ;
+border: 1px   solid  blue ;
+text-align: center ;
+ " >
+	
 
-		<div style="position: fixed; top: 25px; right: 15px;">
+		<div style="height: 500px; width: 200px; border: 2px solid black; text-align: center; position: fixed; top: 25px; right: 15px;">
   			<a href="#string">string</a> <br>
   			<a href="#string_1">1.1</a> <br>
   			<a href="#string_2">1.2</a> <br>
