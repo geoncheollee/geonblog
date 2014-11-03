@@ -9,6 +9,19 @@ image:
 share: true
 ---
 
+
+<html>
+	<body>
+
+		<div style="position: fixed; right: 15px;">
+  			<a href="#fm">fmfm</a> 
+		</div>
+		
+	</body>
+</html>
+
+
+
 # 4. 문자열
 
 
@@ -267,9 +280,9 @@ function func(){
 }
 </script>
 
-<form name="fm" method="get">
+<form id="fm" name="fm" method="get">
 
- <p> 1. 위의 코드 결과로 알맞은 것은? </p>
+ <p> 1. 위의 코드 결과로 알맞은 것은?? </p>
  
  <p></p>
  <input type="radio" name="chk_1" value="chk_1"> (1) , <p></p>
