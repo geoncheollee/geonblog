@@ -14,8 +14,9 @@ share: true
 	<link rel = "stylesheet" type = "text/css" href = "{{ site.url}}/assets/css/style.css">
 	
 	
-	
-	
+	<link href="/resources/rateit/rateit.css" rel="stylesheet" type="text/css">
+	<script type="text/javascript" src="/resources/rateit/jquery.rateit.min.js">
+</script>
 	
 </head>
 
@@ -65,11 +66,9 @@ share: true
 
 
 
+<div class="rateit" data-rateit-value="7.5" data-rateit-ispreset="true" data-rateit-readonly="true"></div>
 
-
-<div class="star_rating_wrap"
-    data-label="Quality,Delivery,Design,Price,Service"
-    data-value="0,5,2,1,4"></div>
+$('div.rateit, span.rateit').rateit();
 
 </body>
 </html>
