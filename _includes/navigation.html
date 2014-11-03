@@ -46,7 +46,6 @@
 				<li><a href="{{ site.url }}/lecture_1/">수치 자료형과 연산자</a></li>
 				<li><a href="{{ site.url }}/lecture_2/">문자열</a></li>
 				<li><a href="{{ site.url }}/lecture_3/">리스트</a></li>
-				<li><a href="{{ site.url }}/lecture_6/">튜플</a></li>
 			</ul>
 		</li>
 		{% for link in site.links %}<li>{% if link.external %}<a href="{{ link.url }}" target="_blank">{{ link.title }}</a>{% else %}<a href="{{ site.url }}{{ link.url }}">{{ link.title }}</a>{% endif %}</li>{% endfor %}
