@@ -24,7 +24,10 @@ share: true
 
 <html>
 	<body id="string"></body>
-<html>
+	
+	
+	
+</html>
 # 4. 문자열
 
 
