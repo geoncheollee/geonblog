@@ -1,7 +1,7 @@
 ---
 layout: page
 permalink: /python_intro/
-title: Python 학습 개요
+<!_- title: Python 학습 개요 -->
 description: "파이썬 학습의 개요"
 tags: [Jekyll, theme, install, setup]
 image:
