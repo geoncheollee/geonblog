@@ -9,7 +9,7 @@ image:
 share: true
 ---
 
-수정2
+수정1
 
 <html>
 <body>
@@ -21,7 +21,7 @@ share: true
           <a href="/geonblog/study/">배우는 법 배우기 - 좋은/나쁜 학습의 10가지 원칙</a>
         </h2>
         <p>
-          <span class="date">16 Aug 2014</span>
+          <span class="date">16 Aug 2014</span><br>
           <span class="description">코세라의 배우는 법 배우기(Learn How to Learn) 강의 중 좋은/나쁜 학습의 열가지 원칙 번역</span>
         </p>
       </li>
