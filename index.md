@@ -4,8 +4,8 @@ layout: page
 description: "Python intro"
 tags: [Jekyll, theme, themes, responsive, blog, modern]
 image:
-  feature: pythonlogo3.jpg
-  creditlink: https://github.com/geoncheollee/geonblog/blob/gh-pages/images/pythonlogo2.JPG
+  feature: home.jpg
+  creditlink: https://github.com/geoncheollee/geonblog/blob/gh-pages/images/home.jpg
 share: true
 ---
 
