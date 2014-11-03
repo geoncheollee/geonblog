@@ -11,7 +11,7 @@ share: true
 
 <html>
 	<body>
-		<div style="background-image: URL({{ site.url }}/images/list2.png); height: 200px; width: 200px; border: 2px solid black; position: fixed; top: 35px; right: 35px;"><br>
+		<div style="background-image: URL({{ site.url }}/images/list2.png); height: 170px; width: 200px; border: 2px solid black; position: fixed; top: 35px; right: 35px;"><br>
   			<a href="#1" style="color: white"> &nbsp;&nbsp;Programming 무경험자</a> <br>
   			<a href="#2" style="color: white"> &nbsp;&nbsp;C/C++ 프로그래머</a> <br>
   			<a href="#3" style="color: white"> &nbsp;&nbsp;기타사항</a> <br>
