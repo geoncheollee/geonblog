@@ -13,7 +13,7 @@ share: true
   credit: dargadgetz
   creditlink: http://www.dargadgetz.com/ios-7-abstract-wallpaper-pack-for-iphone-5-and-ipod-touch-retina/-->
 
-수정222
+수정33
 
 <html>
 <h1>3. 수치 자료형과 연산자</h1>
