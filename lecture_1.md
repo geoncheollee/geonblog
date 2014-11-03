@@ -242,7 +242,7 @@ True
 
 <!-- 이미지 기능 -->
 <figure>
-	<a href="http://farm9.staticflickr.com/8426/7758832526_cc8f681e48_b.jpg"><img src="http://nbviewer.ipython.org/github/bluebibi/python/blob/master/images/objectIdentity.png" alt=""></a>
+	<a href="http://nbviewer.ipython.org/github/bluebibi/python/blob/master/images/objectIdentity.png"><img src="http://nbviewer.ipython.org/github/bluebibi/python/blob/master/images/objectIdentity.png" alt=""></a>
 </figure>
 
 
