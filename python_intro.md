@@ -11,12 +11,13 @@ share: true
 
 <html>
 	<body>
-		<div style="background: white; height: 350px; width: 200px; border: 2px solid black; position: fixed; top: 35px; right: 35px;">
-  			<br><a href="#1">  Programming 무경험자</a> <br>
-  			<a href="#2">  C/C++ 프로그래머</a> <br>
-  			<a href="#3">  기타사항</a> <br>
-  			<a href="#4">  Python 개요 및 설치방법 </a> <br>
-  			<a href="#forum">  Forum </a> <br>
+		<div style="background: white; height: 250px; width: 200px; border: 2px solid black; position: fixed; top: 35px; right: 35px;">
+		<b><span style="font-size: large;">&nbsp;&nbsp;&nbsp;차례</span></b><br /><br>
+  			<br><a href="#1"> &nbsp;&nbsp;Programming 무경험자</a> <br>
+  			<a href="#2"> &nbsp;&nbsp;C/C++ 프로그래머</a> <br>
+  			<a href="#3"> &nbsp;&nbsp;기타사항</a> <br>
+  			<a href="#4"> &nbsp;&nbsp;Python 개요 및 설치방법 </a> <br>
+  			<a href="#forum"> &nbsp;&nbsp;Forum </a> <br>
 
   			
 		</div>
