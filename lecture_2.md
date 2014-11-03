@@ -22,13 +22,9 @@ share: true
 </html>
 
 
-<html>
-	<body>
-	
-	<div class="string"></div>
-	
-	</body>
-</html>
+
+<form id="string" name="fm" method="get">
+
 # 4. 문자열
 
 
