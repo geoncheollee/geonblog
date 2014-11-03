@@ -5,6 +5,11 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
 <head>
 {% include head.html %}
+
+<!-- 버튼(건철) -->
+#header
+
+  
 </head>
 
 <body id="page" {% if page.image.feature %}class="feature"{% endif %}>
@@ -14,6 +19,10 @@
 
 {% if page.image.feature %}
 
+<!-- 버튼(건철) -->
+<div style="position: fixed; bottom: 5px; right: 5px;">
+  <a href="#header">TOP</a>
+</div>
 
 <div class="entry-header">
   {% if page.image.credit %}<div class="image-credit">Image source: <a href="{{ page.image.creditlink }}">{{ page.image.credit }}</a></div><!-- /.image-credit -->{% endif %}
