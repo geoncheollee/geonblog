@@ -18,19 +18,20 @@ share: true
 	
 	
 
-		<div style="background: white; height: 410px; width: 200px; border: 2px solid black; position: fixed; top: 35px; right: 35px;">
+		<
+div style="background-image: URL({{ site.url }}/images/list2.png); height: 410px; width: 200px; border: 2px solid black; position: fixed; top: 35px; right: 35px;">
   			<br><a href="#01"> &nbsp;01.수치 자료형 </a> <br>
-  			<a href="#1-1"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1-1 정수형 상수 </a> <br>
-  			<a href="#1-2"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1-2 실수형 상수 </a> <br>
-  			<a href="#1-3"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1-3 Decimal 자료형 </a> <br><br>
-  			<a href="#02"> &nbsp;02 파이썬 연산자 </a> <br>
-  			<a href="#2-1"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2-1 산술 연산자 </a> <br>
-  			<a href="#2-2"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2-2 관계 연산자 </a> <br>
-  			<a href="#2-3"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2-3 논리 연산자 </a> <br>
-  			<a href="#2-4"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2-4 비트 단위 연산자 </a> <br><br>
-  			<a href="#problem"> &nbsp; 연습문제 </a> <br>
-  			<a href="#coding"> &nbsp; 코딩 실습 </a> <br>
-  			<a href="#forum"> &nbsp; Forum </a> <br>
+  			<a href="#1-1" style="color: white"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1-1 정수형 상수 </a> <br>
+  			<a href="#1-2" style="color: white"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1-2 실수형 상수 </a> <br>
+  			<a href="#1-3" style="color: white"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1-3 Decimal 자료형 </a> <br><br>
+  			<a href="#02" style="color: white"> &nbsp;02 파이썬 연산자 </a> <br>
+  			<a href="#2-1" style="color: white"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2-1 산술 연산자 </a> <br>
+  			<a href="#2-2" style="color: white"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2-2 관계 연산자 </a> <br>
+  			<a href="#2-3" style="color: white"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2-3 논리 연산자 </a> <br>
+  			<a href="#2-4" style="color: white"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2-4 비트 단위 연산자 </a> <br><br>
+  			<a href="#problem" style="color: white"> &nbsp; 연습문제 </a> <br>
+  			<a href="#coding" style="color: white"> &nbsp; 코딩 실습 </a> <br>
+  			<a href="#forum" style="color: white"> &nbsp; Forum </a> <br>
 		</div>
 		
 	</body>
