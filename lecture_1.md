@@ -9,6 +9,8 @@ image:
 
 share: true
 ---
+
+수정1
   <!--
   credit: dargadgetz
   creditlink: http://www.dargadgetz.com/ios-7-abstract-wallpaper-pack-for-iphone-5-and-ipod-touch-retina/-->
@@ -17,8 +19,8 @@ share: true
 	
 	
 
-		<div style="background: white; height: 370px; width: 200px; border: 2px solid black; position: fixed; top: 35px; right: 35px;">
-  			<a href="#01"> &nbsp;01.수치 자료형 </a> <br>
+		<div style="background: white; height: 390px; width: 200px; border: 2px solid black; position: fixed; top: 35px; right: 35px;">
+  			<br><a href="#01"> &nbsp;01.수치 자료형 </a> <br>
   			<a href="#1-1"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1-1 정수형 상수 </a> <br>
   			<a href="#1-2"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1-2 실수형 상수 </a> <br>
   			<a href="#1-3"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1-3 Decimal 자료형 </a> <br><br>
@@ -43,6 +45,7 @@ share: true
 </html>
 
 <div id="1-1"></div>
+
 ### 1-1 정수형 상수
 
 {% highlight python linenos %}
@@ -64,6 +67,7 @@ print a, b, c
 ---
 
 <div id="1-2"></div>
+
 ####1-2 실수형 상수
 
 {% highlight python linenos %}
@@ -95,6 +99,7 @@ print a, b, c
 ---
 
 <div id="1-3"></div>
+
 ####1-3 Decimal 자료형
 - 컴퓨터의 부동소수점 (Floating point)에 의한 실수 표현은 매우 미미한 오차를 동반함
 - 그러한 오차를 최대한 줄이고 최대한 정확한 결과 값을 얻어내기 위해 사용할 수 있는 모듈 -> decimal 모듈
@@ -186,6 +191,7 @@ Decimal('485.8887109649886451686600498')
 </html>
 
 <div id="2-1"></div>
+
 ### 2-1 산술 연산자
 
 {% highlight python linenos %}
@@ -219,6 +225,7 @@ print --3
 ---
 
 <div id="2-2"></div>
+
 ### 2-2 관계 연산자
 - 객체가 지닌 값의 크기(대소)를 비교함
 
@@ -288,6 +295,7 @@ True
 ---
 
 <div id="2-3"></div>
+
 ### 2-3 논리 연산자 (or 부울 연산자)
 - 피연산자의 값으로 진리값인 True 또는 False을 취하여 논리 적인 계산을 수행하는 연산자
   - and
