@@ -29,7 +29,7 @@ share: true
   - 길이 정보 (Length)
   - for ~ in 문
 
-
+<br><br>
 ### 1-2 인덱싱
 
 {% highlight python linenos %}
