@@ -11,7 +11,7 @@ image:
 share: true
 ---
 
-수정33
+수정44
 
 <!DOCTYPE html>
 <html lang="en">
@@ -33,6 +33,101 @@ share: true
 (function(d){d.fn.toc=function(j){var l=d.extend({},d.fn.toc.defaults,j);var n=this.append("<ul></ul>").children("ul");var m={h1:0,h2:0,h3:0,h4:0,h5:0,h6:0};var h=0;var g={h1:0,h2:0,h3:0,h4:0,h5:0,h6:0};for(var k=1;k<=6;k++){g["h"+k]=(l.exclude.match(new RegExp("h"+k,"i"))===null&&d("h"+k).length>0)?++h:0}return this.each(function(){d(l.context+" :header").not(l.exclude).each(function(){var p=d(this);for(var o=6;o>=1;o--){if(p.is("h"+o)){if(l.numerate){b(m["h"+o],n);c(m,"h"+o);if(l.autoId&&!p.attr("id")){p.attr("id",a(p.text()))}p.text(f(m,"h"+o,p.text()))}e(n,g["h"+o],p.attr("id"),p.text())}}})})};function b(h,g){if(h===0&&g.find(":last").length!==0&&!g.find(":last").is("ul")){g.find("li:last").append("<ul></ul>")}}function c(g,h){d.each(g,function(j,k){if(j===h){++g[j]}else{if(j>h){g[j]=0}}})}function a(g){return g.replace(/[ <>#\/\\?&\n]/g,"_")}function f(i,j,h){var g="";d.each(i,function(k,l){if(k<=j&&i[k]>0){g+=i[k]+"."}});return g+" "+h}function e(m,g,l,k){var j=m;for(var h=1;h<g;h++){if(j.find("> li:last > ul").length===0){j.append("<li><ul></ul></li>")}j=j.find("> li:last > ul:first")}if(l===""){j.append("<li>"+k+"</li>")}else{j.append('<li><a href="#'+l+'">'+k+"</a></li>")}}d.fn.toc.defaults={exclude:"h1, h5, h6",context:"",autoId:false,numerate:true}})(jQuery);
 //]]>
 </script> 
+
+
+
+<script type='text/javascript'>
+      summary_noimg = 352;
+      summary_img = 252;
+      img_thumb_height = 120;
+      img_thumb_width = 160; 
+    </script>
+<script type='text/javascript'>
+      //<![CDATA[
+      function removeHtmlTag(strx,chop){ 
+        if(strx.indexOf("<")!=-1)
+        {
+          var s = strx.split("<"); 
+          for(var i=0;i<s.length;i++){ 
+            if(s[i].indexOf(">")!=-1){ 
+              s[i] = s[i].substring(s[i].indexOf(">")+1,s[i].length); 
+            } 
+          } 
+          strx =  s.join(""); 
+        }
+        chop = (chop < strx.length-1) ? chop : strx.length-2; 
+        while(strx.charAt(chop-1)!=' ' && strx.indexOf(' ',chop)!=-1) chop++; 
+        strx = strx.substring(0,chop-1); 
+        return strx+'...'; 
+      }
+      function createSummaryAndThumb(pID){
+        var div = document.getElementById(pID);
+        var imgtag = "";
+        var img = div.getElementsByTagName("img");
+        var summ = summary_noimg;
+        if(img.length>=1) {	
+          imgtag = '<span style="float:left; padding:0px 10px 5px 0px;"><img src="'+img[0].src+'" width="'+img_thumb_width+'px" height="'+img_thumb_height+'px"/></span>';
+          summ = summary_img;
+        }
+        var summary = imgtag + '<div>' + removeHtmlTag(div.innerHTML,summ) + '</div>';
+        div.innerHTML = summary;
+      }
+      //]]>
+</script>
+<!--Related Posts Scripts and Styles Start-->
+<!--Remove-->
+<style type='text/css'>
+        #related-posts {
+          background: #F8F8F4;
+          float:center;
+          text-transform:none;
+          height:100%;
+          min-height:100%;
+          padding-top:15px;
+          padding-left:15px;
+          padding-bottom: 10px;
+        }
+        #related-posts .widget{
+          background: #F8F8F4;
+          padding-left:6px;
+          margin-bottom:10px;
+        }
+        #related-posts .widget h2, #related-posts h2{
+          background: #F8F8F4;
+          font-size: 1.6em;
+          font-weight: bold;
+          color: black;
+          font-family: Nanumgothic, 나눔고딕,Georgia, &#8220;Times New Roman&#8221;, Times, serif;
+          margin-bottom: 0.35em;
+          margin-top: 0em;
+          padding-top: 0em;
+        }
+        #related-posts a{
+          color:#383838;
+        }
+        #related-posts a:hover{
+          color:blue;
+        }
+        #related-posts ul{
+          list-style-type:none;
+          background: #F8F8F4;
+          margin:0 0 0px 0;
+          padding:0px;
+          text-decoration:bold;
+          font-size:15px;
+          text-color:#000000
+        }
+        #related-posts ul li{
+          background:#F8F8F4 url(http://ts.daumcdn.net/custom/blog/94/948102/skin/images/bullet01.gif) no-repeat left ;
+          display:block;
+          list-style-type:none;
+          margin-bottom: 3px;
+          padding-left: 20px;
+          padding-top:0px;
+          margin-left: 4px;}
+      </style>
+
+
 
 
 </head>
