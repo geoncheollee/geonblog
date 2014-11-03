@@ -9,8 +9,6 @@ image:
 share: true
 ---
 
-수정1
-
 <html>
 <body>
 
