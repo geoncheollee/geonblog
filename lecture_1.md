@@ -18,18 +18,18 @@ share: true
 	
 
 		<div style="background: white; height: 350px; width: 200px; border: 2px solid black; position: fixed; top: 35px; right: 35px;">
-  			<a href="#01"> 01. 수치 자료형</a> <br>
-  			<a href="#string_2"> &npsb &npsp 1.2</a> <br>
-  			<a href="#string_3">  1.3</a> <br>
-  			<a href="#string_4">              1.4</a> <br>
-  			<a href="#string_5">              1.5</a> <br>
-  			<a href="#string_6">  1.6</a> <br>
-  			<a href="#string_7">  1.7</a> <br>
-  			<a href="#string_8">  1.8</a> <br>
-  			<a href="#string_movie">  관련 영상</a> <br>
-  			<a href="#string_problem">  문제 풀기</a> <br>
-  			<a href="#string_code">  코드 직접 작성해보기</a>
-  			
+  			<a href="#01"> &nbsp;01.수치 자료형 </a> <br>
+  			<a href="#1-1"> &nbsp;&nbsp;&nbsp; 1-1 정수형 상수 </a> <br>
+  			<a href="#1-2"> &nbsp;&nbsp;&nbsp; 1-2 실수형 상수 </a> <br>
+  			<a href="#1-3"> &nbsp;&nbsp;&nbsp; 1-3 Decimal 자료형 </a> <br>
+  			<a href="#02"> &nbsp;02 파이썬 연산자 </a> <br>
+  			<a href="#2-1"> &nbsp;&nbsp;&nbsp; 2-1 산술 연산자 </a> <br>
+  			<a href="#2-2"> &nbsp;&nbsp;&nbsp; 2-2 관계 연산자 </a> <br>
+  			<a href="#2-3"> &nbsp;&nbsp;&nbsp; 2-3 논리 연산자 </a> <br>
+  			<a href="#2-4"> &nbsp;&nbsp;&nbsp; 2-4 비트 단위 연산자 </a> <br>
+  			<a href="#problem"> &nbsp;&nbsp;&nbsp; 연습문제 </a> <br>
+  			<a href="#coding"> &nbsp; 코딩 실습 </a> <br>
+  			<a href="#forum"> &nbsp; Forum </a> <br>
 		</div>
 		
 	</body>
@@ -42,7 +42,7 @@ share: true
 <h2>01. 수치 자료형</h2>
 </html>
 
-
+<div id="1-1"></div>
 ### 1-1 정수형 상수
 
 {% highlight python linenos %}
@@ -63,6 +63,7 @@ print a, b, c
 
 ---
 
+<div id="1-2"></div>
 ####1-2 실수형 상수
 
 {% highlight python linenos %}
@@ -90,8 +91,10 @@ print a, b, c
     <iframe src="https://trinket.io/embed/python/538012d3a6554c7945027aab" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen> </iframe>
 </body>
 </html>
+
 ---
 
+<div id="1-3"></div>
 ####1-3 Decimal 자료형
 - 컴퓨터의 부동소수점 (Floating point)에 의한 실수 표현은 매우 미미한 오차를 동반함
 - 그러한 오차를 최대한 줄이고 최대한 정확한 결과 값을 얻어내기 위해 사용할 수 있는 모듈 -> decimal 모듈
@@ -176,10 +179,13 @@ Decimal('485.8887109649886451686600498')
 
 ---
 
+<div id="02"></div>
+
 <html>
 <h2> 02 파이썬 연산자</h2>
 </html>
 
+<div id="2-1"></div>
 ### 2-1 산술 연산자
 
 {% highlight python linenos %}
@@ -212,6 +218,7 @@ print --3
 
 ---
 
+<div id="2-2"></div>
 ### 2-2 관계 연산자
 - 객체가 지닌 값의 크기(대소)를 비교함
 
@@ -280,6 +287,7 @@ True
 
 ---
 
+<div id="2-3"></div>
 ### 2-3 논리 연산자 (or 부울 연산자)
 - 피연산자의 값으로 진리값인 True 또는 False을 취하여 논리 적인 계산을 수행하는 연산자
   - and
@@ -324,6 +332,8 @@ True
 {% endhighlight %}
 
 - 값이 없는 빈 객체나 None 객체는 False로 평가됨
+
+<div id="2-4"></div>
 
 ### 2-4 비트 단위 연산자
 - 비트 단위 조작 지원
@@ -379,6 +389,7 @@ function func(){
 
 <form name="fm" method="get">
 
+<div id="problem"></div>
  <p> 1. "다음 중 틀린 것은? </p>
  
  <p></p>
@@ -400,8 +411,10 @@ function func(){
 
 <!-- 사지선다형 문제 끝 -->
 
+<div id="coding"></div>
 
 
+<div id="forum"></div>
 <!-- 댓글 기능 -->
 <html>
 <body>
