@@ -19,18 +19,44 @@ share: true
 	<script>
 var locked = 0;
 
+
 function show(imagenr) 
 {
     if (locked) return;
     var i;
     var image;
     var el;
+  var e = document.getElementById(‘ratetext’);
+  var StateMSG;
+
 
     for (i=1; i<=imagenr; i++) {
-        image = 'image' + i;
+        image = ‘image’ + i;
         el = document.getElementById(image);
-        el.src="star1.gif";
+        el.src=”star1.gif”;
     }
+
+
+  switch (imagenr) {
+   case 1:
+    StateMSG = “20점”;
+    break
+   case 2:
+    StateMSG = “40점”;
+    break
+   case 3:
+    StateMSG = “60점”;
+    break
+   case 4:
+    StateMSG = “80점”;
+    break
+   case 5:
+    StateMSG = “100점”;
+    break
+   default:
+    StateMSG = “”;
+  }
+  e.innerHTML = StateMSG;
 }
 
 
@@ -40,13 +66,16 @@ function noshow(imagenr)
     var i;
     var image;
     var el;
+ 
+
 
     for (i=1; i<=imagenr; i++) {
-        image = 'image' + i;
+        image = ‘image’ + i;
         el = document.getElementById(image);
-        el.src="star0.gif";
+        el.src=”star0.gif”;
     }
 }
+
 
 function lock(imagenr)
 {
@@ -54,25 +83,35 @@ function lock(imagenr)
     locked = 1;
 }
 
+
 function mark(imagenr)
 {
     //show(imagenr);
     //locked = 1;
     lock(imagenr);
 
-    var e = document.getElementById('ratetext');
-    e.innerHTML = "You rated: ";
+
+    var e = document.getElementById(‘ratetext’);
+   
+
 
     /* store rating on server */
     var xmlhttp;
     try {
-        xmlhttp = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject("Microsoft.XMLHTTP");
+        xmlhttp = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject(“Microsoft.XMLHTTP”);
     } catch (e) {
         // todo
     }
-    var qs = '/test2.html?rate=' + imagenr;
-    xmlhttp.open("GET", qs);
-    xmlhttp.send(null);
+    //var qs = “UccPointProcess.asp?rate=” + imagenr;  
+    //xmlhttp.open(“GET”, qs);
+  
+  xmlhttp.open(“GET”, “point_.asp?rate=” + imagenr,true);
+  xmlhttp.onreadystatechange=function() {
+   if (xmlhttp.readyState==4) {
+    e.innerHTML = xmlhttp.responseText;
+   }
+  }
+  xmlhttp.send(null)
 }
 </script>
 
@@ -131,26 +170,16 @@ function mark(imagenr)
 
 
 
-<table cellpadding=0 cellspacing=0 border=0 width=126 height=21 align=center background=star_bg.gif>
-	<tr>
-		<td>
-			<table cellpadding=0 cellspacing=0 border=0 width=67% height=21 background=star.gif><tr><td></td></tr></table>
-		</td>
-	</tr>
-</table>
-	<BR>
 <DIV id=rating align=center>
-	<SPAN id=ratetext>Rate this site</SPAN>
-	<BR>
-	<SPAN>
-		<IMG id=image1 onmouseover=show(1) onclick=mark(1) onmouseout=noshow(1) src="star0.gif">
-		<IMG id=image2 onmouseover=show(2) onclick=mark(2) onmouseout=noshow(2) src="star0.gif">
-		<IMG id=image3 onmouseover=show(3) onclick=mark(3) onmouseout=noshow(3) src="star0.gif">
-		<IMG id=image4 onmouseover=show(4) onclick=mark(4) onmouseout=noshow(4) src="star0.gif">
-		<IMG id=image5 onmouseover=show(5) onclick=mark(5) onmouseout=noshow(5) src="star0.gif">
-	</SPAN>
-	<BR>
-</DIV>
+   <SPAN>
+    <IMG id=image1 onmouseover=show(1) onclick=mark(1) onmouseout=noshow(1) src=”star0.gif”>
+    <IMG id=image2 onmouseover=show(2) onclick=mark(2) onmouseout=noshow(2) src=”star0.gif”>
+    <IMG id=image3 onmouseover=show(3) onclick=mark(3) onmouseout=noshow(3) src=”star0.gif”>
+    <IMG id=image4 onmouseover=show(4) onclick=mark(4) onmouseout=noshow(4) src=”star0.gif”>
+    <IMG id=image5 onmouseover=show(5) onclick=mark(5) onmouseout=noshow(5) src=”star0.gif”>
+   </SPAN>
+   <br/><SPAN id=ratetext>평가하기</SPAN>
+ </DIV>
 
 </body>
 </html>
