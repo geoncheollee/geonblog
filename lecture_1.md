@@ -13,7 +13,7 @@ share: true
   credit: dargadgetz
   creditlink: http://www.dargadgetz.com/ios-7-abstract-wallpaper-pack-for-iphone-5-and-ipod-touch-retina/-->
 
-수정111
+수정222
 
 <html>
 <h1>3. 수치 자료형과 연산자</h1>
@@ -59,7 +59,18 @@ print a, b, c
 1.2 3500.0 -2e-05
 {% endhighlight %}
 
-<div markdown="0"><a href="https://github.com/mmistakes/hpstr-jekyll-theme/archive/master.zip" class="btn">Download the Theme</a></div>
+<div markdown="0"><a href="https://trinket.io/embed/python/538012d3a6554c7945027aab" width="100%" height="356"  class="btn">Download the Theme</a></div>
+
+<!-- 파이썬 코드 실행기  -->
+<html>
+<body>
+    <h2>파이썬 연습하기</h2>
+
+    <p>파이썬 코드를 입력 후 RUN 버튼을 누르세요.</p>
+
+    <iframe src="https://trinket.io/embed/python/538012d3a6554c7945027aab" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen> </iframe>
+</body>
+</html>
 ---
 
 ####1-3 Decimal 자료형
