@@ -203,6 +203,43 @@ True
 - 서로 다른 자료형간의 크기 관계
   - 숫자 < 사전 < 리스트 < 문자열 < 튜플
 
+{% highlight python linenos %}
+{% raw %}
+print 9999999999999999999999L < 'abc'
+print {3:2} < [1,2,3] < (1,2,3)
+{% endraw %}
+{% endhighlight %}
+
+{% highlight html %}
+True
+True
+{% endhighlight %}
+
+
+{% highlight python linenos %}
+{% raw %}
+x = [1,2,3]
+y = [1,2,3]
+z = y
+
+print x == y
+print x == z
+print x is y
+print x is z
+print y is z
+{% endraw %}
+{% endhighlight %}
+
+{% highlight html %}
+True
+True
+False
+False
+True
+{% endhighlight %}
+
+http://nbviewer.ipython.org/github/bluebibi/python/blob/master/images/objectIdentity.png
+
 ---
 
 ### 2-3 논리 연산자 (or 부울 연산자)
@@ -291,11 +328,11 @@ function func(){
  
  for(i=0;i<chk.length;i++){
   if(chk[i].checked==true){
-   if (i == 2 ) {
+   if (i == 1 ) {
     //창 뜨게 하는거
     alert('\n\n정답입니다.'+ "\n"); }
    else {
-    alert('\n\n틀렸습니다. 정답은 3번, print "Hello, World"'+ "\n"); }
+    alert('\n\n틀렸습니다. 정답은 1번, print abcd > abd = False'+ "\n"); }
    break;
   }
  }
@@ -304,12 +341,13 @@ function func(){
 
 <form name="fm" method="get">
 
- <p> 1. "Hello, World를 출력하는 문장으로 옳은 것은? </p>
+ <p> 1. "다음 중 틀린 것은? </p>
  
  <p></p>
- <input type="radio" name="chk_1" value="chk_1"> (1) print Hello, World <p></p>
- <input type="radio" name="chk_1" value="chk_2"> (2) printf Hello, World <p></p>
- <input type="radio" name="chk_1" value="chk_3"> (3) print "Hello, World" <p></p>
+ <input type="radio" name="chk_1" value="chk_1"> (1) print 'abcd' > 'abd'             답 : True  <p></p>
+ <input type="radio" name="chk_1" value="chk_2"> (2) print (1, 2, 4) < (2, 1, 0)      답 : True  <p></p>
+ <input type="radio" name="chk_1" value="chk_3"> (3) print [1, 3, 2] == [1, 2, 3]     답 : False <p></p>
+ <input type="radio" name="chk_1" value="chk_4"> (4) print {3:2} < [1,2,3] < (1,2,3)  답 : True  <p></p>
  
   <p><form name="input" method="post" action="">
   <input type="button" value="확인" onClick="func()"></form></p>
@@ -324,6 +362,7 @@ function func(){
 
 <!-- 사지선다형 문제 끝 -->
 
+---
 
 <!-- 댓글 기능 -->
 <html>
