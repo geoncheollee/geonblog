@@ -13,14 +13,11 @@ share: true
   credit: dargadgetz
   creditlink: http://www.dargadgetz.com/ios-7-abstract-wallpaper-pack-for-iphone-5-and-ipod-touch-retina/-->
 
-
-수정2
-
 <html>
 <body>
 <h1>3. 수치 자료형과 연산자</h1>
 
-<h2>## 01 수치 자료형</h2>
+<h2>01 수치 자료형</h2>
 </html>
 </body>
 
@@ -43,6 +40,7 @@ print a, b, c
 {% endhighlight %}
 
 ---
+
 ####1-2 실수형 상수
 
 {% highlight python linenos %}
@@ -59,6 +57,8 @@ print a, b, c
 <type 'float'> <type 'float'> <type 'float'>
 1.2 3500.0 -2e-05
 {% endhighlight %}
+
+---
 
 ####1-3 Decimal 자료형
 - 컴퓨터의 부동소수점 (Floating point)에 의한 실수 표현은 매우 미미한 오차를 동반함
@@ -142,9 +142,11 @@ Decimal('485.8887109649886451686600498')
   - [참고자료2](http://www-01.ibm.com/support/knowledgecenter/SSEPGG_9.7.0/com.ibm.db2.luw.admin.config.doc/doc/r0052298.html?cp=SSEPGG_9.7.0%2F2-2-6-7-29&lang=ko)
 
 
-***
-## 02 파이썬 연산자
-***
+---
+
+<html>
+<h2> 02 파이썬 연산자</h2>
+</html>
 
 ### 2-1 산술 연산자
 
@@ -176,6 +178,8 @@ print --3
 3
 {% endhighlight %}
 
+---
+
 ### 2-2 관계 연산자
 - 객체가 지닌 값의 크기(대소)를 비교함
 
@@ -199,6 +203,8 @@ True
 
 - 서로 다른 자료형간의 크기 관계
   - 숫자 < 사전 < 리스트 < 문자열 < 튜플
+
+---
 
 ### 2-3 논리 연산자 (or 부울 연산자)
 - 피연산자의 값으로 진리값인 True 또는 False을 취하여 논리 적인 계산을 수행하는 연산자
@@ -270,7 +276,7 @@ True
   - [참고자료1](http://www.ecogwiki.com/2%EC%9D%98_%EB%B3%B4%EC%88%98%EB%B2%95%EC%9C%BC%EB%A1%9C_%EC%9D%8C%EC%88%98_%ED%91%9C%ED%98%84%ED%95%98%EA%B8%B0)
   - [참고자료1](http://multithread.tistory.com/entry/%EC%A0%95%EC%88%98%EC%9D%98-2%EC%9D%98%EB%B3%B4%EC%88%98-%ED%91%9C%ED%98%84)
 
-
+---
 
 <!-- 댓글 기능 -->
 <html>
