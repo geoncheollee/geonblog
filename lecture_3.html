@@ -139,11 +139,15 @@ License: You must have a valid license purchased only from themeforest (the abov
                   <li class="active">리스트 원소에 대한 슬라이스 치환</a></li>
                   </div>
                   <!-- show code area -->
-                  <div class="highlight"><pre><code class="language-html" data-lang="html"><span class="lineno">01</span> a = ['spam', 'eggs', 100, 1234]
-<span class="lineno">02</span> a[2] = a[2] + 23
-<span class="lineno">02</span> a[2] = a[2] + 23
-<span class="lineno">02</span> a[2] = a[2] + 23
-<span class="lineno">03</span> print a</code></pre></div>
+                  <div class="highlight"><pre><code class="language-html" data-lang="html"><span class="lineno">01</span> a = ['spam', 'eggs', 123, 1234]
+<span class="lineno">02</span> a[0:2] = [1,12]      # 동일한 크기에 대한 슬라이스 치환
+<span class="lineno">03</span> print a
+<span class="lineno">04</span>
+<span class="lineno">05</span> a[0:2] = [1]         # 서로 다른 크기에 대한 슬라이스 치환
+<span class="lineno">06</span> print a
+<span class="lineno">07</span> 
+<span class="lineno">08</span> a[0:1] = [1, 2, 3]   # 서로 다른 크기에 대한 슬라이스 치환
+<span class="lineno">09</span> print a</code></pre></div>
 
 <!-- show code area end -->
                   <h5>[1, 12, 123, 1234]</h5>
@@ -155,14 +159,15 @@ License: You must have a valid license purchased only from themeforest (the abov
         <div class="row">
                   <div class="col-md-6">
                   <li>중첩 리스트: 리스트 안에 요소로서 리스트를 지닌 리스트</li>
-                    <div class="well">
-                      <p>s = [1, 2, 3]</p>
-                      <p>t = ['begin', s, 'end']</p>
-                      <p>print t</p>
-                      <p></p>
-                      <p>print t[1][1]</p>
-                    </div>
                   </div>
+                   <!-- show code area -->
+                  <div class="highlight"><pre><code class="language-html" data-lang="html"><span class="lineno">01</span> s = [1, 2, 3]
+<span class="lineno">02</span> t = ['begin', s, 'end']
+<span class="lineno">02</span> print t
+<span class="lineno">02</span>
+<span class="lineno">03</span> print t[1][1]</code></pre></div>
+
+<!-- show code area end -->
                   <h5>['begin', [1, 2, 3], 'end']</h5>
                   <h5>2</h5>
                 </div>
@@ -172,17 +177,27 @@ License: You must have a valid license purchased only from themeforest (the abov
         <div class="row">
                   <div class="col-md-6">
                   <li> del을 이용한 리스트 요소 삭제</li>
-                    <div class="well">
-                      <p>a = [1, 2, 3, 4]</p>
-                      <p>del a[0]</p>
-                      <p>print a</p>
-                      <p></p>
-                      <p>del a[1:]</p>
-                      <p>print a</p>
-                    </div>
                   </div>
-                  <h5>[2, 3, 4]</h5>
-                  <h5>[2]</h5>
+                   <!-- show code area -->
+                  <div class="highlight"><pre><code class="language-html" data-lang="html"><span class="lineno">01</span> s = [10, 20, 30, 40, 50]
+<span class="lineno">02</span> s.remove(10)        # 자료 값 10 삭제
+<span class="lineno">03</span> print s
+<span class="lineno">04</span>
+<span class="lineno">05</span> s = [10, 20, 30, 20, 40, 50]   # 자료 값이 여러개 존재하면 첫번째 것만 삭제
+<span class="lineno">06</span> s.remove(20)
+<span class="lineno">07</span> print s
+<span class="lineno">08</span>
+<span class="lineno">09</span> s.extend([60, 70])  # 새로운 리스트([60, 70]를 기존 리스트 s 뒤에 병합
+<span class="lineno">10</span> print s
+<span class="lineno">11</span>
+<span class="lineno">12</span> s.append([60, 70])  # 주의: append로 새로운 리스트를 추가하면 하나의 자료 요소로서 추가
+<span class="lineno">13</span> print s</code></pre></div>
+
+<!-- show code area end -->
+                  <h5>[20, 30, 40, 50]</h5>
+                  <h5>[10, 30, 20, 40, 50]</h5>
+                  <h5>[10, 30, 20, 40, 50, 60, 70]</h5>
+                  <h5>[10, 30, 20, 40, 50, 60, 70, [60, 70]]</h5>
                 </div>
       <!-- box area end -->
       <!-- box area -->
@@ -201,16 +216,17 @@ License: You must have a valid license purchased only from themeforest (the abov
         <div class="row">
                   <div class="col-md-6">
                   <li><h4> 3-1 리스트의 메소드</h3></li>
-                    <div class="well">
-                      <p>s = [1, 2, 3]</p>
-                      <p></p>
-                      <p>s.append(5)             # 리스트 맨 마지막에 정수 값 5 추가</p>
-                      <p>print s</p>
-                      <p></p>
-                      <p>s.insert(3, 4)          # 3 인덱스 위치에 정수 값 4 추가</p>
-                      <p>print s</p>
-                    </div>
                   </div>
+                   <!-- show code area -->
+                  <div class="highlight"><pre><code class="language-html" data-lang="html"><span class="lineno">01</span> s = [1, 2, 3]
+<span class="lineno">02</span>
+<span class="lineno">03</span> s.append(5)             # 리스트 맨 마지막에 정수 값 5 추가
+<span class="lineno">04</span> print s
+<span class="lineno">05</span>
+<span class="lineno">06</span> s.insert(3, 4)          # 3 인덱스 위치에 정수 값 4 추가
+<span class="lineno">07</span> print s</code></pre></div>
+
+<!-- show code area end -->
                   <h5>[1, 2, 3, 5]</h5>
                   <h5>[1,2,3,4,5]</h5>
                 </div>
