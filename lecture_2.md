@@ -372,8 +372,3 @@ function func(){
 </html>
 <!-- 댓글 기능 끝 -->
 
-
-
-
-<div style="cursor:pointer;" onclick="window.scrollTo(0,0);">TOP</div>
-
