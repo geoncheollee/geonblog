@@ -22,12 +22,15 @@ share: true
         </h2>
         <p>
           <span class="date">16 Aug 2014</span><br>
-          <span class="description">코세라의 배우는 법 배우기(Learn How to Learn) 강의 중 좋은/나쁜 학습의 열가지 원칙 번역</span>
+          <span class="description">코세라의 배우는 법 배우기(Learn How to Learn) 강의 중 좋은/나쁜 학습의 열가지 원칙</span>
         </p>
       </li>
 </body>
 </html>
 
-
+<!-- 이미지 기능 -->
+<figure>
+	<a href="http://www.thedallasartsdistrict.org/wp-content/uploads/2012/11/JekyllHyde-236x300.png"><img src="http://www.thedallasartsdistrict.org/wp-content/uploads/2012/11/JekyllHyde-236x300.png" alt=""></a>
+</figure>
 
 
