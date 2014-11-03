@@ -16,18 +16,18 @@ share: true
 	
 
 		<div style="background: white; height: 350px; width: 200px; border: 2px solid black; position: fixed; top: 35px; right: 35px;">
-  			<a href="#string">  string</a> <br>
-  			<a href="#string_1">  1.1</a> <br>
-  			<a href="#string_2">  1.2</a> <br>
-  			<a href="#string_3">  1.3</a> <br>
-  			<a href="#string_4">  1.4</a> <br>
-  			<a href="#string_5">  1.5</a> <br>
-  			<a href="#string_6">  1.6</a> <br>
-  			<a href="#string_7">  1.7</a> <br>
-  			<a href="#string_8">  1.8</a> <br>
-  			<a href="#string_movie">  관련 영상</a> <br>
-  			<a href="#string_problem">  문제 풀기</a> <br>
-  			<a href="#string_code">  코드 직접 작성해보기</a>
+  			<a href="#string"> &nbsp;&nbsp; string</a> <br>
+  			<a href="#string_1"> &nbsp;&nbsp; 1.1</a> <br>
+  			<a href="#string_2"> &nbsp;&nbsp; 1.2</a> <br>
+  			<a href="#string_3"> &nbsp;&nbsp; 1.3</a> <br>
+  			<a href="#string_4">&nbsp;&nbsp;  1.4</a> <br>
+  			<a href="#string_5"> &nbsp;&nbsp; 1.5</a> <br>
+  			<a href="#string_6"> &nbsp;&nbsp; 1.6</a> <br>
+  			<a href="#string_7"> &nbsp;&nbsp; 1.7</a> <br>
+  			<a href="#string_8"> &nbsp;&nbsp; 1.8</a> <br>
+  			<a href="#string_movie"> &nbsp;&nbsp; 관련 영상</a> <br>
+  			<a href="#string_problem"> &nbsp;&nbsp; 문제 풀기</a> <br>
+  			<a href="#string_code"> &nbsp;&nbsp; 코드 작성하기</a>
   			
 		</div>
 		
