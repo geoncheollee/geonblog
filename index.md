@@ -23,12 +23,15 @@ share: true
           <span class="description">코세라의 배우는 법 배우기(Learn How to Learn) 강의 중 좋은/나쁜 학습의 열가지 원칙</span>
         </p>
       </li>
+
+<br><br>
+
 </body>
 </html>
 
 <!-- 이미지 기능 -->
 <figure>
-	<a href="http://www.thedallasartsdistrict.org/wp-content/uploads/2012/11/JekyllHyde-236x300.png"><img src="http://www.thedallasartsdistrict.org/wp-content/uploads/2012/11/JekyllHyde-236x300.png" alt=""></a>
+	<a href="https://github.com/geoncheollee/geonblog/blob/gh-pages/images/VD_1.JPG"><img src="https://github.com/geoncheollee/geonblog/blob/gh-pages/images/VD_1.JPG" alt=""></a>
 </figure>
 
 
