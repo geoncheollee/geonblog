@@ -308,6 +308,7 @@ function func(){
    break;
   }
  }
+}
 </script>
 
 <form id="fm" name="fm" method="get">
@@ -362,6 +363,7 @@ function func1(){
    break;
   }
  }
+}
 </script>
 
 <form id="fm1" name="fm1" method="get">
