@@ -59,7 +59,7 @@ print a, b, c
 1.2 3500.0 -2e-05
 {% endhighlight %}
 
-div markdown="0"><a href="https://github.com/mmistakes/hpstr-jekyll-theme/archive/master.zip" class="btn">Download the Theme</a></div>
+<div markdown="0"><a href="https://github.com/mmistakes/hpstr-jekyll-theme/archive/master.zip" class="btn">Download the Theme</a></div>
 ---
 
 ####1-3 Decimal 자료형
