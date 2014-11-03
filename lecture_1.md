@@ -369,8 +369,11 @@ True
 
 ---
 
+<br><br><br>
 <!-- 문제풀이 -->
 <html>
+
+<h2> 연습문제 </h2>
 
 <div class="page">
 <div class="body">
