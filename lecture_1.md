@@ -13,7 +13,7 @@ share: true
   credit: dargadgetz
   creditlink: http://www.dargadgetz.com/ios-7-abstract-wallpaper-pack-for-iphone-5-and-ipod-touch-retina/-->
 
-수정1
+수정111
 
 <html>
 <h1>3. 수치 자료형과 연산자</h1>
@@ -59,6 +59,7 @@ print a, b, c
 1.2 3500.0 -2e-05
 {% endhighlight %}
 
+div markdown="0"><a href="https://github.com/mmistakes/hpstr-jekyll-theme/archive/master.zip" class="btn">Download the Theme</a></div>
 ---
 
 ####1-3 Decimal 자료형
