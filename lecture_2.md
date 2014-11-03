@@ -297,7 +297,6 @@ function func(){
  //sex=성별정보, age=나이정보, job=직업정보, info=관심분야 정보, user_info=나이, 성별, 직업, 관심분야 통합 정도
  
  var chk=document.fm.chk_1;
- var chk1=documnet.fm1.chk_2;
  
  for(i=0;i<chk.length;i++){
   if(chk[i].checked==true){
@@ -309,18 +308,6 @@ function func(){
    break;
   }
  }
- 
- for(i=0;i<chk1.length;i++){
-  if(chk1[i].checked==true){
-   if (i == 2 ) {
-    //창 뜨게 하는거
-    alert('\n\n정답입니다.'+ "\n"); }
-   else {
-    alert('\n\n틀렸습니다. 정답은 3번'+ "\n"); }
-   break;
-  }
- }
-}
 </script>
 
 <form id="fm" name="fm" method="get">
@@ -333,10 +320,10 @@ function func(){
  <input type="radio" name="chk_1" value="chk_3"> (3) 공백 <p></p>
  <input type="radio" name="chk_1" value="chk_4"> (3) W <p></p>
  
- <!--
+
   <p><form name="input" method="post" action="">
   <input type="button" value="확인" onClick="func()"></form></p>
- -->
+ 
  
 </div></div></div>
 </html>
@@ -357,10 +344,28 @@ print s1 + s2
 <div class="body">
 <div class="main">
 
+<SCRIPT> 
+function func1(){
+ //checkbox_num=관심분야 체크박스 개수
+ //sex=성별정보, age=나이정보, job=직업정보, info=관심분야 정보, user_info=나이, 성별, 직업, 관심분야 통합 정도
+ 
+ var chk1=document.fm1.chk_2;
+ 
+ for(i=0;i<chk1.length;i++){
+  if(chk1[i].checked==true){
+   if (i == 2 ) {
+    //창 뜨게 하는거
+    alert('\n\n정답입니다.'+ "\n"); }
+   else {
+    alert('\n\n틀렸습니다. 정답은 3번'+ "\n"); }
+   break;
+  }
+ }
+</script>
 
 <form id="fm1" name="fm1" method="get">
 
- <p> 2. 위의 코드 결과로 알맞은 것은?? </p>
+ <p> 1. 위의 코드 결과로 알맞은 것은?? </p>
  
  <p></p>
  <input type="radio" name="chk_2" value="chk_1"> (1) Hello,World <p></p>
@@ -368,13 +373,13 @@ print s1 + s2
  <input type="radio" name="chk_2" value="chk_3"> (3) HelloWorld <p></p>
  <input type="radio" name="chk_2" value="chk_4"> (3) Hello <p></p>
  
+
   <p><form name="input" method="post" action="">
-  <input type="button" value="확인" onClick="func()"></form></p>
- 
+  <input type="button" value="확인" onClick="func1()"></form></p>
+
 </div></div></div>
 </html>
 <!-- 문제풀이 끝-->
-
 
 <br><br>
 
