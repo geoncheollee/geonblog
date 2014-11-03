@@ -17,7 +17,7 @@ share: true
 
 		<div style="background-image: URL({{ site.url }}/images/list2.png); height: 400px; width: 200px; border: 2px solid white; position: fixed; top: 35px; right: 35px;">
 			<br>
-  			<a href="#string" style="color: white; face: Impact"> &nbsp;&nbsp; <b>String</b></a> <br>
+  			<a href="#string" style="color: white; font-style:Impact"> &nbsp;&nbsp; <b>String</b></a> <br>
   			<a href="#string_1" style="color: white"> &nbsp;&nbsp; <b>1.1 Sequence Type</b></a> <br>
   			<a href="#string_2" style="color: white"> &nbsp;&nbsp; <b>1.2 Indexing</b></a> <br>
   			<a href="#string_3" style="color: white"> &nbsp;&nbsp; <b>1.3 Slicing</b></a> <br>
