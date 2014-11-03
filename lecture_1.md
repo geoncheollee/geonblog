@@ -139,8 +139,8 @@ Decimal('485.8887109649886451686600498')
     - 2.56 -> 2.6
 
 - Rounding에 대한 참고자료
-  - https://docs.python.org/2/library/decimal.html#context-objects
-  - http://www-01.ibm.com/support/knowledgecenter/SSEPGG_9.7.0/com.ibm.db2.luw.admin.config.doc/doc/r0052298.html?cp=SSEPGG_9.7.0%2F2-2-6-7-29&lang=ko
+  - [참고자료1](https://docs.python.org/2/library/decimal.html#context-objects)
+  - [참고자료2](http://www-01.ibm.com/support/knowledgecenter/SSEPGG_9.7.0/com.ibm.db2.luw.admin.config.doc/doc/r0052298.html?cp=SSEPGG_9.7.0%2F2-2-6-7-29&lang=ko)
 
 
 ***
@@ -268,15 +268,14 @@ True
   - "1111 1010" = "0000 0101"에 대한 1의 보수 = 5에 대한 1의 보수 = (6 - 1)에 대한 1의 보수 = -6
   - "1111 1110" = "0000 0001"에 대한 1의 보수 = 1에 대한 1의 보수 = (2 - 1)에 대한 1의 보수 = -2
 - 참고
-  - http://www.ecogwiki.com/2%EC%9D%98_%EB%B3%B4%EC%88%98%EB%B2%95%EC%9C%BC%EB%A1%9C_%EC%9D%8C%EC%88%98_%ED%91%9C%ED%98%84%ED%95%98%EA%B8%B0
-  - http://multithread.tistory.com/entry/%EC%A0%95%EC%88%98%EC%9D%98-2%EC%9D%98%EB%B3%B4%EC%88%98-%ED%91%9C%ED%98%84
+  - [참고자료1](http://www.ecogwiki.com/2%EC%9D%98_%EB%B3%B4%EC%88%98%EB%B2%95%EC%9C%BC%EB%A1%9C_%EC%9D%8C%EC%88%98_%ED%91%9C%ED%98%84%ED%95%98%EA%B8%B0)
+  - [참고자료1](http://multithread.tistory.com/entry/%EC%A0%95%EC%88%98%EC%9D%98-2%EC%9D%98%EB%B3%B4%EC%88%98-%ED%91%9C%ED%98%84)
 
 
 
 <!-- 댓글 기능 -->
 <html>
 <body>
-<a href="http://foo.com/bar.html#disqus_thread">Link</a>.
 
     <div id="disqus_thread"></div>
     <script type="text/javascript">
