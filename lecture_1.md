@@ -14,12 +14,11 @@ share: true
   creditlink: http://www.dargadgetz.com/ios-7-abstract-wallpaper-pack-for-iphone-5-and-ipod-touch-retina/-->
 
 <html>
-<body>
 <h1>3. 수치 자료형과 연산자</h1>
 
 <h2>01 수치 자료형</h2>
 </html>
-</body>
+
 
 ### 1-1 정수형 상수
 
@@ -278,25 +277,6 @@ True
 
 ---
 
-<!-- 댓글 기능 -->
-<html>
-<body>
-
-    <div id="disqus_thread"></div>
-    <script type="text/javascript">
-        var disqus_shortname = 'slhblog';
-        (function() {
-            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-        })();
-    </script>
-    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-
-</body>
-</html>
-
-
 <!-- 문제풀이 -->
 <html>
 
@@ -343,3 +323,23 @@ function func(){
 </html>
 
 <!-- 사지선다형 문제 끝 -->
+
+
+<!-- 댓글 기능 -->
+<html>
+<body>
+
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        var disqus_shortname = 'slhblog';
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+</body>
+</html>
+
