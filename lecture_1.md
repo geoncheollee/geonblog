@@ -418,7 +418,7 @@ function func(){
 
 <!-- 사지선다형 문제 끝 -->
 
----
+<br><br><br>
 
 <div id="coding"></div>
 
@@ -435,7 +435,7 @@ function func(){
 
 <div id="forum"></div>
 
----
+<br><br><br>
 
 <!-- 댓글 기능 -->
 <html>
