@@ -38,15 +38,7 @@ share: true
 
 ### 1-2 인덱싱
 
-<html>
-	<body>
-<blockquote><ol><li>s&nbsp;<font color="#66cc66">=</font>&nbsp;<font color="#483d8b">'abcdef'</font></li><li>l&nbsp;<font color="#66cc66">=</font>&nbsp;<font>&#91;</font><font color="#ff4500">100</font><font color="#66cc66">,</font><font color="#ff4500">200</font><font color="#66cc66">,</font><font color="#ff4500">300</font><font>&#93;</font></li><li><font color="#ff7700">print</font>&nbsp;s<font>&#91;</font><font color="#ff4500">0</font><font>&#93;</font></li><li><font color="#ff7700">print</font>&nbsp;s<font>&#91;</font><font color="#ff4500">1</font><font>&#93;</font></li><li><font color="#ff7700">print</font>&nbsp;s<font>&#91;</font>-<font color="#ff4500">1</font><font>&#93;</font></li><li><font color="#ff7700">print</font></li><li><font color="#ff7700">print</font>&nbsp;l<font>&#91;</font><font color="#ff4500">1</font><font>&#93;</font></li><li>l<font>&#91;</font><font color="#ff4500">1</font><font>&#93;</font>&nbsp;<font color="#66cc66">=</font>&nbsp;<font color="#ff4500">900</font></li><li><font color="#ff7700">print</font>&nbsp;l<font>&#91;</font><font color="#ff4500">1</font><font>&#93;</font></li></ol></blockquote>
-	</body>
-</html>
-
-
 {% highlight python %}
-[% raw %]
 s = 'abcdef'
 l = [100,200,300]
 print s[0]
@@ -56,7 +48,6 @@ print
 print l[1]
 l[1] = 900
 print l[1]
-[% /raw %]
 {% endhighlight %}
 
 {% highlight html %}
