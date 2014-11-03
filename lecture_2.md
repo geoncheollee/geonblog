@@ -23,10 +23,11 @@ share: true
 
 
 <html>
-	<body id="string"></body>
+	<body>
 	
+	<div class="string"></div>
 	
-	
+	</body>
 </html>
 # 4. 문자열
 
