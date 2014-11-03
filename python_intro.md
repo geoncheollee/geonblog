@@ -9,10 +9,28 @@ image:
 share: true
 ---
 
+<html>
+	<body>
+		<div style="background: white; height: 350px; width: 200px; border: 2px solid black; position: fixed; top: 35px; right: 35px;">
+  			<br><a href="#1">  Programming 무경험자</a> <br>
+  			<a href="#2">  C/C++ 프로그래머</a> <br>
+  			<a href="#3">  기타사항</a> <br>
+  			<a href="#4">  Python 개요 및 설치방법 </a> <br>
+  			<a href="#forum">  Forum </a> <br>
+
+  			
+		</div>
+		
+	</body>
+</html>
+
+
 
 # 파이썬을 배워야 하는 이유...
 ---
 ---
+
+<div id="1"></div>
 
 ##Programming에 대한 경험이 없는 사람의 경우
 ---
@@ -27,6 +45,8 @@ share: true
 - 다양한 라이브러리를 지원하기 때문에, **상대적으로 적은 양의 코드만으로도 GUI 프로그램, game, CGI 프로그램등을 빠르게 만들 수 있다**.
 
 ---
+
+<div id="2"></div>
 
 ##C/C++ 프로그래머인 경우
 ---
@@ -44,6 +64,8 @@ OS에 관련된 기능들은 (예: POSIX interface) 대부분 C/C++에서 제공
 함수, 클래스 또는 변수에 Decorator를 직접 제작할 수 있다. Decorator란 C/C++ 문법상 qualifier에 해당하는 것으로 다양한 wrapper를 만들거나 class인 경우 static, class method를 지정할 수 있다. Python 2.4 Decorators 참고
 
 ---
+
+<div id="3"></div>
 
 ##기타 사항
 ---
@@ -70,8 +92,13 @@ OS에 관련된 기능들은 (예: POSIX interface) 대부분 C/C++에서 제공
 
 ---
 
+<div id="4"></div>
+
 ##Python 개요 및 설치방법
 ---
 
 <iframe width="854" height="510" src="//www.youtube.com/embed/obO1oUu8AK8" frameborder="0"></iframe>
 ---
+
+<div id="forum"></div>
+
