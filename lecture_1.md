@@ -19,7 +19,7 @@ share: true
 
 		<div style="background: white; height: 350px; width: 200px; border: 2px solid black; position: fixed; top: 35px; right: 35px;">
   			<a href="#01"> 01. 수치 자료형</a> <br>
-  			<a href="#string_2">  1.2</a> <br>
+  			<a href="#string_2"> &npsb &npsp 1.2</a> <br>
   			<a href="#string_3">  1.3</a> <br>
   			<a href="#string_4">              1.4</a> <br>
   			<a href="#string_5">              1.5</a> <br>
